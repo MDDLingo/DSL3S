@@ -1,0 +1,227 @@
+[comment encoding = UTF-8 /]
+[module animat('http://www.eclipse.org/uml2/3.0.0/UML')]
+[import dsl3s::templates::services/]
+
+[comment
+Date: 15-06-2012    Author: Luís de Sousa
+Skeleton of the Animat class. 
+/]
+
+[import dsl3s::templates::behavHarvest/]
+[import dsl3s::templates::behavPerish/]
+[import dsl3s::templates::behavReplicate/]
+[import dsl3s::templates::behavMove/]
+
+[template public animat(c : Class) ? (c.hasStereotype('Animat'))]
+[comment @main /]
+[file (c.name.concat('.java'), false, 'UTF-8')]
+
+import ec.util.MersenneTwisterFast;
+import sim.engine.SimState;
+import sim.engine.Steppable;
+import sim.engine.Stoppable;
+import sim.field.grid.IntGrid2D;
+import sim.field.grid.SparseGrid2D;
+import sim.util.Bag;
+import sim.util.Int2D;
+import sim.util.IntBag;
+import sim.util.MutableInt2D;
+
+public class [c.name/] implements Steppable, Stoppable {
+
+	protected SimGrid domain;
+	
+ [comment Iterate through linked States /]
+ [for (ass:Association | c.getAssociations())]
+  [for (s:Element | ass.relatedElement) ]
+   [let sClass: Class = s.oclAsType(Class)]
+   [if (sClass.isNotNull())]
+    [if (sClass.hasStereotype('State'))]
+	///////////////////////////////////////////////////////
+    // State: [sClass.name/]
+	
+	protected Integer state[sClass.name/] = [sClass.getTaggedValue(sClass, 'State', 'initValue')/];
+	protected static Integer state[sClass.name/]Min = [sClass.getTaggedValue(sClass, 'State', 'minValue')/];
+	protected static Integer state[sClass.name/]Max = [sClass.getTaggedValue(sClass, 'State', 'maxValue')/];
+	protected static Integer state[sClass.name/]Var = [sClass.getTaggedValue(sClass, 'State', 'stepVariation')/];
+	public Integer getState[sClass.name/]() {return state[sClass.name/];}
+    public void setState[sClass.name/](Integer newState) {state[sClass.name/] = newState;}
+	public Integer harvestState[sClass.name/](Integer percent) {
+		Integer harvested = state[sClass.name/] * (100.0 / percent);
+		state[sClass.name/] -= harvested;
+		return harvested;
+	}
+
+	[comment Iterate through linked Replicate /]
+	// Replicate constants
+     [for (assR:Association | sClass.getAssociations())]
+      [for (r:Element | assR.relatedElement) ]
+	   [let rClass: Class = r.oclAsType(Class)]
+       [if (rClass.isNotNull())]
+        [if (rClass.hasStereotype('Replicate'))]
+	     [if rClass.getTaggedValue(rClass, 'Replicate', 'upperTreshold').isNotNull()]
+	protected static Integer upperTresh[rClass.name/] = [rClass.getTaggedValue(rClass, 'Replicate', 'upperTreshold')/];
+         [/if]
+         [if rClass.getTaggedValue(rClass, 'Replicate', 'lowerTreshold').isNotNull()]
+	protected static Integer lowerTresh[rClass.name/] = [rClass.getTaggedValue(rClass, 'Replicate', 'lowerTreshold')/];
+         [/if]
+	     [if rClass.getTaggedValue(rClass, 'Replicate', 'toll').isNotNull()]
+	protected static Integer toll[rClass.name/] = [rClass.getTaggedValue(rClass, 'Replicate', 'toll')/];
+         [/if]
+	     [if rClass.getTaggedValue(rClass, 'Replicate', 'inheritance').isNotNull()]
+	protected static Integer inheritance[rClass.name/] = [rClass.getTaggedValue(rClass, 'Replicate', 'inheritance')/];
+         [/if]
+        [/if]
+       [/if]
+       [/let]
+      [/for]	 
+     [/for] [comment Replicate/]
+
+	[comment Iterate through linked Perish /]
+	// Perish thresholds
+     [for (assP:Association | sClass.getAssociations())]
+      [for (p:Element | assP.relatedElement) ]
+	   [let pClass : Class = p.oclAsType(Class)]
+       [if (pClass.isNotNull())]
+        [if (pClass.hasStereotype('Perish'))]
+	     [if pClass.getTaggedValue(pClass, 'Perish', 'upperTreshold').isNotNull()]
+	protected static Integer upperTresh[pClass.name/] = [pClass.getTaggedValue(pClass, 'Perish', 'upperTreshold')/];
+         [/if]
+         [if pClass.getTaggedValue(pClass, 'Perish', 'lowerTreshold').isNotNull()]
+	protected static Integer lowerTresh[pClass.name/] = [pClass.getTaggedValue(pClass, 'Perish', 'lowerTreshold')/];
+         [/if]
+        [/if]
+       [/if]
+      [/let]
+      [/for]	 
+     [/for] [comment Replicate/]
+
+	///////////////////////////////////////////////////////
+     [/if]
+    [/if]
+   [/let]
+  [/for]	 
+ [/for]  [comment States/]
+
+	// Movement weights
+ [for (ass:Association | c.getAssociations())]
+  [for (p:Element | ass.relatedElement) ]
+   [let pClass: Class = p.oclAsType(Class)]
+    [if (pClass.isNotNull())]
+     [if (pClass.hasStereotype('Move'))]
+	protected static Integer weight[pClass.name/] = [pClass.getTaggedValue(pClass, 'Move', 'weight')/];
+     [/if]
+    [/if]
+   [/let]
+  [/for]	 
+ [/for]
+
+	private Stoppable stopper = null;
+    public void setStopper(Stoppable stopper)   {this.stopper = stopper;}
+    public void stop() {stopper.stop();}
+
+	public static Integer getMinDisplayValue() {
+
+		return
+ [for (ass:Association | c.getAssociations())]
+  [for (p:Element | ass.relatedElement) ]
+   [let pClass: Class = p.oclAsType(Class)]
+    [if (pClass.isNotNull())]
+     [if (pClass.hasStereotype('State'))]
+      [if (pClass.getTaggedValue(pClass, 'State', 'display') = 'true')]
+		 	state[pClass.name/]Min +
+      [/if]
+     [/if]
+    [/if]
+   [/let]
+  [/for]	 
+ [/for]
+			0; // this zero is an artifact of code generation
+}
+
+	public static Integer getMaxDisplayValue() {
+
+		return
+ [for (ass:Association | c.getAssociations())]
+  [for (p:Element | ass.relatedElement) ]
+   [let pClass: Class = p.oclAsType(Class)]
+    [if (pClass.isNotNull())]
+     [if (pClass.hasStereotype('State'))]
+      [if (pClass.getTaggedValue(pClass, 'State', 'display') = 'true')]
+		 	state[pClass.name/]Max +
+      [/if]
+     [/if]
+    [/if]
+   [/let]
+  [/for]	 
+ [/for]
+			0; // this zero is an artifact of code generation
+}
+
+	public Integer getDisplayValue() {
+
+		return
+ [for (ass:Association | c.getAssociations())]
+  [for (p:Element | ass.relatedElement) ]
+   [let pClass: Class = p.oclAsType(Class)]
+    [if (pClass.isNotNull())]
+     [if (pClass.hasStereotype('State'))]
+      [if (pClass.getTaggedValue(pClass, 'State', 'display') = 'true')]
+		 	state[pClass.name/] +
+      [/if]
+     [/if]
+    [/if]
+   [/let]
+  [/for]	 
+ [/for]
+			0; // this zero is an artifact of code generation
+}
+
+
+	@Override
+	public void step(SimState state) {
+		
+		Sim sim = (Sim) state;
+		SimGrid domain = sim.getSimDomain();
+		Int2D location = domain.getObjectLocation(this);
+		
+		harvest(location);
+		
+		if (perish(domain)) {
+			domain.remove(this);
+			this.stop();
+ 			return;
+		}
+		
+		replicate(location, sim);
+		
+		move(location);
+		
+		// Update state variables
+ [for (ass:Association | c.getAssociations())]
+  [for (p:Element | ass.relatedElement) ]
+   [let pClass: Class = p.oclAsType(Class)]
+    [if (pClass.isNotNull())]
+     [if (pClass.hasStereotype('State'))]
+		state[pClass.name/] += state[pClass.name/]Var;
+	 [/if]
+    [/if]
+   [/let]
+  [/for]	 
+ [/for]
+
+	}
+
+ [c.behavHarvest() /]
+
+ [c.behavPerish() /]
+
+ [c.behavMove() /]
+
+ [c.behavReplicate() /]
+
+}
+
+[/file]
+
+[/template]

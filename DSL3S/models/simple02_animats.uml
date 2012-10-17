@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:profile="http:///schemas/profile/_fwch8LsFEeGnqKScKZg9PA/4" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/profile/_fwch8LsFEeGnqKScKZg9PA/4 ../profile/DSL3S.profile.uml#_gLzBMLsFEeGnqKScKZg9PA">
+  <uml:Model xmi:id="_K_qeQLDLEeGlNNC6L9ntuA" name="model">
+    <packagedElement xmi:type="uml:Class" xmi:id="_N2ao8LDLEeGlNNC6L9ntuA" name="BasicSim"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_P8QUELDLEeGlNNC6L9ntuA" name="Grass">
+      <ownedAttribute xmi:id="_UtHbALDLEeGlNNC6L9ntuA" name="" type="_N2ao8LDLEeGlNNC6L9ntuA" association="_UtICELDLEeGlNNC6L9ntuA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UtHbAbDLEeGlNNC6L9ntuA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UtHbArDLEeGlNNC6L9ntuA" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_UtICELDLEeGlNNC6L9ntuA" name="" memberEnd="_UtICEbDLEeGlNNC6L9ntuA _UtHbALDLEeGlNNC6L9ntuA">
+      <ownedEnd xmi:id="_UtICEbDLEeGlNNC6L9ntuA" name="" type="_P8QUELDLEeGlNNC6L9ntuA" association="_UtICELDLEeGlNNC6L9ntuA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UtICErDLEeGlNNC6L9ntuA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UtICE7DLEeGlNNC6L9ntuA" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_W_WjYLDLEeGlNNC6L9ntuA" name="Hopper">
+      <ownedAttribute xmi:id="_Y0TS0LDLEeGlNNC6L9ntuA" name="" type="_N2ao8LDLEeGlNNC6L9ntuA" association="_Y0VvELDLEeGlNNC6L9ntuA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Y0TS0bDLEeGlNNC6L9ntuA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Y0TS0rDLEeGlNNC6L9ntuA" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_Y0VvELDLEeGlNNC6L9ntuA" name="" memberEnd="_Y0VvEbDLEeGlNNC6L9ntuA _Y0TS0LDLEeGlNNC6L9ntuA">
+      <ownedEnd xmi:id="_Y0VvEbDLEeGlNNC6L9ntuA" name="" type="_W_WjYLDLEeGlNNC6L9ntuA" association="_Y0VvELDLEeGlNNC6L9ntuA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Y0VvErDLEeGlNNC6L9ntuA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Y0VvE7DLEeGlNNC6L9ntuA" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_isrpkLsFEeGnqKScKZg9PA" name="Energy">
+      <ownedAttribute xmi:id="_MN1BcLsGEeGnqKScKZg9PA" name="" type="_W_WjYLDLEeGlNNC6L9ntuA" association="_MN1ogLsGEeGnqKScKZg9PA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MN1BcbsGEeGnqKScKZg9PA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MN1BcrsGEeGnqKScKZg9PA" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_MN1ogLsGEeGnqKScKZg9PA" name="" memberEnd="_MN1ogbsGEeGnqKScKZg9PA _MN1BcLsGEeGnqKScKZg9PA">
+      <ownedEnd xmi:id="_MN1ogbsGEeGnqKScKZg9PA" name="" type="_isrpkLsFEeGnqKScKZg9PA" association="_MN1ogLsGEeGnqKScKZg9PA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MN1ogrsGEeGnqKScKZg9PA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MN1og7sGEeGnqKScKZg9PA" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_IlcwELsHEeGnqKScKZg9PA" name="Bug"/>
+    <profileApplication xmi:id="_cuM8kLDLEeGlNNC6L9ntuA">
+      <eAnnotations xmi:id="_cui60LDLEeGlNNC6L9ntuA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../profile/DSL3S.profile.uml#_gLzBMLsFEeGnqKScKZg9PA"/>
+      </eAnnotations>
+      <appliedProfile href="../profile/DSL3S.profile.uml#_akJ9MZxOEeGZz4LhQjKg0g"/>
+    </profileApplication>
+  </uml:Model>
+  <profile:Simulation xmi:id="_d3oCwLDLEeGlNNC6L9ntuA" simulName="BasicSim" base_Class="_N2ao8LDLEeGlNNC6L9ntuA" spaceHeight="100" spaceWidth="100"/>
+  <profile:Animat xmi:id="_exyk8LDLEeGlNNC6L9ntuA" base_Class="_P8QUELDLEeGlNNC6L9ntuA"/>
+  <profile:State xmi:id="_pz480LsFEeGnqKScKZg9PA" base_Class="_isrpkLsFEeGnqKScKZg9PA" maxValue="50" minValue="0" RandomInit="true" DecayStep="5"/>
+  <profile:Animat xmi:id="_3x9kwLsGEeGnqKScKZg9PA" base_Class="_W_WjYLDLEeGlNNC6L9ntuA"/>
+  <profile:Animat xmi:id="_M2CbgLsHEeGnqKScKZg9PA" base_Class="_IlcwELsHEeGnqKScKZg9PA"/>
+</xmi:XMI>

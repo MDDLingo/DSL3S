@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:profile="http:///schemas/profile/_NslsAOlJEeGttYwCjnppaA/11" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/profile/_NslsAOlJEeGttYwCjnppaA/11 ../../profile/DSL3S.profile.uml#_Ops0gOlJEeGttYwCjnppaA">
+  <uml:Model xmi:id="_5oO7YPUFEeGgcqr62y_IrA" name="model">
+    <packagedElement xmi:type="uml:Class" xmi:id="_6sjfIPUFEeGgcqr62y_IrA" name="Animat">
+      <ownedAttribute xmi:id="_bwxG8PUGEeGgcqr62y_IrA" name="stateVar" type="_Fco9kPUGEeGgcqr62y_IrA" association="_bwyVEPUGEeGgcqr62y_IrA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bwxG8fUGEeGgcqr62y_IrA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bwxG8vUGEeGgcqr62y_IrA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_a9w1UPUJEeGgcqr62y_IrA" name="anotherState" type="_WUe9EPUJEeGgcqr62y_IrA" association="_a9yDcPUJEeGgcqr62y_IrA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_a9w1UfUJEeGgcqr62y_IrA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_a9w1UvUJEeGgcqr62y_IrA" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Fco9kPUGEeGgcqr62y_IrA" name="StateVar">
+      <ownedAttribute xmi:id="_n7PfwPUGEeGgcqr62y_IrA" name="replica" type="_eVtI4PUGEeGgcqr62y_IrA" association="_n7SjEPUGEeGgcqr62y_IrA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_n7PfwfUGEeGgcqr62y_IrA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_n7PfwvUGEeGgcqr62y_IrA" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_bwyVEPUGEeGgcqr62y_IrA" name="animat_stateVar_0" memberEnd="_bwyVEfUGEeGgcqr62y_IrA _bwxG8PUGEeGgcqr62y_IrA">
+      <ownedEnd xmi:id="_bwyVEfUGEeGgcqr62y_IrA" name="animat" type="_6sjfIPUFEeGgcqr62y_IrA" association="_bwyVEPUGEeGgcqr62y_IrA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bwyVEvUGEeGgcqr62y_IrA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bwyVE_UGEeGgcqr62y_IrA" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_eVtI4PUGEeGgcqr62y_IrA" name="Replica"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_n7SjEPUGEeGgcqr62y_IrA" name="stateVar_replica_0" memberEnd="_n7SjEfUGEeGgcqr62y_IrA _n7PfwPUGEeGgcqr62y_IrA">
+      <ownedEnd xmi:id="_n7SjEfUGEeGgcqr62y_IrA" name="stateVar" type="_Fco9kPUGEeGgcqr62y_IrA" association="_n7SjEPUGEeGgcqr62y_IrA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_n7SjEvUGEeGgcqr62y_IrA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_n7SjE_UGEeGgcqr62y_IrA" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_WUe9EPUJEeGgcqr62y_IrA" name="anotherState">
+      <ownedAttribute xmi:id="_jXA_QPUJEeGgcqr62y_IrA" name="anotherRep" type="_b39MsPUJEeGgcqr62y_IrA" association="_jXCNYPUJEeGgcqr62y_IrA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jXA_QfUJEeGgcqr62y_IrA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jXA_QvUJEeGgcqr62y_IrA" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_a9yDcPUJEeGgcqr62y_IrA" name="animat_anotherState_0" memberEnd="_a9yDcfUJEeGgcqr62y_IrA _a9w1UPUJEeGgcqr62y_IrA">
+      <ownedEnd xmi:id="_a9yDcfUJEeGgcqr62y_IrA" name="animat" type="_6sjfIPUFEeGgcqr62y_IrA" association="_a9yDcPUJEeGgcqr62y_IrA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_a9yDcvUJEeGgcqr62y_IrA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_a9yDc_UJEeGgcqr62y_IrA" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_b39MsPUJEeGgcqr62y_IrA" name="anotherRep"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_jXCNYPUJEeGgcqr62y_IrA" name="anotherState_anotherRep_0" memberEnd="_jXCNYfUJEeGgcqr62y_IrA _jXA_QPUJEeGgcqr62y_IrA">
+      <ownedEnd xmi:id="_jXCNYfUJEeGgcqr62y_IrA" name="anotherState" type="_WUe9EPUJEeGgcqr62y_IrA" association="_jXCNYPUJEeGgcqr62y_IrA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jXCNYvUJEeGgcqr62y_IrA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jXCNY_UJEeGgcqr62y_IrA" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <profileApplication xmi:id="__bONsPUFEeGgcqr62y_IrA">
+      <eAnnotations xmi:id="__brgsPUFEeGgcqr62y_IrA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../../profile/DSL3S.profile.uml#_Ops0gOlJEeGttYwCjnppaA"/>
+      </eAnnotations>
+      <appliedProfile href="../../profile/DSL3S.profile.uml#_akJ9MZxOEeGZz4LhQjKg0g"/>
+    </profileApplication>
+  </uml:Model>
+  <profile:Animat xmi:id="_BqSGQPUGEeGgcqr62y_IrA" base_Class="_6sjfIPUFEeGgcqr62y_IrA"/>
+  <profile:State xmi:id="_L18B8PUGEeGgcqr62y_IrA" maxValue="100" initValue="20" base_Class="_Fco9kPUGEeGgcqr62y_IrA"/>
+  <profile:Replicate xmi:id="_jflMwPUGEeGgcqr62y_IrA" base_Class="_eVtI4PUGEeGgcqr62y_IrA" upperTreshold="70" lowerTreshold="null" toll="50" inheritance="25"/>
+  <profile:State xmi:id="_Zq6tYPUJEeGgcqr62y_IrA" maxValue="50" stepVariation="-1" initValue="50" base_Class="_WUe9EPUJEeGgcqr62y_IrA"/>
+  <profile:Replicate xmi:id="_iRUigPUJEeGgcqr62y_IrA" base_Class="_b39MsPUJEeGgcqr62y_IrA" upperTreshold="null" lowerTreshold="10" toll="-20"/>
+</xmi:XMI>

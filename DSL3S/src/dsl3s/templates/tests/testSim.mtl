@@ -1,0 +1,11 @@
+[comment encoding = UTF-8 /]
+[module testSim('http://www.eclipse.org/uml2/3.0.0/UML')/]
+[import dsl3s::templates::sim/]
+[import dsl3s::templates::services/]
+
+[template public testSimClass(c : Class) ? (c.hasStereotype('Simulation'))]
+	
+	[comment @main /]
+	[c.sim()/]
+
+[/template]

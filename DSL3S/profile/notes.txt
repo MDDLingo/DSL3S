@@ -1,0 +1,127 @@
+############################
+## Simulation
+
+fieldWidth
+fieldHeight
+
+############################
+## Variable
+
+maxValue
+minValue
+initValue
+stepVariation
+initRandom?
+display? - indicates if this is the variable used in the draw
+
+############################
+## Animat
+
+=> add default value for initNum
+initial number (negative to cover the complete field?)
+movement radius
+wander?
+
+############################
+## Replicate
+
+upperTreshold
+lowerTreshold
+toll
+inheritance
+=> change inheritance type
+
+############################
+## Move
+
+weight
+neighbourghood distance?
+
+############################
+## Perish
+
+upperTreshold
+lowerTreshold
+
+############################
+## Harvest
+
+percent harvested?
+value harvested?
+harvest factor?
+=> what's the difference between harvest factor and percent harvested?
+
+############################
+## Simulation
+
+fieldWidth
+fieldHeight
+
+############################
+## Variable
+
+maxValue
+minValue
+initValue
+stepVariation
+initRandom?
+display? - indicates if this is the variable used in the draw
+
+############################
+## Animat
+
+initial number (negative to cover the complete field?)
+movement radius 
+=> should this be in Move?
+
+wander?
+
+############################
+## Replicate
+
+upperTreshold
+lowerTreshold
+toll
+inheritance
+
+############################
+## Move
+
+weight
+neighbourghood distance?
+
+############################
+## Perish
+
+upperTreshold
+lowerTreshold
+
+############################
+## Harvest
+
+percent harvested?
+value harvested?
+harvest factor?
+=> difference between harvest factor and percent harvested?
+
+############################
+## Emerge
+
+probability
+scope
+required
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

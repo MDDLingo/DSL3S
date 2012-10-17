@@ -1,0 +1,97 @@
+[comment encoding = UTF-8 /]
+[module behavHarvest('http://www.eclipse.org/uml2/3.0.0/UML')]
+[import dsl3s::templates::services/]
+
+[comment
+Date: 16-08-2012    Author: Luís de Sousa
+Generates the Harvest function to be included in the Animat class.
+Instead of filtering for the Harvest stereotype, this module starts with
+the Animat stereotype, so that it only generates the code for a specific
+class of that type.
+
+Issues:
+. Doesn't include harvest rate or harvest amount
+/]
+
+[template public behavHarvest(c : Class) ? (c.hasStereotype('Animat'))]
+[comment Iterate through linked States /]
+[for (ass:Association | c.getAssociations())]
+ [for (s:Element | ass.relatedElement) ]
+  [let sClass: Class = s.oclAsType(Class)]
+   [if (sClass.isNotNull())]
+    [if (sClass.hasStereotype('State'))]
+	 [if (sClass.hasLinkedStereotype('Harvest'))]
+	public void harvest[sClass.name/](Int2D location) {
+
+		Bag neigh = domain.getObjectsAtLocation(location.x, location.y);
+		for(int j = 0; j < neigh.numObjs; j++) {
+			Object obj = neigh.get(j);
+	 [comment Iterate through linked Harvest /]
+      [for (assH:Association | sClass.getAssociations())]
+       [for (h:Element | assH.relatedElement) ]
+       [let hClass: Class = h.oclAsType(Class)]
+        [if (hClass.isNotNull())]
+         [if (hClass.hasStereotype('Harvest'))]
+		  [if (hClass.getTaggedValue(hClass, 'Harvest', 'harvested') <> sClass.name)]
+		  [comment Iterate through harvested States /]
+           [for (assHS:Association | hClass.getAssociations())]
+            [for (hs:Element | assHS.relatedElement) ]
+		    [let hsClass: Class = hs.oclAsType(Class)]
+             [if (hsClass.isNotNull())]
+              [if (hsClass.hasStereotype('State'))]
+		 	 [comment Iterate through harvested Animat /]
+           	  [for (assHA:Association | hsClass.getAssociations())]
+                [for (ha:Element | assHA.relatedElement) ]
+                [let haClass: Class = ha.oclAsType(Class)]
+                  [if (haClass.isNotNull())]
+                   [if (haClass.hasStereotype('Animat'))]
+                    [if (haClass.name <> c.name)]
+
+			if(obj.getClass() == [haClass.name/].class) {
+				this.state[sClass.name/] += 
+					(([haClass.name/]) obj).harvestState[hsClass.name/]([hClass.getTaggedValue(hClass, 'Harvest', 'percentHarvested')/]);
+				(([haClass.name/]) obj).perish(domain);
+			}
+                  [/if]
+                 [/if]
+                [/if]
+               [/let]
+               [/for]	 
+              [/for] [comment Animat /]
+             [/if]
+            [/if]
+            [/let]
+           [/for]	 
+          [/for] [comment States /]
+		  [comment Iterate through harvested Environments /]
+          [for (assHE:Association | hClass.getAssociations())]
+           [for (he:Element | assHE.relatedElement) ]
+		    [let heClass: Class = he.oclAsType(Class)]
+            [if (heClass.isNotNull())]
+             [if (heClass.hasStereotype('Environment'))]
+		
+			if(obj.getClass() == [heClass.name/].class) {
+				this.state[sClass.name/] += 
+					(([heClass.name/]) obj).harvestValue([hClass.getTaggedValue(hClass, 'Harvest', 'percentHarvested')/]);
+				(([heClass.name/]) obj).perish(location, domain);
+			}
+             [/if]
+            [/if]
+           [/let]
+           [/for]	 
+          [/for] [comment Environment /]
+         [/if]
+        [/if]
+       [/if]
+      [/let]
+      [/for]	 
+     [/for] [comment Harvest /]
+		}
+	}
+    [/if]
+   [/if]
+  [/if]
+ [/let]
+ [/for]	 
+[/for] [comment States /]
+[/template]

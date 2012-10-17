@@ -1,0 +1,169 @@
+[comment encoding = UTF-8 /]
+[module behavEmerge('http://www.eclipse.org/uml2/3.0.0/UML')]
+[import dsl3s::templates::services/]
+
+[comment
+Date: 22-09-2012    Author: Luís de Sousa
+Generates the Emerge class for an Animat.
+Issues:
+. Generates a file for every Animat, even if it doesn't have a linked Emerge.
+. The method getNeighborsHamiltonianDistance must be tested for distance 0.
+/]
+
+[template public behavEmerge(c : Class) ? (c.hasStereotype('Animat'))]
+
+[if (c.hasLinkedStereotype('Emerge'))]
+[file (c.name.concat('Emerge.java'), false, 'UTF-8')]
+import sim.engine.SimState;
+import sim.engine.Steppable;
+import sim.engine.Stoppable;
+import sim.util.Bag;
+import sim.util.IntBag;
+
+public class [c.name/]Emerge implements Steppable, Stoppable {
+		
+[comment Iterate through linked Emerge /]
+[for (assE:Association | c.getAssociations())]
+ [for (e:Element | assE.relatedElement) ]
+ [let eClass: Class = e.oclAsType(Class)] 
+  [if (eClass.isNotNull())]
+   [if (eClass.hasStereotype('Emerge'))]
+	private static Integer [eClass.name/]Prob = [eClass.getTaggedValue(eClass, 'Emerge', 'probability')/];
+   [/if]
+  [/if]
+ [/let]
+ [/for]	 
+[/for] [comment Emerge /]
+
+	public [c.name/]Emerge() {}
+	
+	private Stoppable stopper = null;
+    public void setStopper(Stoppable stopper) {this.stopper = stopper;}
+
+	@Override
+	public void stop() {
+		// TODO Auto-generated method stub
+		stopper.stop();
+	}
+
+	@Override
+	public void step(SimState state) {
+
+		Sim sim = (Sim) state;
+		SimGrid domain = sim.simDomain;
+		int scope;
+
+		for(int x = 0; x < sim.gridWidth; x++)
+			for(int y = 0; y < sim.gridWidth; y++) {
+[comment Iterate through linked Emerge /]
+[for (assE:Association | c.getAssociations())]
+ [for (e:Element | assE.relatedElement) ]
+ [let eClass: Class = e.oclAsType(Class)] 
+  [if (eClass.isNotNull())]
+   [if (eClass.hasStereotype('Emerge'))]
+				double [eClass.name/]Weight = 0;
+   [/if]
+  [/if]
+ [/let]
+ [/for]	 
+[/for] [comment Emerge /]
+				IntBag xPos = null, yPos = null;
+
+[comment Iterate through linked Emerges /]
+[for (assE:Association | c.getAssociations())]
+ [for (e:Element | assE.relatedElement) ]
+ [let eClass: Class = e.oclAsType(Class)] 
+  [if (eClass.isNotNull())]
+   [if (eClass.hasStereotype('Emerge'))]
+	[comment Iterate through linked States and Environments/]
+    [for (assS:Association | eClass.getAssociations())]
+     [for (s:Element | assS.relatedElement) ]
+     [let sClass: Class = s.oclAsType(Class)]
+      [if (sClass.isNotNull())]
+	   [comment Linked States /]
+       [if (sClass.hasStereotype('State'))]
+		[comment Iterate through linked Animats /]
+    	[for (assA:Association | sClass.getAssociations())]
+     	 [for (a:Element | assA.relatedElement) ]
+     	 [let aClass: Class = a.oclAsType(Class)]
+      	  [if (aClass.isNotNull())]
+           [if (aClass.hasStereotype('Animat'))]
+				IntBag xPos = null, yPos = null;
+				scope = [eClass.getTaggedValue(eClass, 'Emerge', 'scope')/];
+				neigh = domain.getNeighborsHamiltonianDistance(x, y, scope, true, null, xPos, yPos);
+				for(int j = 0; j < neigh.numObjs; j++) {
+					Object obj = neigh.get(j);
+					if(obj.getClass() == [aClass.name/].class) {
+						[aClass.name/] obj = ([aClass.name/]) obj;
+						[eClass.name/]Weight += 
+							((obj.getState[sClass.name/]() + 0.0) / 
+							  obj.state[sClass.name/]Max) * [eClass.name/]Prob;
+					}
+				}
+
+           [/if]
+	      [/if]
+	     [/let]
+	     [/for]	 
+	    [/for] [comment Animats /]
+	   [/if] [comment States /]
+	   [if (sClass.hasStereotype('Environment'))]
+				IntBag xPos = null, yPos = null;
+				scope = [eClass.getTaggedValue(eClass, 'Emerge', 'scope')/];
+				neigh = domain.getNeighborsHamiltonianDistance(x, y, scope, true, null, xPos, yPos);
+				for(int j = 0; j < neigh.numObjs; j++) {
+					Object obj = neigh.get(j);
+					if(obj.getClass() == [sClass.name/].class) {
+						[sClass.name/] obj = ([sClass.name/]) obj;
+						[eClass.name/]Weight += 
+							((obj.getValue() + 0.0) / 
+							  obj.valueMax) * [eClass.name/]Prob;
+					}
+				}
+       [/if]
+	  [/if]
+	 [/let]
+	 [/for]	 
+	[/for] [comment States /]
+   [/if]
+  [/if]
+ [/let]
+ [/for]	 
+[/for] [comment Emerges /]		
+				if(
+[comment Iterate through linked Emerge /]
+[for (assE:Association | c.getAssociations())]
+ [for (e:Element | assE.relatedElement) ]
+ [let eClass: Class = e.oclAsType(Class)] 
+  [if (eClass.isNotNull())]
+   [if (eClass.hasStereotype('Emerge'))]
+	[if (eClass.getTaggedValue(eClass, 'Emerge', 'required') = 'true')]
+				 ([eClass.name/]Weight > 0) && 
+    [/if]
+   [/if]
+  [/if]
+ [/let]
+ [/for]	 
+[/for] [comment Emerge /]	
+				 ((
+[comment Iterate through linked Emerge /]
+[for (assE:Association | c.getAssociations())]
+ [for (e:Element | assE.relatedElement) ]
+ [let eClass: Class = e.oclAsType(Class)] 
+  [if (eClass.isNotNull())]
+   [if (eClass.hasStereotype('Emerge'))]
+				  [eClass.name/]Weight + 
+   [/if]
+  [/if]
+ [/let]
+ [/for]	 
+[/for] [comment Emerge /]	
+				  0) > sim.random.nextInt(101)))			
+					sim.create[c.name/](x, y);
+
+		}
+	}	
+}
+[/file]
+[/if]
+[/template]

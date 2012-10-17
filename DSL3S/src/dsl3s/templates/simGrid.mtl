@@ -1,0 +1,35 @@
+[comment encoding = UTF-8 /]
+[module simGrid('http://www.eclipse.org/uml2/3.0.0/UML')]
+[import dsl3s::templates::services/]
+
+[comment
+Date: 11-08-2012    Author: Luís de Sousa
+Generates the field class that stores in space all simulation objects.
+/]
+
+[template public sim_grid(c : Class) ? (c.hasStereotype('Simulation'))]
+
+[file (c.name.concat('Grid.java'), false, 'UTF-8')]
+
+import sim.field.grid.SparseGrid2D;
+
+public class [c.name/]Grid extends SparseGrid2D {
+
+	public [c.name/]Grid (int width, int heigth) {
+		
+		super(width, heigth);
+	}
+	
+	public boolean setObjectLocation(Object obj, int x, int y)
+	{
+		if (x >= this.width) x = 0;
+		if (x < 0) x = this.width - 1;
+		if (y >= this.height) y = 0;
+		if (y < 0) y = this.height - 1;
+		return super.setObjectLocation(obj, x, y);
+	}
+}
+
+
+[/file]
+[/template]

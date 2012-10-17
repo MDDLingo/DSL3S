@@ -1,0 +1,15 @@
+	
+	
+		protected Boolean perish(SimGrid domain) {
+	
+			if(stateVarA < lowerTreshDieA) 
+				return Boolean.TRUE;
+			if(stateVarB > upperTreshDieB) 
+				return Boolean.TRUE;
+			if(stateVarB < lowerTreshDieB) 
+				return Boolean.TRUE;
+	
+			return Boolean.FALSE;
+		}
+	
+
