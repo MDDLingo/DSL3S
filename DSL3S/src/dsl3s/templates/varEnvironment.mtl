@@ -31,7 +31,7 @@ public class [c.name/] implements Steppable, Stoppable {
 	}
 	
 	public Integer harvestValue(Integer percent) {
-		Integer harvested = value * (100.0 / percent);
+		Integer harvested = (int) Math.round(value * (100.0 / percent));
 		setValue(value - harvested);
 		return harvested;
 	}
@@ -48,7 +48,7 @@ public class [c.name/] implements Steppable, Stoppable {
 		value = randGen.nextInt(valueMax - valueMin) + valueMin;
 	}
 	
-	@Override
+	//@Override
 	public void step(SimState state) { setValue(value + stepVar); }
 	
 	[comment Makes sense? Must rethink this. /]

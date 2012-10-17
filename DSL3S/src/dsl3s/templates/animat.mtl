@@ -47,7 +47,7 @@ public class [c.name/] implements Steppable, Stoppable {
 	public Integer getState[sClass.name/]() {return state[sClass.name/];}
     public void setState[sClass.name/](Integer newState) {state[sClass.name/] = newState;}
 	public Integer harvestState[sClass.name/](Integer percent) {
-		Integer harvested = state[sClass.name/] * (100.0 / percent);
+		Integer harvested = (int) Math.round(state[sClass.name/] * (100.0 / percent));
 		state[sClass.name/] -= harvested;
 		return harvested;
 	}
@@ -120,6 +120,8 @@ public class [c.name/] implements Steppable, Stoppable {
     public void setStopper(Stoppable stopper)   {this.stopper = stopper;}
     public void stop() {stopper.stop();}
 
+	public [c.name/](SimGrid domain) {this.domain = domain;}
+
 	public static Integer getMinDisplayValue() {
 
 		return
@@ -178,15 +180,28 @@ public class [c.name/] implements Steppable, Stoppable {
 }
 
 
-	@Override
+	//@Override
 	public void step(SimState state) {
 		
 		Sim sim = (Sim) state;
 		SimGrid domain = sim.getSimDomain();
 		Int2D location = domain.getObjectLocation(this);
-		
-		harvest(location);
-		
+
+[comment Iterate through linked States /]
+[for (ass:Association | c.getAssociations())]
+ [for (s:Element | ass.relatedElement) ]
+  [let sClass: Class = s.oclAsType(Class)]
+   [if (sClass.isNotNull())]
+    [if (sClass.hasStereotype('State'))]
+	 [if (sClass.hasLinkedStereotype('Harvest'))]
+		harvest[sClass.name/](location);
+	 [/if]
+   [/if]
+  [/if]
+ [/let]
+ [/for]	 
+[/for] [comment States /]
+
 		if (perish(domain)) {
 			domain.remove(this);
 			this.stop();
