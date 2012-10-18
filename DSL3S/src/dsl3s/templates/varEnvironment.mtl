@@ -27,11 +27,11 @@ public class [c.name/] implements Steppable, Stoppable {
 	public void setValue(int newValue) {
 		value = newValue;
 		if (value > valueMax) value = valueMax;
-		if (value > valueMin) value = valueMin;
+		if (value < valueMin) value = valueMin;
 	}
 	
 	public Integer harvestValue(Integer percent) {
-		Integer harvested = (int) Math.round(value * (100.0 / percent));
+		Integer harvested = (int) Math.round(value * (percent / 100.0));
 		setValue(value - harvested);
 		return harvested;
 	}

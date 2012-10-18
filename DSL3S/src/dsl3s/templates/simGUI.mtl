@@ -80,7 +80,7 @@ public class [c.name /]GUI extends GUIState {
  [/for]	 
 [/for]
 
-[comment Iterate through Animats /]
+[comment Iterate through Environments /]
 [for (ass:Association | c.getAssociations())]
   [for (e:Element | ass.relatedElement) ]
    [let eClass: Class = e.oclAsType(Class)]

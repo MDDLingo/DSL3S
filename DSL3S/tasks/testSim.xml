@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="testSim" name="DSL3S">
-    <property name="ECLIPSE_HOME" value="../../../../../../../../../usr/local/eclipse.indigo"/>
-    <property name="ECLIPSE_WORKSPACE" value="../.."/>
+    <property name="ECLIPSE_HOME" value="../../../../../../usr/local/eclipse.indigo"/>
+    <property name="ECLIPSE_WORKSPACE" value="../../../../../../media/Data/users/lads/Trabalho/Eclipse/Workspace.DSL3S"/>
 
     <!-- The classpath with only the dependencies used by the project -->
     <path id="DSL3S.libraryclasspath">

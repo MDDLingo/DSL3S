@@ -47,7 +47,7 @@ public class [c.name/] implements Steppable, Stoppable {
 	public Integer getState[sClass.name/]() {return state[sClass.name/];}
     public void setState[sClass.name/](Integer newState) {state[sClass.name/] = newState;}
 	public Integer harvestState[sClass.name/](Integer percent) {
-		Integer harvested = (int) Math.round(state[sClass.name/] * (100.0 / percent));
+		Integer harvested = (int) Math.round(state[sClass.name/] * (percent / 100.0));
 		state[sClass.name/] -= harvested;
 		return harvested;
 	}

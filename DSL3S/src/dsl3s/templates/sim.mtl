@@ -46,6 +46,16 @@ public class [c.name/] extends SimState {
 		
 		simDomain = new SimGrid(spaceWidth, spaceHeight);
 
+ [for (ass:Association | c.getAssociations())]
+  [for (p:Property | ass.memberEnd) ]
+   [if (p.class.isNotNull())]
+    [if (p.class.hasStereotype('Environment'))]
+		init[p.class.name/]Objects();
+    [/if]
+   [/if]
+  [/for]	 
+ [/for]
+
 		// At this stage animats are cast at random locations.
 		// In the future this may be set with a spatial layer.
  [for (ass:Association | c.getAssociations())]
@@ -60,22 +70,37 @@ public class [c.name/] extends SimState {
   [/for]	 
  [/for]
 
- [for (ass:Association | c.getAssociations())]
-  [for (p:Property | ass.memberEnd) ]
-   [if (p.class.isNotNull())]
-    [if (p.class.hasStereotype('Environment'))]
-		init[p.class.name/]Objects();
-    [/if]
-   [/if]
-  [/for]	 
- [/for]
-
 		schedule.scheduleRepeating(schedule.EPOCH, 1, new Steppable()
 		{
 			public void step(SimState state) { 
 			}
 		});
 	}
+
+ [for (ass:Association | c.getAssociations())]
+  [for (p:Element | ass.relatedElement) ]
+   [let pClass: Class = p.oclAsType(Class)]
+    [if (pClass.isNotNull())]
+     [if (pClass.hasStereotype('Environment'))]
+	public void init[pClass.name/]Objects() {
+
+		for (int i=0; i < simDomain.getWidth(); i++)
+			for (int j=0; j < simDomain.getHeight(); j++)
+			{
+			  [if (pClass.getTaggedValue(pClass, 'Environment', 'initRandom') = 'true')]
+				[pClass.name/] obj = new [pClass.name/](random);
+			  [else]
+				[pClass.name/] obj = new [pClass.name/]();
+			  [/if]
+				obj.setStopper(schedule.scheduleRepeating(obj));
+				simDomain.setObjectLocation(obj, i, j);
+			}
+	}
+     [/if]
+    [/if]
+   [/let]
+  [/for]	 
+ [/for]
 
  [for (ass:Association | c.getAssociations())]
   [for (p:Property | ass.memberEnd) ]
@@ -88,29 +113,6 @@ public class [c.name/] extends SimState {
 		return new[p.class.name/];
 	}
 
-    [/if]
-   [/if]
-  [/for]	 
- [/for]
-
- [for (ass:Association | c.getAssociations())]
-  [for (p:Property | ass.memberEnd) ]
-   [if (p.class.isNotNull())]
-    [if (p.class.hasStereotype('Environment'))]
-	public void init[p.class.name/]Objects() {
-
-		for (int i=0; i < simDomain.getWidth(); i++)
-			for (int j=0; j < simDomain.getHeight(); j++)
-			{
-			  [if (p.class.getTaggedValue(p.class, 'Environment', 'initRandom') = 'TRUE')]
-				[p.class.name/] obj = new [p.class.name/](random);
-			  [else]
-				[p.class.name/] obj = new [p.class.name/]();
-			  [/if]
-				obj.setStopper(schedule.scheduleRepeating(obj));
-				simDomain.setObjectLocation(obj, i, j);
-			}
-	}
     [/if]
    [/if]
   [/for]	 
