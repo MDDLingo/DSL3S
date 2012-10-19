@@ -25,6 +25,10 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bxu5kRVuEeKKubxyzHq1vA" value="1"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bxu5khVuEeKKubxyzHq1vA" value="1"/>
       </ownedAttribute>
+      <ownedAttribute xmi:id="_MsRhsBohEeKN07hQpA-1_g" name="" type="_Jam8oBohEeKN07hQpA-1_g" association="_MsSIwBohEeKN07hQpA-1_g">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MsRhsRohEeKN07hQpA-1_g" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MsRhshohEeKN07hQpA-1_g" value="1"/>
+      </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_3R_AABViEeKKubxyzHq1vA" name="Pasture">
       <ownedAttribute xmi:id="_BkDswBVjEeKKubxyzHq1vA" name="sim" type="_l0mjIBViEeKKubxyzHq1vA" association="_BkE64BVjEeKKubxyzHq1vA">
@@ -228,6 +232,24 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LSb4wxVyEeKKubxyzHq1vA" value="1"/>
       </ownedEnd>
     </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Jam8oBohEeKN07hQpA-1_g" name="MovePredator">
+      <ownedAttribute xmi:id="_NP82gBohEeKN07hQpA-1_g" name="" type="_mB-FMBVsEeKKubxyzHq1vA" association="_NP-rsBohEeKN07hQpA-1_g">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NP82gRohEeKN07hQpA-1_g" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NP82ghohEeKN07hQpA-1_g" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_MsSIwBohEeKN07hQpA-1_g" name="prey_movePredator_0" memberEnd="_MsSIwRohEeKN07hQpA-1_g _MsRhsBohEeKN07hQpA-1_g">
+      <ownedEnd xmi:id="_MsSIwRohEeKN07hQpA-1_g" name="" type="_z1g5IBViEeKKubxyzHq1vA" association="_MsSIwBohEeKN07hQpA-1_g">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MsSIwhohEeKN07hQpA-1_g" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MsSIwxohEeKN07hQpA-1_g" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_NP-rsBohEeKN07hQpA-1_g" name="movePredator_predEnergy_0" memberEnd="_NP-rsRohEeKN07hQpA-1_g _NP82gBohEeKN07hQpA-1_g">
+      <ownedEnd xmi:id="_NP-rsRohEeKN07hQpA-1_g" name="" type="_Jam8oBohEeKN07hQpA-1_g" association="_NP-rsBohEeKN07hQpA-1_g">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NP-rshohEeKN07hQpA-1_g" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NP-rsxohEeKN07hQpA-1_g" value="1"/>
+      </ownedEnd>
+    </packagedElement>
     <profileApplication xmi:id="_lDt4wBViEeKKubxyzHq1vA">
       <eAnnotations xmi:id="_lEDP8BViEeKKubxyzHq1vA" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="../profile/DSL3S.profile.uml#_N7yn0BBoEeK1GvJRYsZ8vQ"/>
@@ -249,4 +271,5 @@
   <profile:Move xmi:id="_aPN98BVuEeKKubxyzHq1vA" base_Class="_YHKsUBVuEeKKubxyzHq1vA" weight="1"/>
   <profile:Move xmi:id="_xspKUBVxEeKKubxyzHq1vA" base_Class="_5U5KkBVwEeKKubxyzHq1vA" weight="1"/>
   <profile:Harvest xmi:id="_BBNgkBVyEeKKubxyzHq1vA" base_Class="_euFOkBVxEeKKubxyzHq1vA" harvested="PreyEnergy" percentHarvested="100"/>
+  <profile:Move xmi:id="_iQkJkBohEeKN07hQpA-1_g" base_Class="_Jam8oBohEeKN07hQpA-1_g" weight="2"/>
 </xmi:XMI>

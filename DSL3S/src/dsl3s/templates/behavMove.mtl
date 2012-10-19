@@ -12,7 +12,7 @@ Issues:
 [template public behavMove(c : Class) ? (c.hasStereotype('Animat'))]
 [comment Check first if this class has linked Moved stereotypes /]
 [if (c.hasLinkedStereotype('Move'))]	
-	public void move(Int2D location) {
+	public void move(Int2D location, Sim sim) {
 		
 		IntBag xPos = new IntBag();
 		IntBag yPos = new IntBag();
@@ -75,7 +75,15 @@ Issues:
 				best = weigth;
 			}
 		}
-		
+
+ [if (c.getTaggedValue(c, 'Animat', 'wanderer') = 'true')]
+		//Wander if nothing interesting around
+		if((nextX == location.x) && (nextY == location.y)){
+			nextX = randMove(nextX, sim.random);
+			nextY = randMove(nextY, sim.random);
+		}
+ [/if]
+
 		domain.setObjectLocation(this,nextX,nextY);
 	}
 [/if] [comment Linked check /]
