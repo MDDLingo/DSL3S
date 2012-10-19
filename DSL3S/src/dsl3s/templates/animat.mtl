@@ -210,7 +210,7 @@ public class [c.name/] implements Steppable, Stoppable {
 		
 		replicate(location, sim);
 		
-		move(location);
+		move(location, sim);
 		
 		// Update state variables
  [for (ass:Association | c.getAssociations())]
