@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:profile="http:///schemas/profile/_V-yuUB00EeKTUOpZbz254A/17" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/profile/_V-yuUB00EeKTUOpZbz254A/17 ../../profile/DSL3S.profile.uml#_WnlMoB00EeKTUOpZbz254A">
+  <uml:Model xmi:id="_qgnzoB00EeKTUOpZbz254A" name="model">
+    <packagedElement xmi:type="uml:Class" xmi:id="_uFclQB00EeKTUOpZbz254A" name="Harvested"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_DGHisB01EeKTUOpZbz254A" name="HarvestedState">
+      <ownedAttribute xmi:id="_GIw0UB01EeKTUOpZbz254A" name="harvested" type="_uFclQB00EeKTUOpZbz254A" association="_GIxbYB01EeKTUOpZbz254A">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GIw0UR01EeKTUOpZbz254A" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GIw0Uh01EeKTUOpZbz254A" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_GIxbYB01EeKTUOpZbz254A" name="harvestedState_harvested_0" memberEnd="_GIxbYR01EeKTUOpZbz254A _GIw0UB01EeKTUOpZbz254A">
+      <ownedEnd xmi:id="_GIxbYR01EeKTUOpZbz254A" name="harvestedState" type="_DGHisB01EeKTUOpZbz254A" association="_GIxbYB01EeKTUOpZbz254A">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GIxbYh01EeKTUOpZbz254A" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GIxbYx01EeKTUOpZbz254A" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_JHTpEB01EeKTUOpZbz254A" name="Harvester"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_LFqMIB01EeKTUOpZbz254A" name="HarvesterState">
+      <ownedAttribute xmi:id="_MM-ZgB01EeKTUOpZbz254A" name="harvester" type="_JHTpEB01EeKTUOpZbz254A" association="_MM_noB01EeKTUOpZbz254A">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MM-ZgR01EeKTUOpZbz254A" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MM-Zgh01EeKTUOpZbz254A" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_MM_noB01EeKTUOpZbz254A" name="harvesterState_harvester_0" memberEnd="_MM_noR01EeKTUOpZbz254A _MM-ZgB01EeKTUOpZbz254A">
+      <ownedEnd xmi:id="_MM_noR01EeKTUOpZbz254A" name="harvesterState" type="_LFqMIB01EeKTUOpZbz254A" association="_MM_noB01EeKTUOpZbz254A">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MM_noh01EeKTUOpZbz254A" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MM_nox01EeKTUOpZbz254A" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Nkg0MB01EeKTUOpZbz254A" name="Harvest">
+      <ownedAttribute xmi:id="_RofnAB01EeKTUOpZbz254A" name="harvestedState" type="_DGHisB01EeKTUOpZbz254A" association="_RoiqUB01EeKTUOpZbz254A">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RofnAR01EeKTUOpZbz254A" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RofnAh01EeKTUOpZbz254A" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_VH6UMB01EeKTUOpZbz254A" name="harvesterState" type="_LFqMIB01EeKTUOpZbz254A" association="_VH9-kB01EeKTUOpZbz254A">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VH6UMR01EeKTUOpZbz254A" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VH6UMh01EeKTUOpZbz254A" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_RoiqUB01EeKTUOpZbz254A" name="harvest_harvestedState_0" memberEnd="_RoiqUR01EeKTUOpZbz254A _RofnAB01EeKTUOpZbz254A">
+      <ownedEnd xmi:id="_RoiqUR01EeKTUOpZbz254A" name="harvest" type="_Nkg0MB01EeKTUOpZbz254A" association="_RoiqUB01EeKTUOpZbz254A">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RoiqUh01EeKTUOpZbz254A" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RoiqUx01EeKTUOpZbz254A" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_VH9-kB01EeKTUOpZbz254A" name="harvest_harvesterState_0" memberEnd="_VH9-kR01EeKTUOpZbz254A _VH6UMB01EeKTUOpZbz254A">
+      <ownedEnd xmi:id="_VH9-kR01EeKTUOpZbz254A" name="harvest" type="_Nkg0MB01EeKTUOpZbz254A" association="_VH9-kB01EeKTUOpZbz254A">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VH9-kh01EeKTUOpZbz254A" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VH9-kx01EeKTUOpZbz254A" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <profileApplication xmi:id="_tj8asB00EeKTUOpZbz254A">
+      <eAnnotations xmi:id="_tkU1MB00EeKTUOpZbz254A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../../profile/DSL3S.profile.uml#_WnlMoB00EeKTUOpZbz254A"/>
+      </eAnnotations>
+      <appliedProfile href="../../profile/DSL3S.profile.uml#_akJ9MZxOEeGZz4LhQjKg0g"/>
+    </profileApplication>
+  </uml:Model>
+  <profile:Animat xmi:id="_wIgCIB00EeKTUOpZbz254A" base_Class="_uFclQB00EeKTUOpZbz254A"/>
+  <profile:State xmi:id="_FeyDMB01EeKTUOpZbz254A" base_Class="_DGHisB01EeKTUOpZbz254A"/>
+  <profile:State xmi:id="_Pkeg0B01EeKTUOpZbz254A" base_Class="_LFqMIB01EeKTUOpZbz254A"/>
+  <profile:Animat xmi:id="_Qj5WcB01EeKTUOpZbz254A" base_Class="_JHTpEB01EeKTUOpZbz254A"/>
+  <profile:Harvest xmi:id="_X-m0gB01EeKTUOpZbz254A" base_Class="_Nkg0MB01EeKTUOpZbz254A" harvested="HarvestedState" percentHarvested="null" maxIntake="null" valueHarvest="5"/>
+</xmi:XMI>

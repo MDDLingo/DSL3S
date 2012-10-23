@@ -40,21 +40,21 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
 	private Stoppable stopper = null;
     public void setStopper(Stoppable stopper) {this.stopper = stopper;}
 
-	@Override
+	//@Override
 	public void stop() {
 		// TODO Auto-generated method stub
 		stopper.stop();
 	}
 
-	@Override
+	//@Override
 	public void step(SimState state) {
 
 		Sim sim = (Sim) state;
 		SimGrid domain = sim.simDomain;
 		int scope;
 
-		for(int x = 0; x < sim.gridWidth; x++)
-			for(int y = 0; y < sim.gridWidth; y++) {
+		for(int x = 0; x < sim.spaceWidth; x++)
+			for(int y = 0; y < sim.spaceHeight; y++) {
 [comment Iterate through linked Emerge /]
 [for (assE:Association | c.getAssociations())]
  [for (e:Element | assE.relatedElement) ]
@@ -68,6 +68,7 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
  [/for]	 
 [/for] [comment Emerge /]
 				IntBag xPos = null, yPos = null;
+				Bag neigh;
 
 [comment Iterate through linked Emerges /]
 [for (assE:Association | c.getAssociations())]
@@ -88,17 +89,14 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
      	 [let aClass: Class = a.oclAsType(Class)]
       	  [if (aClass.isNotNull())]
            [if (aClass.hasStereotype('Animat'))]
-				IntBag xPos = null, yPos = null;
 				scope = [eClass.getTaggedValue(eClass, 'Emerge', 'scope')/];
 				neigh = domain.getNeighborsHamiltonianDistance(x, y, scope, true, null, xPos, yPos);
 				for(int j = 0; j < neigh.numObjs; j++) {
 					Object obj = neigh.get(j);
-					if(obj.getClass() == [aClass.name/].class) {
-						[aClass.name/] obj = ([aClass.name/]) obj;
+					if(obj.getClass() == [aClass.name/].class)
 						[eClass.name/]Weight += 
-							((obj.getState[sClass.name/]() + 0.0) / 
-							  obj.state[sClass.name/]Max) * [eClass.name/]Prob;
-					}
+							(((([aClass.name/]) obj).getState[sClass.name/]() + 0.0) / 
+							  [aClass.name/].state[sClass.name/]Max) * [eClass.name/]Prob;
 				}
 
            [/if]
@@ -108,18 +106,16 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
 	    [/for] [comment Animats /]
 	   [/if] [comment States /]
 	   [if (sClass.hasStereotype('Environment'))]
-				IntBag xPos = null, yPos = null;
 				scope = [eClass.getTaggedValue(eClass, 'Emerge', 'scope')/];
 				neigh = domain.getNeighborsHamiltonianDistance(x, y, scope, true, null, xPos, yPos);
 				for(int j = 0; j < neigh.numObjs; j++) {
 					Object obj = neigh.get(j);
-					if(obj.getClass() == [sClass.name/].class) {
-						[sClass.name/] obj = ([sClass.name/]) obj;
+					if(obj.getClass() == [sClass.name/].class)
 						[eClass.name/]Weight += 
-							((obj.getValue() + 0.0) / 
-							  obj.valueMax) * [eClass.name/]Prob;
-					}
+							(((([sClass.name/]) obj).getValue() + 0.0) / 
+							  [sClass.name/].valueMax) * [eClass.name/]Prob;
 				}
+
        [/if]
 	  [/if]
 	 [/let]

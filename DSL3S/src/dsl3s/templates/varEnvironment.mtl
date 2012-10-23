@@ -30,10 +30,17 @@ public class [c.name/] implements Steppable, Stoppable {
 		if (value < valueMin) value = valueMin;
 	}
 	
-	public Integer harvestValue(Integer percent) {
+	public Integer harvestPercent(Integer percent) {
 		Integer harvested = (int) Math.round(value * (percent / 100.0));
 		setValue(value - harvested);
 		return harvested;
+	}
+	public Integer harvestValue(Integer val) {
+		Integer res;
+		if(val < value) res = val;
+		else res = value;
+		setValue(value - val);
+		return res;
 	}
 
 	private Stoppable stopper = null;

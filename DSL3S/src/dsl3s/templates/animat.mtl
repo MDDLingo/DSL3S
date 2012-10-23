@@ -45,11 +45,24 @@ public class [c.name/] implements Steppable, Stoppable {
 	protected static Integer state[sClass.name/]Max = [sClass.getTaggedValue(sClass, 'State', 'maxValue')/];
 	protected static Integer state[sClass.name/]Var = [sClass.getTaggedValue(sClass, 'State', 'stepVariation')/];
 	public Integer getState[sClass.name/]() {return state[sClass.name/];}
-    public void setState[sClass.name/](Integer newState) {state[sClass.name/] = newState;}
-	public Integer harvestState[sClass.name/](Integer percent) {
+    public void setState[sClass.name/](Integer newState) {
+		state[sClass.name/] = newState;
+		if (state[sClass.name/] < state[sClass.name/]Min) 
+			state[sClass.name/] = state[sClass.name/]Min;
+		if (state[sClass.name/] > state[sClass.name/]Max) 
+			state[sClass.name/] = state[sClass.name/]Max;
+	}
+	public Integer harvestPercent[sClass.name/](Integer percent) {
 		Integer harvested = (int) Math.round(state[sClass.name/] * (percent / 100.0));
 		state[sClass.name/] -= harvested;
 		return harvested;
+	}
+	public Integer harvestValue[sClass.name/](Integer value) {
+		Integer res;
+		if(value < state[sClass.name/]) res = value;
+		else res = state[sClass.name/];
+		setState[sClass.name/](state[sClass.name/] - value);
+		return res;
 	}
 
 	[comment Iterate through linked Replicate /]
@@ -96,6 +109,24 @@ public class [c.name/] implements Steppable, Stoppable {
       [/for]	 
      [/for] [comment Replicate/]
 
+	// Harvest constants
+     [for (assP:Association | sClass.getAssociations())]
+      [for (p:Element | assP.relatedElement) ]
+	   [let pClass : Class = p.oclAsType(Class)]
+       [if (pClass.isNotNull())]
+        [if (pClass.hasStereotype('Harvest'))]
+	     [if (pClass.getTaggedValue(pClass, 'Harvest', 'percentHarvested').isNotNull())]
+ 	protected static Integer percent[pClass.name/] = [pClass.getTaggedValue(pClass, 'Harvest', 'percentHarvested')/];	
+	     [/if]
+	     [if (pClass.getTaggedValue(pClass, 'Harvest', 'valueHarvest').isNotNull())]
+ 	protected static Integer value[pClass.name/] = [pClass.getTaggedValue(pClass, 'Harvest', 'valueHarvest')/];			
+	     [/if]
+        [/if]
+       [/if]
+      [/let]
+      [/for]	 
+     [/for] [comment Harvest/]
+
 	///////////////////////////////////////////////////////
      [/if]
     [/if]
@@ -115,6 +146,9 @@ public class [c.name/] implements Steppable, Stoppable {
    [/let]
   [/for]	 
  [/for]
+
+
+
 
 	private Stoppable stopper = null;
     public void setStopper(Stoppable stopper)   {this.stopper = stopper;}
@@ -187,6 +221,19 @@ public class [c.name/] implements Steppable, Stoppable {
 		SimGrid domain = sim.getSimDomain();
 		Int2D location = domain.getObjectLocation(this);
 
+		// Update state variables
+ [for (ass:Association | c.getAssociations())]
+  [for (p:Element | ass.relatedElement) ]
+   [let pClass: Class = p.oclAsType(Class)]
+    [if (pClass.isNotNull())]
+     [if (pClass.hasStereotype('State'))]
+		setState[pClass.name/](state[pClass.name/] += state[pClass.name/]Var);
+	 [/if]
+    [/if]
+   [/let]
+  [/for]	 
+ [/for]
+
 [comment Iterate through linked States /]
 [for (ass:Association | c.getAssociations())]
  [for (s:Element | ass.relatedElement) ]
@@ -209,22 +256,10 @@ public class [c.name/] implements Steppable, Stoppable {
 		}
 		
 		replicate(location, sim);
-		
-		move(location, sim);
-		
-		// Update state variables
- [for (ass:Association | c.getAssociations())]
-  [for (p:Element | ass.relatedElement) ]
-   [let pClass: Class = p.oclAsType(Class)]
-    [if (pClass.isNotNull())]
-     [if (pClass.hasStereotype('State'))]
-		state[pClass.name/] += state[pClass.name/]Var;
-	 [/if]
-    [/if]
-   [/let]
-  [/for]	 
- [/for]
 
+ [if (c.hasLinkedStereotype('Move'))]
+		move(location, sim);
+ [/if]
 	}
 
  [c.behavHarvest() /]

@@ -65,6 +65,10 @@ public class [c.name/] extends SimState {
 		for(int i = 0; i < initNum[p.class.name/]; i++)
 			create[p.class.name/](random.nextInt(spaceWidth), random.nextInt(spaceHeight));
 
+	 [if (p.class.hasLinkedStereotype('Emerge'))]
+		createEmerge[p.class.name/]();	
+	 [/if]
+
     [/if]
    [/if]
   [/for]	 
@@ -112,6 +116,13 @@ public class [c.name/] extends SimState {
 		simDomain.setObjectLocation(new[p.class.name/], x, y);
 		return new[p.class.name/];
 	}
+
+	 [if (p.class.hasLinkedStereotype('Emerge'))]
+	public void createEmerge[p.class.name/]() {
+		[p.class.name/]Emerge emerge = new [p.class.name/]Emerge();
+		emerge.setStopper(schedule.scheduleRepeating(emerge));
+	}
+	 [/if]
 
     [/if]
    [/if]

@@ -31,11 +31,11 @@ Issues:
        [if (pClass.isNotNull())]
         [if (pClass.hasStereotype('Perish'))]
 		 [if pClass.getTaggedValue(pClass, 'Perish', 'upperTreshold').isNotNull()]
-		if(state[sClass.name/] > upperTresh[pClass.name/]) 
+		if(state[sClass.name/] >= upperTresh[pClass.name/]) 
 			return Boolean.TRUE;
 		 [/if]
 		 [if pClass.getTaggedValue(pClass, 'Perish', 'lowerTreshold').isNotNull()]
-		if(state[sClass.name/] < lowerTresh[pClass.name/]) 
+		if(state[sClass.name/] <= lowerTresh[pClass.name/]) 
 			return Boolean.TRUE;
 		 [/if]
        [/if]

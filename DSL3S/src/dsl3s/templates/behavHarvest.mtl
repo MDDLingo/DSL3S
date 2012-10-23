@@ -10,7 +10,8 @@ the Animat stereotype, so that it only generates the code for a specific
 class of that type.
 
 Issues:
-. Doesn't include harvest rate or harvest amount
+. Doesn't include max harvest amount
+. Generates a function for the harvested Animat
 /]
 
 [template public behavHarvest(c : Class) ? (c.hasStereotype('Animat'))]
@@ -48,8 +49,15 @@ Issues:
                     [if (haClass.name <> c.name)]
 
 			if(obj.getClass() == [haClass.name/].class) {
+				     [if (hClass.getTaggedValue(hClass, 'Harvest', 'percentHarvested').isNotNull())]
 				this.state[sClass.name/] += 
-					(([haClass.name/]) obj).harvestState[hsClass.name/]([hClass.getTaggedValue(hClass, 'Harvest', 'percentHarvested')/]);
+					(([haClass.name/]) obj).harvestPercent[hsClass.name/](percent[hClass.name/]);
+			         [/if]
+			         [if (hClass.getTaggedValue(hClass, 'Harvest', 'valueHarvested').isNotNull())]
+				this.state[sClass.name/] += 
+					(([haClass.name/]) obj).harvestValue[hsClass.name/](value[hClass.name/]);
+			         [/if]
+
 				(([haClass.name/]) obj).perish(domain);
 			}
                   [/if]
@@ -71,8 +79,15 @@ Issues:
              [if (heClass.hasStereotype('Environment'))]
 		
 			if(obj.getClass() == [heClass.name/].class) {
+			  [if (hClass.getTaggedValue(hClass, 'Harvest', 'percentHarvested') <> 'null')]
 				this.state[sClass.name/] += 
-					(([heClass.name/]) obj).harvestValue([hClass.getTaggedValue(hClass, 'Harvest', 'percentHarvested')/]);
+					(([heClass.name/]) obj).harvestPercent(percent[hClass.name/]);
+			  [/if]
+			  [if (hClass.getTaggedValue(hClass, 'Harvest', 'valueHarvested') <> 'null')]
+				this.state[sClass.name/] +=
+					(([heClass.name/]) obj).harvestValue(value[hClass.name/]);
+				
+			  [/if]
 				(([heClass.name/]) obj).perish(location, domain);
 			}
              [/if]

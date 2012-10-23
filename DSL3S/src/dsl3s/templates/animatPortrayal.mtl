@@ -27,7 +27,8 @@ public class [c.name/]Portrayal extends OvalPortrayal2D {
 	final SimpleColorMap map = new SimpleColorMap(
 		[c.name/].getMinDisplayValue(), 
 		[c.name/].getMaxDisplayValue(), 
-		new Color(128, 128, 255), new Color(64, 64, 186));
+		new Color([c.getTaggedValue(c, 'Animat', 'colourMin')/]), 
+		new Color([c.getTaggedValue(c, 'Animat', 'colourMax')/]));
 	
 	public void draw(Object object, Graphics2D graphics, DrawInfo2D info)
     {

@@ -4,68 +4,6 @@
 fieldWidth
 fieldHeight
 
-############################
-## Variable
-
-maxValue
-minValue
-initValue
-stepVariation
-initRandom?
-display? - indicates if this is the variable used in the draw
-
-############################
-## Animat
-
-=> add default value for initNum
-initial number (negative to cover the complete field?)
-movement radius
-wander?
-
-############################
-## Replicate
-
-upperTreshold
-lowerTreshold
-toll
-inheritance
-=> change inheritance type
-
-############################
-## Move
-
-weight
-neighbourghood distance?
-
-############################
-## Perish
-
-upperTreshold
-lowerTreshold
-
-############################
-## Harvest
-
-percent harvested?
-value harvested?
-harvest factor?
-=> what's the difference between harvest factor and percent harvested?
-
-############################
-## Simulation
-
-fieldWidth
-fieldHeight
-
-############################
-## Variable
-
-maxValue
-minValue
-initValue
-stepVariation
-initRandom?
-display? - indicates if this is the variable used in the draw
 
 ############################
 ## Animat
@@ -73,8 +11,27 @@ display? - indicates if this is the variable used in the draw
 initial number (negative to cover the complete field?)
 movement radius 
 => should this be in Move?
-
 wander?
+
+############################
+## Environment
+
+maxValue
+minValue
+initValue
+stepVariation
+initRandom?
+display? - indicates if this is the variable used in the draw
+
+############################
+## Variable Global
+
+maxValue
+minValue
+initValue
+stepVariation
+initRandom?
+display? - indicates if this is the variable used in the draw
 
 ############################
 ## Replicate
@@ -83,6 +40,14 @@ upperTreshold
 lowerTreshold
 toll
 inheritance
+
+############################
+## Harvest
+
+harvested (the class)
+percentHarvested
+maxIntake
+=> make the attribute names congruent
 
 ############################
 ## Move
@@ -95,14 +60,6 @@ neighbourghood distance?
 
 upperTreshold
 lowerTreshold
-
-############################
-## Harvest
-
-percent harvested?
-value harvested?
-harvest factor?
-=> difference between harvest factor and percent harvested?
 
 ############################
 ## Emerge
@@ -115,12 +72,14 @@ required
 
 
 
+Prey
+new Color(128, 128, 255), new Color(64, 64, 186));
 
+Pasture
+new Color(224, 224, 128), new Color(32, 128, 32));
 
-
-
-
-
+Predator
+new Color(255, 64, 64), new Color(255, 0, 0));
 
 
 
