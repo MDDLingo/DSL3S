@@ -53,7 +53,7 @@ Issues:
 				this.state[sClass.name/] += 
 					(([haClass.name/]) obj).harvestPercent[hsClass.name/](percent[hClass.name/]);
 			         [/if]
-			         [if (hClass.getTaggedValue(hClass, 'Harvest', 'valueHarvested').isNotNull())]
+			         [if (hClass.getTaggedValue(hClass, 'Harvest', 'valueHarvest').isNotNull())]
 				this.state[sClass.name/] += 
 					(([haClass.name/]) obj).harvestValue[hsClass.name/](value[hClass.name/]);
 			         [/if]
@@ -83,7 +83,7 @@ Issues:
 				this.state[sClass.name/] += 
 					(([heClass.name/]) obj).harvestPercent(percent[hClass.name/]);
 			  [/if]
-			  [if (hClass.getTaggedValue(hClass, 'Harvest', 'valueHarvested') <> 'null')]
+			  [if (hClass.getTaggedValue(hClass, 'Harvest', 'valueHarvest') <> 'null')]
 				this.state[sClass.name/] +=
 					(([heClass.name/]) obj).harvestValue(value[hClass.name/]);
 				

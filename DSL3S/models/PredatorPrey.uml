@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:profile="http:///schemas/profile/_NRxacBBoEeK1GvJRYsZ8vQ/12" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/profile/_NRxacBBoEeK1GvJRYsZ8vQ/12 file:/media/Data/users/lads/Trabalho/Eclipse/Workspace.New/DSL3S/profile/DSL3S.profile.uml#_N7yn0BBoEeK1GvJRYsZ8vQ">
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:profile="http:///schemas/profile/_NRxacBBoEeK1GvJRYsZ8vQ/12" xmlns:profile_1="http:///schemas/profile/_V-yuUB00EeKTUOpZbz254A/17" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/profile/_NRxacBBoEeK1GvJRYsZ8vQ/12 file:/media/Data/users/lads/Trabalho/Eclipse/Workspace.New/DSL3S/profile/DSL3S.profile.uml#_N7yn0BBoEeK1GvJRYsZ8vQ http:///schemas/profile/_V-yuUB00EeKTUOpZbz254A/17 ../profile/DSL3S.profile.uml#_WnlMoB00EeKTUOpZbz254A">
   <uml:Model xmi:id="_uoB9EBVhEeKfCYUGa0wThA" name="model">
     <packagedElement xmi:type="uml:Class" xmi:id="_l0mjIBViEeKKubxyzHq1vA" name="Sim"/>
     <packagedElement xmi:type="uml:Class" xmi:id="_ui_PkBViEeKKubxyzHq1vA" name="Predator">
@@ -252,24 +252,24 @@
     </packagedElement>
     <profileApplication xmi:id="_lDt4wBViEeKKubxyzHq1vA">
       <eAnnotations xmi:id="_lEDP8BViEeKKubxyzHq1vA" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="../profile/DSL3S.profile.uml#_N7yn0BBoEeK1GvJRYsZ8vQ"/>
+        <references xmi:type="ecore:EPackage" href="../profile/DSL3S.profile.uml#_WnlMoB00EeKTUOpZbz254A"/>
       </eAnnotations>
       <appliedProfile href="../profile/DSL3S.profile.uml#_akJ9MZxOEeGZz4LhQjKg0g"/>
     </profileApplication>
   </uml:Model>
   <profile:Simulation xmi:id="_pdOPoBViEeKKubxyzHq1vA" simulName="Predator Prey model" base_Class="_l0mjIBViEeKKubxyzHq1vA" spaceHeight="100" spaceWidth="100"/>
-  <profile:Animat xmi:id="_wndBsBViEeKKubxyzHq1vA" base_Class="_ui_PkBViEeKKubxyzHq1vA" initNum="10" scopeRadius="1" wanderer="true"/>
-  <profile:Animat xmi:id="_1C-x0BViEeKKubxyzHq1vA" base_Class="_z1g5IBViEeKKubxyzHq1vA" initNum="10" scopeRadius="1"/>
-  <profile:Environment xmi:id="_6lbGsBViEeKKubxyzHq1vA" maxValue="50" initRandom="true" stepVariation="1" display="true" base_Class="_3R_AABViEeKKubxyzHq1vA"/>
   <profile:State xmi:id="_nztIkBVsEeKKubxyzHq1vA" maxValue="100" stepVariation="-1" display="true" initValue="20" base_Class="_mB-FMBVsEeKKubxyzHq1vA"/>
   <profile:Replicate xmi:id="_44dDABVsEeKKubxyzHq1vA" base_Class="_utXvEBVsEeKKubxyzHq1vA" upperTreshold="50" lowerTreshold="" toll="20" inheritance="20"/>
   <profile:Perish xmi:id="_H8YVMBVtEeKKubxyzHq1vA" base_Class="_EuL64BVtEeKKubxyzHq1vA" upperTreshold=""/>
   <profile:State xmi:id="_eDTJABVtEeKKubxyzHq1vA" maxValue="50" stepVariation="-1" display="true" initValue="10" base_Class="_cC-QABVtEeKKubxyzHq1vA"/>
   <profile:Replicate xmi:id="_scjGgBVtEeKKubxyzHq1vA" base_Class="_qaehEBVtEeKKubxyzHq1vA" upperTreshold="20" lowerTreshold="" toll="10" inheritance="10"/>
   <profile:Perish xmi:id="__PHNoBVtEeKKubxyzHq1vA" base_Class="_9RDlgBVtEeKKubxyzHq1vA" upperTreshold=""/>
-  <profile:Harvest xmi:id="_PqzkABVuEeKKubxyzHq1vA" base_Class="_GZoTkBVuEeKKubxyzHq1vA" harvested="Pasture" percentHarvested="100"/>
   <profile:Move xmi:id="_aPN98BVuEeKKubxyzHq1vA" base_Class="_YHKsUBVuEeKKubxyzHq1vA" weight="1"/>
   <profile:Move xmi:id="_xspKUBVxEeKKubxyzHq1vA" base_Class="_5U5KkBVwEeKKubxyzHq1vA" weight="1"/>
-  <profile:Harvest xmi:id="_BBNgkBVyEeKKubxyzHq1vA" base_Class="_euFOkBVxEeKKubxyzHq1vA" harvested="PreyEnergy" percentHarvested="100"/>
   <profile:Move xmi:id="_iQkJkBohEeKN07hQpA-1_g" base_Class="_Jam8oBohEeKN07hQpA-1_g" weight="2"/>
+  <profile_1:Animat xmi:id="_bp12cB4BEeKaabSpLnEi-A" base_Class="_ui_PkBViEeKKubxyzHq1vA" initNum="10" scopeRadius="1" wanderer="true" colourMax="255, 0, 0" colourMin="255, 64, 64"/>
+  <profile_1:Animat xmi:id="_onD60B4BEeKaabSpLnEi-A" base_Class="_z1g5IBViEeKKubxyzHq1vA" initNum="10" scopeRadius="1" colourMax="64, 64, 186" colourMin="128, 128, 255"/>
+  <profile_1:Environment xmi:id="__38nYB4BEeKaabSpLnEi-A" maxValue="50" initRandom="true" stepVariation="1" display="true" base_Class="_3R_AABViEeKKubxyzHq1vA" colourMin="224, 224, 128" colourMax="32, 128, 32"/>
+  <profile_1:Harvest xmi:id="_V2a0YB4DEeKaabSpLnEi-A" base_Class="_euFOkBVxEeKKubxyzHq1vA" harvested="PreyEnergy" percentHarvested="100" maxIntake="null" valueHarvest="null"/>
+  <profile_1:Harvest xmi:id="_iqzs4B4DEeKaabSpLnEi-A" base_Class="_GZoTkBVuEeKKubxyzHq1vA" harvested="Pasture" percentHarvested="100" maxIntake="null" valueHarvest="null"/>
 </xmi:XMI>
