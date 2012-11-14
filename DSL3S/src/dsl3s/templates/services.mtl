@@ -25,3 +25,8 @@
 	= invoke('dsl3s.services.UML2Services',
 	    'getTaggedValue(org.eclipse.uml2.uml.Class, java.lang.String, java.lang.String)',  
 	 Sequence{c, stereoTypeName, propName}) /]
+
+[query public listStereotypes(arg0 : Class) : String
+	= invoke('dsl3s.services.UML2Services',
+		'listStereotypes(org.eclipse.uml2.uml.Class)', 
+		Sequence{arg0}) /]

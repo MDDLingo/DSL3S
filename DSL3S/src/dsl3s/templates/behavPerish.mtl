@@ -16,7 +16,7 @@ Issues:
 
 [template public behavPerish(c : Class) ? (c.hasStereotype('Animat'))]
 
-	protected Boolean perish(SimGrid domain) {
+	protected void perish(Sim sim) {
 
 [comment Iterate through linked States /]
 [for (ass:Association | c.getAssociations())]
@@ -30,13 +30,14 @@ Issues:
 	   [let pClass : Class = p.oclAsType(Class)]
        [if (pClass.isNotNull())]
         [if (pClass.hasStereotype('Perish'))]
-		 [if pClass.getTaggedValue(pClass, 'Perish', 'upperTreshold').isNotNull()]
-		if(state[sClass.name/] >= upperTresh[pClass.name/]) 
-			return Boolean.TRUE;
+		 [if pClass.getTaggedValue(pClass, 'Perish', 'upperThreshold').isNotNull()]
+		if(state[sClass.name/] >= upperThresh[pClass.name/]) 
+			sim.addToGarbage(this);
 		 [/if]
-		 [if pClass.getTaggedValue(pClass, 'Perish', 'lowerTreshold').isNotNull()]
-		if(state[sClass.name/] <= lowerTresh[pClass.name/]) 
-			return Boolean.TRUE;
+
+		 [if pClass.getTaggedValue(pClass, 'Perish', 'lowerThreshold').isNotNull()]
+		if(state[sClass.name/] <= lowerThresh[pClass.name/]) 
+			sim.addToGarbage(this);
 		 [/if]
        [/if]
       [/if]
@@ -48,8 +49,6 @@ Issues:
   [/let]
  [/for]	 
 [/for]
-
-		return Boolean.FALSE;
 	}
 
 [/template]

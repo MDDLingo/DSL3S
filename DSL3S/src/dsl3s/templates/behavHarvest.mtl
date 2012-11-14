@@ -11,7 +11,8 @@ class of that type.
 
 Issues:
 . Doesn't include max harvest amount
-. Generates a function for the harvested Animat
+. Generates an empty function for the harvested Animat State
+. Not teste with more than one Harvest feeding a single State
 /]
 
 [template public behavHarvest(c : Class) ? (c.hasStereotype('Animat'))]
@@ -22,11 +23,9 @@ Issues:
    [if (sClass.isNotNull())]
     [if (sClass.hasStereotype('State'))]
 	 [if (sClass.hasLinkedStereotype('Harvest'))]
-	public void harvest[sClass.name/](Int2D location) {
+	public void harvest[sClass.name/](Int2D location, Sim sim) {
 
-		Bag neigh = domain.getObjectsAtLocation(location.x, location.y);
-		for(int j = 0; j < neigh.numObjs; j++) {
-			Object obj = neigh.get(j);
+		IntBag xPos = null, yPos = null;
 	 [comment Iterate through linked Harvest /]
       [for (assH:Association | sClass.getAssociations())]
        [for (h:Element | assH.relatedElement) ]
@@ -34,38 +33,46 @@ Issues:
         [if (hClass.isNotNull())]
          [if (hClass.hasStereotype('Harvest'))]
 		  [if (hClass.getTaggedValue(hClass, 'Harvest', 'harvested') <> sClass.name)]
+
+
+		//Bag neigh = domain.getObjectsAtLocation(location.x, location.y);
+		Bag neigh = domain.getNeighborsMaxDistance(location.x, location.y, scope[hClass.name/], true, null, xPos, yPos);
+		for(int j = 0; j < neigh.numObjs; j++) {
+			Object obj = neigh.get(j);
 		  [comment Iterate through harvested States /]
            [for (assHS:Association | hClass.getAssociations())]
             [for (hs:Element | assHS.relatedElement) ]
 		    [let hsClass: Class = hs.oclAsType(Class)]
              [if (hsClass.isNotNull())]
               [if (hsClass.hasStereotype('State'))]
-		 	 [comment Iterate through harvested Animat /]
-           	  [for (assHA:Association | hsClass.getAssociations())]
-                [for (ha:Element | assHA.relatedElement) ]
-                [let haClass: Class = ha.oclAsType(Class)]
-                  [if (haClass.isNotNull())]
-                   [if (haClass.hasStereotype('Animat'))]
-                    [if (haClass.name <> c.name)]
+			   [if (hsClass.name <> sClass.name)]
+		 	    [comment Iterate through harvested Animat /]
+           	    [for (assHA:Association | hsClass.getAssociations())]
+                 [for (ha:Element | assHA.relatedElement) ]
+                 [let haClass: Class = ha.oclAsType(Class)]
+                   [if (haClass.isNotNull())]
+                    [if (haClass.hasStereotype('Animat'))]
+                     [comment [if (haClass.name <> c.name)/]
 
-			if(obj.getClass() == [haClass.name/].class) {
+			if((obj != this) && (obj.getClass() == [haClass.name/].class)) {
 				     [if (hClass.getTaggedValue(hClass, 'Harvest', 'percentHarvested').isNotNull())]
 				this.state[sClass.name/] += 
 					(([haClass.name/]) obj).harvestPercent[hsClass.name/](percent[hClass.name/]);
 			         [/if]
-			         [if (hClass.getTaggedValue(hClass, 'Harvest', 'valueHarvest').isNotNull())]
+			         [if (hClass.getTaggedValue(hClass, 'Harvest', 'valueHarvested').isNotNull())]
 				this.state[sClass.name/] += 
 					(([haClass.name/]) obj).harvestValue[hsClass.name/](value[hClass.name/]);
 			         [/if]
 
-				(([haClass.name/]) obj).perish(domain);
+				(([haClass.name/]) obj).perish(sim);
 			}
+                   [comment [/if/]
                   [/if]
                  [/if]
-                [/if]
-               [/let]
-               [/for]	 
-              [/for] [comment Animat /]
+                [/let]
+                [/for]	 
+               [/for] [comment Animat /]
+              [/if]
              [/if]
             [/if]
             [/let]
@@ -83,25 +90,25 @@ Issues:
 				this.state[sClass.name/] += 
 					(([heClass.name/]) obj).harvestPercent(percent[hClass.name/]);
 			  [/if]
-			  [if (hClass.getTaggedValue(hClass, 'Harvest', 'valueHarvest') <> 'null')]
+			  [if (hClass.getTaggedValue(hClass, 'Harvest', 'valueHarvested') <> 'null')]
 				this.state[sClass.name/] +=
 					(([heClass.name/]) obj).harvestValue(value[hClass.name/]);
 				
 			  [/if]
-				(([heClass.name/]) obj).perish(location, domain);
+				(([heClass.name/]) obj).perish(sim);
 			}
              [/if]
             [/if]
            [/let]
            [/for]	 
           [/for] [comment Environment /]
+		}
          [/if]
         [/if]
        [/if]
       [/let]
       [/for]	 
      [/for] [comment Harvest /]
-		}
 	}
     [/if]
    [/if]

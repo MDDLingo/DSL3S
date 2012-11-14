@@ -12,6 +12,9 @@ Generates the main Simulation class inheriting from SimState.
 [file (c.name.concat('.java'), false, 'UTF-8')]
 import sim.engine.SimState;
 import sim.engine.Steppable;
+import sim.engine.Stoppable;
+import sim.util.Int2D;
+import java.util.ArrayList;
 
 public class [c.name/] extends SimState {
 
@@ -34,6 +37,32 @@ public class [c.name/] extends SimState {
 
 	protected SimGrid simDomain;
 	public SimGrid getSimDomain() {return simDomain;}
+
+	protected ArrayList<Stoppable> garbage = new ArrayList<Stoppable>();
+	public void addToGarbage(Stoppable anim) {
+		garbage.add(anim);
+	}
+	protected void collectGarbage()  {
+		for (Stoppable anim : garbage) {
+			simDomain.remove(anim);
+			anim.stop();
+		}
+		garbage = new ArrayList<Stoppable>();
+	}
+
+	// Lists for new animats
+[for (assA:Association | c.getAssociations())]
+ [for (a:Element | assA.relatedElement) ]
+  [let aClass: Class = a.oclAsType(Class)] 
+  [if (aClass.isNotNull())]
+   [if (aClass.hasStereotype('Animat'))]
+	protected ArrayList<[aClass.name/]> newAnimats[aClass.name/] = new ArrayList<[aClass.name/]>();
+	protected ArrayList<Int2D> newLocs[aClass.name/] = new ArrayList<Int2D>();
+   [/if]
+  [/if]
+  [/let]
+ [/for]	 
+[/for]
 	
 	public Sim(long seed)
 	{
@@ -63,7 +92,7 @@ public class [c.name/] extends SimState {
    [if (p.class.isNotNull())]
     [if (p.class.hasStereotype('Animat'))]
 		for(int i = 0; i < initNum[p.class.name/]; i++)
-			create[p.class.name/](random.nextInt(spaceWidth), random.nextInt(spaceHeight));
+			init[p.class.name/](random.nextInt(spaceWidth), random.nextInt(spaceHeight));
 
 	 [if (p.class.hasLinkedStereotype('Emerge'))]
 		createEmerge[p.class.name/]();	
@@ -77,6 +106,17 @@ public class [c.name/] extends SimState {
 		schedule.scheduleRepeating(schedule.EPOCH, 1, new Steppable()
 		{
 			public void step(SimState state) { 
+
+				collectGarbage();
+ [for (ass:Association | c.getAssociations())]
+  [for (p:Property | ass.memberEnd) ]
+   [if (p.class.isNotNull())]
+    [if (p.class.hasStereotype('Animat'))]
+				castNew[p.class.name/]();
+    [/if]
+   [/if]
+  [/for]	 
+ [/for]
 			}
 		});
 	}
@@ -110,11 +150,30 @@ public class [c.name/] extends SimState {
   [for (p:Property | ass.memberEnd) ]
    [if (p.class.isNotNull())]
     [if (p.class.hasStereotype('Animat'))]
-	public [p.class.name/] create[p.class.name/](int x, int y) {
+	protected void init[p.class.name/](int x, int y) {
 		[p.class.name/] new[p.class.name/] = new [p.class.name/](simDomain);
 		new[p.class.name/].setStopper(schedule.scheduleRepeating(new[p.class.name/]));
 		simDomain.setObjectLocation(new[p.class.name/], x, y);
+	}
+
+	public [p.class.name/] create[p.class.name/](int x, int y) {
+		[p.class.name/] new[p.class.name/] = new [p.class.name/](simDomain);
+		new[p.class.name/].setStopper(schedule.scheduleRepeating(new[p.class.name/]));
+		newAnimats[p.class.name/].add(new[p.class.name/]);
+		newLocs[p.class.name/].add(new Int2D(x,y));
 		return new[p.class.name/];
+	}
+
+	protected void castNew[p.class.name/] () {
+		
+		for(int i = 0; i < newAnimats[p.class.name/].size(); i++) {
+			[p.class.name/] new[p.class.name/] = newAnimats[p.class.name/].get(i);
+			Int2D loc = newLocs[p.class.name/].get(i);
+			simDomain.setObjectLocation(new[p.class.name/], loc.x, loc.y);
+		}
+		
+		newAnimats[p.class.name/] = new ArrayList<[p.class.name/]>();
+		newLocs[p.class.name/] = new ArrayList<Int2D>();
 	}
 
 	 [if (p.class.hasLinkedStereotype('Emerge'))]

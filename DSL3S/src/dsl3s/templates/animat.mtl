@@ -72,11 +72,11 @@ public class [c.name/] implements Steppable, Stoppable {
 	   [let rClass: Class = r.oclAsType(Class)]
        [if (rClass.isNotNull())]
         [if (rClass.hasStereotype('Replicate'))]
-	     [if rClass.getTaggedValue(rClass, 'Replicate', 'upperTreshold').isNotNull()]
-	protected static Integer upperTresh[rClass.name/] = [rClass.getTaggedValue(rClass, 'Replicate', 'upperTreshold')/];
+	     [if rClass.getTaggedValue(rClass, 'Replicate', 'upperThreshold').isNotNull()]
+	protected static Integer upperThresh[rClass.name/] = [rClass.getTaggedValue(rClass, 'Replicate', 'upperThreshold')/];
          [/if]
-         [if rClass.getTaggedValue(rClass, 'Replicate', 'lowerTreshold').isNotNull()]
-	protected static Integer lowerTresh[rClass.name/] = [rClass.getTaggedValue(rClass, 'Replicate', 'lowerTreshold')/];
+         [if rClass.getTaggedValue(rClass, 'Replicate', 'lowerThreshold').isNotNull()]
+	protected static Integer lowerThresh[rClass.name/] = [rClass.getTaggedValue(rClass, 'Replicate', 'lowerThreshold')/];
          [/if]
 	     [if rClass.getTaggedValue(rClass, 'Replicate', 'toll').isNotNull()]
 	protected static Integer toll[rClass.name/] = [rClass.getTaggedValue(rClass, 'Replicate', 'toll')/];
@@ -97,11 +97,11 @@ public class [c.name/] implements Steppable, Stoppable {
 	   [let pClass : Class = p.oclAsType(Class)]
        [if (pClass.isNotNull())]
         [if (pClass.hasStereotype('Perish'))]
-	     [if pClass.getTaggedValue(pClass, 'Perish', 'upperTreshold').isNotNull()]
-	protected static Integer upperTresh[pClass.name/] = [pClass.getTaggedValue(pClass, 'Perish', 'upperTreshold')/];
+	     [if pClass.getTaggedValue(pClass, 'Perish', 'upperThreshold').isNotNull()]
+	protected static Integer upperThresh[pClass.name/] = [pClass.getTaggedValue(pClass, 'Perish', 'upperThreshold')/];
          [/if]
-         [if pClass.getTaggedValue(pClass, 'Perish', 'lowerTreshold').isNotNull()]
-	protected static Integer lowerTresh[pClass.name/] = [pClass.getTaggedValue(pClass, 'Perish', 'lowerTreshold')/];
+         [if pClass.getTaggedValue(pClass, 'Perish', 'lowerThreshold').isNotNull()]
+	protected static Integer lowerThresh[pClass.name/] = [pClass.getTaggedValue(pClass, 'Perish', 'lowerThreshold')/];
          [/if]
         [/if]
        [/if]
@@ -109,18 +109,22 @@ public class [c.name/] implements Steppable, Stoppable {
       [/for]	 
      [/for] [comment Replicate/]
 
+	[comment Iterate through linked Harvest /]
 	// Harvest constants
      [for (assP:Association | sClass.getAssociations())]
       [for (p:Element | assP.relatedElement) ]
 	   [let pClass : Class = p.oclAsType(Class)]
        [if (pClass.isNotNull())]
         [if (pClass.hasStereotype('Harvest'))]
-	     [if (pClass.getTaggedValue(pClass, 'Harvest', 'percentHarvested').isNotNull())]
+		 [if (pClass.getTaggedValue(pClass, 'Harvest', 'harvested') <> sClass.name)]
+	      [if (pClass.getTaggedValue(pClass, 'Harvest', 'percentHarvested').isNotNull())]  
  	protected static Integer percent[pClass.name/] = [pClass.getTaggedValue(pClass, 'Harvest', 'percentHarvested')/];	
-	     [/if]
-	     [if (pClass.getTaggedValue(pClass, 'Harvest', 'valueHarvest').isNotNull())]
- 	protected static Integer value[pClass.name/] = [pClass.getTaggedValue(pClass, 'Harvest', 'valueHarvest')/];			
-	     [/if]
+	      [/if]
+	      [if (pClass.getTaggedValue(pClass, 'Harvest', 'valueHarvested').isNotNull())]
+ 	protected static Integer value[pClass.name/] = [pClass.getTaggedValue(pClass, 'Harvest', 'valueHarvested')/];			
+	      [/if]
+ 	protected static Integer scope[pClass.name/] = [pClass.getTaggedValue(pClass, 'Harvest', 'scope')/];			
+		 [/if]
         [/if]
        [/if]
       [/let]
@@ -241,7 +245,7 @@ public class [c.name/] implements Steppable, Stoppable {
    [if (sClass.isNotNull())]
     [if (sClass.hasStereotype('State'))]
 	 [if (sClass.hasLinkedStereotype('Harvest'))]
-		harvest[sClass.name/](location);
+		harvest[sClass.name/](location, sim);
 	 [/if]
    [/if]
   [/if]
@@ -249,11 +253,7 @@ public class [c.name/] implements Steppable, Stoppable {
  [/for]	 
 [/for] [comment States /]
 
-		if (perish(domain)) {
-			domain.remove(this);
-			this.stop();
- 			return;
-		}
+		perish(sim);
 		
 		replicate(location, sim);
 

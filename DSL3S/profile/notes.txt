@@ -36,8 +36,8 @@ display? - indicates if this is the variable used in the draw
 ############################
 ## Replicate
 
-upperTreshold
-lowerTreshold
+upperThreshold
+lowerThreshold
 toll
 inheritance
 
@@ -47,6 +47,7 @@ inheritance
 harvested (the class)
 percentHarvested
 maxIntake
+valueHarvest
 => make the attribute names congruent
 
 ############################
@@ -58,8 +59,8 @@ neighbourghood distance?
 ############################
 ## Perish
 
-upperTreshold
-lowerTreshold
+upperThreshold
+lowerThreshold
 
 ############################
 ## Emerge
@@ -67,20 +68,10 @@ lowerTreshold
 probability
 scope
 required
+lowerThreshold
+upperThreshold
 
 
-
-
-
-Prey
-new Color(128, 128, 255), new Color(64, 64, 186));
-
-Pasture
-new Color(224, 224, 128), new Color(32, 128, 32));
-
-Predator
-new Color(255, 64, 64), new Color(255, 0, 0));
-
-
+==> Checkout navigable property of memberEnd
 
 

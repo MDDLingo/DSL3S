@@ -29,8 +29,8 @@ Issues:
 	  [let rClass: Class = r.oclAsType(Class)]
        [if (rClass.isNotNull())]
         [if (rClass.hasStereotype('Replicate'))]
-		 [if rClass.getTaggedValue(rClass, 'Replicate', 'upperTreshold').isNotNull()]
-		if (state[sClass.name/] > upperTresh[rClass.name/]) {
+		 [if rClass.getTaggedValue(rClass, 'Replicate', 'upperThreshold').isNotNull()]
+		if (state[sClass.name/] > upperThresh[rClass.name/]) {
 			[c.name/] new[c.name/] = sim.create[c.name/]( 
 					randMove(location.x, sim.random), 
 					randMove(location.y, sim.random));
@@ -40,8 +40,8 @@ Issues:
 			state[sClass.name/] -= toll[rClass.name/];
 		}
 		 [/if]
-		[if rClass.getTaggedValue(rClass, 'Replicate', 'lowerTreshold').isNotNull()]
-		if (state[sClass.name/] < lowerTresh[rClass.name/]) {
+		[if rClass.getTaggedValue(rClass, 'Replicate', 'lowerThreshold').isNotNull()]
+		if (state[sClass.name/] < lowerThresh[rClass.name/]) {
 			[c.name/] new[c.name/] = sim.create[c.name/]( 
 					randMove(location.x, sim.random), 
 					randMove(location.y, sim.random));
