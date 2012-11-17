@@ -20,12 +20,9 @@ import ec.util.MersenneTwisterFast;
 import sim.engine.SimState;
 import sim.engine.Steppable;
 import sim.engine.Stoppable;
-import sim.field.grid.IntGrid2D;
-import sim.field.grid.SparseGrid2D;
 import sim.util.Bag;
 import sim.util.Int2D;
 import sim.util.IntBag;
-import sim.util.MutableInt2D;
 
 public class [c.name/] implements Steppable, Stoppable {
 

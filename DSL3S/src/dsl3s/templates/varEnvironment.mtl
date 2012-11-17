@@ -60,7 +60,7 @@ public class [c.name/] implements Steppable, Stoppable {
 	
 	[comment Makes sense? Must rethink this. /]
 	// This empty perish method facilitates things in the Animat Harvest process
-	public void perish(Int2D location, SimGrid domain) {}
+	public void perish(Sim sim) {}
 
 }
 

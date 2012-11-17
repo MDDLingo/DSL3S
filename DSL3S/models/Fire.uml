@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:profile="http:///schemas/profile/_l4HVcBrZEeKjdP3IW4sVUw/14" xmlns:profile_1="http:///schemas/profile/_v5ed4BujEeK004p3DgS3UQ/15" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/profile/_l4HVcBrZEeKjdP3IW4sVUw/14 file:/media/Data/users/lads/Trabalho/Eclipse/Workspace.New/DSL3S/profile/DSL3S.profile.uml#_mgQTgBrZEeKjdP3IW4sVUw http:///schemas/profile/_v5ed4BujEeK004p3DgS3UQ/15 ../profile/DSL3S.profile.uml#_xBjgQBujEeK004p3DgS3UQ">
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DSL3S="http:///schemas/DSL3S/_IKSogC9PEeKyirj45CxRZw/10" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:profile="http:///schemas/profile/_l4HVcBrZEeKjdP3IW4sVUw/14" xmlns:profile_1="http:///schemas/profile/_v5ed4BujEeK004p3DgS3UQ/15" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/DSL3S/_IKSogC9PEeKyirj45CxRZw/10 ../profile/DSL3S.profile.uml#_I9aHgC9PEeKyirj45CxRZw http:///schemas/profile/_l4HVcBrZEeKjdP3IW4sVUw/14 file:/media/Data/users/lads/Trabalho/Eclipse/Workspace.New/DSL3S/profile/DSL3S.profile.uml#_mgQTgBrZEeKjdP3IW4sVUw http:///schemas/profile/_v5ed4BujEeK004p3DgS3UQ/15 ../profile/DSL3S.profile.uml#_xBjgQBujEeK004p3DgS3UQ">
   <uml:Model xmi:id="_vKp30BrZEeKjdP3IW4sVUw" name="model">
     <packagedElement xmi:type="uml:Class" xmi:id="_wVEcgBrZEeKjdP3IW4sVUw" name="Sim"/>
     <packagedElement xmi:type="uml:Class" xmi:id="_xUdc8BrZEeKjdP3IW4sVUw" name="Fire">
@@ -117,19 +117,27 @@
       </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_IEQbMB02EeKTUOpZbz254A" name="Class0"/>
-    <profileApplication xmi:id="_VBs8gBraEeKjdP3IW4sVUw">
-      <eAnnotations xmi:id="_VCK2kBraEeKjdP3IW4sVUw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="../profile/DSL3S.profile.uml#_xBjgQBujEeK004p3DgS3UQ"/>
+    <profileApplication xmi:id="_4ffuIC9PEeKPsJyPiWm16w">
+      <eAnnotations xmi:id="_4gLqoC9PEeKPsJyPiWm16w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../profile/DSL3S.profile.uml#_I9aHgC9PEeKyirj45CxRZw"/>
       </eAnnotations>
-      <appliedProfile href="../profile/DSL3S.profile.uml#_akJ9MZxOEeGZz4LhQjKg0g"/>
+      <appliedProfile href="../profile/DSL3S.profile.uml#_bf7O0CBZEeKpfttodweVYA"/>
     </profileApplication>
   </uml:Model>
   <profile:Simulation xmi:id="_WapFYBraEeKjdP3IW4sVUw" simulName="Forest fire model" base_Class="_wVEcgBrZEeKjdP3IW4sVUw" spaceHeight="100" spaceWidth="100"/>
   <profile:Animat xmi:id="_bqWEcBraEeKjdP3IW4sVUw" base_Class="_xUdc8BrZEeKjdP3IW4sVUw" initNum="2" scopeRadius="1" colourMax="186, 64, 64" colourMin="255, 255, 128"/>
   <profile:State xmi:id="_yWHKYBrdEeKjdP3IW4sVUw" maxValue="5" minValue="1" stepVariation="-100" display="true" initValue="1" base_Class="_woGbUBrbEeKjdP3IW4sVUw"/>
-  <profile:Perish xmi:id="_x9pKkBreEeKjdP3IW4sVUw" base_Class="_t5KBcBreEeKjdP3IW4sVUw" upperTreshold="null" lowerTreshold="1"/>
+  <profile:Perish xmi:id="_x9pKkBreEeKjdP3IW4sVUw" base_Class="_t5KBcBreEeKjdP3IW4sVUw" upperThreshold="null" lowerThreshold="1"/>
   <profile:Emerge xmi:id="_Ci6eQBrgEeKjdP3IW4sVUw" base_Class="_cTMa4BrfEeKjdP3IW4sVUw" probability="8" scope="1" required="true"/>
   <profile:Emerge xmi:id="_UAPQwBrgEeKjdP3IW4sVUw" base_Class="_jMLE4BrfEeKjdP3IW4sVUw" probability="10" scope="1" required="true"/>
   <profile_1:Harvest xmi:id="_YIzzIBulEeKfcr7W2TDBkw" base_Class="_tFSb4BrbEeKjdP3IW4sVUw" harvested="Forest" percentHarvested="null" maxIntake="null" valueHarvest="5"/>
   <profile_1:Environment xmi:id="_dEmXsBulEeKfcr7W2TDBkw" maxValue="50" initRandom="true" display="true" base_Class="_yJVPcBrZEeKjdP3IW4sVUw" colourMin="128, 128, 128" colourMax="128,255,128"/>
+  <DSL3S:Simulation xmi:id="_6C6osC9PEeKPsJyPiWm16w" base_Class="_wVEcgBrZEeKjdP3IW4sVUw" simulName="Forest Fire" spaceHeight="100" spaceWidth="100"/>
+  <DSL3S:Environment xmi:id="_G4Vb8C9QEeKPsJyPiWm16w" maxValue="100" initRandom="true" colourMin="64,64,64" colourMax="0,255,0" base_Class="_yJVPcBrZEeKjdP3IW4sVUw"/>
+  <DSL3S:Animat xmi:id="_QIIMUC9QEeKPsJyPiWm16w" initNum="3" base_Class="_xUdc8BrZEeKjdP3IW4sVUw" colourMin="255,255,0" colourMax="255,0,0"/>
+  <DSL3S:State xmi:id="_cTjnYC9QEeKPsJyPiWm16w" base_Class="_woGbUBrbEeKjdP3IW4sVUw" maxValue="5" stepVariation="-5" display="true" initValue="1"/>
+  <DSL3S:Perish xmi:id="_3V54cDDGEeKD65gnn3SxNA" upperThreshold="6" base_Class="_t5KBcBreEeKjdP3IW4sVUw"/>
+  <DSL3S:Harvest xmi:id="_6M1CQDDGEeKD65gnn3SxNA" harvested="Forest" valueHarvested="5" base_Class="_tFSb4BrbEeKjdP3IW4sVUw"/>
+  <DSL3S:Emerge xmi:id="_A4awgDDHEeKD65gnn3SxNA" probability="7" required="true" base_Class="_cTMa4BrfEeKjdP3IW4sVUw"/>
+  <DSL3S:Emerge xmi:id="_Gk0SoDDHEeKD65gnn3SxNA" probability="2" scope="1" required="true" base_Class="_jMLE4BrfEeKjdP3IW4sVUw"/>
 </xmi:XMI>
