@@ -1,4 +1,12 @@
-Domain Specific Language for Spatial Simulation Scenarios - DSL3S
+=== Domain Specific Language for Spatial Simulation Scenarios - DSL3S
+
+== Copyright
+
+Copyright 2010 - 2013 Instituto Superior Técnico. All rights reserved. 
+Any use of this software constitutes full acceptance of all terms of the 
+software's license.
+
+== Description
 
 This project is part of the doctoral studies on Computer Science by Luís de 
 Sousa (student id D44155) at the Instituto Superior Técnico [1]. The aim of 
@@ -14,7 +22,7 @@ Urban and Spatial Systems, Oporto, November 2012.
 
 [1] https://fenix.ist.utl.pt/cursos/deic?locale=en_EN
 
--------------------------------------------------------------------------------
+== Software dependencies
 
 To run this project the following pieces of software are required:
 
@@ -40,7 +48,7 @@ to run the end code produced by the DSL3S.
 
 [5] http://cs.gmu.edu/~eclab/projects/mason/
 
--------------------------------------------------------------------------------
+== License
 
 DSL3S is released under the GPL 3.0 license. For further details please read 
 the LICENSE file.  
