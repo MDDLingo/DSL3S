@@ -35,7 +35,7 @@ To run this project the following pieces of software are required:
 The versions referenced are those presently supporting development and should 
 be read as indicative. The same development pipeline based on Eclipse 3.6 
 should also be functional; the project hasn't been tested on later versions of 
-Eclipse but it should likewise functional.
+Eclipse but it should be likewise functional.
 
 Beyond the development pipeline, the MASON [5] simulation library is necessary 
 to run the end code produced by the DSL3S.
