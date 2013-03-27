@@ -1,0 +1,77 @@
+############################
+## Simulation
+
+fieldWidth
+fieldHeight
+
+
+############################
+## Animat
+
+initial number (negative to cover the complete field?)
+movement radius 
+=> should this be in Move?
+wander?
+
+############################
+## Environment
+
+maxValue
+minValue
+initValue
+stepVariation
+initRandom?
+display? - indicates if this is the variable used in the draw
+
+############################
+## Variable Global
+
+maxValue
+minValue
+initValue
+stepVariation
+initRandom?
+display? - indicates if this is the variable used in the draw
+
+############################
+## Replicate
+
+upperThreshold
+lowerThreshold
+toll
+inheritance
+
+############################
+## Harvest
+
+harvested (the class)
+percentHarvested
+maxIntake
+valueHarvest
+=> make the attribute names congruent
+
+############################
+## Move
+
+weight
+neighbourghood distance?
+
+############################
+## Perish
+
+upperThreshold
+lowerThreshold
+
+############################
+## Emerge
+
+probability
+scope
+required
+lowerThreshold
+upperThreshold
+
+
+==> Checkout navigable property of memberEnd
+
+

@@ -1,0 +1,54 @@
+[comment encoding = UTF-8 /]
+[module behavPerish('http://www.eclipse.org/uml2/3.0.0/UML')]
+[import dsl3s::templates::services/]
+
+[comment
+Date: 21-07-2012    Author: Luís de Sousa
+Generates the Perish function to be included in the Animat class.
+Instead of filtering for the Perish stereotype, this module starts with
+the Animat stereotype, so that it only generates the code for a specific
+class of that type.
+
+Issues:
+. stop method must be invoked here, other Perish may not work.
+/]
+
+
+[template public behavPerish(c : Class) ? (c.hasStereotype('Animat'))]
+
+	protected void perish(Sim sim) {
+
+[comment Iterate through linked States /]
+[for (ass:Association | c.getAssociations())]
+  [comment Association: [ass.name/]
+  [for (s:Element | ass.relatedElement) ]
+   [let sClass: Class = s.oclAsType(Class)]
+    [if (sClass.hasStereotype('State'))]
+	[comment Iterate through linked Perish /]
+     [for (assP:Association | sClass.getAssociations())]
+      [for (p:Element | assP.relatedElement) ]
+	   [let pClass : Class = p.oclAsType(Class)]
+       [if (pClass.isNotNull())]
+        [if (pClass.hasStereotype('Perish'))]
+		 [if pClass.getTaggedValue(pClass, 'Perish', 'upperThreshold').isNotNull()]
+		if(state[sClass.name/] >= upperThresh[pClass.name/]) 
+			sim.addToGarbage(this);
+		 [/if]
+
+		 [if pClass.getTaggedValue(pClass, 'Perish', 'lowerThreshold').isNotNull()]
+		if(state[sClass.name/] <= lowerThresh[pClass.name/]) 
+			sim.addToGarbage(this);
+		 [/if]
+       [/if]
+      [/if]
+      [/let]
+     [/for]	 
+    [/for]
+   [/if]
+  [comment [/if /]
+  [/let]
+ [/for]	 
+[/for]
+	}
+
+[/template]

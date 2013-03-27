@@ -1,0 +1,13 @@
+[comment encoding = UTF-8 /]
+[module testBehavReplicate('http://www.eclipse.org/uml2/3.0.0/UML')/]
+[import dsl3s::templates::behavReplicate/]
+[import dsl3s::templates::services/]
+
+[template public testBehavReplicateClass(c : Class) ? (c.hasStereotype('Animat'))]
+[comment @main /]
+
+[file (c.name.concat('.test'), false, 'UTF-8')]
+	[c.behavReplicate()/]
+[/file]
+	
+[/template]

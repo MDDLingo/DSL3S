@@ -1,0 +1,192 @@
+[comment encoding = UTF-8 /]
+[module sim('http://www.eclipse.org/uml2/3.0.0/UML')/]
+[import dsl3s::templates::services/]
+
+[comment
+Date: 09-08-2012    Author: Luís de Sousa  (luis.a.de.sousa@gmail.com)
+Generates the main Simulation class inheriting from SimState.
+/]
+
+[template public sim(c : Class) ? (c.hasStereotype('Simulation'))]
+
+[file (c.name.concat('.java'), false, 'UTF-8')]
+import sim.engine.SimState;
+import sim.engine.Steppable;
+import sim.engine.Stoppable;
+import sim.util.Int2D;
+import java.util.ArrayList;
+
+public class [c.name/] extends SimState {
+
+	//Simulation space
+	public Integer spaceWidth = [c.getTaggedValue(c, 'Simulation', 'spaceWidth')/];
+	public Integer spaceHeight = [c.getTaggedValue(c, 'Simulation', 'spaceHeight')/];
+
+	// Animat initial numbers
+[for (assA:Association | c.getAssociations())]
+ [for (a:Element | assA.relatedElement) ]
+  [let aClass: Class = a.oclAsType(Class)] 
+  [if (aClass.isNotNull())]
+   [if (aClass.hasStereotype('Animat'))]
+	public Integer initNum[aClass.name/] = [aClass.getTaggedValue(aClass, 'Animat', 'initNum')/];
+   [/if]
+  [/if]
+  [/let]
+ [/for]	 
+[/for]
+
+	protected SimGrid simDomain;
+	public SimGrid getSimDomain() {return simDomain;}
+
+	protected ArrayList<Stoppable> garbage = new ArrayList<Stoppable>();
+	public void addToGarbage(Stoppable anim) {
+		garbage.add(anim);
+	}
+	protected void collectGarbage()  {
+		for (Stoppable anim : garbage) {
+			simDomain.remove(anim);
+			anim.stop();
+		}
+		garbage = new ArrayList<Stoppable>();
+	}
+
+	// Lists for new animats
+[for (assA:Association | c.getAssociations())]
+ [for (a:Element | assA.relatedElement) ]
+  [let aClass: Class = a.oclAsType(Class)] 
+  [if (aClass.isNotNull())]
+   [if (aClass.hasStereotype('Animat'))]
+	protected ArrayList<[aClass.name/]> newAnimats[aClass.name/] = new ArrayList<[aClass.name/]>();
+	protected ArrayList<Int2D> newLocs[aClass.name/] = new ArrayList<Int2D>();
+   [/if]
+  [/if]
+  [/let]
+ [/for]	 
+[/for]
+	
+	public Sim(long seed)
+	{
+		super(seed);
+	}
+	
+	public void start()
+	{
+		super.start();
+		
+		simDomain = new SimGrid(spaceWidth, spaceHeight);
+
+ [for (ass:Association | c.getAssociations())]
+  [for (p:Property | ass.memberEnd) ]
+   [if (p.class.isNotNull())]
+    [if (p.class.hasStereotype('Environment'))]
+		init[p.class.name/]Objects();
+    [/if]
+   [/if]
+  [/for]	 
+ [/for]
+
+		// At this stage animats are cast at random locations.
+		// In the future this may be set with a spatial layer.
+ [for (ass:Association | c.getAssociations())]
+  [for (p:Property | ass.memberEnd) ]
+   [if (p.class.isNotNull())]
+    [if (p.class.hasStereotype('Animat'))]
+		for(int i = 0; i < initNum[p.class.name/]; i++)
+			init[p.class.name/](random.nextInt(spaceWidth), random.nextInt(spaceHeight));
+
+	 [if (p.class.hasLinkedStereotype('Emerge'))]
+		createEmerge[p.class.name/]();	
+	 [/if]
+
+    [/if]
+   [/if]
+  [/for]	 
+ [/for]
+
+		schedule.scheduleRepeating(schedule.EPOCH, 1, new Steppable()
+		{
+			public void step(SimState state) { 
+
+				collectGarbage();
+ [for (ass:Association | c.getAssociations())]
+  [for (p:Property | ass.memberEnd) ]
+   [if (p.class.isNotNull())]
+    [if (p.class.hasStereotype('Animat'))]
+				castNew[p.class.name/]();
+    [/if]
+   [/if]
+  [/for]	 
+ [/for]
+			}
+		});
+	}
+
+ [for (ass:Association | c.getAssociations())]
+  [for (p:Element | ass.relatedElement) ]
+   [let pClass: Class = p.oclAsType(Class)]
+    [if (pClass.isNotNull())]
+     [if (pClass.hasStereotype('Environment'))]
+	public void init[pClass.name/]Objects() {
+
+		for (int i=0; i < simDomain.getWidth(); i++)
+			for (int j=0; j < simDomain.getHeight(); j++)
+			{
+			  [if (pClass.getTaggedValue(pClass, 'Environment', 'initRandom') = 'true')]
+				[pClass.name/] obj = new [pClass.name/](random);
+			  [else]
+				[pClass.name/] obj = new [pClass.name/]();
+			  [/if]
+				obj.setStopper(schedule.scheduleRepeating(obj));
+				simDomain.setObjectLocation(obj, i, j);
+			}
+	}
+     [/if]
+    [/if]
+   [/let]
+  [/for]	 
+ [/for]
+
+ [for (ass:Association | c.getAssociations())]
+  [for (p:Property | ass.memberEnd) ]
+   [if (p.class.isNotNull())]
+    [if (p.class.hasStereotype('Animat'))]
+	protected void init[p.class.name/](int x, int y) {
+		[p.class.name/] new[p.class.name/] = new [p.class.name/](simDomain);
+		new[p.class.name/].setStopper(schedule.scheduleRepeating(new[p.class.name/]));
+		simDomain.setObjectLocation(new[p.class.name/], x, y);
+	}
+
+	public [p.class.name/] create[p.class.name/](int x, int y) {
+		[p.class.name/] new[p.class.name/] = new [p.class.name/](simDomain);
+		new[p.class.name/].setStopper(schedule.scheduleRepeating(new[p.class.name/]));
+		newAnimats[p.class.name/].add(new[p.class.name/]);
+		newLocs[p.class.name/].add(new Int2D(x,y));
+		return new[p.class.name/];
+	}
+
+	protected void castNew[p.class.name/] () {
+		
+		for(int i = 0; i < newAnimats[p.class.name/].size(); i++) {
+			[p.class.name/] new[p.class.name/] = newAnimats[p.class.name/].get(i);
+			Int2D loc = newLocs[p.class.name/].get(i);
+			simDomain.setObjectLocation(new[p.class.name/], loc.x, loc.y);
+		}
+		
+		newAnimats[p.class.name/] = new ArrayList<[p.class.name/]>();
+		newLocs[p.class.name/] = new ArrayList<Int2D>();
+	}
+
+	 [if (p.class.hasLinkedStereotype('Emerge'))]
+	public void createEmerge[p.class.name/]() {
+		[p.class.name/]Emerge emerge = new [p.class.name/]Emerge();
+		emerge.setStopper(schedule.scheduleRepeating(emerge));
+	}
+	 [/if]
+
+    [/if]
+   [/if]
+  [/for]	 
+ [/for]
+}
+[/file]
+[/template]

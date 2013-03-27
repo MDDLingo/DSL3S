@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DSL3S="http:///schemas/DSL3S/_0qN20DDdEeK6DceGvYx0EA/11" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:profile="http:///schemas/profile/_NRxacBBoEeK1GvJRYsZ8vQ/12" xmlns:profile_1="http:///schemas/profile/_V-yuUB00EeKTUOpZbz254A/17" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/DSL3S/_0qN20DDdEeK6DceGvYx0EA/11 ../profile/DSL3S.profile.uml#_1KJ7IDDdEeK6DceGvYx0EA http:///schemas/profile/_NRxacBBoEeK1GvJRYsZ8vQ/12 file:/media/Data/users/lads/Trabalho/Eclipse/Workspace.New/DSL3S/profile/DSL3S.profile.uml#_N7yn0BBoEeK1GvJRYsZ8vQ http:///schemas/profile/_V-yuUB00EeKTUOpZbz254A/17 ../profile/DSL3S.profile.uml#_WnlMoB00EeKTUOpZbz254A">
+  <uml:Model xmi:id="_uoB9EBVhEeKfCYUGa0wThA" name="model">
+    <packagedElement xmi:type="uml:Class" xmi:id="_l0mjIBViEeKKubxyzHq1vA" name="Sim"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ui_PkBViEeKKubxyzHq1vA" name="Predator">
+      <ownedAttribute xmi:id="_Auy4sBVjEeKKubxyzHq1vA" name="sim" type="_l0mjIBViEeKKubxyzHq1vA" association="_Au0G0BVjEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Auy4sRVjEeKKubxyzHq1vA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Auy4shVjEeKKubxyzHq1vA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_3qvV4BVwEeKKubxyzHq1vA" name="prey" type="_z1g5IBViEeKKubxyzHq1vA" association="_3qv88BVwEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3qvV4RVwEeKKubxyzHq1vA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3qvV4hVwEeKKubxyzHq1vA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_68DVoBVwEeKKubxyzHq1vA" name="" type="_5U5KkBVwEeKKubxyzHq1vA" association="_68GY8BVwEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_68DVoRVwEeKKubxyzHq1vA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_68DVohVwEeKKubxyzHq1vA" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_z1g5IBViEeKKubxyzHq1vA" name="Prey">
+      <ownedAttribute xmi:id="_BK0tYBVjEeKKubxyzHq1vA" name="sim" type="_l0mjIBViEeKKubxyzHq1vA" association="_BK2ikBVjEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BK0tYRVjEeKKubxyzHq1vA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BK0tYhVjEeKKubxyzHq1vA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_bxu5kBVuEeKKubxyzHq1vA" name="" type="_YHKsUBVuEeKKubxyzHq1vA" association="_bxwHsBVuEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bxu5kRVuEeKKubxyzHq1vA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bxu5khVuEeKKubxyzHq1vA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_MsRhsBohEeKN07hQpA-1_g" name="" type="_Jam8oBohEeKN07hQpA-1_g" association="_MsSIwBohEeKN07hQpA-1_g">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MsRhsRohEeKN07hQpA-1_g" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MsRhshohEeKN07hQpA-1_g" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_3R_AABViEeKKubxyzHq1vA" name="Pasture">
+      <ownedAttribute xmi:id="_BkDswBVjEeKKubxyzHq1vA" name="sim" type="_l0mjIBViEeKKubxyzHq1vA" association="_BkE64BVjEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BkDswRVjEeKKubxyzHq1vA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BkDswhVjEeKKubxyzHq1vA" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_Au0G0BVjEeKKubxyzHq1vA" name="predator_sim_0" memberEnd="_Au0G0RVjEeKKubxyzHq1vA _Auy4sBVjEeKKubxyzHq1vA">
+      <ownedEnd xmi:id="_Au0G0RVjEeKKubxyzHq1vA" name="predator" type="_ui_PkBViEeKKubxyzHq1vA" association="_Au0G0BVjEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Au0G0hVjEeKKubxyzHq1vA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Au0G0xVjEeKKubxyzHq1vA" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_BK2ikBVjEeKKubxyzHq1vA" name="prey_sim_0" memberEnd="_BK2ikRVjEeKKubxyzHq1vA _BK0tYBVjEeKKubxyzHq1vA">
+      <ownedEnd xmi:id="_BK2ikRVjEeKKubxyzHq1vA" name="prey" type="_z1g5IBViEeKKubxyzHq1vA" association="_BK2ikBVjEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BK2ikhVjEeKKubxyzHq1vA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BK2ikxVjEeKKubxyzHq1vA" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_BkE64BVjEeKKubxyzHq1vA" name="pasture_sim_0" memberEnd="_BkE64RVjEeKKubxyzHq1vA _BkDswBVjEeKKubxyzHq1vA">
+      <ownedEnd xmi:id="_BkE64RVjEeKKubxyzHq1vA" name="pasture" type="_3R_AABViEeKKubxyzHq1vA" association="_BkE64BVjEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BkE64hVjEeKKubxyzHq1vA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BkE64xVjEeKKubxyzHq1vA" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_mB-FMBVsEeKKubxyzHq1vA" name="PredEnergy">
+      <ownedAttribute xmi:id="_thPTIBVsEeKKubxyzHq1vA" name="" type="_ui_PkBViEeKKubxyzHq1vA" association="_thULoBVsEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_thPTIRVsEeKKubxyzHq1vA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_thPTIhVsEeKKubxyzHq1vA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_zxMcABVxEeKKubxyzHq1vA" name="" type="_euFOkBVxEeKKubxyzHq1vA" association="_zxO4QBVxEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zxMcARVxEeKKubxyzHq1vA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zxMcAhVxEeKKubxyzHq1vA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_tyjHoBcDEeKH6vUYSQ9XUw" name="preyMove" type="_5U5KkBVwEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tyjHoRcDEeKH6vUYSQ9XUw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tyjusBcDEeKH6vUYSQ9XUw" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_thULoBVsEeKKubxyzHq1vA" name="predEnergy_predator_0" memberEnd="_thULoRVsEeKKubxyzHq1vA _thPTIBVsEeKKubxyzHq1vA">
+      <ownedEnd xmi:id="_thULoRVsEeKKubxyzHq1vA" name="" type="_mB-FMBVsEeKKubxyzHq1vA" association="_thULoBVsEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_thULohVsEeKKubxyzHq1vA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_thULoxVsEeKKubxyzHq1vA" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_utXvEBVsEeKKubxyzHq1vA" name="PredReplicate">
+      <ownedAttribute xmi:id="_AJDi0BVtEeKKubxyzHq1vA" name="" type="_mB-FMBVsEeKKubxyzHq1vA" association="_AJFYABVtEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AJDi0RVtEeKKubxyzHq1vA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AJDi0hVtEeKKubxyzHq1vA" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_AJFYABVtEeKKubxyzHq1vA" name="predReplicate_predEnergy_0" memberEnd="_AJFYARVtEeKKubxyzHq1vA _AJDi0BVtEeKKubxyzHq1vA">
+      <ownedEnd xmi:id="_AJFYARVtEeKKubxyzHq1vA" name="" type="_utXvEBVsEeKKubxyzHq1vA" association="_AJFYABVtEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AJFYAhVtEeKKubxyzHq1vA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AJFYAxVtEeKKubxyzHq1vA" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_EuL64BVtEeKKubxyzHq1vA" name="PredPerish">
+      <ownedAttribute xmi:id="_InLlsBVtEeKKubxyzHq1vA" name="" type="_mB-FMBVsEeKKubxyzHq1vA" association="_InNa4BVtEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_InLlsRVtEeKKubxyzHq1vA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_InLlshVtEeKKubxyzHq1vA" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_InNa4BVtEeKKubxyzHq1vA" name="predPerish_predEnergy_0" memberEnd="_InNa4RVtEeKKubxyzHq1vA _InLlsBVtEeKKubxyzHq1vA">
+      <ownedEnd xmi:id="_InNa4RVtEeKKubxyzHq1vA" name="" type="_EuL64BVtEeKKubxyzHq1vA" association="_InNa4BVtEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_InNa4hVtEeKKubxyzHq1vA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_InNa4xVtEeKKubxyzHq1vA" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_cC-QABVtEeKKubxyzHq1vA" name="PreyEnergy">
+      <ownedAttribute xmi:id="_lBVSIBVtEeKKubxyzHq1vA" name="" type="_z1g5IBViEeKKubxyzHq1vA" association="_lBV5MBVtEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lBVSIRVtEeKKubxyzHq1vA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lBVSIhVtEeKKubxyzHq1vA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_JnVlsBVuEeKKubxyzHq1vA" name="" type="_GZoTkBVuEeKKubxyzHq1vA" association="_JnYB8BVuEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JnVlsRVuEeKKubxyzHq1vA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JnVlshVuEeKKubxyzHq1vA" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_lBV5MBVtEeKKubxyzHq1vA" name="preyEnergy_prey_0" memberEnd="_lBV5MRVtEeKKubxyzHq1vA _lBVSIBVtEeKKubxyzHq1vA">
+      <ownedEnd xmi:id="_lBV5MRVtEeKKubxyzHq1vA" name="" type="_cC-QABVtEeKKubxyzHq1vA" association="_lBV5MBVtEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lBV5MhVtEeKKubxyzHq1vA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lBV5MxVtEeKKubxyzHq1vA" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_qaehEBVtEeKKubxyzHq1vA" name="PreyReplicate">
+      <ownedAttribute xmi:id="_598O8BVtEeKKubxyzHq1vA" name="" type="_cC-QABVtEeKKubxyzHq1vA" association="_59_5UBVtEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_598O8RVtEeKKubxyzHq1vA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_598O8hVtEeKKubxyzHq1vA" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_59_5UBVtEeKKubxyzHq1vA" name="preyReplicate_preyEnergy_0" memberEnd="_59_5URVtEeKKubxyzHq1vA _598O8BVtEeKKubxyzHq1vA">
+      <ownedEnd xmi:id="_59_5URVtEeKKubxyzHq1vA" name="" type="_qaehEBVtEeKKubxyzHq1vA" association="_59_5UBVtEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_59_5UhVtEeKKubxyzHq1vA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_59_5UxVtEeKKubxyzHq1vA" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_9RDlgBVtEeKKubxyzHq1vA" name="PreyPerish">
+      <ownedAttribute xmi:id="_BW6AkBVuEeKKubxyzHq1vA" name="" type="_cC-QABVtEeKKubxyzHq1vA" association="_BW8c0BVuEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BW6AkRVuEeKKubxyzHq1vA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BW6AkhVuEeKKubxyzHq1vA" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_BW8c0BVuEeKKubxyzHq1vA" name="preyPerish_preyEnergy_0" memberEnd="_BW8c0RVuEeKKubxyzHq1vA _BW6AkBVuEeKKubxyzHq1vA">
+      <ownedEnd xmi:id="_BW8c0RVuEeKKubxyzHq1vA" name="" type="_9RDlgBVtEeKKubxyzHq1vA" association="_BW8c0BVuEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BW8c0hVuEeKKubxyzHq1vA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BW8c0xVuEeKKubxyzHq1vA" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_GZoTkBVuEeKKubxyzHq1vA" name="HarvestPast">
+      <ownedAttribute xmi:id="_MNOp4BVuEeKKubxyzHq1vA" name="" type="_3R_AABViEeKKubxyzHq1vA" association="_MNP4ABVuEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MNOp4RVuEeKKubxyzHq1vA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MNOp4hVuEeKKubxyzHq1vA" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_JnYB8BVuEeKKubxyzHq1vA" name="preyEnergy_harvestPast" memberEnd="_JnYB8RVuEeKKubxyzHq1vA _JnVlsBVuEeKKubxyzHq1vA">
+      <ownedEnd xmi:id="_JnYB8RVuEeKKubxyzHq1vA" name="" type="_cC-QABVtEeKKubxyzHq1vA" association="_JnYB8BVuEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JnYB8hVuEeKKubxyzHq1vA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JnYB8xVuEeKKubxyzHq1vA" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_MNP4ABVuEeKKubxyzHq1vA" name="harvestPast_pasture_0" memberEnd="_MNP4ARVuEeKKubxyzHq1vA _MNOp4BVuEeKKubxyzHq1vA">
+      <ownedEnd xmi:id="_MNP4ARVuEeKKubxyzHq1vA" name="" type="_GZoTkBVuEeKKubxyzHq1vA" association="_MNP4ABVuEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MNP4AhVuEeKKubxyzHq1vA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MNP4AxVuEeKKubxyzHq1vA" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_YHKsUBVuEeKKubxyzHq1vA" name="MovePasture">
+      <ownedAttribute xmi:id="_cqGE8BVuEeKKubxyzHq1vA" name="" type="_3R_AABViEeKKubxyzHq1vA" association="_cqHTEBVuEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cqGE8RVuEeKKubxyzHq1vA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cqGE8hVuEeKKubxyzHq1vA" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_bxwHsBVuEeKKubxyzHq1vA" name="prey_movePasture_0" memberEnd="_bxwHsRVuEeKKubxyzHq1vA _bxu5kBVuEeKKubxyzHq1vA">
+      <ownedEnd xmi:id="_bxwHsRVuEeKKubxyzHq1vA" name="" type="_z1g5IBViEeKKubxyzHq1vA" association="_bxwHsBVuEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bxwHshVuEeKKubxyzHq1vA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bxwHsxVuEeKKubxyzHq1vA" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_cqHTEBVuEeKKubxyzHq1vA" name="movePasture_pasture_0" memberEnd="_cqHTERVuEeKKubxyzHq1vA _cqGE8BVuEeKKubxyzHq1vA">
+      <ownedEnd xmi:id="_cqHTERVuEeKKubxyzHq1vA" name="" type="_YHKsUBVuEeKKubxyzHq1vA" association="_cqHTEBVuEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cqHTEhVuEeKKubxyzHq1vA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cqHTExVuEeKKubxyzHq1vA" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_3qv88BVwEeKKubxyzHq1vA" name="predator_prey_0" memberEnd="_3qv88RVwEeKKubxyzHq1vA _3qvV4BVwEeKKubxyzHq1vA">
+      <ownedEnd xmi:id="_3qv88RVwEeKKubxyzHq1vA" name="predator" type="_ui_PkBViEeKKubxyzHq1vA" association="_3qv88BVwEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3qv88hVwEeKKubxyzHq1vA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3qv88xVwEeKKubxyzHq1vA" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_5U5KkBVwEeKKubxyzHq1vA" name="PreyMove">
+      <ownedAttribute xmi:id="_8MCW0BVwEeKKubxyzHq1vA" name="prey" type="_z1g5IBViEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8MCW0RVwEeKKubxyzHq1vA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8MCW0hVwEeKKubxyzHq1vA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_sBoIQBVxEeKKubxyzHq1vA" name="predEnergy" type="_mB-FMBVsEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sBoIQRVxEeKKubxyzHq1vA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sBoIQhVxEeKKubxyzHq1vA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_K43iMBVyEeKKubxyzHq1vA" name="" type="_cC-QABVtEeKKubxyzHq1vA" association="_K49BwBVyEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_K43iMRVyEeKKubxyzHq1vA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_K43iMhVyEeKKubxyzHq1vA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_vI8S0BcDEeKH6vUYSQ9XUw" name="predEnergy" type="_mB-FMBVsEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vI8S0RcDEeKH6vUYSQ9XUw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vI8S0hcDEeKH6vUYSQ9XUw" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_68GY8BVwEeKKubxyzHq1vA" name="predator_preyMove_0" memberEnd="_68GY8RVwEeKKubxyzHq1vA _68DVoBVwEeKKubxyzHq1vA">
+      <ownedEnd xmi:id="_68GY8RVwEeKKubxyzHq1vA" name="" type="_ui_PkBViEeKKubxyzHq1vA" association="_68GY8BVwEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_68GY8hVwEeKKubxyzHq1vA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_68GY8xVwEeKKubxyzHq1vA" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_euFOkBVxEeKKubxyzHq1vA" name="PreyHarvest">
+      <ownedAttribute xmi:id="_0u3lMBVxEeKKubxyzHq1vA" name="predEnergy" type="_mB-FMBVsEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0u3lMRVxEeKKubxyzHq1vA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_0u3lMhVxEeKKubxyzHq1vA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_LSY1cBVyEeKKubxyzHq1vA" name="" type="_cC-QABVtEeKKubxyzHq1vA" association="_LSb4wBVyEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LSY1cRVyEeKKubxyzHq1vA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LSY1chVyEeKKubxyzHq1vA" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_zxO4QBVxEeKKubxyzHq1vA" name="predEnergy_preyHarvest_0" memberEnd="_zxO4QRVxEeKKubxyzHq1vA _zxMcABVxEeKKubxyzHq1vA">
+      <ownedEnd xmi:id="_zxO4QRVxEeKKubxyzHq1vA" name="" type="_mB-FMBVsEeKKubxyzHq1vA" association="_zxO4QBVxEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zxO4QhVxEeKKubxyzHq1vA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zxO4QxVxEeKKubxyzHq1vA" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_K49BwBVyEeKKubxyzHq1vA" name="preyMove_preyEnergy_0" memberEnd="_K49BwRVyEeKKubxyzHq1vA _K43iMBVyEeKKubxyzHq1vA">
+      <ownedEnd xmi:id="_K49BwRVyEeKKubxyzHq1vA" name="" type="_5U5KkBVwEeKKubxyzHq1vA" association="_K49BwBVyEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_K49BwhVyEeKKubxyzHq1vA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_K49BwxVyEeKKubxyzHq1vA" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_LSb4wBVyEeKKubxyzHq1vA" name="preyHarvest_preyEnergy_0" memberEnd="_LSb4wRVyEeKKubxyzHq1vA _LSY1cBVyEeKKubxyzHq1vA">
+      <ownedEnd xmi:id="_LSb4wRVyEeKKubxyzHq1vA" name="" type="_euFOkBVxEeKKubxyzHq1vA" association="_LSb4wBVyEeKKubxyzHq1vA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LSb4whVyEeKKubxyzHq1vA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LSb4wxVyEeKKubxyzHq1vA" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Jam8oBohEeKN07hQpA-1_g" name="MovePredator">
+      <ownedAttribute xmi:id="_NP82gBohEeKN07hQpA-1_g" name="" type="_mB-FMBVsEeKKubxyzHq1vA" association="_NP-rsBohEeKN07hQpA-1_g">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NP82gRohEeKN07hQpA-1_g" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NP82ghohEeKN07hQpA-1_g" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_MsSIwBohEeKN07hQpA-1_g" name="prey_movePredator_0" memberEnd="_MsSIwRohEeKN07hQpA-1_g _MsRhsBohEeKN07hQpA-1_g">
+      <ownedEnd xmi:id="_MsSIwRohEeKN07hQpA-1_g" name="" type="_z1g5IBViEeKKubxyzHq1vA" association="_MsSIwBohEeKN07hQpA-1_g">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MsSIwhohEeKN07hQpA-1_g" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MsSIwxohEeKN07hQpA-1_g" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_NP-rsBohEeKN07hQpA-1_g" name="movePredator_predEnergy_0" memberEnd="_NP-rsRohEeKN07hQpA-1_g _NP82gBohEeKN07hQpA-1_g">
+      <ownedEnd xmi:id="_NP-rsRohEeKN07hQpA-1_g" name="" type="_Jam8oBohEeKN07hQpA-1_g" association="_NP-rsBohEeKN07hQpA-1_g">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NP-rshohEeKN07hQpA-1_g" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NP-rsxohEeKN07hQpA-1_g" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <profileApplication xmi:id="_C8YrADDVEeK6DceGvYx0EA">
+      <eAnnotations xmi:id="_C85oYDDVEeK6DceGvYx0EA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../profile/DSL3S.profile.uml#_1KJ7IDDdEeK6DceGvYx0EA"/>
+      </eAnnotations>
+      <appliedProfile href="../profile/DSL3S.profile.uml#_bf7O0CBZEeKpfttodweVYA"/>
+    </profileApplication>
+  </uml:Model>
+  <profile:Simulation xmi:id="_pdOPoBViEeKKubxyzHq1vA" simulName="Predator Prey model" base_Class="_l0mjIBViEeKKubxyzHq1vA" spaceHeight="100" spaceWidth="100"/>
+  <profile:State xmi:id="_nztIkBVsEeKKubxyzHq1vA" maxValue="100" stepVariation="-1" display="true" initValue="20" base_Class="_mB-FMBVsEeKKubxyzHq1vA"/>
+  <profile:Replicate xmi:id="_44dDABVsEeKKubxyzHq1vA" base_Class="_utXvEBVsEeKKubxyzHq1vA" upperThreshold="50" lowerThreshold="" toll="20" inheritance="20"/>
+  <profile:Perish xmi:id="_H8YVMBVtEeKKubxyzHq1vA" base_Class="_EuL64BVtEeKKubxyzHq1vA" upperThreshold=""/>
+  <profile:State xmi:id="_eDTJABVtEeKKubxyzHq1vA" maxValue="50" stepVariation="-1" display="true" initValue="10" base_Class="_cC-QABVtEeKKubxyzHq1vA"/>
+  <profile:Replicate xmi:id="_scjGgBVtEeKKubxyzHq1vA" base_Class="_qaehEBVtEeKKubxyzHq1vA" upperThreshold="20" lowerThreshold="" toll="10" inheritance="10"/>
+  <profile:Perish xmi:id="__PHNoBVtEeKKubxyzHq1vA" base_Class="_9RDlgBVtEeKKubxyzHq1vA" upperThreshold=""/>
+  <profile:Move xmi:id="_aPN98BVuEeKKubxyzHq1vA" base_Class="_YHKsUBVuEeKKubxyzHq1vA" weight="1"/>
+  <profile:Move xmi:id="_xspKUBVxEeKKubxyzHq1vA" base_Class="_5U5KkBVwEeKKubxyzHq1vA" weight="1"/>
+  <profile:Move xmi:id="_iQkJkBohEeKN07hQpA-1_g" base_Class="_Jam8oBohEeKN07hQpA-1_g" weight="2"/>
+  <profile_1:Animat xmi:id="_bp12cB4BEeKaabSpLnEi-A" base_Class="_ui_PkBViEeKKubxyzHq1vA" initNum="10" scopeRadius="1" wanderer="true" colourMax="255, 0, 0" colourMin="255, 64, 64"/>
+  <profile_1:Animat xmi:id="_onD60B4BEeKaabSpLnEi-A" base_Class="_z1g5IBViEeKKubxyzHq1vA" initNum="10" scopeRadius="1" colourMax="64, 64, 186" colourMin="128, 128, 255"/>
+  <profile_1:Environment xmi:id="__38nYB4BEeKaabSpLnEi-A" maxValue="50" initRandom="true" stepVariation="1" display="true" base_Class="_3R_AABViEeKKubxyzHq1vA" colourMin="224, 224, 128" colourMax="32, 128, 32"/>
+  <profile_1:Harvest xmi:id="_V2a0YB4DEeKaabSpLnEi-A" base_Class="_euFOkBVxEeKKubxyzHq1vA" harvested="PreyEnergy" percentHarvested="100" maxIntake="null" valueHarvest="null"/>
+  <profile_1:Harvest xmi:id="_iqzs4B4DEeKaabSpLnEi-A" base_Class="_GZoTkBVuEeKKubxyzHq1vA" harvested="Pasture" percentHarvested="100" maxIntake="null" valueHarvest="null"/>
+  <DSL3S:Simulation xmi:id="_EGiJ8DDVEeK6DceGvYx0EA" base_Class="_l0mjIBViEeKKubxyzHq1vA" simulName="Predator Prey" spaceHeight="100" spaceWidth="100"/>
+  <DSL3S:Animat xmi:id="__OTS4DDYEeK6DceGvYx0EA" initNum="10" wanderer="true" base_Class="_ui_PkBViEeKKubxyzHq1vA" colourMin="255,64,64" colourMax="192,0,0"/>
+  <DSL3S:Animat xmi:id="_Y83i0DDZEeK6DceGvYx0EA" initNum="10" base_Class="_z1g5IBViEeKKubxyzHq1vA" colourMin="64,64,255" colourMax="32,32,186"/>
+  <DSL3S:Environment xmi:id="_Ak7SIDDaEeK6DceGvYx0EA" maxValue="50" stepVariation="1" initRandom="true" display="true" colourMin="224,224,128" colourMax="32,128,32" base_Class="_3R_AABViEeKKubxyzHq1vA"/>
+  <DSL3S:Move xmi:id="_BXoE8DDbEeK6DceGvYx0EA" weight="1" base_Class="_5U5KkBVwEeKKubxyzHq1vA"/>
+  <DSL3S:Harvest xmi:id="_FgjCIDDbEeK6DceGvYx0EA" harvested="PreyEnergy" percentHarvested="100" base_Class="_euFOkBVxEeKKubxyzHq1vA"/>
+  <DSL3S:State xmi:id="_NZJWEDDbEeK6DceGvYx0EA" base_Class="_mB-FMBVsEeKKubxyzHq1vA" maxValue="100" stepVariation="-1" display="true" initValue="20"/>
+  <DSL3S:Perish xmi:id="_tWKFQDDbEeK6DceGvYx0EA" upperThreshold="101" base_Class="_EuL64BVtEeKKubxyzHq1vA"/>
+  <DSL3S:Replicate xmi:id="_YPshgDDeEeKzg9W6MgBbRw" lowerThreshold="-1" upperThreshold="50" toll="20" inheritance="20" base_Class="_utXvEBVsEeKKubxyzHq1vA"/>
+  <DSL3S:Move xmi:id="_JqVlMDDfEeKzg9W6MgBbRw" weight="-2" base_Class="_Jam8oBohEeKN07hQpA-1_g"/>
+  <DSL3S:Move xmi:id="_LsEzcDDfEeKzg9W6MgBbRw" weight="1" base_Class="_YHKsUBVuEeKKubxyzHq1vA"/>
+  <DSL3S:Harvest xmi:id="_OHpeADDfEeKzg9W6MgBbRw" harvested="Pasture" percentHarvested="100" base_Class="_GZoTkBVuEeKKubxyzHq1vA"/>
+  <DSL3S:State xmi:id="_fuMd8DDfEeKzg9W6MgBbRw" base_Class="_cC-QABVtEeKKubxyzHq1vA" maxValue="50" stepVariation="-1" display="true" initValue="10"/>
+  <DSL3S:Replicate xmi:id="_qwLksDDfEeKzg9W6MgBbRw" lowerThreshold="-1" upperThreshold="20" toll="10" inheritance="10" base_Class="_qaehEBVtEeKKubxyzHq1vA"/>
+  <DSL3S:Perish xmi:id="_wzGJYDDfEeKzg9W6MgBbRw" upperThreshold="51" base_Class="_9RDlgBVtEeKKubxyzHq1vA"/>
+</xmi:XMI>
