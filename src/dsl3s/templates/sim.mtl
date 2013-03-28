@@ -1,7 +1,6 @@
 [comment encoding = UTF-8 /]
 [module sim('http://www.eclipse.org/uml2/3.0.0/UML')/]
 [import dsl3s::templates::services/]
-
 [comment
 Date: 09-08-2012    Author: Luís de Sousa  (luis.a.de.sousa@gmail.com)
 Generates the main Simulation class inheriting from SimState.
@@ -15,6 +14,8 @@ import sim.engine.Steppable;
 import sim.engine.Stoppable;
 import sim.util.Int2D;
 import java.util.ArrayList;
+import com.vividsolutions.jts.geom.Coordinate;
+import com.vividsolutions.jts.geom.Geometry;
 
 public class [c.name/] extends SimState {
 
@@ -22,21 +23,31 @@ public class [c.name/] extends SimState {
 	public Integer spaceWidth = [c.getTaggedValue(c, 'Simulation', 'spaceWidth')/];
 	public Integer spaceHeight = [c.getTaggedValue(c, 'Simulation', 'spaceHeight')/];
 
-	// Animat initial numbers
 [for (assA:Association | c.getAssociations())]
  [for (a:Element | assA.relatedElement) ]
   [let aClass: Class = a.oclAsType(Class)] 
   [if (aClass.isNotNull())]
    [if (aClass.hasStereotype('Animat'))]
+    [if (aClass.getTaggedValue(aClass, 'Animat', 'initNum').isNotNull())]
+
 	public Integer initNum[aClass.name/] = [aClass.getTaggedValue(aClass, 'Animat', 'initNum')/];
+	[/if]
+	[if (aClass.getTaggedValue(aClass, 'Animat', 'inputFile').isNotNull())]
+	public String inputFile[aClass.name/] = "[aClass.getTaggedValue(aClass, 'Animat', 'inputFile')/]";
+	[/if]
+	public GeomVectorField space[aClass.name/] = new GeomVectorField(gridWidth, gridHeight);
+   [/if]
+   [if (aClass.hasStereotype('Environment'))]
+
+	[if (aClass.getTaggedValue(aClass, 'Environment', 'inputFile').isNotNull())]
+	public String inputFile[aClass.name/] = "[aClass.getTaggedValue(aClass, 'Environment', 'inputFile')/]";
+	[/if]
+	public GeomVectorField space[aClass.name/] = new GeomVectorField(gridWidth, gridHeight);
    [/if]
   [/if]
   [/let]
  [/for]	 
 [/for]
-
-	protected SimGrid simDomain;
-	public SimGrid getSimDomain() {return simDomain;}
 
 	protected ArrayList<Stoppable> garbage = new ArrayList<Stoppable>();
 	public void addToGarbage(Stoppable anim) {
@@ -57,7 +68,7 @@ public class [c.name/] extends SimState {
   [if (aClass.isNotNull())]
    [if (aClass.hasStereotype('Animat'))]
 	protected ArrayList<[aClass.name/]> newAnimats[aClass.name/] = new ArrayList<[aClass.name/]>();
-	protected ArrayList<Int2D> newLocs[aClass.name/] = new ArrayList<Int2D>();
+	protected ArrayList<Double2D> newLocs[aClass.name/] = new ArrayList<Double2D>();
    [/if]
   [/if]
   [/let]
@@ -72,14 +83,16 @@ public class [c.name/] extends SimState {
 	public void start()
 	{
 		super.start();
-		
-		simDomain = new SimGrid(spaceWidth, spaceHeight);
 
  [for (ass:Association | c.getAssociations())]
   [for (p:Property | ass.memberEnd) ]
    [if (p.class.isNotNull())]
     [if (p.class.hasStereotype('Environment'))]
+     [if (p.class.getTaggedValue(p.class, 'Emerge', 'inputFile').isNotNull())]
+		loadEnvironment(space[p.class.name/], inputFile[p.class.name/]);
+     [else]
 		init[p.class.name/]Objects();
+	 [/if]
     [/if]
    [/if]
   [/for]	 
@@ -121,6 +134,21 @@ public class [c.name/] extends SimState {
 		});
 	}
 
+	/**
+	 * Here don't forget about expanding the MBR
+     */
+	loadEnvironment(GeomVectorField space, String file)
+	{
+		
+	}
+
+	public void siteObject(GeomVectorField space, MasonGeometry geom, double x, double y) {
+		
+		Coordinate coord = new Coordinate(new Double(x), new Double(y));
+		geom.geometry = geomFactory.createPoint(coord);
+		space.addGeometry(geom);
+	}
+
  [for (ass:Association | c.getAssociations())]
   [for (p:Element | ass.relatedElement) ]
    [let pClass: Class = p.oclAsType(Class)]
@@ -128,8 +156,8 @@ public class [c.name/] extends SimState {
      [if (pClass.hasStereotype('Environment'))]
 	public void init[pClass.name/]Objects() {
 
-		for (int i=0; i < simDomain.getWidth(); i++)
-			for (int j=0; j < simDomain.getHeight(); j++)
+		for (int i=0; i < spaceWidth; i++)
+			for (int j=0; j < spaceHeight; j++)
 			{
 			  [if (pClass.getTaggedValue(pClass, 'Environment', 'initRandom') = 'true')]
 				[pClass.name/] obj = new [pClass.name/](random);
@@ -137,7 +165,7 @@ public class [c.name/] extends SimState {
 				[pClass.name/] obj = new [pClass.name/]();
 			  [/if]
 				obj.setStopper(schedule.scheduleRepeating(obj));
-				simDomain.setObjectLocation(obj, i, j);
+				siteObject(space[pClass.name/], obj, i, j);
 			}
 	}
      [/if]
@@ -151,16 +179,16 @@ public class [c.name/] extends SimState {
    [if (p.class.isNotNull())]
     [if (p.class.hasStereotype('Animat'))]
 	protected void init[p.class.name/](int x, int y) {
-		[p.class.name/] new[p.class.name/] = new [p.class.name/](simDomain);
+		[p.class.name/] new[p.class.name/] = new [p.class.name/]();
 		new[p.class.name/].setStopper(schedule.scheduleRepeating(new[p.class.name/]));
 		simDomain.setObjectLocation(new[p.class.name/], x, y);
 	}
 
 	public [p.class.name/] create[p.class.name/](int x, int y) {
-		[p.class.name/] new[p.class.name/] = new [p.class.name/](simDomain);
+		[p.class.name/] new[p.class.name/] = new [p.class.name/]();
 		new[p.class.name/].setStopper(schedule.scheduleRepeating(new[p.class.name/]));
 		newAnimats[p.class.name/].add(new[p.class.name/]);
-		newLocs[p.class.name/].add(new Int2D(x,y));
+		newLocs[p.class.name/].add(new Double2D(x,y));
 		return new[p.class.name/];
 	}
 
@@ -168,12 +196,12 @@ public class [c.name/] extends SimState {
 		
 		for(int i = 0; i < newAnimats[p.class.name/].size(); i++) {
 			[p.class.name/] new[p.class.name/] = newAnimats[p.class.name/].get(i);
-			Int2D loc = newLocs[p.class.name/].get(i);
-			simDomain.setObjectLocation(new[p.class.name/], loc.x, loc.y);
+			Double2D loc = newLocs[p.class.name/].get(i);
+			siteObject(space[p.class.name/], new[p.class.name/], loc.x, loc.y);
 		}
 		
 		newAnimats[p.class.name/] = new ArrayList<[p.class.name/]>();
-		newLocs[p.class.name/] = new ArrayList<Int2D>();
+		newLocs[p.class.name/] = new ArrayList<Double2D>();
 	}
 
 	 [if (p.class.hasLinkedStereotype('Emerge'))]
