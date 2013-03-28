@@ -2,4 +2,13 @@ Fresh install from GitHub
 -------------------------
 
 . Checkout the project from GitHub into an Generic Project
+
 . Set the src folder as a source folder [right click > Source > Format]
+
+. Add plugin references
+  [right click > Build PAth > Configure Build Path > Add Library > Plug-in Dependencies > Next > Finish]
+  
+. Open the file META-INF/MANIFEST.MF, make sure Export-Package and Import-Package look like this:
+Export-Package: dsl3s.templates,
+ dsl3s.templates.tests
+Import-Package: org.eclipse.uml2.uml
