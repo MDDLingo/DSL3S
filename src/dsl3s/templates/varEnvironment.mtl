@@ -17,6 +17,7 @@ import sim.engine.Steppable;
 import sim.engine.Stoppable;
 import sim.util.geo.MasonGeometry;
 import com.vividsolutions.jts.geom.Coordinate;
+import com.vividsolutions.jts.geom.Geometry;
 
 public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
 
@@ -52,20 +53,26 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
     public void setStopper(Stoppable stopper) {this.stopper = stopper;}
     public void stop() {stopper.stop();}
 
-	public [c.name/]() 
+	public [c.name/](Geometry geom) 
 	{
 		super();
-		location = this.geometry.getCentroid().getCoordinate();
+		this.geometry = geom;
+		location = geom.getCentroid().getCoordinate();
 	}
 	
-	public [c.name/](Double init) 
+	public [c.name/](Double init, Geometry geom) 
 	{
 		super();
-		location = this.geometry.getCentroid().getCoordinate();
+		this.geometry = geom;
+		location = geom.getCentroid().getCoordinate();
 		value = init;
 	}
 
-	public [c.name/](MersenneTwisterFast randGen) {
+	public [c.name/](MersenneTwisterFast randGen, Geometry geom) 
+	{
+		super();
+		this.geometry = geom;
+		location = geom.getCentroid().getCoordinate();
 		value = randGen.nextDouble() * (valueMax - valueMin) + valueMin;
 	}
 	

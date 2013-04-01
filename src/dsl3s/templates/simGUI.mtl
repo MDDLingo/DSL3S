@@ -20,21 +20,30 @@ import sim.display.Controller;
 import sim.display.Display2D;
 import sim.display.GUIState;
 import sim.engine.SimState;
-import sim.engine.Steppable;
 import sim.portrayal.Inspector;
-import sim.portrayal.grid.SparseGridPortrayal2D;
-import sim.portrayal.grid.ValueGridPortrayal2D;
-import sim.portrayal.simple.MovablePortrayal2D;
-import sim.portrayal.simple.OvalPortrayal2D;
-import sim.util.gui.SimpleColorMap;
+import sim.portrayal.geo.GeomVectorFieldPortrayal;
 
 
 public class [c.name /]GUI extends GUIState {
 
 	public Display2D display;
 	public JFrame displayFrame;
-	SparseGridPortrayal2D simPortrayal = new SparseGridPortrayal2D();
-	
+
+[for (assA:Association | c.getAssociations())]
+ [for (a:Element | assA.relatedElement) ]
+  [let aClass: Class = a.oclAsType(Class)] 
+  [if (aClass.isNotNull())]
+   [if (aClass.hasStereotype('Animat'))]
+	GeomVectorFieldPortrayal portrayal[aClass.name/] = new GeomVectorFieldPortrayal();
+   [/if]
+   [if (aClass.hasStereotype('Environment'))]
+	GeomVectorFieldPortrayal portrayal[aClass.name/] = new GeomVectorFieldPortrayal();
+   [/if]
+  [/if]
+  [/let]
+ [/for]	 
+[/for]
+		
 	protected SimGUI() { super(new Sim(System.currentTimeMillis()));}
 	protected SimGUI(SimState state) {super(state);	}
 	
@@ -65,33 +74,24 @@ public class [c.name /]GUI extends GUIState {
 	{
 		Sim sim = (Sim) state;
 		
-		simPortrayal.setField(sim.simDomain);
-		
-[comment Iterate through Animats /]
+[comment Iterate through Animats and Environments /]
 [for (ass:Association | c.getAssociations())]
   [for (a:Element | ass.relatedElement) ]
    [let aClass: Class = a.oclAsType(Class)]
+	[if (aClass.hasStereotype('Environment'))]
+		portrayal[aClass.name/].setField(sim.space[aClass.name/]);
+		portrayal[aClass.name/].setPortrayalForAll(new [aClass.name/]Portrayal());
+
+	[/if]
     [if (aClass.hasStereotype('Animat'))]
-		simPortrayal.setPortrayalForClass(
-			[aClass.name/].class, new [aClass.name/]Portrayal());
+		portrayal[aClass.name/].setField(sim.space[aClass.name/]);
+		portrayal[aClass.name/].setPortrayalForAll(new [aClass.name/]Portrayal());
 
 	[/if]
   [/let]
  [/for]	 
 [/for]
 
-[comment Iterate through Environments /]
-[for (ass:Association | c.getAssociations())]
-  [for (e:Element | ass.relatedElement) ]
-   [let eClass: Class = e.oclAsType(Class)]
-    [if (eClass.hasStereotype('Environment'))]
-		simPortrayal.setPortrayalForClass(
-			[eClass.name/].class, new [eClass.name/]Portrayal());
-
-	[/if]
-  [/let]
- [/for]	 
-[/for]
 
 		// reschedule the displayer
 		display.reset();
@@ -114,7 +114,19 @@ public class [c.name /]GUI extends GUIState {
 		
 		// so the frame appears in the "Display" list
 		displayFrame.setVisible(true);
-		display.attach(simPortrayal, "Simulation" );
+[comment Iterate through Animats and Environments /]
+[for (ass:Association | c.getAssociations())]
+  [for (a:Element | ass.relatedElement) ]
+   [let aClass: Class = a.oclAsType(Class)]
+	[if (aClass.hasStereotype('Environment'))]
+		display.attach(portrayal[aClass.name/], "[aClass.name/]");
+	[/if]
+    [if (aClass.hasStereotype('Animat'))]
+		display.attach(portrayal[aClass.name/], "[aClass.name/]");
+	[/if]
+  [/let]
+ [/for]	 
+[/for]		
 	}
 	
 	public void quit()

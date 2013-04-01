@@ -25,15 +25,17 @@ import sim.util.Bag;
 import sim.util.geo.MasonGeometry;
 import sim.util.geo.PointMoveTo;
 import com.vividsolutions.jts.geom.Coordinate;
+import com.vividsolutions.jts.geom.Geometry;
 
 public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
 
 	protected Double movementScope = 1.0;
 
-	public [c.name/]() 
+	public [c.name/](Geometry geom) 
 	{
 		super();
-		location = this.geometry.getCentroid().getCoordinate();
+		this.geometry = geom;
+		location = geom.getCentroid().getCoordinate();
 	}
 	
  [comment Iterate through linked States /]

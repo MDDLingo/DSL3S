@@ -12,11 +12,11 @@ Generates the main Simulation class inheriting from SimState.
 import sim.engine.SimState;
 import sim.engine.Steppable;
 import sim.engine.Stoppable;
-import sim.util.Double2D;
 import java.util.ArrayList;
 import sim.util.geo.MasonGeometry;
 import sim.field.geo.GeomVectorField;
 import com.vividsolutions.jts.geom.Coordinate;
+import com.vividsolutions.jts.geom.Geometry;
 import com.vividsolutions.jts.geom.GeometryFactory;
 
 public class [c.name/] extends SimState {
@@ -73,7 +73,6 @@ public class [c.name/] extends SimState {
   [if (aClass.isNotNull())]
    [if (aClass.hasStereotype('Animat'))]
 	protected ArrayList<[aClass.name/]> newAnimats[aClass.name/] = new ArrayList<[aClass.name/]>();
-	protected ArrayList<Double2D> newLocs[aClass.name/] = new ArrayList<Double2D>();
    [/if]
   [/if]
   [/let]
@@ -164,13 +163,15 @@ public class [c.name/] extends SimState {
 		for (int i=0; i < spaceWidth; i++)
 			for (int j=0; j < spaceHeight; j++)
 			{
+				Coordinate coord = new Coordinate(new Double(i), new Double(j));
+				Geometry geom = geomFactory.createPoint(coord);
 			  [if (pClass.getTaggedValue(pClass, 'Environment', 'initRandom') = 'true')]
-				[pClass.name/] obj = new [pClass.name/](random);
+				[pClass.name/] obj = new [pClass.name/](random, geom);
 			  [else]
-				[pClass.name/] obj = new [pClass.name/]();
+				[pClass.name/] obj = new [pClass.name/](geom);
 			  [/if]
 				obj.setStopper(schedule.scheduleRepeating(obj));
-				siteObject(space[pClass.name/], obj, i, j);
+				space[pClass.name/].addGeometry(obj);
 			}
 	}
      [/if]
@@ -183,30 +184,36 @@ public class [c.name/] extends SimState {
   [for (p:Property | ass.memberEnd) ]
    [if (p.class.isNotNull())]
     [if (p.class.hasStereotype('Animat'))]
-	protected void init[p.class.name/](int x, int y) {
-		[p.class.name/] new[p.class.name/] = new [p.class.name/]();
+	protected [p.class.name/] generate[p.class.name/](double x, double y)
+	{
+		Coordinate coord = new Coordinate(new Double(x), new Double(y));
+		Geometry geom = geomFactory.createPoint(coord);
+		[p.class.name/] new[p.class.name/] = new [p.class.name/](geom);
 		new[p.class.name/].setStopper(schedule.scheduleRepeating(new[p.class.name/]));
-		siteObject(space[p.class.name/], new[p.class.name/], x, y);
-	}
-
-	public [p.class.name/] create[p.class.name/](double x, double y) {
-		[p.class.name/] new[p.class.name/] = new [p.class.name/]();
-		new[p.class.name/].setStopper(schedule.scheduleRepeating(new[p.class.name/]));
-		newAnimats[p.class.name/].add(new[p.class.name/]);
-		newLocs[p.class.name/].add(new Double2D(x,y));
 		return new[p.class.name/];
 	}
 
-	protected void castNew[p.class.name/] () {
-		
-		for(int i = 0; i < newAnimats[p.class.name/].size(); i++) {
+	protected void init[p.class.name/](double x, double y) 
+	{
+		[p.class.name/] new[p.class.name/] = generate[p.class.name/](x, y);
+		space[p.class.name/].addGeometry(new[p.class.name/]);
+	}
+
+	public [p.class.name/] create[p.class.name/](double x, double y) 
+	{
+		[p.class.name/] new[p.class.name/] = generate[p.class.name/](x, y);
+		newAnimats[p.class.name/].add(new[p.class.name/]);
+		return new[p.class.name/];
+	}
+
+	protected void castNew[p.class.name/] () 
+	{	
+		for(int i = 0; i < newAnimats[p.class.name/].size(); i++) 
+		{
 			[p.class.name/] new[p.class.name/] = newAnimats[p.class.name/].get(i);
-			Double2D loc = newLocs[p.class.name/].get(i);
-			siteObject(space[p.class.name/], new[p.class.name/], loc.x, loc.y);
+			space[p.class.name/].addGeometry(new[p.class.name/]);
 		}
-		
 		newAnimats[p.class.name/] = new ArrayList<[p.class.name/]>();
-		newLocs[p.class.name/] = new ArrayList<Double2D>();
 	}
 
 	 [if (p.class.hasLinkedStereotype('Emerge'))]
@@ -221,12 +228,6 @@ public class [c.name/] extends SimState {
   [/for]	 
  [/for]
 
-	public void siteAnimat(GeomVectorField space, MasonGeometry geom, double x, double y) {
-		
-		Coordinate coord = new Coordinate(new Double(x), new Double(y));
-		geom.geometry = geomFactory.createPoint(coord);
-		space.addGeometry(geom);
-	}
 }
 [/file]
 [/template]
