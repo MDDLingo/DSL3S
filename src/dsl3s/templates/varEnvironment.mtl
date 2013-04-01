@@ -10,33 +10,38 @@ Environment variable class.
 [template public environment(c : Class) ? (c.hasStereotype('Environment'))]
 
 [file (c.name.concat('.java'), false, 'UTF-8')]
+
+import ec.util.MersenneTwisterFast;
 import sim.engine.SimState;
 import sim.engine.Steppable;
 import sim.engine.Stoppable;
-import sim.util.Int2D;
-import ec.util.MersenneTwisterFast;
+import sim.util.geo.MasonGeometry;
+import com.vividsolutions.jts.geom.Coordinate;
 
-public class [c.name/] implements Steppable, Stoppable {
+public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
+
+	protected Double value = new Double([c.getTaggedValue(c, 'Environment', 'initValue')/]); 
+	public static  Double stepVar = new Double([c.getTaggedValue(c, 'Environment', 'stepVariation')/]);
+	public static  Double valueMax = new Double([c.getTaggedValue(c, 'Environment', 'maxValue')/]);
+	public static  Double valueMin = new Double([c.getTaggedValue(c, 'Environment', 'minValue')/]);
+
+	protected Coordinate location;
+	public Coordinate getLocation() {return location;}
 	
-	protected Integer value = [c.getTaggedValue(c, 'Environment', 'initValue')/]; 
-	public static  Integer stepVar = [c.getTaggedValue(c, 'Environment', 'stepVariation')/];
-	public static  Integer valueMax = [c.getTaggedValue(c, 'Environment', 'maxValue')/];
-	public static  Integer valueMin = [c.getTaggedValue(c, 'Environment', 'minValue')/];
-	
-	public Integer getValue() {return value;}
-	public void setValue(int newValue) {
+	public Double getValue() {return value;}
+	public void setValue(Double newValue) {
 		value = newValue;
 		if (value > valueMax) value = valueMax;
 		if (value < valueMin) value = valueMin;
 	}
 	
-	public Integer harvestPercent(Integer percent) {
-		Integer harvested = (int) Math.round(value * (percent / 100.0));
+	public Double harvestPercent(Double percent) {
+		Double harvested = value * percent / 100.0;
 		setValue(value - harvested);
 		return harvested;
 	}
-	public Integer harvestValue(Integer val) {
-		Integer res;
+	public Double harvestValue(Double val) {
+		Double res;
 		if(val < value) res = val;
 		else res = value;
 		setValue(value - val);
@@ -46,13 +51,22 @@ public class [c.name/] implements Steppable, Stoppable {
 	private Stoppable stopper = null;
     public void setStopper(Stoppable stopper) {this.stopper = stopper;}
     public void stop() {stopper.stop();}
+
+	public [c.name/]() 
+	{
+		super();
+		location = this.geometry.getCentroid().getCoordinate();
+	}
 	
-	public [c.name/]() {}
-	
-	public [c.name/](int init) {value = init;}
+	public [c.name/](Double init) 
+	{
+		super();
+		location = this.geometry.getCentroid().getCoordinate();
+		value = init;
+	}
 
 	public [c.name/](MersenneTwisterFast randGen) {
-		value = randGen.nextInt(valueMax - valueMin) + valueMin;
+		value = randGen.nextDouble() * (valueMax - valueMin) + valueMin;
 	}
 	
 	//@Override

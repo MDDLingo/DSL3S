@@ -16,17 +16,25 @@ Skeleton of the Animat class.
 [comment @main /]
 [file (c.name.concat('.java'), false, 'UTF-8')]
 
+import java.util.HashMap;
 import ec.util.MersenneTwisterFast;
 import sim.engine.SimState;
 import sim.engine.Steppable;
 import sim.engine.Stoppable;
 import sim.util.Bag;
-import sim.util.Int2D;
-import sim.util.IntBag;
+import sim.util.geo.MasonGeometry;
+import sim.util.geo.PointMoveTo;
+import com.vividsolutions.jts.geom.Coordinate;
 
-public class [c.name/] implements Steppable, Stoppable {
+public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
 
-	protected SimGrid domain;
+	protected Double movementScope = 1.0;
+
+	public [c.name/]() 
+	{
+		super();
+		location = this.geometry.getCentroid().getCoordinate();
+	}
 	
  [comment Iterate through linked States /]
  [for (ass:Association | c.getAssociations())]
@@ -37,25 +45,25 @@ public class [c.name/] implements Steppable, Stoppable {
 	///////////////////////////////////////////////////////
     // State: [sClass.name/]
 	
-	protected Integer state[sClass.name/] = [sClass.getTaggedValue(sClass, 'State', 'initValue')/];
-	protected static Integer state[sClass.name/]Min = [sClass.getTaggedValue(sClass, 'State', 'minValue')/];
-	protected static Integer state[sClass.name/]Max = [sClass.getTaggedValue(sClass, 'State', 'maxValue')/];
-	protected static Integer state[sClass.name/]Var = [sClass.getTaggedValue(sClass, 'State', 'stepVariation')/];
-	public Integer getState[sClass.name/]() {return state[sClass.name/];}
-    public void setState[sClass.name/](Integer newState) {
+	protected Double state[sClass.name/] = new Double([sClass.getTaggedValue(sClass, 'State', 'initValue')/]);
+	protected static Double state[sClass.name/]Min = new Double([sClass.getTaggedValue(sClass, 'State', 'minValue')/]);
+	protected static Double state[sClass.name/]Max = new Double([sClass.getTaggedValue(sClass, 'State', 'maxValue')/]);
+	protected static Double state[sClass.name/]Var = new Double([sClass.getTaggedValue(sClass, 'State', 'stepVariation')/]);
+	public Double getState[sClass.name/]() {return state[sClass.name/];}
+    public void setState[sClass.name/](Double newState) {
 		state[sClass.name/] = newState;
 		if (state[sClass.name/] < state[sClass.name/]Min) 
 			state[sClass.name/] = state[sClass.name/]Min;
 		if (state[sClass.name/] > state[sClass.name/]Max) 
 			state[sClass.name/] = state[sClass.name/]Max;
 	}
-	public Integer harvestPercent[sClass.name/](Integer percent) {
-		Integer harvested = (int) Math.round(state[sClass.name/] * (percent / 100.0));
+	public Double harvestPercent[sClass.name/](Double percent) {
+		Double harvested = state[sClass.name/] * percent / 100.0;
 		state[sClass.name/] -= harvested;
 		return harvested;
 	}
-	public Integer harvestValue[sClass.name/](Integer value) {
-		Integer res;
+	public Double harvestValue[sClass.name/](Double value) {
+		Double res;
 		if(value < state[sClass.name/]) res = value;
 		else res = state[sClass.name/];
 		setState[sClass.name/](state[sClass.name/] - value);
@@ -70,16 +78,16 @@ public class [c.name/] implements Steppable, Stoppable {
        [if (rClass.isNotNull())]
         [if (rClass.hasStereotype('Replicate'))]
 	     [if rClass.getTaggedValue(rClass, 'Replicate', 'upperThreshold').isNotNull()]
-	protected static Integer upperThresh[rClass.name/] = [rClass.getTaggedValue(rClass, 'Replicate', 'upperThreshold')/];
+	protected static Double upperThresh[rClass.name/] = new Double([rClass.getTaggedValue(rClass, 'Replicate', 'upperThreshold')/]);
          [/if]
          [if rClass.getTaggedValue(rClass, 'Replicate', 'lowerThreshold').isNotNull()]
-	protected static Integer lowerThresh[rClass.name/] = [rClass.getTaggedValue(rClass, 'Replicate', 'lowerThreshold')/];
+	protected static Double lowerThresh[rClass.name/] = new Double([rClass.getTaggedValue(rClass, 'Replicate', 'lowerThreshold')/]);
          [/if]
 	     [if rClass.getTaggedValue(rClass, 'Replicate', 'toll').isNotNull()]
-	protected static Integer toll[rClass.name/] = [rClass.getTaggedValue(rClass, 'Replicate', 'toll')/];
+	protected static Double toll[rClass.name/] = new Double([rClass.getTaggedValue(rClass, 'Replicate', 'toll')/]);
          [/if]
 	     [if rClass.getTaggedValue(rClass, 'Replicate', 'inheritance').isNotNull()]
-	protected static Integer inheritance[rClass.name/] = [rClass.getTaggedValue(rClass, 'Replicate', 'inheritance')/];
+	protected static Double inheritance[rClass.name/] = new Double([rClass.getTaggedValue(rClass, 'Replicate', 'inheritance')/]);
          [/if]
         [/if]
        [/if]
@@ -95,10 +103,10 @@ public class [c.name/] implements Steppable, Stoppable {
        [if (pClass.isNotNull())]
         [if (pClass.hasStereotype('Perish'))]
 	     [if pClass.getTaggedValue(pClass, 'Perish', 'upperThreshold').isNotNull()]
-	protected static Integer upperThresh[pClass.name/] = [pClass.getTaggedValue(pClass, 'Perish', 'upperThreshold')/];
+	protected static Double upperThresh[pClass.name/] = new Double([pClass.getTaggedValue(pClass, 'Perish', 'upperThreshold')/]);
          [/if]
          [if pClass.getTaggedValue(pClass, 'Perish', 'lowerThreshold').isNotNull()]
-	protected static Integer lowerThresh[pClass.name/] = [pClass.getTaggedValue(pClass, 'Perish', 'lowerThreshold')/];
+	protected static Double lowerThresh[pClass.name/] = new Double([pClass.getTaggedValue(pClass, 'Perish', 'lowerThreshold')/]);
          [/if]
         [/if]
        [/if]
@@ -115,12 +123,12 @@ public class [c.name/] implements Steppable, Stoppable {
         [if (pClass.hasStereotype('Harvest'))]
 		 [if (pClass.getTaggedValue(pClass, 'Harvest', 'harvested') <> sClass.name)]
 	      [if (pClass.getTaggedValue(pClass, 'Harvest', 'percentHarvested').isNotNull())]  
- 	protected static Integer percent[pClass.name/] = [pClass.getTaggedValue(pClass, 'Harvest', 'percentHarvested')/];	
+ 	protected static Double percent[pClass.name/] = new Double([pClass.getTaggedValue(pClass, 'Harvest', 'percentHarvested')/]);	
 	      [/if]
 	      [if (pClass.getTaggedValue(pClass, 'Harvest', 'valueHarvested').isNotNull())]
- 	protected static Integer value[pClass.name/] = [pClass.getTaggedValue(pClass, 'Harvest', 'valueHarvested')/];			
+ 	protected static Double value[pClass.name/] = new Double([pClass.getTaggedValue(pClass, 'Harvest', 'valueHarvested')/]);			
 	      [/if]
- 	protected static Integer scope[pClass.name/] = [pClass.getTaggedValue(pClass, 'Harvest', 'scope')/];			
+ 	protected static Double scope[pClass.name/] = new Double([pClass.getTaggedValue(pClass, 'Harvest', 'scope')/]);			
 		 [/if]
         [/if]
        [/if]
@@ -141,7 +149,9 @@ public class [c.name/] implements Steppable, Stoppable {
    [let pClass: Class = p.oclAsType(Class)]
     [if (pClass.isNotNull())]
      [if (pClass.hasStereotype('Move'))]
-	protected static Integer weight[pClass.name/] = [pClass.getTaggedValue(pClass, 'Move', 'weight')/];
+	protected static Double weight[pClass.name/] = new Double([pClass.getTaggedValue(pClass, 'Move', 'weight')/]);
+    [comment Movement scope must be taken into account in the future/]
+	protected static Double scope[pClass.name/] = 1.0[comment pClass.getTaggedValue(pClass, 'Move', 'weight')/];
      [/if]
     [/if]
    [/let]
@@ -149,15 +159,14 @@ public class [c.name/] implements Steppable, Stoppable {
  [/for]
 
 
-
-
 	private Stoppable stopper = null;
     public void setStopper(Stoppable stopper)   {this.stopper = stopper;}
     public void stop() {stopper.stop();}
 
-	public [c.name/](SimGrid domain) {this.domain = domain;}
+	protected Coordinate location;
+	public Coordinate getLocation() {return location;}
 
-	public static Integer getMinDisplayValue() {
+	public static Double getMinDisplayValue() {
 
 		return
  [for (ass:Association | c.getAssociations())]
@@ -176,7 +185,7 @@ public class [c.name/] implements Steppable, Stoppable {
 			0; // this zero is an artifact of code generation
 }
 
-	public static Integer getMaxDisplayValue() {
+	public static Double getMaxDisplayValue() {
 
 		return
  [for (ass:Association | c.getAssociations())]
@@ -195,7 +204,7 @@ public class [c.name/] implements Steppable, Stoppable {
 			0; // this zero is an artifact of code generation
 }
 
-	public Integer getDisplayValue() {
+	public Double getDisplayValue() {
 
 		return
  [for (ass:Association | c.getAssociations())]
@@ -219,8 +228,6 @@ public class [c.name/] implements Steppable, Stoppable {
 	public void step(SimState state) {
 		
 		Sim sim = (Sim) state;
-		SimGrid domain = sim.getSimDomain();
-		Int2D location = domain.getObjectLocation(this);
 
 		// Update state variables
  [for (ass:Association | c.getAssociations())]
@@ -242,7 +249,7 @@ public class [c.name/] implements Steppable, Stoppable {
    [if (sClass.isNotNull())]
     [if (sClass.hasStereotype('State'))]
 	 [if (sClass.hasLinkedStereotype('Harvest'))]
-		harvest[sClass.name/](location, sim);
+		harvest[sClass.name/](sim);
 	 [/if]
    [/if]
   [/if]
@@ -252,10 +259,10 @@ public class [c.name/] implements Steppable, Stoppable {
 
 		perish(sim);
 		
-		replicate(location, sim);
+		replicate(sim);
 
  [if (c.hasLinkedStereotype('Move'))]
-		move(location, sim);
+		move(sim);
  [/if]
 	}
 
@@ -266,6 +273,10 @@ public class [c.name/] implements Steppable, Stoppable {
  [c.behavMove() /]
 
  [c.behavReplicate() /]
+
+	protected double randMove(double val, MersenneTwisterFast randGen) {
+		return val + (randGen.nextDouble() - randGen.nextDouble()) * movementScope;
+	}
 
 }
 

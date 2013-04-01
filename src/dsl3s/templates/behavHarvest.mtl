@@ -23,9 +23,8 @@ Issues:
    [if (sClass.isNotNull())]
     [if (sClass.hasStereotype('State'))]
 	 [if (sClass.hasLinkedStereotype('Harvest'))]
-	public void harvest[sClass.name/](Int2D location, Sim sim) {
+	public void harvest[sClass.name/](Sim sim) {
 
-		IntBag xPos = null, yPos = null;
 	 [comment Iterate through linked Harvest /]
       [for (assH:Association | sClass.getAssociations())]
        [for (h:Element | assH.relatedElement) ]
@@ -34,11 +33,6 @@ Issues:
          [if (hClass.hasStereotype('Harvest'))]
 		  [if (hClass.getTaggedValue(hClass, 'Harvest', 'harvested') <> sClass.name)]
 
-
-		//Bag neigh = domain.getObjectsAtLocation(location.x, location.y);
-		Bag neigh = domain.getNeighborsMaxDistance(location.x, location.y, scope[hClass.name/], true, null, xPos, yPos);
-		for(int j = 0; j < neigh.numObjs; j++) {
-			Object obj = neigh.get(j);
 		  [comment Iterate through harvested States /]
            [for (assHS:Association | hClass.getAssociations())]
             [for (hs:Element | assHS.relatedElement) ]
@@ -46,6 +40,7 @@ Issues:
              [if (hsClass.isNotNull())]
               [if (hsClass.hasStereotype('State'))]
 			   [if (hsClass.name <> sClass.name)]
+
 		 	    [comment Iterate through harvested Animat /]
            	    [for (assHA:Association | hsClass.getAssociations())]
                  [for (ha:Element | assHA.relatedElement) ]
@@ -54,7 +49,11 @@ Issues:
                     [if (haClass.hasStereotype('Animat'))]
                      [comment [if (haClass.name <> c.name)/]
 
-			if((obj != this) && (obj.getClass() == [haClass.name/].class)) {
+		Bag neigh[haClass.name/] = sim.space[haClass.name/].getCoveredObjects(this);
+		for(Object obj : neigh[haClass.name/]) 
+		{
+			if(obj != this)
+			 {
 				     [if (hClass.getTaggedValue(hClass, 'Harvest', 'percentHarvested').isNotNull())]
 				this.state[sClass.name/] += 
 					(([haClass.name/]) obj).harvestPercent[hsClass.name/](percent[hClass.name/]);
@@ -66,6 +65,7 @@ Issues:
 
 				(([haClass.name/]) obj).perish(sim);
 			}
+		}
                    [comment [/if/]
                   [/if]
                  [/if]
@@ -84,9 +84,11 @@ Issues:
 		    [let heClass: Class = he.oclAsType(Class)]
             [if (heClass.isNotNull())]
              [if (heClass.hasStereotype('Environment'))]
-		
-			if(obj.getClass() == [heClass.name/].class) {
-			  [if (hClass.getTaggedValue(hClass, 'Harvest', 'percentHarvested') <> 'null')]
+
+		Bag neigh[heClass.name/] = sim.space[heClass.name/].getCoveredObjects(this);
+		for(Object obj : neigh[heClass.name/]) 
+		{
+			[if (hClass.getTaggedValue(hClass, 'Harvest', 'percentHarvested') <> 'null')]
 				this.state[sClass.name/] += 
 					(([heClass.name/]) obj).harvestPercent(percent[hClass.name/]);
 			  [/if]
@@ -96,13 +98,14 @@ Issues:
 				
 			  [/if]
 				(([heClass.name/]) obj).perish(sim);
-			}
+		}
+		
              [/if]
             [/if]
            [/let]
            [/for]	 
           [/for] [comment Environment /]
-		}
+
          [/if]
         [/if]
        [/if]

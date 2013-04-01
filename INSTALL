@@ -12,3 +12,25 @@ Fresh install from GitHub
 Export-Package: dsl3s.templates,
  dsl3s.templates.tests
 Import-Package: org.eclipse.uml2.uml
+
+
+GeoMason
+--------
+
+Checkout from repo:
+http://mason.googlecode.com/svn/trunk/contrib/geomason
+
+Jars to include in the Build Path:
+. gt-api-8.4.jar
+. gt-data-8.4.jar
+. jts-1.13.jar
+. gdal.jar
+ > include in library path:
+	libgdalconstjni.so
+	libgdaljni.so
+	libogrjni.so
+	libosrjni.so
+	libgdal.so
+. jfreechart-1.0.13.jar
+. junit-4.11.jar
+

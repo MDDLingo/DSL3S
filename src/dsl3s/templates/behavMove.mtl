@@ -12,21 +12,12 @@ Issues:
 [template public behavMove(c : Class) ? (c.hasStereotype('Animat'))]
 [comment Check first if this class has linked Moved stereotypes /]
 [if (c.hasLinkedStereotype('Move'))]	
-	public void move(Int2D location, Sim sim) {
+	public void move(Sim sim) {
 		
-		IntBag xPos = new IntBag();
-		IntBag yPos = new IntBag();
-		int nextX = location.x;
-		int nextY = location.y;
-		int best = 0;
+		Coordinate nextLoc = this.location;
+		Double best = 0.0;
+		HashMap<Coordinate, Double> map = new HashMap<Coordinate,Double>();
 		
-		domain.getNeighborsMaxDistance(location.x, location.y, 1, true, xPos, yPos);
-		
-		for(int i = 0; i < xPos.numObjs; i++) {
-			Bag neigh = domain.getObjectsAtLocation(xPos.get(i), yPos.get(i));
-			int weigth = 0;
-			for(int j = 0; j < neigh.numObjs; j++) {
-				Object obj = neigh.get(j);
 [comment Iterate through linked Moves /]
 [for (assM:Association | c.getAssociations())]
  [for (m:Element | assM.relatedElement) ]
@@ -46,8 +37,19 @@ Issues:
          [let aClass: Class = a.oclAsType(Class)]
           [if (aClass.isNotNull())]
            [if (aClass.hasStereotype('Animat'))]
-				if(obj.getClass() == [aClass.name/].class)
-					weigth += weight[mClass.name/] * (([aClass.name/]) obj).getState[seClass.name/]();
+		
+		// Iterate [aClass.name/] neighbourhood
+		Bag neigh[aClass.name/] = sim.space[aClass.name/].getObjectsWithinDistance(this, scope[mClass.name/]);
+		
+		for (Object obj : neigh[aClass.name/]) {
+			
+			Coordinate objLocation = (([aClass.name/]) obj).getLocation();
+			Double current = map.get(objLocation);
+			if(current == null) current = 0.0;
+			current += weight[mClass.name/] * (([aClass.name/]) obj).getState[seClass.name/]();
+			map.put(objLocation, current);
+		}
+
 	       [/if]
 	      [/if]
          [/let]
@@ -56,8 +58,19 @@ Issues:
        [/if]
        [comment If it is linked to an Environment Variable /]
        [if (seClass.hasStereotype('Environment'))]
-				if(obj.getClass() == [seClass.name/].class)
-					weigth += weight[mClass.name/] * (([seClass.name/]) obj).getValue();
+
+		// Iterate [seClass.name/] neighbourhood
+		Bag neigh[seClass.name/] = sim.space[seClass.name/].getObjectsWithinDistance(this, scope[mClass.name/]);
+		
+		for (Object obj : neigh[seClass.name/]) {
+			
+			Coordinate objLocation = (([seClass.name/]) obj).getLocation();
+			Double current = map.get(objLocation);
+			if(current == null) current = 0.0;
+			current += weight[mClass.name/] * (([seClass.name/]) obj).getValue();
+			map.put(objLocation, current);
+		}
+
 	   [/if]
 	  [/if]
      [/let]
@@ -68,23 +81,27 @@ Issues:
  [/let]
  [/for]	 
 [/for] [comment Moves /]
-			}
-			if(weigth > best) {
-				nextX = xPos.get(i);
-				nextY = yPos.get(i);
-				best = weigth;
+
+		for(Coordinate c : map.keySet())
+		{
+			if(map.get(c) > best)
+			{
+				best = map.get(c);
+				nextLoc = c;
 			}
 		}
 
  [if (c.getTaggedValue(c, 'Animat', 'wanderer') = 'true')]
 		//Wander if nothing interesting around
-		if((nextX == location.x) && (nextY == location.y)){
-			nextX = randMove(nextX, sim.random);
-			nextY = randMove(nextY, sim.random);
+		if((nextLoc.x == location.x) && (nextLoc.y == location.y)){
+			nextLoc = new Coordinate(
+				randMove(location.x, sim.random),
+				randMove(location.y, sim.random));
 		}
  [/if]
 
-		domain.setObjectLocation(this,nextX,nextY);
+		sim.space[c.name/].setGeometryLocation(this, new PointMoveTo(nextLoc));
+		location = nextLoc;
 	}
 [/if] [comment Linked check /]
 [/template]

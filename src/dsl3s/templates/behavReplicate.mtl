@@ -15,7 +15,7 @@ Issues:
 
 [template public behavReplicate(c : Class) ? (c.hasStereotype('Animat'))]
 
-	public void replicate(Int2D location, Sim sim) {
+	public void replicate(Sim sim) {
 
 [comment Iterate through linked States /]
 [for (ass:Association | c.getAssociations())]
@@ -62,10 +62,6 @@ Issues:
  [/for]	 
 [/for] [comment States/]
 	
-	}
-
-	public int randMove(int val, MersenneTwisterFast randGen) {
-		return val + randGen.nextInt(2) - randGen.nextInt(2);
 	}
 
 [/template]

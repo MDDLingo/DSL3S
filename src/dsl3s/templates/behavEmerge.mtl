@@ -26,13 +26,13 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
   [if (eClass.isNotNull())]
    [if (eClass.hasStereotype('Emerge'))]
     [if (eClass.getTaggedValue(eClass, 'Emerge', 'probability').isNotNull())]
-	private static Integer prob[eClass.name/] = [eClass.getTaggedValue(eClass, 'Emerge', 'probability')/];
+	private static Double prob[eClass.name/] = [eClass.getTaggedValue(eClass, 'Emerge', 'probability')/];
     [/if]
 	[if (eClass.getTaggedValue(eClass, 'Emerge', 'upperThreshold').isNotNull())]
-	private static Integer upperThresh[eClass.name/] = [eClass.getTaggedValue(eClass, 'Emerge', 'upperThreshold')/];
+	private static Double upperThresh[eClass.name/] = [eClass.getTaggedValue(eClass, 'Emerge', 'upperThreshold')/];
 	[/if]
 	[if (eClass.getTaggedValue(eClass, 'Emerge', 'lowerThreshold').isNotNull())]
-	private static Integer lowerThresh[eClass.name/] = [eClass.getTaggedValue(eClass, 'Emerge', 'lowerThreshold')/];
+	private static Double lowerThresh[eClass.name/] = [eClass.getTaggedValue(eClass, 'Emerge', 'lowerThreshold')/];
 	[/if]
    [/if]
   [/if]
@@ -55,9 +55,9 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
 	public void step(SimState state) {
 
 		Sim sim = (Sim) state;
-		SimGrid domain = sim.simDomain;
-		int scope;
+		Double scope;
 
+		[comment Assumes a discretisation of space /]
 		for(int x = 0; x < sim.spaceWidth; x++)
 			for(int y = 0; y < sim.spaceHeight; y++) {
 [comment Iterate through linked Emerge /]
@@ -75,7 +75,7 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
 				IntBag xPos = null, yPos = null;
 				Bag neigh;
 
-				if (!isOccupied(domain, x, y)) {
+				if (!isOccupied()) {
 [comment Iterate through linked Emerges /]
 [for (assE:Association | c.getAssociations())]
  [for (e:Element | assE.relatedElement) ]
@@ -97,17 +97,18 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
            [if (aClass.hasStereotype('Animat'))]
 
 					scope = [eClass.getTaggedValue(eClass, 'Emerge', 'scope')/];
-					neigh = domain.getNeighborsMaxDistance(x, y, scope, true, null, xPos, yPos);
-					for (Object obj : neigh) {
-						if(obj.getClass() == [aClass.name/].class)
+					Bag neigh[aClass.name/] = sim.space[aClass.name/].getObjectsWithinDistance(this, scope);
+
+					for (Object obj : neigh) 
+					{
 			[if (eClass.getTaggedValue(eClass, 'Emerge', 'probability').isNotNull())]
-							weight[eClass.name/] = 
-								(((([aClass.name/]) obj).getState[sClass.name/]() - [aClass.name/].state[sClass.name/]Min + 0.0) /
-								 ([aClass.name/].state[sClass.name/]Max - [aClass.name/].state[sClass.name/]Min + 0.0)) *
-								prob[eClass.name/];
+						weight[eClass.name/] = 
+							(((([aClass.name/]) obj).getState[sClass.name/]() - [aClass.name/].state[sClass.name/]Min + 0.0) /
+							 ([aClass.name/].state[sClass.name/]Max - [aClass.name/].state[sClass.name/]Min + 0.0)) *
+							prob[eClass.name/];
 			[/if]
 			[if (eClass.getTaggedValue(eClass, 'Emerge', 'upperThreshold').isNotNull())]
-							weight[eClass.name/] += (([aClass.name/]) obj).getState[sClass.name/]();
+						weight[eClass.name/] += (([aClass.name/]) obj).getState[sClass.name/]();
 			[/if]
 					}
 
@@ -119,17 +120,18 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
 	   [/if] [comment States /]
 	   [if (sClass.hasStereotype('Environment'))]
 					scope = [eClass.getTaggedValue(eClass, 'Emerge', 'scope')/];
-					neigh = domain.getNeighborsMaxDistance(x, y, scope, true, null, xPos, yPos);
-					for (Object obj : neigh) {
-						if(obj.getClass() == [sClass.name/].class)
+					Bag neigh[sClass.name/] = sim.space[sClass.name/].getObjectsWithinDistance(this, scope);
+
+					for (Object obj : neigh) 
+					{
 			[if (eClass.getTaggedValue(eClass, 'Emerge', 'probability').isNotNull())]
-							weight[eClass.name/] = 
-								(((([sClass.name/]) obj).getValue() - [sClass.name/].valueMin + 0.0) /
-								 ([sClass.name/].valueMax - [sClass.name/].valueMin + 0.0)) *
-								prob[eClass.name/];
+						weight[eClass.name/] = 
+							(((([sClass.name/]) obj).getValue() - [sClass.name/].valueMin + 0.0) /
+							 ([sClass.name/].valueMax - [sClass.name/].valueMin + 0.0)) *
+							prob[eClass.name/];
 			[/if]
 			[if (eClass.getTaggedValue(eClass, 'Emerge', 'upperThreshold').isNotNull())]
-							weight[eClass.name/] += (([sClass.name/]) obj).getValue();
+						weight[eClass.name/] += (([sClass.name/]) obj).getValue();
 			[/if]
 					}
        [/if]
@@ -186,11 +188,9 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
 		}
 	}
 
-	protected Boolean isOccupied(SimGrid domain, int x, int y)  {
-		Bag local = domain.getNeighborsMaxDistance(x, y, 0, true, null, null, null);
-		for (Object obj : local) {
-			if(obj.getClass() == [c.name/].class) return true;
-		}
+	protected Boolean isOccupied(GeamVectorField space)  {
+		Bag local = sim.space[c.name/].getCoveringObjects(this);
+		if (local.count > 0) return true;
 		return false;
 	}	
 }

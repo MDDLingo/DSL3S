@@ -12,16 +12,20 @@ Generates the main Simulation class inheriting from SimState.
 import sim.engine.SimState;
 import sim.engine.Steppable;
 import sim.engine.Stoppable;
-import sim.util.Int2D;
+import sim.util.Double2D;
 import java.util.ArrayList;
+import sim.util.geo.MasonGeometry;
+import sim.field.geo.GeomVectorField;
 import com.vividsolutions.jts.geom.Coordinate;
-import com.vividsolutions.jts.geom.Geometry;
+import com.vividsolutions.jts.geom.GeometryFactory;
 
 public class [c.name/] extends SimState {
 
 	//Simulation space
 	public Integer spaceWidth = [c.getTaggedValue(c, 'Simulation', 'spaceWidth')/];
 	public Integer spaceHeight = [c.getTaggedValue(c, 'Simulation', 'spaceHeight')/];
+
+	GeometryFactory geomFactory = new GeometryFactory();
 
 [for (assA:Association | c.getAssociations())]
  [for (a:Element | assA.relatedElement) ]
@@ -32,34 +36,35 @@ public class [c.name/] extends SimState {
 
 	public Integer initNum[aClass.name/] = [aClass.getTaggedValue(aClass, 'Animat', 'initNum')/];
 	[/if]
-	[if (aClass.getTaggedValue(aClass, 'Animat', 'inputFile').isNotNull())]
-	public String inputFile[aClass.name/] = "[aClass.getTaggedValue(aClass, 'Animat', 'inputFile')/]";
-	[/if]
-	public GeomVectorField space[aClass.name/] = new GeomVectorField(gridWidth, gridHeight);
+	[comment if (aClass.getTaggedValue(aClass, 'Animat', 'inputFile').isNotNull()) /]
+	//public String inputFile[comment aClass.name/] = "[comment aClass.getTaggedValue(aClass, 'Animat', 'inputFile')/]";
+	[comment /if /]
+	public GeomVectorField space[aClass.name/] = new GeomVectorField(spaceWidth, spaceHeight);
+
+	protected ArrayList<MasonGeometry> garbage[aClass.name/] = new ArrayList<MasonGeometry>();
+	public void addTo[aClass.name/]Garbage(MasonGeometry anim) {
+		garbage[aClass.name/].add(anim);
+	}
+	protected void collect[aClass.name/]Garbage()  {
+		for (MasonGeometry anim : garbage[aClass.name/]) {
+			space[aClass.name/].removeGeometry(anim);
+			((Stoppable) anim).stop();
+		}
+		garbage[aClass.name/] = new ArrayList<MasonGeometry>();
+	}
    [/if]
    [if (aClass.hasStereotype('Environment'))]
 
 	[if (aClass.getTaggedValue(aClass, 'Environment', 'inputFile').isNotNull())]
-	public String inputFile[aClass.name/] = "[aClass.getTaggedValue(aClass, 'Environment', 'inputFile')/]";
+	//public String inputFile[aClass.name/] = "[aClass.getTaggedValue(aClass, 'Environment', 'inputFile')/]";
 	[/if]
-	public GeomVectorField space[aClass.name/] = new GeomVectorField(gridWidth, gridHeight);
+	public GeomVectorField space[aClass.name/] = new GeomVectorField(spaceWidth, spaceHeight);
+
    [/if]
   [/if]
   [/let]
  [/for]	 
 [/for]
-
-	protected ArrayList<Stoppable> garbage = new ArrayList<Stoppable>();
-	public void addToGarbage(Stoppable anim) {
-		garbage.add(anim);
-	}
-	protected void collectGarbage()  {
-		for (Stoppable anim : garbage) {
-			simDomain.remove(anim);
-			anim.stop();
-		}
-		garbage = new ArrayList<Stoppable>();
-	}
 
 	// Lists for new animats
 [for (assA:Association | c.getAssociations())]
@@ -120,11 +125,11 @@ public class [c.name/] extends SimState {
 		{
 			public void step(SimState state) { 
 
-				collectGarbage();
  [for (ass:Association | c.getAssociations())]
   [for (p:Property | ass.memberEnd) ]
    [if (p.class.isNotNull())]
     [if (p.class.hasStereotype('Animat'))]
+				collect[p.class.name/]Garbage();
 				castNew[p.class.name/]();
     [/if]
    [/if]
@@ -137,7 +142,7 @@ public class [c.name/] extends SimState {
 	/**
 	 * Here don't forget about expanding the MBR
      */
-	loadEnvironment(GeomVectorField space, String file)
+	protected void loadEnvironment(GeomVectorField space, String file)
 	{
 		
 	}
@@ -181,10 +186,10 @@ public class [c.name/] extends SimState {
 	protected void init[p.class.name/](int x, int y) {
 		[p.class.name/] new[p.class.name/] = new [p.class.name/]();
 		new[p.class.name/].setStopper(schedule.scheduleRepeating(new[p.class.name/]));
-		simDomain.setObjectLocation(new[p.class.name/], x, y);
+		siteObject(space[p.class.name/], new[p.class.name/], x, y);
 	}
 
-	public [p.class.name/] create[p.class.name/](int x, int y) {
+	public [p.class.name/] create[p.class.name/](double x, double y) {
 		[p.class.name/] new[p.class.name/] = new [p.class.name/]();
 		new[p.class.name/].setStopper(schedule.scheduleRepeating(new[p.class.name/]));
 		newAnimats[p.class.name/].add(new[p.class.name/]);
@@ -215,6 +220,13 @@ public class [c.name/] extends SimState {
    [/if]
   [/for]	 
  [/for]
+
+	public void siteAnimat(GeomVectorField space, MasonGeometry geom, double x, double y) {
+		
+		Coordinate coord = new Coordinate(new Double(x), new Double(y));
+		geom.geometry = geomFactory.createPoint(coord);
+		space.addGeometry(geom);
+	}
 }
 [/file]
 [/template]
