@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import sim.util.geo.MasonGeometry;
 import sim.field.geo.GeomVectorField;
 import com.vividsolutions.jts.geom.Coordinate;
+import com.vividsolutions.jts.geom.Envelope;
 import com.vividsolutions.jts.geom.Geometry;
 import com.vividsolutions.jts.geom.GeometryFactory;
 
@@ -26,6 +27,7 @@ public class [c.name/] extends SimState {
 	public Integer spaceHeight = [c.getTaggedValue(c, 'Simulation', 'spaceHeight')/];
 
 	GeometryFactory geomFactory = new GeometryFactory();
+	Envelope globalMBR = new Envelope();
 
 [for (assA:Association | c.getAssociations())]
  [for (a:Element | assA.relatedElement) ]
@@ -97,6 +99,8 @@ public class [c.name/] extends SimState {
      [else]
 		init[p.class.name/]Objects();
 	 [/if]
+		globalMBR.expandToInclude(space[p.class.name/].getMBR());
+
     [/if]
    [/if]
   [/for]	 
@@ -110,15 +114,28 @@ public class [c.name/] extends SimState {
     [if (p.class.hasStereotype('Animat'))]
 		for(int i = 0; i < initNum[p.class.name/]; i++)
 			init[p.class.name/](random.nextInt(spaceWidth), random.nextInt(spaceHeight));
-
 	 [if (p.class.hasLinkedStereotype('Emerge'))]
 		createEmerge[p.class.name/]();	
 	 [/if]
+		globalMBR.expandToInclude(space[p.class.name/].getMBR());
 
     [/if]
    [/if]
   [/for]	 
  [/for]
+ [for (ass:Association | c.getAssociations())]
+  [for (p:Property | ass.memberEnd) ]
+   [if (p.class.isNotNull())]
+    [if (p.class.hasStereotype('Environment'))]
+		space[p.class.name/].setMBR(globalMBR);
+    [/if]
+	[if (p.class.hasStereotype('Animat'))]
+		space[p.class.name/].setMBR(globalMBR);
+    [/if]
+   [/if]
+  [/for]	 
+ [/for]
+
 
 		schedule.scheduleRepeating(schedule.EPOCH, 1, new Steppable()
 		{

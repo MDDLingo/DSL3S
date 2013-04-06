@@ -114,19 +114,26 @@ public class [c.name /]GUI extends GUIState {
 		
 		// so the frame appears in the "Display" list
 		displayFrame.setVisible(true);
-[comment Iterate through Animats and Environments /]
+[comment Iterate through Environments /]
 [for (ass:Association | c.getAssociations())]
   [for (a:Element | ass.relatedElement) ]
    [let aClass: Class = a.oclAsType(Class)]
 	[if (aClass.hasStereotype('Environment'))]
 		display.attach(portrayal[aClass.name/], "[aClass.name/]");
 	[/if]
+  [/let]
+ [/for]	 
+[/for]	
+[comment Iterate through Animats /]
+[for (ass:Association | c.getAssociations())]
+  [for (a:Element | ass.relatedElement) ]
+   [let aClass: Class = a.oclAsType(Class)]
     [if (aClass.hasStereotype('Animat'))]
 		display.attach(portrayal[aClass.name/], "[aClass.name/]");
 	[/if]
   [/let]
  [/for]	 
-[/for]		
+[/for]	
 	}
 	
 	public void quit()
