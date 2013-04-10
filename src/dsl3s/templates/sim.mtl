@@ -93,6 +93,16 @@ public class [c.name/] extends SimState {
  [for (ass:Association | c.getAssociations())]
   [for (p:Property | ass.memberEnd) ]
    [if (p.class.isNotNull())]
+    [if (p.class.hasStereotype('Animat'))]
+		space[p.class.name/].clear();
+    [/if]
+   [/if]
+  [/for]	 
+ [/for]
+
+ [for (ass:Association | c.getAssociations())]
+  [for (p:Property | ass.memberEnd) ]
+   [if (p.class.isNotNull())]
     [if (p.class.hasStereotype('Environment'))]
      [if (p.class.getTaggedValue(p.class, 'Emerge', 'inputFile').isNotNull())]
 		loadEnvironment(space[p.class.name/], inputFile[p.class.name/]);
