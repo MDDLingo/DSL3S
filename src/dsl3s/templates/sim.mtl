@@ -136,11 +136,28 @@ public class [c.name/] extends SimState {
   [/for]	 
  [/for]
 
+		// Update spatial index at the start of each time step
+		schedule.scheduleRepeating(new Steppable()
+		{
+			public void step(SimState state) 
+			{ 
+ [for (ass:Association | c.getAssociations())]
+  [for (p:Property | ass.memberEnd) ]
+   [if (p.class.isNotNull())]
+    [if (p.class.hasStereotype('Animat'))]
+				space[p.class.name/].updateSpatialIndex();
+    [/if]
+   [/if]
+  [/for]	 
+ [/for]
+			}
+		},-1,1);
 
+		// Collect garbage at the end of each time step
 		schedule.scheduleRepeating(schedule.EPOCH, 1, new Steppable()
 		{
-			public void step(SimState state) { 
-
+			public void step(SimState state) 
+			{ 
  [for (ass:Association | c.getAssociations())]
   [for (p:Property | ass.memberEnd) ]
    [if (p.class.isNotNull())]
@@ -150,7 +167,7 @@ public class [c.name/] extends SimState {
     [/if]
    [/if]
   [/for]	 
- [/for]
+ [/for]	
 			}
 		});
 	}
