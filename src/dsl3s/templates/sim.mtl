@@ -25,6 +25,8 @@ public class [c.name/] extends SimState {
 	//Simulation space
 	public Integer spaceWidth = [c.getTaggedValue(c, 'Simulation', 'spaceWidth')/];
 	public Integer spaceHeight = [c.getTaggedValue(c, 'Simulation', 'spaceHeight')/];
+	public Double  widthInterval = 1.0; 
+	public Double  heightInterval = 1.0;
 
 	GeometryFactory geomFactory = new GeometryFactory();
 	Envelope globalMBR = new Envelope();
@@ -38,9 +40,9 @@ public class [c.name/] extends SimState {
 
 	public Integer initNum[aClass.name/] = [aClass.getTaggedValue(aClass, 'Animat', 'initNum')/];
 	[/if]
-	[comment if (aClass.getTaggedValue(aClass, 'Animat', 'inputFile').isNotNull()) /]
-	//public String inputFile[comment aClass.name/] = "[comment aClass.getTaggedValue(aClass, 'Animat', 'inputFile')/]";
-	[comment /if /]
+	[if (aClass.getTaggedValue(aClass, 'Animat', 'inputFile').isNotNull())]
+	public String inputFile[aClass.name/] = "[aClass.getTaggedValue(aClass, 'Animat', 'inputFile')/]";
+	[/if]
 	public GeomVectorField space[aClass.name/] = new GeomVectorField(spaceWidth, spaceHeight);
 
 	protected ArrayList<MasonGeometry> garbage[aClass.name/] = new ArrayList<MasonGeometry>();
@@ -103,36 +105,35 @@ public class [c.name/] extends SimState {
  [for (ass:Association | c.getAssociations())]
   [for (p:Property | ass.memberEnd) ]
    [if (p.class.isNotNull())]
-    [if (p.class.hasStereotype('Environment'))]
-     [if (p.class.getTaggedValue(p.class, 'Emerge', 'inputFile').isNotNull())]
-		loadEnvironment(space[p.class.name/], inputFile[p.class.name/]);
-     [else]
-		init[p.class.name/]Objects();
-	 [/if]
+	[if (p.class.hasStereotype('Environment'))]
+	 [if (p.class.getTaggedValue(p.class, 'Environment', 'inputFile').isNotNull())]
+		Factory.load[p.class.name/]FromLayer(filePath[p.class.name/], space[p.class.name/], schedule);
 		globalMBR.expandToInclude(space[p.class.name/].getMBR());
-
-    [/if]
-   [/if]
-  [/for]	 
- [/for]
-
-		// At this stage animats are cast at random locations.
-		// In the future this may be set with a spatial layer.
- [for (ass:Association | c.getAssociations())]
-  [for (p:Property | ass.memberEnd) ]
-   [if (p.class.isNotNull())]
+     [/if]
+	[/if]
     [if (p.class.hasStereotype('Animat'))]
-		for(int i = 0; i < initNum[p.class.name/]; i++)
-			init[p.class.name/](random.nextInt(spaceWidth), random.nextInt(spaceHeight));
-	 [if (p.class.hasLinkedStereotype('Emerge'))]
-		createEmerge[p.class.name/]();	
-	 [/if]
+	 [if (p.class.getTaggedValue(p.class, 'Animat', 'inputFile').isNotNull())]
+		Factory.load[p.class.name/]FromLayer(filePath[p.class.name/], space[p.class.name/], schedule);
 		globalMBR.expandToInclude(space[p.class.name/].getMBR());
-
-    [/if]
+     [/if]
+	[/if]
    [/if]
   [/for]	 
  [/for]
+
+		/**
+		 * . Update the space between environment cells
+         * . init Animats with Double x,y
+		 */
+		if(globalMBR.getArea() <= 0)
+		{
+			globalMBR.expandToInclude(0, 0);
+			globalMBR.expandToInclude(spaceWidth, spaceHeight);
+		}
+
+		widthInterval = globalMBR.getWidth() / spaceWidth;
+		heightInterval = globalMBR.getWidth() / spaceHeight;
+
  [for (ass:Association | c.getAssociations())]
   [for (p:Property | ass.memberEnd) ]
    [if (p.class.isNotNull())]
@@ -146,6 +147,30 @@ public class [c.name/] extends SimState {
   [/for]	 
  [/for]
 
+ [for (ass:Association | c.getAssociations())]
+  [for (p:Property | ass.memberEnd) ]
+   [if (p.class.isNotNull())]
+    [if (p.class.hasStereotype('Environment'))]
+	 [if (p.class.getTaggedValue(p.class, 'Environment', 'inputFile').isNull())]
+		init[p.class.name/]Objects();
+
+     [/if]
+	[/if]
+    [if (p.class.hasStereotype('Animat'))]
+     [if (p.class.getTaggedValue(p.class, 'Animat', 'inputFile').isNull())]
+		for(int i = 0; i < initNum[p.class.name/]; i++)
+			init[p.class.name/](
+				globalMBR.getMinX() + random.nextDouble() * globalMBR.getWidth(),  
+				globalMBR.getMinY() + random.nextDouble() * globalMBR.getHeight()); 
+
+     [/if]
+	 [if (p.class.hasLinkedStereotype('Emerge'))]
+		createEmerge[p.class.name/]();	
+	 [/if]
+    [/if]
+   [/if]
+  [/for]	 
+ [/for]
 		// Update spatial index at the start of each time step
 		schedule.scheduleRepeating(new Steppable()
 		{
@@ -182,21 +207,6 @@ public class [c.name/] extends SimState {
 		});
 	}
 
-	/**
-	 * Here don't forget about expanding the MBR
-     */
-	protected void loadEnvironment(GeomVectorField space, String file)
-	{
-		
-	}
-
-	public void siteObject(GeomVectorField space, MasonGeometry geom, double x, double y) {
-		
-		Coordinate coord = new Coordinate(new Double(x), new Double(y));
-		geom.geometry = geomFactory.createPoint(coord);
-		space.addGeometry(geom);
-	}
-
  [for (ass:Association | c.getAssociations())]
   [for (p:Element | ass.relatedElement) ]
    [let pClass: Class = p.oclAsType(Class)]
@@ -207,7 +217,9 @@ public class [c.name/] extends SimState {
 		for (int i=0; i < spaceWidth; i++)
 			for (int j=0; j < spaceHeight; j++)
 			{
-				Coordinate coord = new Coordinate(new Double(i), new Double(j));
+				Coordinate coord = new Coordinate(
+					new Double(i) * widthInterval, 
+					new Double(j) * heightInterval);
 				Geometry geom = geomFactory.createPoint(coord);
 			  [if (pClass.getTaggedValue(pClass, 'Environment', 'initRandom') = 'true')]
 				[pClass.name/] obj = new [pClass.name/](random, geom);
@@ -228,24 +240,16 @@ public class [c.name/] extends SimState {
   [for (p:Property | ass.memberEnd) ]
    [if (p.class.isNotNull())]
     [if (p.class.hasStereotype('Animat'))]
-	protected [p.class.name/] generate[p.class.name/](double x, double y)
-	{
-		Coordinate coord = new Coordinate(new Double(x), new Double(y));
-		Geometry geom = geomFactory.createPoint(coord);
-		[p.class.name/] new[p.class.name/] = new [p.class.name/](geom);
-		new[p.class.name/].setStopper(schedule.scheduleRepeating(new[p.class.name/]));
-		return new[p.class.name/];
-	}
 
 	protected void init[p.class.name/](double x, double y) 
 	{
-		[p.class.name/] new[p.class.name/] = generate[p.class.name/](x, y);
+		[p.class.name/] new[p.class.name/] = Factory.generate[p.class.name/](x, y, schedule);
 		space[p.class.name/].addGeometry(new[p.class.name/]);
 	}
 
 	public [p.class.name/] create[p.class.name/](double x, double y) 
 	{
-		[p.class.name/] new[p.class.name/] = generate[p.class.name/](x, y);
+		[p.class.name/] new[p.class.name/] = Factory.generate[p.class.name/](x, y, schedule);
 		newAnimats[p.class.name/].add(new[p.class.name/]);
 		return new[p.class.name/];
 	}

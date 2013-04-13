@@ -1,0 +1,106 @@
+[comment encoding = UTF-8 /]
+[module factory('http://www.eclipse.org/uml2/3.0.0/UML')]
+[import dsl3s::templates::services/]
+
+[comment
+Date: 10-04-2013    Author: Luís de Sousa  (luis.a.de.sousa@gmail.com)
+Generates a factory class contining methods to load spatial layers, creating
+the respective environment spaces or animats.
+/]
+
+[template public factory(c : Class) ? (c.hasStereotype('Simulation'))]
+
+[file ('Factory.java', false, 'UTF-8')]
+
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.net.URL;
+
+import sim.engine.Schedule;
+import sim.field.geo.GeomVectorField;
+import sim.io.geo.ShapeFileImporter;
+import sim.util.geo.MasonGeometry;
+
+import com.vividsolutions.jts.geom.Coordinate;
+import com.vividsolutions.jts.geom.Envelope;
+import com.vividsolutions.jts.geom.Geometry;
+import com.vividsolutions.jts.geom.GeometryFactory;
+import com.vividsolutions.jts.geom.Point;
+import com.vividsolutions.jts.geom.Polygon;
+
+public class Factory {
+
+	protected static GeometryFactory geomFactory = new GeometryFactory();
+
+	protected static GeomVectorField loadAnimatLayer(String filePath)
+	{
+		GeomVectorField layer = new GeomVectorField();
+
+		try 
+		{
+			ShapeFileImporter.read(new URL(filePath), layer);
+		} 
+		catch (Exception ex)
+		{ 
+			System.out.println("Exception using ShapeFileImporter:");
+			System.out.println("Message: " + ex.getMessage());
+			System.out.println("Cause: " + ex.getCause());
+			ex.printStackTrace(System.out);
+			return null;
+		}
+		
+		return layer;
+	}
+
+	protected static GeomVectorField loadEnvironmentLayer(String filePath)
+	{
+		return null;
+	}
+
+ [for (ass:Association | c.getAssociations())]
+  [for (p:Property | ass.memberEnd) ]
+   [if (p.class.isNotNull())]
+	[if (p.class.hasStereotype('Environment'))]
+
+	protected static GeomVectorField load[p.class.name/]FromLayer(String filePath)
+	{
+		return null;
+	}
+	[/if]
+    [if (p.class.hasStereotype('Animat'))]
+
+	public static void load[p.class.name/]FromLayer(String filePath, GeomVectorField space, Schedule schedule)
+	{
+[comment
+This is a bit awkward. It might make more sense to have the Geometry as a 
+property of the Animat class than to have the Animat class inheriting from the
+MasonGeometry class.
+Also, there's no need to create a second GeomVectorField object.
+/]
+		GeomVectorField layer = loadAnimatLayer(filePath);
+
+		for(Object geom : layer.getGeometries())
+		{
+			Point centroid = ((MasonGeometry) geom).geometry.getCentroid();
+			[p.class.name/] new[p.class.name/] = generate[p.class.name/](centroid.getX(), centroid.getY(), schedule);
+			space.addGeometry(new[p.class.name/]);
+		}
+	}
+
+	protected static [p.class.name/] generate[p.class.name/](double x, double y, Schedule schedule)
+	{
+		Coordinate coord = new Coordinate(new Double(x), new Double(y));
+		Geometry geom = geomFactory.createPoint(coord);
+		[p.class.name/] new[p.class.name/] = new [p.class.name/](geom);
+		new[p.class.name/].setStopper(schedule.scheduleRepeating(new[p.class.name/]));
+		return new[p.class.name/];
+	}
+    [/if]
+   [/if]
+  [/for]	 
+ [/for]
+}
+
+[/file]
+
+[/template]

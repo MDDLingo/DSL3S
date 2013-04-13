@@ -157,5 +157,10 @@ public class UML2Services {
 			 return false;
 		 else return true;
 	 }
+	 
+	 public boolean isNull(String str) 
+	 {
+		return !isNotNull(str);
+	 }
 
 }

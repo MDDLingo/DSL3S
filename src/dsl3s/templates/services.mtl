@@ -21,6 +21,11 @@
 		'isNotNull(java.lang.String)', 
 		Sequence{arg0}) /]
 
+[query public isNull(arg0 : String) : Boolean
+	= invoke('dsl3s.services.UML2Services',
+		'isNull(java.lang.String)', 
+		Sequence{arg0}) /]
+
 [query public getTaggedValue(c: Class, stereoTypeName: String, propName: String) : String 
 	= invoke('dsl3s.services.UML2Services',
 	    'getTaggedValue(org.eclipse.uml2.uml.Class, java.lang.String, java.lang.String)',  
