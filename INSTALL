@@ -13,9 +13,11 @@ Export-Package: dsl3s.templates,
  dsl3s.templates.tests
 Import-Package: org.eclipse.uml2.uml
 
-. The org.eclipse.osgi_?.?.?.v? might be needed to add to the Build Path, check for it at:
+. The org.eclipse.osgi_?.?.?.v? jat might be needed in the Build Path, check for it at:
   /usr/share/eclipse/plugins/
 
+. The org.eclipse.uml2.uml_?.?.? jar might be needed in the Build Path, check for it at:
+  /usr/share/eclipse/plugins/
 
 
 GeoMason
