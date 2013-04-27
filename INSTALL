@@ -32,5 +32,6 @@ Jars to include in the Build Path:
 	libosrjni.so
 	libgdal.so
 . jfreechart-1.0.13.jar
+. jcommon-1.0.16.jar
 . junit-4.11.jar
 
