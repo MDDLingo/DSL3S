@@ -3,15 +3,19 @@ Fresh install from GitHub
 
 . Checkout the project from GitHub into an Generic Project
 
-. Set the src folder as a source folder [right click > Source > Format]
+. Set the src folder as a source folder [right click > Source > Format; right click on project > Refresh] 
 
 . Add plugin references
-  [right click > Build PAth > Configure Build Path > Add Library > Plug-in Dependencies > Next > Finish]
+  [right click > Build PAth > Configure Build Path > Add Library > Plug-in Dependencies > Select Acceleo > Next > Select all checkboxes > Finish]
   
 . Open the file META-INF/MANIFEST.MF, make sure Export-Package and Import-Package look like this:
 Export-Package: dsl3s.templates,
  dsl3s.templates.tests
 Import-Package: org.eclipse.uml2.uml
+
+. The org.eclipse.osgi_?.?.?.v? might be needed to add to the Build Path, check for it at:
+  /usr/share/eclipse/plugins/
+
 
 
 GeoMason
