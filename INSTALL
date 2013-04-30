@@ -3,7 +3,9 @@ Fresh install from GitHub
 
 . Checkout the project from GitHub into an Generic Project
 
-. Set the src folder as a source folder [right click > Source > Format; right click on project > Refresh] 
+. Right click and select New > Convert to an Acceleo Project
+
+. Set the src folder as a source folder [right click > Source > Format; right click on project > Refresh]. If the src folder isn't market immediatly as source close and re-open the project. 
 
 . Add plugin references
   [right click > Build PAth > Configure Build Path > Add Library > Plug-in Dependencies > Select Acceleo > Next > Select all checkboxes > Finish]
@@ -13,7 +15,7 @@ Export-Package: dsl3s.templates,
  dsl3s.templates.tests
 Import-Package: org.eclipse.uml2.uml
 
-. The org.eclipse.osgi_?.?.?.v? jat might be needed in the Build Path, check for it at:
+. The org.eclipse.osgi_?.?.?.v? jar might be needed in the Build Path, check for it at:
   /usr/share/eclipse/plugins/
 
 . The org.eclipse.uml2.uml_?.?.? jar might be needed in the Build Path, check for it at:
