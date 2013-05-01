@@ -13,6 +13,8 @@ import org.eclipse.uml2.uml.Stereotype;
 
 public class UML2Services {
 	
+	protected String logFile = "/home/lads/Desktop/out.txt";
+	
 	 public boolean hasStereotype(Class clazz, String stereotypeName) throws IOException {
 		 Boolean DEBUG = false;
 		 PrintWriter out = null;
@@ -21,7 +23,7 @@ public class UML2Services {
 		 Stereotype st = clazz.getAppliedStereotype(stereotypeName);
 		 
 		 if(DEBUG) {
-		 	out = new PrintWriter(new FileWriter("/home/lads/Desktop/out.txt"));
+		 	out = new PrintWriter(new FileWriter(logFile));
 			out.println("O nome do estereótipo principal: " + st.getName());
 		}
 		 
@@ -42,7 +44,7 @@ public class UML2Services {
 		PrintWriter out = null;
 		 
 		if(DEBUG) {
-			out = new PrintWriter(new FileWriter("/home/lads/Desktop/out.txt"));
+			out = new PrintWriter(new FileWriter(logFile));
 			out.println("hasLinkedStereotype!!!!!!!!!!!!!!!!! : " + c.getName() + " " + linkedStereotype);
 			out.flush();
 		}
@@ -72,25 +74,27 @@ public class UML2Services {
 	 
 	public String getTaggedValue(Class c, String stereoTypeName, String propName) throws IOException {
 		
-		Boolean DEBUG = false;
+		Boolean DEBUG = true;
 		PrintWriter out = null;
 		Stereotype st = null;
 		
 		String res = "Failled!";
 		if(DEBUG)
 			{
-			out = new PrintWriter(new FileWriter("/home/lads/Desktop/out.txt"));
-			out.println("Olá!");
-			System.out.println("ÿyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy");
+			out = new PrintWriter(new FileWriter(logFile, true));
+			//out.println("Olá!");
+			out.println("\n\n####################################");
+			out.println("Stereo: " + stereoTypeName);
+			out.println("Proper: " + propName + "\n");
 			}
 		
 		try {
-			if(DEBUG)
+			/*if(DEBUG)
 			{
 				st = c.getAppliedStereotype(stereoTypeName);
 				out.println("Got the stereo.");
 				if(st == null) out.println("NULO!!!!!!!!");
-			}
+			}*/
 			
 			
 			 List<Stereotype> stereotypes = c.getAppliedStereotypes();
@@ -144,7 +148,7 @@ public class UML2Services {
 		if(DEBUG)
 		{
 			try {
-				out = new PrintWriter(new FileWriter("/home/lads/Desktop/out.txt", true));
+				out = new PrintWriter(new FileWriter(logFile, true));
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

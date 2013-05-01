@@ -40,8 +40,8 @@ public class [c.name/] extends SimState {
 
 	public Integer initNum[aClass.name/] = [aClass.getTaggedValue(aClass, 'Animat', 'initNum')/];
 	[/if]
-	[if (aClass.getTaggedValue(aClass, 'Animat', 'inputFile').isNotNull())]
-	public String inputFile[aClass.name/] = "[aClass.getTaggedValue(aClass, 'Animat', 'inputFile')/]";
+	[if (aClass.getTaggedValue(aClass, 'Animat', 'inputLayer').isNotNull())]
+	public String inputFile[aClass.name/] = "[aClass.getTaggedValue(aClass, 'Animat', 'inputLayer')/]";
 	[/if]
 	public GeomVectorField space[aClass.name/] = new GeomVectorField(spaceWidth, spaceHeight);
 
@@ -59,8 +59,8 @@ public class [c.name/] extends SimState {
    [/if]
    [if (aClass.hasStereotype('Environment'))]
 
-	[if (aClass.getTaggedValue(aClass, 'Environment', 'inputFile').isNotNull())]
-	//public String inputFile[aClass.name/] = "[aClass.getTaggedValue(aClass, 'Environment', 'inputFile')/]";
+	[if (aClass.getTaggedValue(aClass, 'Environment', 'inputLayer').isNotNull())]
+	//public String inputFile[aClass.name/] = "[aClass.getTaggedValue(aClass, 'Environment', 'inputLayer')/]";
 	[/if]
 	public GeomVectorField space[aClass.name/] = new GeomVectorField(spaceWidth, spaceHeight);
 
