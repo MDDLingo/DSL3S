@@ -13,7 +13,7 @@ import org.eclipse.uml2.uml.Stereotype;
 
 public class UML2Services {
 	
-	protected String logFile = "/home/lads/Desktop/out.txt";
+	protected String logFile = "/home/desousa/Desktop/out.txt";
 	
 	 public boolean hasStereotype(Class clazz, String stereotypeName) throws IOException {
 		 Boolean DEBUG = false;
@@ -74,28 +74,22 @@ public class UML2Services {
 	 
 	public String getTaggedValue(Class c, String stereoTypeName, String propName) throws IOException {
 		
-		Boolean DEBUG = true;
+		Boolean DEBUG = false;
 		PrintWriter out = null;
 		Stereotype st = null;
 		
-		String res = "Failled!";
+		String res = null;
 		if(DEBUG)
 			{
 			out = new PrintWriter(new FileWriter(logFile, true));
 			//out.println("Olá!");
 			out.println("\n\n####################################");
+			out.println("Class : " + c.getName());
 			out.println("Stereo: " + stereoTypeName);
-			out.println("Proper: " + propName + "\n");
+			out.println("Prpert: " + propName + "\n");
 			}
 		
-		try {
-			/*if(DEBUG)
-			{
-				st = c.getAppliedStereotype(stereoTypeName);
-				out.println("Got the stereo.");
-				if(st == null) out.println("NULO!!!!!!!!");
-			}*/
-			
+		try {		
 			
 			 List<Stereotype> stereotypes = c.getAppliedStereotypes();
 			 for (Stereotype stereotype : stereotypes) {
@@ -109,7 +103,11 @@ public class UML2Services {
 				 out.println(st.toString());
 				 out.println("O stereo: " + st.getName());
 			 }
-			res = c.getValue(st, propName).toString();
+			 
+			Object val = c.getValue(st, propName);
+			if(val != null)
+				res = val.toString();
+			
 			if(DEBUG){
 				out.println("O resultado:");
 				out.println(res);
