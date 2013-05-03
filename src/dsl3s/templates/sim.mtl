@@ -41,7 +41,7 @@ public class [c.name/] extends SimState {
 	public Integer initNum[aClass.name/] = [aClass.getTaggedValue(aClass, 'Animat', 'initNum')/];
 	[/if]
 	[if (aClass.getTaggedValue(aClass, 'Animat', 'inputLayer').isNotNull())]
-	public String inputFile[aClass.name/] = "[aClass.getTaggedValue(aClass, 'Animat', 'inputLayer')/]";
+	public String inputLayer[aClass.name/] = "[aClass.getTaggedValue(aClass, 'Animat', 'inputLayer')/]";
 	[/if]
 	public GeomVectorField space[aClass.name/] = new GeomVectorField(spaceWidth, spaceHeight);
 
@@ -60,7 +60,7 @@ public class [c.name/] extends SimState {
    [if (aClass.hasStereotype('Environment'))]
 
 	[if (aClass.getTaggedValue(aClass, 'Environment', 'inputLayer').isNotNull())]
-	//public String inputFile[aClass.name/] = "[aClass.getTaggedValue(aClass, 'Environment', 'inputLayer')/]";
+	//public String inputLayer[aClass.name/] = "[aClass.getTaggedValue(aClass, 'Environment', 'inputLayer')/]";
 	[/if]
 	public GeomVectorField space[aClass.name/] = new GeomVectorField(spaceWidth, spaceHeight);
 
@@ -102,22 +102,24 @@ public class [c.name/] extends SimState {
   [/for]	 
  [/for]
 
- [for (ass:Association | c.getAssociations())]
-  [for (p:Property | ass.memberEnd) ]
-   [if (p.class.isNotNull())]
-	[if (p.class.hasStereotype('Environment'))]
-	 [if (p.class.getTaggedValue(p.class, 'Environment', 'inputFile').isNotNull())]
-		Factory.load[p.class.name/]FromLayer(filePath[p.class.name/], space[p.class.name/], schedule);
-		globalMBR.expandToInclude(space[p.class.name/].getMBR());
+[for (assA:Association | c.getAssociations())]
+ [for (a:Element | assA.relatedElement) ]
+  [let aClass: Class = a.oclAsType(Class)] 
+  [if (aClass.isNotNull())]
+   [if (aClass.hasStereotype('Environment'))]
+	 [if (aClass.getTaggedValue(aClass, 'Environment', 'inputLayer').isNotNull())]
+		Factory.load[aClass.name/]FromLayer(filePath[aClass.name/], space[aClass.name/], schedule);
+		globalMBR.expandToInclude(space[aClass.name/].getMBR());
      [/if]
 	[/if]
-    [if (p.class.hasStereotype('Animat'))]
-	 [if (p.class.getTaggedValue(p.class, 'Animat', 'inputFile').isNotNull())]
-		Factory.load[p.class.name/]FromLayer(filePath[p.class.name/], space[p.class.name/], schedule);
-		globalMBR.expandToInclude(space[p.class.name/].getMBR());
+    [if (aClass.hasStereotype('Animat'))]
+     [if (aClass. getTaggedValue(aClass,  'Animat', 'inputLayer').isNotNull())]
+		Factory.load[aClass.name/]FromLayer(filePath[aClass.name/], space[aClass.name/], schedule);
+		globalMBR.expandToInclude(space[aClass.name/].getMBR());
      [/if]
 	[/if]
    [/if]
+   [/let]
   [/for]	 
  [/for]
 
@@ -151,13 +153,13 @@ public class [c.name/] extends SimState {
   [for (p:Property | ass.memberEnd) ]
    [if (p.class.isNotNull())]
     [if (p.class.hasStereotype('Environment'))]
-	 [if (p.class.getTaggedValue(p.class, 'Environment', 'inputFile').isNull())]
+	 [if (p.class.getTaggedValue(p.class, 'Environment', 'inputLayer').isNull())]
 		init[p.class.name/]Objects();
 
      [/if]
 	[/if]
     [if (p.class.hasStereotype('Animat'))]
-     [if (p.class.getTaggedValue(p.class, 'Animat', 'inputFile').isNull())]
+     [if (p.class.getTaggedValue(p.class, 'Animat', 'inputLayer').isNull())]
 		for(int i = 0; i < initNum[p.class.name/]; i++)
 			init[p.class.name/](
 				globalMBR.getMinX() + random.nextDouble() * globalMBR.getWidth(),  
