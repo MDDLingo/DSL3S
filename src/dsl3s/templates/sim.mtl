@@ -108,13 +108,13 @@ public class [c.name/] extends SimState {
   [if (aClass.isNotNull())]
    [if (aClass.hasStereotype('Environment'))]
 	 [if (aClass.getTaggedValue(aClass, 'Environment', 'inputLayer').isNotNull())]
-		Factory.load[aClass.name/]FromLayer(filePath[aClass.name/], space[aClass.name/], schedule);
+		Factory.load[aClass.name/]FromLayer(inputLayer[aClass.name/], space[aClass.name/], schedule);
 		globalMBR.expandToInclude(space[aClass.name/].getMBR());
      [/if]
 	[/if]
     [if (aClass.hasStereotype('Animat'))]
      [if (aClass. getTaggedValue(aClass,  'Animat', 'inputLayer').isNotNull())]
-		Factory.load[aClass.name/]FromLayer(filePath[aClass.name/], space[aClass.name/], schedule);
+		Factory.load[aClass.name/]FromLayer(inputLayer[aClass.name/], space[aClass.name/], schedule);
 		globalMBR.expandToInclude(space[aClass.name/].getMBR());
      [/if]
 	[/if]
