@@ -38,7 +38,7 @@ public class Factory {
 
 		try 
 		{
-			ShapeFileImporter.read(new URL(filePath), layer);
+			ShapeFileImporter.read(new URL("file://" + filePath), layer);
 		} 
 		catch (Exception ex)
 		{ 
