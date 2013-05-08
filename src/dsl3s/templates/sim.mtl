@@ -29,7 +29,7 @@ public class [c.name/] extends SimState {
 	public Double  heightInterval = 1.0;
 
 	GeometryFactory geomFactory = new GeometryFactory();
-	Envelope globalMBR = new Envelope();
+	Envelope globalMBR;
 
 [for (assA:Association | c.getAssociations())]
  [for (a:Element | assA.relatedElement) ]
@@ -109,13 +109,15 @@ public class [c.name/] extends SimState {
    [if (aClass.hasStereotype('Environment'))]
 	 [if (aClass.getTaggedValue(aClass, 'Environment', 'inputLayer').isNotNull())]
 		Factory.load[aClass.name/]FromLayer(inputLayer[aClass.name/], space[aClass.name/], schedule);
-		globalMBR.expandToInclude(space[aClass.name/].getMBR());
+		if(globalMBR == null) globalMBR = space[aClass.name/].getMBR();
+		else globalMBR.expandToInclude(space[aClass.name/].getMBR());
      [/if]
 	[/if]
     [if (aClass.hasStereotype('Animat'))]
      [if (aClass. getTaggedValue(aClass,  'Animat', 'inputLayer').isNotNull())]
 		Factory.load[aClass.name/]FromLayer(inputLayer[aClass.name/], space[aClass.name/], schedule);
-		globalMBR.expandToInclude(space[aClass.name/].getMBR());
+		if(globalMBR == null) globalMBR = space[aClass.name/].getMBR();
+		else globalMBR.expandToInclude(space[aClass.name/].getMBR());
      [/if]
 	[/if]
    [/if]
@@ -127,11 +129,8 @@ public class [c.name/] extends SimState {
 		 * . Update the space between environment cells
          * . init Animats with Double x,y
 		 */
-		if(globalMBR.getArea() <= 0)
-		{
-			globalMBR.expandToInclude(0, 0);
-			globalMBR.expandToInclude(spaceWidth, spaceHeight);
-		}
+		if(globalMBR == null)
+			globalMBR = new Envelope(0, 0, spaceWidth, spaceHeight);
 
 		widthInterval = globalMBR.getWidth() / spaceWidth;
 		heightInterval = globalMBR.getWidth() / spaceHeight;
