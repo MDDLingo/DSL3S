@@ -32,7 +32,7 @@ public class Factory {
 
 	protected static GeometryFactory geomFactory = new GeometryFactory();
 
-	protected static GeomVectorField loadAnimatLayer(String filePath)
+	protected static GeomVectorField loadVectorLayer(String filePath)
 	{
 		GeomVectorField layer = new GeomVectorField();
 
@@ -52,7 +52,7 @@ public class Factory {
 		return layer;
 	}
 
-	protected static GeomVectorField loadEnvironmentLayer(String filePath)
+	protected static GeomRasterField loadRasterLayer(String filePath)
 	{
 		return null;
 	}
@@ -64,7 +64,15 @@ public class Factory {
 
 	protected static GeomVectorField load[p.class.name/]FromLayer(String filePath)
 	{
-		return null;
+		GeomVectorField layer = loadVectorLayer(filePath);
+		
+		//If import failed as vector try with raster
+		if(layer == null)
+		{
+			GeomRasterField rast = loadRasterLayer(filePath);
+		} 
+
+		return layer;
 	}
 	[/if]
     [if (p.class.hasStereotype('Animat'))]
@@ -77,7 +85,7 @@ property of the Animat class than to have the Animat class inheriting from the
 MasonGeometry class.
 Also, there's no need to create a second GeomVectorField object.
 /]
-		GeomVectorField layer = loadAnimatLayer(filePath);
+		GeomVectorField layer = loadVectorLayer(filePath);
 
 		for(Object geom : layer.getGeometries())
 		{
