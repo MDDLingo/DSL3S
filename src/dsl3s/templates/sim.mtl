@@ -148,30 +148,32 @@ public class [c.name/] extends SimState {
   [/for]	 
  [/for]
 
- [for (ass:Association | c.getAssociations())]
-  [for (p:Property | ass.memberEnd) ]
-   [if (p.class.isNotNull())]
-    [if (p.class.hasStereotype('Environment'))]
-	 [if (p.class.getTaggedValue(p.class, 'Environment', 'inputLayer').isNull())]
-		init[p.class.name/]Objects();
+[for (assA:Association | c.getAssociations())]
+ [for (a:Element | assA.relatedElement) ]
+  [let aClass: Class = a.oclAsType(Class)] 
+   [if (aClass.isNotNull())]
+    [if (aClass.hasStereotype('Environment'))]
+	 [if (aClass.getTaggedValue(aClass, 'Environment', 'inputLayer').isNull())]
+		init[aClass.name/]Objects();
 
      [/if]
 	[/if]
-    [if (p.class.hasStereotype('Animat'))]
-     [if (p.class.getTaggedValue(p.class, 'Animat', 'inputLayer').isNull())]
-		for(int i = 0; i < initNum[p.class.name/]; i++)
-			init[p.class.name/](
+    [if (aClass.hasStereotype('Animat'))]
+     [if (aClass.getTaggedValue(aClass, 'Animat', 'inputLayer').isNull())]
+		for(int i = 0; i < initNum[aClass.name/]; i++)
+			init[aClass.name/](
 				globalMBR.getMinX() + random.nextDouble() * globalMBR.getWidth(),  
 				globalMBR.getMinY() + random.nextDouble() * globalMBR.getHeight()); 
 
      [/if]
-	 [if (p.class.hasLinkedStereotype('Emerge'))]
-		createEmerge[p.class.name/]();	
+	 [if (aClass.hasLinkedStereotype('Emerge'))]
+		createEmerge[aClass.name/]();	
 	 [/if]
     [/if]
    [/if]
-  [/for]	 
- [/for]
+  [/let]
+ [/for]	 
+[/for]
 		// Update spatial index at the start of each time step
 		schedule.scheduleRepeating(new Steppable()
 		{
@@ -219,8 +221,8 @@ public class [c.name/] extends SimState {
 			for (int j=0; j < spaceHeight; j++)
 			{
 				Coordinate coord = new Coordinate(
-					new Double(i) * widthInterval, 
-					new Double(j) * heightInterval);
+					globalMBR.getMinX() + new Double(i) * widthInterval, 
+					globalMBR.getMinY() + new Double(j) * heightInterval);
 				Geometry geom = geomFactory.createPoint(coord);
 			  [if (pClass.getTaggedValue(pClass, 'Environment', 'initRandom') = 'true')]
 				[pClass.name/] obj = new [pClass.name/](random, geom);
