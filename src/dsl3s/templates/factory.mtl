@@ -17,9 +17,13 @@ import java.io.InputStream;
 import java.net.URL;
 
 import sim.engine.Schedule;
-import sim.field.geo.GeomVectorField;
-import sim.io.geo.ShapeFileImporter;
 import sim.util.geo.MasonGeometry;
+import sim.field.geo.GeomVectorField;
+import sim.field.geo.GeomGridField;
+import sim.field.geo.GeomGridField.GridDataType;
+import sim.field.grid.Grid2D;
+import sim.io.geo.ShapeFileImporter;
+import sim.io.geo.ArcInfoASCGridImporter;
 
 import com.vividsolutions.jts.geom.Coordinate;
 import com.vividsolutions.jts.geom.Envelope;
@@ -52,7 +56,7 @@ public class Factory {
 		return layer;
 	}
 
-	protected static GeomRasterField loadRasterLayer(String filePath)
+	protected static GeomGridField loadRasterLayer(String filePath)
 	{
 		GeomGridField gridField = new GeomGridField();
 
@@ -81,27 +85,29 @@ public class Factory {
 	{
 		GeomVectorField layer = loadVectorLayer(filePath);
 		
-		//If import failed as vector try with raster
-		if(layer == null)
-		{
-			GeomRasterField rast = loadRasterLayer(filePath);
-
-			Grid2D grid = rast.getGrid();
-			for(int x = 0; x < grid.getWidth(); x++)
-			for(int y = 0; y < grid.getHeight(); y++)
-			{
-				Point centroid = gridField.toPolygon(x, y).getCentroid();
-				[p.class.name/] new[p.class.name/] = generate[p.class.name/](centroid.getX(), centroid.getY(), schedule);
-				space.addGeometry(new[p.class.name/]);	
-			}
-		}
-		else 
+		// Import as vector
+		if(layer != null)
 		{
 			for(Object geom : layer.getGeometries())
 			{
-				[p.class.name/] new[p.class.name/] = new [p.class.name/](geom);
+				[p.class.name/] new[p.class.name/] = new [p.class.name/]((Geometry) geom);
 				new[p.class.name/].setStopper(schedule.scheduleRepeating(new[p.class.name/]));
 				space.addGeometry(new[p.class.name/]);
+			}
+			
+		}
+		//If import failed as a vector try with raster
+		else 
+		{
+			GeomGridField rast = loadRasterLayer(filePath);
+
+			for(int x = 0; x < rast.getWidth(); x++)
+			for(int y = 0; y < rast.getHeight(); y++)
+			{
+				Polygon poly = rast.toPolygon(x, y);
+				[p.class.name/] new[p.class.name/] = new [p.class.name/](poly);
+				new[p.class.name/].setStopper(schedule.scheduleRepeating(new[p.class.name/]));
+				space.addGeometry(new[p.class.name/]);	
 			}
 		} 
 
