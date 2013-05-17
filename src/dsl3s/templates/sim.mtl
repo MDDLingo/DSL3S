@@ -60,7 +60,7 @@ public class [c.name/] extends SimState {
    [if (aClass.hasStereotype('Environment'))]
 
 	[if (aClass.getTaggedValue(aClass, 'Environment', 'inputLayer').isNotNull())]
-	//public String inputLayer[aClass.name/] = "[aClass.getTaggedValue(aClass, 'Environment', 'inputLayer')/]";
+	public String inputLayer[aClass.name/] = "[aClass.getTaggedValue(aClass, 'Environment', 'inputLayer')/]";
 	[/if]
 	public GeomVectorField space[aClass.name/] = new GeomVectorField(spaceWidth, spaceHeight);
 
