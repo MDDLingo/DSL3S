@@ -54,7 +54,22 @@ public class Factory {
 
 	protected static GeomRasterField loadRasterLayer(String filePath)
 	{
-		return null;
+		GeomGridField gridField = new GeomGridField();
+
+		try 
+		{
+			InputStream inputStream = new FileInputStream(filePath);
+			ArcInfoASCGridImporter.read(inputStream, GridDataType.INTEGER, gridField);
+			return gridField;
+		}
+		catch (Exception ex)
+		{ 
+			System.out.println("Exception using ShapeFileImporter:");
+			System.out.println("Message: " + ex.getMessage());
+			System.out.println("Cause: " + ex.getCause());
+			ex.printStackTrace(System.out);
+			return null;
+		}
 	}
 
  [for (ass:Association | c.getAssociations())]
@@ -62,7 +77,7 @@ public class Factory {
    [if (p.class.isNotNull())]
 	[if (p.class.hasStereotype('Environment'))]
 
-	protected static GeomVectorField load[p.class.name/]FromLayer(String filePath)
+	protected static GeomVectorField load[p.class.name/]FromLayer(String filePath, GeomVectorField space, Schedule schedule)
 	{
 		GeomVectorField layer = loadVectorLayer(filePath);
 		
@@ -70,6 +85,24 @@ public class Factory {
 		if(layer == null)
 		{
 			GeomRasterField rast = loadRasterLayer(filePath);
+
+			Grid2D grid = rast.getGrid();
+			for(int x = 0; x < grid.getWidth(); x++)
+			for(int y = 0; y < grid.getHeight(); y++)
+			{
+				Point centroid = gridField.toPolygon(x, y).getCentroid();
+				[p.class.name/] new[p.class.name/] = generate[p.class.name/](centroid.getX(), centroid.getY(), schedule);
+				space.addGeometry(new[p.class.name/]);	
+			}
+		}
+		else 
+		{
+			for(Object geom : layer.getGeometries())
+			{
+				[p.class.name/] new[p.class.name/] = new [p.class.name/](geom);
+				new[p.class.name/].setStopper(schedule.scheduleRepeating(new[p.class.name/]));
+				space.addGeometry(new[p.class.name/]);
+			}
 		} 
 
 		return layer;
@@ -84,6 +117,7 @@ This is a bit awkward. It might make more sense to have the Geometry as a
 property of the Animat class than to have the Animat class inheriting from the
 MasonGeometry class.
 Also, there's no need to create a second GeomVectorField object.
+!!!!!!! Must pass the geometry itself, not the centroid !!!!!!!!!!!!!!!!!
 /]
 		GeomVectorField layer = loadVectorLayer(filePath);
 
