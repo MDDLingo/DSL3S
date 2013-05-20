@@ -267,7 +267,7 @@
   <profile:Move xmi:id="_aPN98BVuEeKKubxyzHq1vA" base_Class="_YHKsUBVuEeKKubxyzHq1vA" weight="1"/>
   <profile:Move xmi:id="_xspKUBVxEeKKubxyzHq1vA" base_Class="_5U5KkBVwEeKKubxyzHq1vA" weight="1"/>
   <profile:Move xmi:id="_iQkJkBohEeKN07hQpA-1_g" base_Class="_Jam8oBohEeKN07hQpA-1_g" weight="2"/>
-  <profile_1:Animat xmi:id="_bp12cB4BEeKaabSpLnEi-A" base_Class="_ui_PkBViEeKKubxyzHq1vA" initNum="10" scopeRadius="1" wanderer="true" colourMax="255, 0, 0" colourMin="255, 64, 64"/>
+  <profile_1:Animat xmi:id="_bp12cB4BEeKaabSpLnEi-A" base_Class="_ui_PkBViEeKKubxyzHq1vA" initNum="10" scopeRadius="1.5" wanderer="true" colourMax="255, 0, 0" colourMin="255, 64, 64"/>
   <profile_1:Animat xmi:id="_onD60B4BEeKaabSpLnEi-A" base_Class="_z1g5IBViEeKKubxyzHq1vA" initNum="10" scopeRadius="1" colourMax="64, 64, 186" colourMin="128, 128, 255"/>
   <profile_1:Environment xmi:id="__38nYB4BEeKaabSpLnEi-A" maxValue="50" initRandom="true" stepVariation="1" display="true" base_Class="_3R_AABViEeKKubxyzHq1vA" colourMin="224, 224, 128" colourMax="32, 128, 32"/>
   <profile_1:Harvest xmi:id="_V2a0YB4DEeKaabSpLnEi-A" base_Class="_euFOkBVxEeKKubxyzHq1vA" harvested="PreyEnergy" percentHarvested="100" maxIntake="null" valueHarvest="null"/>
@@ -286,5 +286,5 @@
   <DSL3S:Perish xmi:id="_wzGJYDDfEeKzg9W6MgBbRw" upperThreshold="51" base_Class="_9RDlgBVtEeKKubxyzHq1vA"/>
   <DSL3S_1:Environment xmi:id="_fHKPIJ7oEeKD-LPFubo42g" maxValue="50" stepVariation="1" initRandom="true" display="true" colourMin="224,224,128" colourMax="32,128,32" base_Class="_3R_AABViEeKKubxyzHq1vA" inputLayer="/media/Data/users/lads/Trabalho/Eclipse/Repositories/DSL3S/data/Pasture.agrid"/>
   <DSL3S_1:Animat xmi:id="_SSoXQJ7pEeKD-LPFubo42g" initNum="10" scope="1.5" base_Class="_z1g5IBViEeKKubxyzHq1vA" colourMin="64,64,255" colourMax="32,32,186"/>
-  <DSL3S_1:Animat xmi:id="_f_dToJ7pEeKD-LPFubo42g" initNum="10" scope="1.5" base_Class="_ui_PkBViEeKKubxyzHq1vA" colourMin="255,64,64" colourMax="192,0,0" inputLayer="/media/Data/users/lads/Trabalho/Eclipse/Repositories/DSL3S/data/Predators.shp"/>
+  <DSL3S_1:Animat xmi:id="_f_dToJ7pEeKD-LPFubo42g" initNum="10" scope="1.5" base_Class="_ui_PkBViEeKKubxyzHq1vA" wanderer="true" colourMin="255,64,64" colourMax="192,0,0" inputLayer="/media/Data/users/lads/Trabalho/Eclipse/Repositories/DSL3S/data/Predators.shp"/>
 </xmi:XMI>
