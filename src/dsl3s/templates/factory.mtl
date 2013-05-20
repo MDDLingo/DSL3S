@@ -21,18 +21,19 @@ import sim.util.geo.MasonGeometry;
 import sim.field.geo.GeomVectorField;
 import sim.field.geo.GeomGridField;
 import sim.field.geo.GeomGridField.GridDataType;
-import sim.field.grid.Grid2D;
+import sim.field.grid.DoubleGrid2D;
 import sim.io.geo.ShapeFileImporter;
 import sim.io.geo.ArcInfoASCGridImporter;
 
 import com.vividsolutions.jts.geom.Coordinate;
-import com.vividsolutions.jts.geom.Envelope;
 import com.vividsolutions.jts.geom.Geometry;
 import com.vividsolutions.jts.geom.GeometryFactory;
 import com.vividsolutions.jts.geom.Point;
 import com.vividsolutions.jts.geom.Polygon;
 
 public class Factory {
+
+	protected static Boolean DEBUG = true;
 
 	protected static GeometryFactory geomFactory = new GeometryFactory();
 
@@ -63,15 +64,18 @@ public class Factory {
 		try 
 		{
 			InputStream inputStream = new FileInputStream(filePath);
-			ArcInfoASCGridImporter.read(inputStream, GridDataType.INTEGER, gridField);
+			ArcInfoASCGridImporter.read(inputStream, GridDataType.DOUBLE, gridField);
 			return gridField;
 		}
 		catch (Exception ex)
 		{ 
-			System.out.println("Exception using ShapeFileImporter:");
-			System.out.println("Message: " + ex.getMessage());
-			System.out.println("Cause: " + ex.getCause());
-			ex.printStackTrace(System.out);
+			if(DEBUG)
+			{
+				System.out.println("Exception using ArcInfoASCGridImporter:");
+				System.out.println("Message: " + ex.getMessage());
+				System.out.println("Cause: " + ex.getCause());
+				ex.printStackTrace(System.out);
+			}
 			return null;
 		}
 	}
@@ -99,13 +103,21 @@ public class Factory {
 		//If import failed as a vector try with raster
 		else 
 		{
+			System.out.println("Failed to load input layer for class [p.class.name/] as a vector, trying as raster.");
 			GeomGridField rast = loadRasterLayer(filePath);
 
+			if(rast == null) 
+			{
+				System.out.println("Failed to load input layer for class [p.class.name/] as raster. No data imported.");
+				return null;
+			}
+
+			DoubleGrid2D grid = (DoubleGrid2D) rast.getGrid();
 			for(int x = 0; x < rast.getWidth(); x++)
 			for(int y = 0; y < rast.getHeight(); y++)
 			{
 				Polygon poly = rast.toPolygon(x, y);
-				[p.class.name/] new[p.class.name/] = new [p.class.name/](poly);
+				[p.class.name/] new[p.class.name/] = new [p.class.name/](grid.get(x, y), poly);
 				new[p.class.name/].setStopper(schedule.scheduleRepeating(new[p.class.name/]));
 				space.addGeometry(new[p.class.name/]);	
 			}

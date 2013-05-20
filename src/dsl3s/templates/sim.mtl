@@ -111,6 +111,7 @@ public class [c.name/] extends SimState {
 		Factory.load[aClass.name/]FromLayer(inputLayer[aClass.name/], space[aClass.name/], schedule);
 		if(globalMBR == null) globalMBR = space[aClass.name/].getMBR();
 		else globalMBR.expandToInclude(space[aClass.name/].getMBR());
+
      [/if]
 	[/if]
     [if (aClass.hasStereotype('Animat'))]
@@ -118,13 +119,13 @@ public class [c.name/] extends SimState {
 		Factory.load[aClass.name/]FromLayer(inputLayer[aClass.name/], space[aClass.name/], schedule);
 		if(globalMBR == null) globalMBR = space[aClass.name/].getMBR();
 		else globalMBR.expandToInclude(space[aClass.name/].getMBR());
+
      [/if]
 	[/if]
    [/if]
    [/let]
   [/for]	 
  [/for]
-
 		/**
 		 * . Update the space between environment cells
          * . init Animats with Double x,y

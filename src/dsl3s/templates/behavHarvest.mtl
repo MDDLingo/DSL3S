@@ -49,7 +49,7 @@ Issues:
                     [if (haClass.hasStereotype('Animat'))]
                      [comment [if (haClass.name <> c.name)/]
 
-		Bag neigh[haClass.name/] = sim.space[haClass.name/].getCoveredObjects(this);
+		Bag neigh[haClass.name/] = sim.space[haClass.name/].getCoveringObjects(this);
 		for(Object obj : neigh[haClass.name/]) 
 		{
 			if(obj != this)
@@ -85,7 +85,7 @@ Issues:
             [if (heClass.isNotNull())]
              [if (heClass.hasStereotype('Environment'))]
 
-		Bag neigh[heClass.name/] = sim.space[heClass.name/].getCoveredObjects(this);
+		Bag neigh[heClass.name/] = sim.space[heClass.name/].getCoveringObjects(this);
 		for(Object obj : neigh[heClass.name/]) 
 		{
 			[if (hClass.getTaggedValue(hClass, 'Harvest', 'percentHarvested') <> 'null')]
