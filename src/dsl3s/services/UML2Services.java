@@ -13,7 +13,7 @@ import org.eclipse.uml2.uml.Stereotype;
 
 public class UML2Services {
 	
-	protected String logFile = "/home/desousa/Desktop/out.txt";
+	protected String logFile = "/home/lads/Desktop/out.txt";
 	
 	 public boolean hasStereotype(Class clazz, String stereotypeName) throws IOException {
 		 Boolean DEBUG = false;
@@ -117,10 +117,9 @@ public class UML2Services {
 			if(DEBUG){
 				out.println(ex.getMessage());
 				out.println(ex.toString());
-				res = ex.getMessage();
 				ex.printStackTrace(out);
 			}
-			else res = "Error in service!!!";
+			res = "Error in service!!!";
 			
 		}
 		if(DEBUG) out.close();

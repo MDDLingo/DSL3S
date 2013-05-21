@@ -38,13 +38,13 @@ public class Factory {
 
 	protected static GeometryFactory geomFactory = new GeometryFactory();
 
-	protected static GeomVectorField loadVectorLayer(String filePath)
+	protected static GeomVectorField loadVectorLayer(String filePath, Bag attributes)
 	{
 		GeomVectorField layer = new GeomVectorField();
 
 		try 
 		{
-			ShapeFileImporter.read(new URL("file://" + filePath), layer);
+			ShapeFileImporter.read(new URL("file://" + filePath), layer, attributes);
 		} 
 		catch (Exception ex)
 		{ 
@@ -113,7 +113,7 @@ public class Factory {
 
 	protected static GeomVectorField load[p.class.name/]FromLayer(String filePath, GeomVectorField space, Schedule schedule)
 	{
-		GeomVectorField layer = loadVectorLayer(filePath);
+		GeomVectorField layer = loadVectorLayer(filePath, null);
 		
 		// Import as vector
 		if(layer != null)
