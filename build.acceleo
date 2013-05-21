@@ -18,7 +18,7 @@
         <acceleoCompiler 
             sourceFolder="${target.folder}"
             outputFolder="${target.folder}"
-            dependencies="${target.folder}/../../GeoMason;${target.folder}/../../MASON;"
+            dependencies="${target.folder}/../../GeoMason;${target.folder}/../../Mason;"
             binaryResource="false"
             packagesToRegister="">
         </acceleoCompiler>
