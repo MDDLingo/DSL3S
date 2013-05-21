@@ -17,18 +17,24 @@ import java.io.InputStream;
 import java.net.URL;
 
 import sim.engine.Schedule;
-import sim.field.geo.GeomVectorField;
-import sim.io.geo.ShapeFileImporter;
+import sim.util.Bag;
 import sim.util.geo.MasonGeometry;
+import sim.field.geo.GeomVectorField;
+import sim.field.geo.GeomGridField;
+import sim.field.geo.GeomGridField.GridDataType;
+import sim.field.grid.DoubleGrid2D;
+import sim.io.geo.ShapeFileImporter;
+import sim.io.geo.ArcInfoASCGridImporter;
 
 import com.vividsolutions.jts.geom.Coordinate;
-import com.vividsolutions.jts.geom.Envelope;
 import com.vividsolutions.jts.geom.Geometry;
 import com.vividsolutions.jts.geom.GeometryFactory;
 import com.vividsolutions.jts.geom.Point;
 import com.vividsolutions.jts.geom.Polygon;
 
 public class Factory {
+
+	protected static Boolean DEBUG = true;
 
 	protected static GeometryFactory geomFactory = new GeometryFactory();
 
@@ -52,8 +58,51 @@ public class Factory {
 		return layer;
 	}
 
-	protected static GeomRasterField loadRasterLayer(String filePath)
+	protected static GeomGridField loadRasterLayer(String filePath)
 	{
+		GeomGridField gridField = new GeomGridField();
+
+		try 
+		{
+			InputStream inputStream = new FileInputStream(filePath);
+			ArcInfoASCGridImporter.read(inputStream, GridDataType.DOUBLE, gridField);
+			return gridField;
+		}
+		catch (Exception ex)
+		{ 
+			if(DEBUG)
+			{
+				System.out.println("Exception using ArcInfoASCGridImporter:");
+				System.out.println("Message: " + ex.getMessage());
+				System.out.println("Cause: " + ex.getCause());
+				ex.printStackTrace(System.out);
+			}
+			return null;
+		}
+	}
+
+	protected static Double getAttributeValue(MasonGeometry geom, String name)
+	{
+		try
+		{
+			return ((MasonGeometry) geom).getDoubleAttribute("energy");
+		}
+		catch (Exception ex) {}
+		
+		try
+		{
+			Integer i = ((MasonGeometry) geom).getIntegerAttribute("energy");
+			return new Double(i);
+		}
+		catch (Exception ex) {}
+		
+		try
+		{
+			String s = ((MasonGeometry) geom).getStringAttribute("energy");
+			return new Double(s);
+		}
+		catch (Exception ex) {}
+		
 		return null;
 	}
 
@@ -62,14 +111,42 @@ public class Factory {
    [if (p.class.isNotNull())]
 	[if (p.class.hasStereotype('Environment'))]
 
-	protected static GeomVectorField load[p.class.name/]FromLayer(String filePath)
+	protected static GeomVectorField load[p.class.name/]FromLayer(String filePath, GeomVectorField space, Schedule schedule)
 	{
 		GeomVectorField layer = loadVectorLayer(filePath);
 		
-		//If import failed as vector try with raster
-		if(layer == null)
+		// Import as vector
+		if(layer != null)
 		{
-			GeomRasterField rast = loadRasterLayer(filePath);
+			for(Object geom : layer.getGeometries())
+			{
+				[p.class.name/] new[p.class.name/] = new [p.class.name/]((Geometry) geom);
+				new[p.class.name/].setStopper(schedule.scheduleRepeating(new[p.class.name/]));
+				space.addGeometry(new[p.class.name/]);
+			}
+			
+		}
+		//If import failed as a vector try with raster
+		else 
+		{
+			System.out.println("Failed to load input layer for class [p.class.name/] as a vector, trying as raster.");
+			GeomGridField rast = loadRasterLayer(filePath);
+
+			if(rast == null) 
+			{
+				System.out.println("Failed to load input layer for class [p.class.name/] as raster. No data imported.");
+				return null;
+			}
+
+			DoubleGrid2D grid = (DoubleGrid2D) rast.getGrid();
+			for(int x = 0; x < rast.getWidth(); x++)
+			for(int y = 0; y < rast.getHeight(); y++)
+			{
+				Polygon poly = rast.toPolygon(x, y);
+				[p.class.name/] new[p.class.name/] = new [p.class.name/](grid.get(x, y), poly);
+				new[p.class.name/].setStopper(schedule.scheduleRepeating(new[p.class.name/]));
+				space.addGeometry(new[p.class.name/]);	
+			}
 		} 
 
 		return layer;
@@ -84,13 +161,43 @@ This is a bit awkward. It might make more sense to have the Geometry as a
 property of the Animat class than to have the Animat class inheriting from the
 MasonGeometry class.
 Also, there's no need to create a second GeomVectorField object.
+!!!!!!! Must pass the geometry itself, not the centroid !!!!!!!!!!!!!!!!!
 /]
-		GeomVectorField layer = loadVectorLayer(filePath);
+		Bag desiredAttributes = new Bag();
+	 [comment Iterate through linked States /]
+	 [for (ass:Association | p.class.getAssociations())]
+	  [for (s:Element | ass.relatedElement) ]
+	   [let sClass: Class = s.oclAsType(Class)]
+	   [if (sClass.isNotNull())]
+	    [if (sClass.hasStereotype('State'))]
+         [if (sClass.getTaggedValue(sClass, 'State', 'inputAttribute').isNotNull())]
+		desiredAttributes.add("[sClass.getTaggedValue(sClass, 'State', 'inputAttribute')/]");
+         [/if]
+        [/if]
+       [/if]
+       [/let]
+      [/for]	 
+     [/for]
+
+		GeomVectorField layer = loadVectorLayer(filePath, desiredAttributes);
 
 		for(Object geom : layer.getGeometries())
 		{
 			Point centroid = ((MasonGeometry) geom).geometry.getCentroid();
 			[p.class.name/] new[p.class.name/] = generate[p.class.name/](centroid.getX(), centroid.getY(), schedule);
+	 [for (ass:Association | p.class.getAssociations())]
+	  [for (s:Element | ass.relatedElement) ]
+	   [let sClass: Class = s.oclAsType(Class)]
+	   [if (sClass.isNotNull())]
+	    [if (sClass.hasStereotype('State'))]
+         [if (sClass.getTaggedValue(sClass, 'State', 'inputAttribute').isNotNull())]
+			new[p.class.name/].setState[sClass.name/](getAttributeValue((MasonGeometry) geom, "[sClass.getTaggedValue(sClass, 'State', 'inputAttribute')/]"));
+         [/if]
+        [/if]
+       [/if]
+       [/let]
+      [/for]	 
+     [/for]
 			space.addGeometry(new[p.class.name/]);
 		}
 	}
