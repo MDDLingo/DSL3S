@@ -24,7 +24,11 @@ Issues:
     [if (sClass.hasStereotype('State'))]
 	 [if (sClass.hasLinkedStereotype('Harvest'))]
 	public void harvest[sClass.name/](Sim sim) {
-
+ 	/**
+       * This method uses an awkward combination of the getCoveringObjects() and
+       * getCoveringObjects() methods to obtain intersecting geometries. Waiting
+       * for something more straightforward to be available in GeoMason.
+       */
 	 [comment Iterate through linked Harvest /]
       [for (assH:Association | sClass.getAssociations())]
        [for (h:Element | assH.relatedElement) ]
@@ -49,7 +53,8 @@ Issues:
                     [if (haClass.hasStereotype('Animat'))]
                      [comment [if (haClass.name <> c.name)/]
 
-		Bag neigh[haClass.name/] = sim.space[haClass.name/].getCoveredObjects(this);
+		Bag neigh[haClass.name/] = sim.space[haClass.name/].getCoveringObjects(this);
+		neigh[haClass.name/].addAll(sim.space[haClass.name/].getCoveredObjects(this));
 		for(Object obj : neigh[haClass.name/]) 
 		{
 			if(obj != this)
