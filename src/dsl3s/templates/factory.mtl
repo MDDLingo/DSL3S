@@ -116,6 +116,7 @@ public class Factory {
    [if (aClass.isNotNull())]
     [if (aClass.hasStereotype('Environment'))]
 
+	 [if (aClass.getTaggedValue(aClass, 'Environment', 'inputLayer').isNotNull())]
 	protected static GeomVectorField load[aClass.name/]FromLayer(String filePath, GeomVectorField space, Schedule schedule)
 	{
 		GeomVectorField layer = loadVectorLayer(filePath, null);
@@ -156,6 +157,7 @@ public class Factory {
 
 		return layer;
 	}
+     [/if]
 	[/if]
     [if (aClass.hasStereotype('Animat'))]
 
