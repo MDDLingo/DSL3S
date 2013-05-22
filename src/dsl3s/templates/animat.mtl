@@ -29,7 +29,7 @@ import com.vividsolutions.jts.geom.Geometry;
 
 public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
 
-	protected Double movementScope = 1.0;
+	protected Double wanderScope = 1.0;
 
 	public [c.name/](Geometry geom) 
 	{
@@ -153,7 +153,7 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
      [if (pClass.hasStereotype('Move'))]
 	protected static Double weight[pClass.name/] = new Double([pClass.getTaggedValue(pClass, 'Move', 'weight')/]);
     [comment Movement scope must be taken into account in the future/]
-	protected static Double scope[pClass.name/] = 1.0[comment pClass.getTaggedValue(pClass, 'Move', 'weight')/];
+	protected static Double scope[pClass.name/] = 1.4[comment pClass.getTaggedValue(pClass, 'Move', 'scope')/];
      [/if]
     [/if]
    [/let]
@@ -277,7 +277,7 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
  [c.behavReplicate() /]
 
 	protected double randMove(double val, MersenneTwisterFast randGen) {
-		return val + (randGen.nextDouble() - randGen.nextDouble()) * movementScope;
+		return val + (randGen.nextDouble() - randGen.nextDouble()) * wanderScope;
 	}
 
 }
