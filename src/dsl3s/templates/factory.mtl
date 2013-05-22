@@ -110,12 +110,13 @@ public class Factory {
 		return null;
 	}
 
- [for (ass:Association | c.getAssociations())]
-  [for (p:Property | ass.memberEnd) ]
-   [if (p.class.isNotNull())]
-	[if (p.class.hasStereotype('Environment'))]
+ [for (assA:Association | c.getAssociations())]
+  [for (a:Element | assA.relatedElement) ]
+  [let aClass: Class = a.oclAsType(Class)] 
+   [if (aClass.isNotNull())]
+    [if (aClass.hasStereotype('Environment'))]
 
-	protected static GeomVectorField load[p.class.name/]FromLayer(String filePath, GeomVectorField space, Schedule schedule)
+	protected static GeomVectorField load[aClass.name/]FromLayer(String filePath, GeomVectorField space, Schedule schedule)
 	{
 		GeomVectorField layer = loadVectorLayer(filePath, null);
 		
@@ -124,21 +125,21 @@ public class Factory {
 		{
 			for(Object geom : layer.getGeometries())
 			{
-				[p.class.name/] new[p.class.name/] = new [p.class.name/]((Geometry) geom);
-				new[p.class.name/].setStopper(schedule.scheduleRepeating(new[p.class.name/]));
-				space.addGeometry(new[p.class.name/]);
+				[aClass.name/] new[aClass.name/] = new [aClass.name/]((Geometry) geom);
+				new[aClass.name/].setStopper(schedule.scheduleRepeating(new[aClass.name/]));
+				space.addGeometry(new[aClass.name/]);
 			}
 			
 		}
 		//If import failed as a vector try with raster
 		else 
 		{
-			System.out.println("Failed to load input layer for class [p.class.name/] as a vector, trying as raster.");
+			System.out.println("Failed to load input layer for class [aClass.name/] as a vector, trying as raster.");
 			GeomGridField rast = loadRasterLayer(filePath);
 
 			if(rast == null) 
 			{
-				System.out.println("Failed to load input layer for class [p.class.name/] as raster. No data imported.");
+				System.out.println("Failed to load input layer for class [aClass.name/] as raster. No data imported.");
 				return null;
 			}
 
@@ -147,18 +148,19 @@ public class Factory {
 			for(int y = 0; y < rast.getHeight(); y++)
 			{
 				Polygon poly = rast.toPolygon(x, y);
-				[p.class.name/] new[p.class.name/] = new [p.class.name/](grid.get(x, y), poly);
-				new[p.class.name/].setStopper(schedule.scheduleRepeating(new[p.class.name/]));
-				space.addGeometry(new[p.class.name/]);	
+				[aClass.name/] new[aClass.name/] = new [aClass.name/](grid.get(x, y), poly);
+				new[aClass.name/].setStopper(schedule.scheduleRepeating(new[aClass.name/]));
+				space.addGeometry(new[aClass.name/]);	
 			}
 		} 
 
 		return layer;
 	}
 	[/if]
-    [if (p.class.hasStereotype('Animat'))]
+    [if (aClass.hasStereotype('Animat'))]
 
-	public static void load[p.class.name/]FromLayer(String filePath, GeomVectorField space, Schedule schedule)
+     [if (aClass.getTaggedValue(aClass, 'Animat', 'inputLayer').isNotNull())]
+	public static void load[aClass.name/]FromLayer(String filePath, GeomVectorField space, Schedule schedule)
 	{
 [comment
 This is a bit awkward. It might make more sense to have the Geometry as a 
@@ -167,7 +169,7 @@ MasonGeometry class.
 /]
 		Bag desiredAttributes = new Bag();
 	 [comment Iterate through linked States /]
-	 [for (ass:Association | p.class.getAssociations())]
+	 [for (ass:Association | aClass.getAssociations())]
 	  [for (s:Element | ass.relatedElement) ]
 	   [let sClass: Class = s.oclAsType(Class)]
 	   [if (sClass.isNotNull())]
@@ -185,35 +187,38 @@ MasonGeometry class.
 
 		for(Object geom : layer.getGeometries())
 		{
-			[p.class.name/] new[p.class.name/] = new [p.class.name/](((MasonGeometry) geom).getGeometry());
-			new[p.class.name/].setStopper(schedule.scheduleRepeating(new[p.class.name/]));
-	 [for (ass:Association | p.class.getAssociations())]
+			[aClass.name/] new[aClass.name/] = new [aClass.name/](((MasonGeometry) geom).getGeometry());
+			new[aClass.name/].setStopper(schedule.scheduleRepeating(new[aClass.name/]));
+	 [for (ass:Association | aClass.getAssociations())]
 	  [for (s:Element | ass.relatedElement) ]
 	   [let sClass: Class = s.oclAsType(Class)]
 	   [if (sClass.isNotNull())]
 	    [if (sClass.hasStereotype('State'))]
          [if (sClass.getTaggedValue(sClass, 'State', 'inputAttribute').isNotNull())]
-			new[p.class.name/].setState[sClass.name/](getAttributeValue((MasonGeometry) geom, "[sClass.getTaggedValue(sClass, 'State', 'inputAttribute')/]"));
+			new[aClass.name/].setState[sClass.name/](getAttributeValue((MasonGeometry) geom, "[sClass.getTaggedValue(sClass, 'State', 'inputAttribute')/]"));
          [/if]
         [/if]
        [/if]
        [/let]
       [/for]	 
      [/for]
-			space.addGeometry(new[p.class.name/]);
+			space.addGeometry(new[aClass.name/]);
 		}
 	}
 
-	protected static [p.class.name/] generate[p.class.name/](double x, double y, Schedule schedule)
+    [/if] [comment inputLayer <> null /]
+
+	protected static [aClass.name/] generate[aClass.name/](double x, double y, Schedule schedule)
 	{
 		Coordinate coord = new Coordinate(new Double(x), new Double(y));
 		Geometry geom = geomFactory.createPoint(coord);
-		[p.class.name/] new[p.class.name/] = new [p.class.name/](geom);
-		new[p.class.name/].setStopper(schedule.scheduleRepeating(new[p.class.name/]));
-		return new[p.class.name/];
+		[aClass.name/] new[aClass.name/] = new [aClass.name/](geom);
+		new[aClass.name/].setStopper(schedule.scheduleRepeating(new[aClass.name/]));
+		return new[aClass.name/];
 	}
     [/if]
    [/if]
+  [/let]
   [/for]	 
  [/for]
 }
