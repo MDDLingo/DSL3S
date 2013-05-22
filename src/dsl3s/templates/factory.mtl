@@ -164,8 +164,6 @@ public class Factory {
 This is a bit awkward. It might make more sense to have the Geometry as a 
 property of the Animat class than to have the Animat class inheriting from the
 MasonGeometry class.
-Also, there's no need to create a second GeomVectorField object.
-!!!!!!! Must pass the geometry itself, not the centroid !!!!!!!!!!!!!!!!!
 /]
 		Bag desiredAttributes = new Bag();
 	 [comment Iterate through linked States /]
@@ -187,8 +185,8 @@ Also, there's no need to create a second GeomVectorField object.
 
 		for(Object geom : layer.getGeometries())
 		{
-			Point centroid = ((MasonGeometry) geom).geometry.getCentroid();
-			[p.class.name/] new[p.class.name/] = generate[p.class.name/](centroid.getX(), centroid.getY(), schedule);
+			[p.class.name/] new[p.class.name/] = new [p.class.name/](((MasonGeometry) geom).getGeometry());
+			new[p.class.name/].setStopper(schedule.scheduleRepeating(new[p.class.name/]));
 	 [for (ass:Association | p.class.getAssociations())]
 	  [for (s:Element | ass.relatedElement) ]
 	   [let sClass: Class = s.oclAsType(Class)]
