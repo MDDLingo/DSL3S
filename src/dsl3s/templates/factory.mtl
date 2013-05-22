@@ -44,7 +44,7 @@ public class Factory {
 
 		try 
 		{
-			ShapeFileImporter.read(new URL("file://" + filePath), layer, attributes);
+			ShapeFileImporter.read(new URL("file:" + filePath), layer, attributes);
 		} 
 		catch (Exception ex)
 		{ 
@@ -81,24 +81,28 @@ public class Factory {
 		}
 	}
 
+	/**
+	  * There is no way to know the type of an attribute beforehand. 
+      * The available types are tested successively. 
+      */
 	protected static Double getAttributeValue(MasonGeometry geom, String name)
 	{
 		try
 		{
-			return ((MasonGeometry) geom).getDoubleAttribute("energy");
+			return ((MasonGeometry) geom).getDoubleAttribute(name);
 		}
 		catch (Exception ex) {}
 		
 		try
 		{
-			Integer i = ((MasonGeometry) geom).getIntegerAttribute("energy");
+			Integer i = ((MasonGeometry) geom).getIntegerAttribute(name);
 			return new Double(i);
 		}
 		catch (Exception ex) {}
 		
 		try
 		{
-			String s = ((MasonGeometry) geom).getStringAttribute("energy");
+			String s = ((MasonGeometry) geom).getStringAttribute(name);
 			return new Double(s);
 		}
 		catch (Exception ex) {}

@@ -282,9 +282,9 @@
   <DSL3S:Harvest xmi:id="_OHpeADDfEeKzg9W6MgBbRw" harvested="Pasture" percentHarvested="100" base_Class="_GZoTkBVuEeKKubxyzHq1vA"/>
   <DSL3S:Replicate xmi:id="_qwLksDDfEeKzg9W6MgBbRw" lowerThreshold="-1" upperThreshold="20" toll="10" inheritance="10" base_Class="_qaehEBVtEeKKubxyzHq1vA"/>
   <DSL3S:Perish xmi:id="_wzGJYDDfEeKzg9W6MgBbRw" upperThreshold="51" base_Class="_9RDlgBVtEeKKubxyzHq1vA"/>
-  <DSL3S_1:Environment xmi:id="_fHKPIJ7oEeKD-LPFubo42g" maxValue="50" stepVariation="1" initRandom="true" display="true" colourMin="224,224,128" colourMax="32,128,32" base_Class="_3R_AABViEeKKubxyzHq1vA" inputLayer="null"/>
+  <DSL3S_1:Environment xmi:id="_fHKPIJ7oEeKD-LPFubo42g" maxValue="50" stepVariation="1" initRandom="true" display="true" colourMin="224,224,128" colourMax="32,128,32" base_Class="_3R_AABViEeKKubxyzHq1vA" inputLayer="data/Pasture.agrid"/>
   <DSL3S_1:Animat xmi:id="_SSoXQJ7pEeKD-LPFubo42g" initNum="10" scope="1" base_Class="_z1g5IBViEeKKubxyzHq1vA" colourMin="64,64,255" colourMax="32,32,186"/>
-  <DSL3S_1:Animat xmi:id="_f_dToJ7pEeKD-LPFubo42g" initNum="10" scope="1" base_Class="_ui_PkBViEeKKubxyzHq1vA" colourMin="255,64,64" colourMax="192,0,0" inputLayer="/home/desousa/Eclipse/Workspace.New/DSL3S/data/Predators.shp"/>
+  <DSL3S_1:Animat xmi:id="_f_dToJ7pEeKD-LPFubo42g" initNum="10" scope="1" base_Class="_ui_PkBViEeKKubxyzHq1vA" colourMin="255,64,64" colourMax="192,0,0" inputLayer="data/Predators.shp"/>
   <DSL3S_1:State xmi:id="_CtiOAMJREeK4c-HWfcmPYA" base_Class="_mB-FMBVsEeKKubxyzHq1vA" maxValue="100" stepVariation="-1" display="true" initValue="20" inputAttribute="energy"/>
   <DSL3S_1:State xmi:id="_QbfLwMJREeK4c-HWfcmPYA" base_Class="_cC-QABVtEeKKubxyzHq1vA" maxValue="50" stepVariation="-1" display="true" initValue="10" inputAttribute="null"/>
 </xmi:XMI>
