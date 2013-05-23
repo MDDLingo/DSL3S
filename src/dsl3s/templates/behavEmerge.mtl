@@ -16,6 +16,7 @@ import sim.engine.Steppable;
 import sim.engine.Stoppable;
 import sim.util.Bag;
 import sim.util.IntBag;
+import sim.field.geo.GeomVectorField;
 
 public class [c.name/]Emerge implements Steppable, Stoppable {
 		
@@ -26,13 +27,13 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
   [if (eClass.isNotNull())]
    [if (eClass.hasStereotype('Emerge'))]
     [if (eClass.getTaggedValue(eClass, 'Emerge', 'probability').isNotNull())]
-	private static Double prob[eClass.name/] = [eClass.getTaggedValue(eClass, 'Emerge', 'probability')/];
+	private static Double prob[eClass.name/] = new Double([eClass.getTaggedValue(eClass, 'Emerge', 'probability')/]);
     [/if]
 	[if (eClass.getTaggedValue(eClass, 'Emerge', 'upperThreshold').isNotNull())]
-	private static Double upperThresh[eClass.name/] = [eClass.getTaggedValue(eClass, 'Emerge', 'upperThreshold')/];
+	private static Double upperThresh[eClass.name/] = new Double([eClass.getTaggedValue(eClass, 'Emerge', 'upperThreshold')/]);
 	[/if]
 	[if (eClass.getTaggedValue(eClass, 'Emerge', 'lowerThreshold').isNotNull())]
-	private static Double lowerThresh[eClass.name/] = [eClass.getTaggedValue(eClass, 'Emerge', 'lowerThreshold')/];
+	private static Double lowerThresh[eClass.name/] = new Double([eClass.getTaggedValue(eClass, 'Emerge', 'lowerThreshold')/]);
 	[/if]
    [/if]
   [/if]
@@ -75,7 +76,7 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
 				IntBag xPos = null, yPos = null;
 				Bag neigh;
 
-				if (!isOccupied()) {
+				if (!isOccupied(sim.space[c.name/])) {
 [comment Iterate through linked Emerges /]
 [for (assE:Association | c.getAssociations())]
  [for (e:Element | assE.relatedElement) ]
@@ -96,7 +97,7 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
       	  [if (aClass.isNotNull())]
            [if (aClass.hasStereotype('Animat'))]
 
-					scope = [eClass.getTaggedValue(eClass, 'Emerge', 'scope')/];
+					scope = new Double([eClass.getTaggedValue(eClass, 'Emerge', 'scope')/]);
 					Bag neigh[aClass.name/] = sim.space[aClass.name/].getObjectsWithinDistance(this, scope);
 
 					for (Object obj : neigh) 
@@ -119,7 +120,7 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
 	    [/for] [comment Animats /]
 	   [/if] [comment States /]
 	   [if (sClass.hasStereotype('Environment'))]
-					scope = [eClass.getTaggedValue(eClass, 'Emerge', 'scope')/];
+					scope = new Double([eClass.getTaggedValue(eClass, 'Emerge', 'scope')/]);
 					Bag neigh[sClass.name/] = sim.space[sClass.name/].getObjectsWithinDistance(this, scope);
 
 					for (Object obj : neigh) 
@@ -188,9 +189,10 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
 		}
 	}
 
-	protected Boolean isOccupied(GeamVectorField space)  {
-		Bag local = sim.space[c.name/].getCoveringObjects(this);
-		if (local.count > 0) return true;
+	protected Boolean isOccupied(GeomVectorField space)  {
+		Bag local = space.getCoveringObjects(this);
+		local.addAll(space.getCoveredObjects(this); 
+		if (local.numObjects > 0) return true;
 		return false;
 	}	
 }
