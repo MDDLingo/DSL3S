@@ -9,7 +9,6 @@ Gathers all the modules in a single template.
 [import dsl3s::templates::services/]
 
 [import dsl3s::templates::sim/]
-[import dsl3s::templates::simGrid/]
 [import dsl3s::templates::simGUI/]
 [import dsl3s::templates::factory/]
 [import dsl3s::templates::animat/]
@@ -23,7 +22,6 @@ Gathers all the modules in a single template.
 	[comment @main /]
 	[aClass.sim()/]
 	[aClass.sim_gui()/]
-	[aClass.sim_grid()/]
 	[aClass.factory()/]
 	[aClass.animat()/]
 	[aClass.behavEmerge()/]
