@@ -17,9 +17,14 @@ import sim.engine.Stoppable;
 import sim.util.Bag;
 import sim.util.IntBag;
 import sim.field.geo.GeomVectorField;
+import com.vividsolutions.jts.geom.Geometry;
+import com.vividsolutions.jts.geom.GeometryFactory;
+import com.vividsolutions.jts.geom.Coordinate;
 
 public class [c.name/]Emerge implements Steppable, Stoppable {
 		
+	private static GeometryFactory geomFactory = new GeometryFactory();
+
 [comment Iterate through linked Emerge /]
 [for (assE:Association | c.getAssociations())]
  [for (e:Element | assE.relatedElement) ]
@@ -56,6 +61,7 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
 	public void step(SimState state) {
 
 		Sim sim = (Sim) state;
+		Coordinate coord = new Coordinate(0.0, 0.0);
 		Double scope;
 
 		[comment Assumes a discretisation of space /]
@@ -73,10 +79,13 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
  [/let]
  [/for]	 
 [/for] [comment Emerge /]
+				coord.x = x;
+				coord.y = y;
+				Geometry point = geomFactory.createPoint(coord);
 				IntBag xPos = null, yPos = null;
 				Bag neigh;
 
-				if (!isOccupied(sim.space[c.name/])) {
+				if (!isOccupied(sim.space[c.name/], point, sim.getGridInterval())) {
 [comment Iterate through linked Emerges /]
 [for (assE:Association | c.getAssociations())]
  [for (e:Element | assE.relatedElement) ]
@@ -98,9 +107,9 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
            [if (aClass.hasStereotype('Animat'))]
 
 					scope = new Double([eClass.getTaggedValue(eClass, 'Emerge', 'scope')/]);
-					Bag neigh[aClass.name/] = sim.space[aClass.name/].getObjectsWithinDistance(this, scope);
+					Bag neigh[aClass.name/] = sim.space[aClass.name/].getObjectsWithinDistance(point, scope);
 
-					for (Object obj : neigh) 
+					for (Object obj : neigh[aClass.name/]) 
 					{
 			[if (eClass.getTaggedValue(eClass, 'Emerge', 'probability').isNotNull())]
 						weight[eClass.name/] = 
@@ -120,8 +129,10 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
 	    [/for] [comment Animats /]
 	   [/if] [comment States /]
 	   [if (sClass.hasStereotype('Environment'))]
+					coord.x = x;
+					coord.y = y;
 					scope = new Double([eClass.getTaggedValue(eClass, 'Emerge', 'scope')/]);
-					Bag neigh[sClass.name/] = sim.space[sClass.name/].getObjectsWithinDistance(this, scope);
+					Bag neigh[sClass.name/] = sim.space[sClass.name/].getObjectsWithinDistance(geomFactory.createPoint(coord), scope);
 
 					for (Object obj : neigh) 
 					{
@@ -189,9 +200,8 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
 		}
 	}
 
-	protected Boolean isOccupied(GeomVectorField space)  {
-		Bag local = space.getCoveringObjects(this);
-		local.addAll(space.getCoveredObjects(this); 
+	protected Boolean isOccupied(GeomVectorField space, Geometry point, Double dist)  {
+		Bag local = space.getObjectsWithinDistance(point, dist);
 		if (local.numObjects > 0) return true;
 		return false;
 	}	

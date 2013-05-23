@@ -28,6 +28,12 @@ public class [c.name/] extends SimState {
 	public Double  widthInterval = 1.0; 
 	public Double  heightInterval = 1.0;
 
+	public Double getGridInterval()
+	{
+		if(widthInterval > heightInterval) return widthInterval;
+		else return heightInterval;
+	}
+
 	GeometryFactory geomFactory = new GeometryFactory();
 	Envelope globalMBR;
 
