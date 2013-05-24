@@ -15,7 +15,6 @@ import sim.engine.SimState;
 import sim.engine.Steppable;
 import sim.engine.Stoppable;
 import sim.util.Bag;
-import sim.util.IntBag;
 import sim.field.geo.GeomVectorField;
 import com.vividsolutions.jts.geom.Geometry;
 import com.vividsolutions.jts.geom.GeometryFactory;
@@ -65,8 +64,8 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
 		Double scope;
 
 		[comment Assumes a discretisation of space /]
-		for(int x = 0; x < sim.spaceWidth; x++)
-			for(int y = 0; y < sim.spaceHeight; y++) {
+		for(double x = sim.globalMBR.getMinX(); x < sim.globalMBR.getMaxX(); x += sim.widthInterval)
+			for(double y = sim.globalMBR.getMinY(); y < sim.globalMBR.getMaxY(); y += sim.heightInterval) {
 [comment Iterate through linked Emerge /]
 [for (assE:Association | c.getAssociations())]
  [for (e:Element | assE.relatedElement) ]
@@ -82,8 +81,6 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
 				coord.x = x;
 				coord.y = y;
 				Geometry point = geomFactory.createPoint(coord);
-				IntBag xPos = null, yPos = null;
-				Bag neigh;
 
 				if (!isOccupied(sim.space[c.name/], point, sim.getGridInterval())) {
 [comment Iterate through linked Emerges /]
@@ -129,12 +126,10 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
 	    [/for] [comment Animats /]
 	   [/if] [comment States /]
 	   [if (sClass.hasStereotype('Environment'))]
-					coord.x = x;
-					coord.y = y;
 					scope = new Double([eClass.getTaggedValue(eClass, 'Emerge', 'scope')/]);
-					Bag neigh[sClass.name/] = sim.space[sClass.name/].getObjectsWithinDistance(geomFactory.createPoint(coord), scope);
+					Bag neigh[sClass.name/] = sim.space[sClass.name/].getObjectsWithinDistance(point, scope);
 
-					for (Object obj : neigh) 
+					for (Object obj : neigh[sClass.name/]) 
 					{
 			[if (eClass.getTaggedValue(eClass, 'Emerge', 'probability').isNotNull())]
 						weight[eClass.name/] = 
@@ -202,7 +197,7 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
 
 	protected Boolean isOccupied(GeomVectorField space, Geometry point, Double dist)  {
 		Bag local = space.getObjectsWithinDistance(point, dist);
-		if (local.numObjects > 0) return true;
+		if (local.numObjs > 0) return true;
 		return false;
 	}	
 }
