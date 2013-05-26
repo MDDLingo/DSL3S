@@ -136,7 +136,7 @@ public class [c.name/] extends SimState {
          * . init Animats with Double x,y
 		 */
 		if(globalMBR == null)
-			globalMBR = new Envelope(0, 0, spaceWidth, spaceHeight);
+			globalMBR = new Envelope(0, spaceWidth, 0, spaceHeight);
 
 		widthInterval = globalMBR.getWidth() / spaceWidth;
 		heightInterval = globalMBR.getWidth() / spaceHeight;
