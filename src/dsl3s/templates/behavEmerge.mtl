@@ -39,6 +39,9 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
 	[if (eClass.getTaggedValue(eClass, 'Emerge', 'lowerThreshold').isNotNull())]
 	private static Double lowerThresh[eClass.name/] = new Double([eClass.getTaggedValue(eClass, 'Emerge', 'lowerThreshold')/]);
 	[/if]
+	[if (eClass.getTaggedValue(eClass, 'Emerge', 'scope').isNotNull())]
+	private static Double scope[eClass.name/] = new Double([eClass.getTaggedValue(eClass, 'Emerge', 'scope')/]);
+	[/if]
    [/if]
   [/if]
  [/let]
@@ -61,28 +64,29 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
 
 		Sim sim = (Sim) state;
 		Coordinate coord = new Coordinate(0.0, 0.0);
-		Double scope;
 
 		[comment Assumes a discretisation of space /]
 		for(double x = sim.globalMBR.getMinX(); x < sim.globalMBR.getMaxX(); x += sim.widthInterval)
-			for(double y = sim.globalMBR.getMinY(); y < sim.globalMBR.getMaxY(); y += sim.heightInterval) {
+		for(double y = sim.globalMBR.getMinY(); y < sim.globalMBR.getMaxY(); y += sim.heightInterval) 
+		{
 [comment Iterate through linked Emerge /]
 [for (assE:Association | c.getAssociations())]
  [for (e:Element | assE.relatedElement) ]
  [let eClass: Class = e.oclAsType(Class)] 
   [if (eClass.isNotNull())]
    [if (eClass.hasStereotype('Emerge'))]
-				double weight[eClass.name/] = 0;
+			double weight[eClass.name/] = 0;
    [/if]
   [/if]
  [/let]
  [/for]	 
 [/for] [comment Emerge /]
-				coord.x = x;
-				coord.y = y;
-				Geometry point = geomFactory.createPoint(coord);
+			coord.x = x;
+			coord.y = y;
+			Geometry point = geomFactory.createPoint(coord);
 
-				if (!isOccupied(sim.space[c.name/], point, sim.getGridInterval())) {
+			if (!isOccupied(sim.space[c.name/], point, sim.getGridInterval())) 
+			{
 [comment Iterate through linked Emerges /]
 [for (assE:Association | c.getAssociations())]
  [for (e:Element | assE.relatedElement) ]
@@ -102,23 +106,19 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
      	 [let aClass: Class = a.oclAsType(Class)]
       	  [if (aClass.isNotNull())]
            [if (aClass.hasStereotype('Animat'))]
-
-					scope = new Double([eClass.getTaggedValue(eClass, 'Emerge', 'scope')/]);
-					Bag neigh[aClass.name/] = sim.space[aClass.name/].getObjectsWithinDistance(point, scope);
-
-					for (Object obj : neigh[aClass.name/]) 
-					{
+				Bag neigh[aClass.name/] = sim.space[aClass.name/].getObjectsWithinDistance(point, scope[eClass.name/]);
+				for (Object obj : neigh[aClass.name/]) 
+				{
 			[if (eClass.getTaggedValue(eClass, 'Emerge', 'probability').isNotNull())]
-						weight[eClass.name/] = 
-							(((([aClass.name/]) obj).getState[sClass.name/]() - [aClass.name/].state[sClass.name/]Min + 0.0) /
-							 ([aClass.name/].state[sClass.name/]Max - [aClass.name/].state[sClass.name/]Min + 0.0)) *
-							prob[eClass.name/];
+					weight[eClass.name/] = 
+						(((([aClass.name/]) obj).getState[sClass.name/]() - [aClass.name/].state[sClass.name/]Min + 0.0) /
+						 ([aClass.name/].state[sClass.name/]Max - [aClass.name/].state[sClass.name/]Min + 0.0)) *
+						prob[eClass.name/];
 			[/if]
 			[if (eClass.getTaggedValue(eClass, 'Emerge', 'upperThreshold').isNotNull())]
-						weight[eClass.name/] += (([aClass.name/]) obj).getState[sClass.name/]();
+					weight[eClass.name/] += (([aClass.name/]) obj).getState[sClass.name/]();
 			[/if]
-					}
-
+				}
            [/if]
 	      [/if]
 	     [/let]
@@ -126,21 +126,19 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
 	    [/for] [comment Animats /]
 	   [/if] [comment States /]
 	   [if (sClass.hasStereotype('Environment'))]
-					scope = new Double([eClass.getTaggedValue(eClass, 'Emerge', 'scope')/]);
-					Bag neigh[sClass.name/] = sim.space[sClass.name/].getObjectsWithinDistance(point, scope);
-
-					for (Object obj : neigh[sClass.name/]) 
-					{
+				Bag neigh[sClass.name/] = sim.space[sClass.name/].getObjectsWithinDistance(point, scope[eClass.name/]);
+				for (Object obj : neigh[sClass.name/]) 
+				{
 			[if (eClass.getTaggedValue(eClass, 'Emerge', 'probability').isNotNull())]
-						weight[eClass.name/] = 
-							(((([sClass.name/]) obj).getValue() - [sClass.name/].valueMin + 0.0) /
-							 ([sClass.name/].valueMax - [sClass.name/].valueMin + 0.0)) *
-							prob[eClass.name/];
+					weight[eClass.name/] = 
+						(((([sClass.name/]) obj).getValue() - [sClass.name/].valueMin + 0.0) /
+						 ([sClass.name/].valueMax - [sClass.name/].valueMin + 0.0)) *
+						 prob[eClass.name/];
 			[/if]
 			[if (eClass.getTaggedValue(eClass, 'Emerge', 'upperThreshold').isNotNull())]
-						weight[eClass.name/] += (([sClass.name/]) obj).getValue();
+					weight[eClass.name/] += (([sClass.name/]) obj).getValue();
 			[/if]
-					}
+				}
        [/if]
 	  [/if]
 	 [/let]
@@ -149,10 +147,10 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
 
 	[if (eClass.getTaggedValue(eClass, 'Emerge', 'upperThreshold').isNotNull())]
 	 [if (eClass.getTaggedValue(eClass, 'Emerge', 'lowerThreshold').isNotNull())]
-					if((weight[eClass.name/] <= upperThresh[eClass.name/]) &&
-					   (weight[eClass.name/] >= lowerThresh[eClass.name/]) )
-						weight[eClass.name/] = 101;
-					else weight[eClass.name/] = -1;
+				if((weight[eClass.name/] <= upperThresh[eClass.name/]) &&
+				   (weight[eClass.name/] >= lowerThresh[eClass.name/]) )
+					weight[eClass.name/] = 101;
+				else weight[eClass.name/] = -1;
 	 [/if]
 	[/if]
 
@@ -161,7 +159,7 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
  [/let]
  [/for]	 
 [/for] [comment Emerges /]		
-					if(
+				if(
 [comment Iterate through linked Emerge /]
 [for (assE:Association | c.getAssociations())]
  [for (e:Element | assE.relatedElement) ]
@@ -169,28 +167,28 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
   [if (eClass.isNotNull())]
    [if (eClass.hasStereotype('Emerge'))]
 	[if (eClass.getTaggedValue(eClass, 'Emerge', 'required') = 'true')]
-				 	(weight[eClass.name/] > 0) && 
+				   (weight[eClass.name/] > 0) && 
     [/if]
    [/if]
   [/if]
  [/let]
  [/for]	 
 [/for] [comment Emerge /]	
-				 	((
+				   ((
 [comment Iterate through linked Emerge /]
 [for (assE:Association | c.getAssociations())]
  [for (e:Element | assE.relatedElement) ]
  [let eClass: Class = e.oclAsType(Class)] 
   [if (eClass.isNotNull())]
    [if (eClass.hasStereotype('Emerge'))]
-				  	  weight[eClass.name/] + 
+				  	 weight[eClass.name/] + 
    [/if]
   [/if]
  [/let]
  [/for]	 
 [/for] [comment Emerge /]	
-				  	  0) > sim.random.nextInt(101)))			
-						sim.create[c.name/](x, y);
+				  	 0) > sim.random.nextInt(101)))			
+					sim.create[c.name/](x, y);
 			}	
 		}
 	}
