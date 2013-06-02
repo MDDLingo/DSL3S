@@ -110,7 +110,7 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
 				for (Object obj : neigh[aClass.name/]) 
 				{
 			[if (eClass.getTaggedValue(eClass, 'Emerge', 'probability').isNotNull())]
-					weight[eClass.name/] = 
+					weight[eClass.name/] += 
 						(((([aClass.name/]) obj).getState[sClass.name/]() - [aClass.name/].state[sClass.name/]Min + 0.0) /
 						 ([aClass.name/].state[sClass.name/]Max - [aClass.name/].state[sClass.name/]Min + 0.0)) *
 						prob[eClass.name/];
@@ -130,7 +130,7 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
 				for (Object obj : neigh[sClass.name/]) 
 				{
 			[if (eClass.getTaggedValue(eClass, 'Emerge', 'probability').isNotNull())]
-					weight[eClass.name/] = 
+					weight[eClass.name/] += 
 						(((([sClass.name/]) obj).getValue() - [sClass.name/].valueMin + 0.0) /
 						 ([sClass.name/].valueMax - [sClass.name/].valueMin + 0.0)) *
 						 prob[eClass.name/];
