@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DSL3S="http:///schemas/DSL3S/_b2qjcCayEeKp_6zQMPZWmQ/9" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/DSL3S/_b2qjcCayEeKp_6zQMPZWmQ/9 ../profile/DSL3S.profile.uml#_cG9pQCayEeKp_6zQMPZWmQ">
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DSL3S="http:///schemas/DSL3S/_O74AMMNvEeK7baGOJhGPLQ/14" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/DSL3S/_O74AMMNvEeK7baGOJhGPLQ/14 ../profile/DSL3S.profile.uml#_QTdeMMNvEeK7baGOJhGPLQ">
   <uml:Model xmi:id="_BJ00wCQ-EeK2oPEGStcpwg" name="model">
     <ownedComment xmi:id="_yk0yQDDKEeKD65gnn3SxNA">
       <body> At this stage DSL3S doens't alow the specific alocation of animats in space. 
@@ -136,18 +136,18 @@ lines 49 and 50 of the Sim class with the following:
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Do8GEyQ_EeK2oPEGStcpwg" value="1"/>
       </ownedEnd>
     </packagedElement>
-    <profileApplication xmi:id="_vTghMCazEeKkqr_V4Lp7-A">
-      <eAnnotations xmi:id="_vTtVgCazEeKkqr_V4Lp7-A" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="../profile/DSL3S.profile.uml#_cG9pQCayEeKp_6zQMPZWmQ"/>
+    <profileApplication xmi:id="_H0kuwM7SEeKPQdCjNMaAqA">
+      <eAnnotations xmi:id="_H0ufwM7SEeKPQdCjNMaAqA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../profile/DSL3S.profile.uml#_QTdeMMNvEeK7baGOJhGPLQ"/>
       </eAnnotations>
       <appliedProfile href="../profile/DSL3S.profile.uml#_bf7O0CBZEeKpfttodweVYA"/>
     </profileApplication>
   </uml:Model>
-  <DSL3S:Harvest xmi:id="_wOWY0CazEeKkqr_V4Lp7-A" harvested="Alive" valueHarvested="1" base_Class="_jYYv0CQ-EeK2oPEGStcpwg" scope="1"/>
-  <DSL3S:Simulation xmi:id="_oGH4ACa0EeKkqr_V4Lp7-A" base_Class="_B_3r8CQ-EeK2oPEGStcpwg" simulName="Game Of Life" spaceHeight="100" spaceWidth="100"/>
-  <DSL3S:Animat xmi:id="_s8YcUCa0EeKkqr_V4Lp7-A" initNum="1000" base_Class="_KES1YCQ-EeK2oPEGStcpwg"/>
-  <DSL3S:State xmi:id="_wP0jACa0EeKkqr_V4Lp7-A" base_Class="_OFA40CQ-EeK2oPEGStcpwg" minValue="1" maxValue="1" display="true" initValue="1"/>
-  <DSL3S:Emerge xmi:id="_2Lbl0Ca0EeKkqr_V4Lp7-A" scope="1" required="true" lowerThreshold="3" upperThreshold="3" base_Class="_TckMUCQ-EeK2oPEGStcpwg"/>
-  <DSL3S:State xmi:id="_8GufkCa0EeKkqr_V4Lp7-A" base_Class="_blgCUCQ-EeK2oPEGStcpwg" maxValue="8" stepVariation="-10" initValue="3"/>
-  <DSL3S:Perish xmi:id="_C36fgCa1EeKkqr_V4Lp7-A" upperThreshold="4" lowerThreshold="1" base_Class="_CkmUMCQ_EeK2oPEGStcpwg"/>
+  <DSL3S:Simulation xmi:id="_L2HRkM7SEeKPQdCjNMaAqA" base_Class="_B_3r8CQ-EeK2oPEGStcpwg"  simulName="Game Of Life" spaceHeight="100" spaceWidth="100"/>
+  <DSL3S:Emerge xmi:id="_Oszx4M7SEeKPQdCjNMaAqA" base_Class="_TckMUCQ-EeK2oPEGStcpwg" scope="1" required="true" lowerThreshold="3" upperThreshold="3" />
+  <DSL3S:Animat xmi:id="_PuTrIM7SEeKPQdCjNMaAqA" base_Class="_KES1YCQ-EeK2oPEGStcpwg" initNum="1000" />
+  <DSL3S:State xmi:id="_RcVTMM7SEeKPQdCjNMaAqA" base_Class="_OFA40CQ-EeK2oPEGStcpwg"  minValue="1" maxValue="1" display="true" initValue="1"/>
+  <DSL3S:Harvest xmi:id="_SabTIM7SEeKPQdCjNMaAqA" base_Class="_jYYv0CQ-EeK2oPEGStcpwg"  harvested="Alive" valueHarvested="1" scope="1"/>
+  <DSL3S:State xmi:id="_TsNrIM7SEeKPQdCjNMaAqA" base_Class="_blgCUCQ-EeK2oPEGStcpwg"  maxValue="8" stepVariation="-10" initValue="3"/>
+  <DSL3S:Perish xmi:id="_UvOAQM7SEeKPQdCjNMaAqA" base_Class="_CkmUMCQ_EeK2oPEGStcpwg"  upperThreshold="4" lowerThreshold="1" />
 </xmi:XMI>

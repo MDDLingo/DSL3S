@@ -13,7 +13,7 @@ import org.eclipse.uml2.uml.Stereotype;
 
 public class UML2Services {
 	
-	protected String logFile = "/home/lads/Desktop/out.txt";
+	protected String logFile = "/home/desousa/Desktop/out.txt";
 	
 	 public boolean hasStereotype(Class clazz, String stereotypeName) throws IOException {
 		 Boolean DEBUG = false;
@@ -82,7 +82,6 @@ public class UML2Services {
 		if(DEBUG)
 			{
 			out = new PrintWriter(new FileWriter(logFile, true));
-			//out.println("Olá!");
 			out.println("\n\n####################################");
 			out.println("Class : " + c.getName());
 			out.println("Stereo: " + stereoTypeName);
