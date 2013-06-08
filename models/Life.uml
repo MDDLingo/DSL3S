@@ -144,10 +144,10 @@ lines 49 and 50 of the Sim class with the following:
     </profileApplication>
   </uml:Model>
   <DSL3S:Simulation xmi:id="_L2HRkM7SEeKPQdCjNMaAqA" base_Class="_B_3r8CQ-EeK2oPEGStcpwg"  simulName="Game Of Life" spaceHeight="100" spaceWidth="100"/>
-  <DSL3S:Emerge xmi:id="_Oszx4M7SEeKPQdCjNMaAqA" base_Class="_TckMUCQ-EeK2oPEGStcpwg" scope="1" required="true" lowerThreshold="3" upperThreshold="3" />
+  <DSL3S:Emerge xmi:id="_Oszx4M7SEeKPQdCjNMaAqA" base_Class="_TckMUCQ-EeK2oPEGStcpwg" scope="1.5" required="true" lowerThreshold="3" upperThreshold="3" />
   <DSL3S:Animat xmi:id="_PuTrIM7SEeKPQdCjNMaAqA" base_Class="_KES1YCQ-EeK2oPEGStcpwg" inputLayer="data/Life.shp"/>
   <DSL3S:State xmi:id="_RcVTMM7SEeKPQdCjNMaAqA" base_Class="_OFA40CQ-EeK2oPEGStcpwg"  minValue="1" maxValue="1" display="true" initValue="1"/>
-  <DSL3S:Harvest xmi:id="_SabTIM7SEeKPQdCjNMaAqA" base_Class="_jYYv0CQ-EeK2oPEGStcpwg"  harvested="Alive" valueHarvested="1" scope="1"/>
+  <DSL3S:Harvest xmi:id="_SabTIM7SEeKPQdCjNMaAqA" base_Class="_jYYv0CQ-EeK2oPEGStcpwg"  harvested="Alive" valueHarvested="1" scope="1.5"/>
   <DSL3S:State xmi:id="_TsNrIM7SEeKPQdCjNMaAqA" base_Class="_blgCUCQ-EeK2oPEGStcpwg"  maxValue="8" stepVariation="-10" initValue="3"/>
   <DSL3S:Perish xmi:id="_UvOAQM7SEeKPQdCjNMaAqA" base_Class="_CkmUMCQ_EeK2oPEGStcpwg"  upperThreshold="4" lowerThreshold="1" />
 </xmi:XMI>
