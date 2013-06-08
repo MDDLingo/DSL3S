@@ -34,6 +34,11 @@ public class [c.name/] extends SimState {
 		else return heightInterval;
 	}
 
+	public Double getGridIntervalOpen()
+	{
+		return getGridInterval() - (getGridInterval() / 100);
+	}
+
 	GeometryFactory geomFactory = new GeometryFactory();
 	Envelope globalMBR;
 
