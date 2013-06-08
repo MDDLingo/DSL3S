@@ -85,7 +85,7 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
 			coord.y = y;
 			Geometry point = geomFactory.createPoint(coord);
 
-			if (!isOccupied(sim.space[c.name/], point, sim.getGridInterval())) 
+			if (!isOccupied(sim.space[c.name/], point, sim.getGridIntervalOpen())) 
 			{
 [comment Iterate through linked Emerges /]
 [for (assE:Association | c.getAssociations())]
