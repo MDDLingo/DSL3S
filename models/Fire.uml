@@ -134,7 +134,7 @@
   <profile_1:Environment xmi:id="_dEmXsBulEeKfcr7W2TDBkw" maxValue="50" initRandom="true" display="true" base_Class="_yJVPcBrZEeKjdP3IW4sVUw" colourMin="128, 128, 128" colourMax="128,255,128"/>
   <DSL3S:Simulation xmi:id="_uo-rIMNvEeK7baGOJhGPLQ" base_Class="_wVEcgBrZEeKjdP3IW4sVUw" simulName="Forest Fire" spaceHeight="100" spaceWidth="100"/>
   <DSL3S:Animat xmi:id="_vpj-YMNvEeK7baGOJhGPLQ" initNum="3" base_Class="_xUdc8BrZEeKjdP3IW4sVUw" colourMin="255,255,0" colourMax="255,0,0"/>
-  <DSL3S:Environment xmi:id="_wkc5UMNvEeK7baGOJhGPLQ" maxValue="100" initRandom="true" display="true" colourMin="64,64,64" colourMax="0,255,0" base_Class="_yJVPcBrZEeKjdP3IW4sVUw"/>
+  <DSL3S:Environment xmi:id="_wkc5UMNvEeK7baGOJhGPLQ" maxValue="100" initRandom="true" display="true" colourMin="64,64,64" colourMax="0,255,0" inputLayer="data/Pasture.agrid" base_Class="_yJVPcBrZEeKjdP3IW4sVUw"/>
   <DSL3S:Emerge xmi:id="_ySoSYMNvEeK7baGOJhGPLQ" probability="7" scope="1.0" required="true" base_Class="_cTMa4BrfEeKjdP3IW4sVUw"/>
   <DSL3S:Emerge xmi:id="_zuSYEMNvEeK7baGOJhGPLQ" probability="2" scope="1.5" required="true" base_Class="_jMLE4BrfEeKjdP3IW4sVUw"/>
   <DSL3S:State xmi:id="_06noUMNvEeK7baGOJhGPLQ" base_Class="_woGbUBrbEeKjdP3IW4sVUw" maxValue="5" stepVariation="-5" display="true" initValue="1"/>
