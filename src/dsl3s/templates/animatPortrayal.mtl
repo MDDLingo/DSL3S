@@ -33,6 +33,9 @@ public class [c.name/]Portrayal extends OvalPortrayal2D {
 	public void draw(Object object, Graphics2D graphics, DrawInfo2D info)
     {
 		[c.name/] obj = ([c.name/]) object;
+		// Some MasonGeometries are kept alive after being stopped.
+		// Possibly a GeoMason bug.
+		if(obj.Stopped()) return;
 	    double val = obj.getDisplayValue();
 	    paint = map.getColor(val);
 	    super.draw(object, graphics, info);

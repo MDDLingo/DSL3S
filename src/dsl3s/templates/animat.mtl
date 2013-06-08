@@ -160,10 +160,14 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
   [/for]	 
  [/for]
 
-
+	private Boolean stopped = false;
+ 	public Boolean Stopped() {return stopped;}
 	private Stoppable stopper = null;
     public void setStopper(Stoppable stopper)   {this.stopper = stopper;}
-    public void stop() {stopper.stop();}
+    public void stop() {
+    	stopped = true;
+    	stopper.stop();
+    }
 
 	protected Coordinate location;
 	public Coordinate getLocation() {return location;}
