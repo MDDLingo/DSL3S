@@ -66,8 +66,8 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
 		Coordinate coord = new Coordinate(0.0, 0.0);
 
 		[comment Assumes a discretisation of space /]
-		for(double x = sim.globalMBR.getMinX(); x < sim.globalMBR.getMaxX(); x += sim.widthInterval)
-		for(double y = sim.globalMBR.getMinY(); y < sim.globalMBR.getMaxY(); y += sim.heightInterval) 
+		for(double x = sim.globalMBR.getMinX() + sim.widthInterval / 2; x < sim.globalMBR.getMaxX(); x += sim.widthInterval)
+		for(double y = sim.globalMBR.getMinY() + sim.heightInterval / 2; y < sim.globalMBR.getMaxY(); y += sim.heightInterval) 
 		{
 [comment Iterate through linked Emerge /]
 [for (assE:Association | c.getAssociations())]

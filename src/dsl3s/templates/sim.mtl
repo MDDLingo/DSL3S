@@ -232,8 +232,8 @@ public class [c.name/] extends SimState {
 			for (int j=0; j < spaceHeight; j++)
 			{
 				Coordinate coord = new Coordinate(
-					globalMBR.getMinX() + new Double(i) * widthInterval, 
-					globalMBR.getMinY() + new Double(j) * heightInterval);
+					globalMBR.getMinX() + widthInterval / 2 + new Double(i) * widthInterval, 
+					globalMBR.getMinY() + heightInterval / 2 + new Double(j) * heightInterval);
 				Geometry geom = geomFactory.createPoint(coord);
 			  [if (pClass.getTaggedValue(pClass, 'Environment', 'initRandom') = 'true')]
 				[pClass.name/] obj = new [pClass.name/](random, geom);

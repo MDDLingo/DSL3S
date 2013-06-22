@@ -24,11 +24,7 @@ Issues:
     [if (sClass.hasStereotype('State'))]
 	 [if (sClass.hasLinkedStereotype('Harvest'))]
 	public void harvest[sClass.name/](Sim sim) {
- 	/**
-       * This method uses an awkward combination of the getCoveringObjects() and
-       * getCoveringObjects() methods to obtain intersecting geometries. Waiting
-       * for something more straightforward to be available in GeoMason.
-       */
+
 	 [comment Iterate through linked Harvest /]
       [for (assH:Association | sClass.getAssociations())]
        [for (h:Element | assH.relatedElement) ]
@@ -52,10 +48,6 @@ Issues:
                    [if (haClass.isNotNull())]
                     [if (haClass.hasStereotype('Animat'))]
                      [comment [if (haClass.name <> c.name)/]
-		/*Bag neigh[haClass.name/] = sim.space[haClass.name/].getCoveringObjects(this);
-		neigh[haClass.name/].addAll(sim.space[haClass.name/].getCoveredObjects(this));*/
-
-
 		Bag neigh[haClass.name/] = sim.space[haClass.name/].getObjectsWithinDistance(this, scope[hClass.name/]);
 		for(Object obj : neigh[haClass.name/]) 
 		{
@@ -91,9 +83,6 @@ Issues:
 		    [let heClass: Class = he.oclAsType(Class)]
             [if (heClass.isNotNull())]
              [if (heClass.hasStereotype('Environment'))]
-
-		/*Bag neigh[heClass.name/] = sim.space[heClass.name/].getCoveredObjects(this);
-		neigh[heClass.name/].addAll(sim.space[heClass.name/].getCoveringObjects(this));*/
 		Bag neigh[heClass.name/] = sim.space[heClass.name/].getObjectsWithinDistance(this, scope[hClass.name/]);
 		for(Object obj : neigh[heClass.name/]) 
 		{
