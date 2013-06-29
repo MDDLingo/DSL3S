@@ -12,7 +12,18 @@ Issues:
 [template public behavMove(c : Class) ? (c.hasStereotype('Animat'))]
 [comment Check first if this class has linked Moved stereotypes /]
 [if (c.hasLinkedStereotype('Move'))]	
-	public void move(Sim sim) {
+ [comment Get Simulation name /]
+  [for (assS:Association | c.getAssociations())]
+   [for (e:Element | assS.relatedElement) ]
+	[let sim: Class = e.oclAsType(Class)]
+	 [if (sim.isNotNull())]
+	  [if (sim.hasStereotype('Simulation'))]
+	public void move([sim.name/] sim) {
+	  [/if]
+	 [/if]
+    [/let]
+   [/for]
+  [/for]
 		
 		Coordinate nextLoc = this.location;
 		Double best = 0.0;
@@ -91,8 +102,14 @@ Issues:
 			}
 		}
 
+
+ [if c.getTaggedValue(c, 'Animat', 'stop').isNotNull()]
+ 		// Stop if goal achieved
+		if(best >= stopGoal) return;
+ [/if]
+
  [if (c.getTaggedValue(c, 'Animat', 'wanderer') = 'true')]
-		//Wander if nothing interesting around
+		// Wander if nothing interesting around
 		if((nextLoc.x == location.x) && (nextLoc.y == location.y)){
 			nextLoc = new Coordinate(
 				randMove(location.x, sim.random),

@@ -44,8 +44,8 @@ public class [c.name /]GUI extends GUIState {
  [/for]	 
 [/for]
 		
-	protected SimGUI() { super(new Sim(System.currentTimeMillis()));}
-	protected SimGUI(SimState state) {super(state);	}
+	protected [c.name/]GUI() { super(new [c.name/](System.currentTimeMillis()));}
+	protected [c.name/]GUI(SimState state) {super(state);	}
 	
 	public static String getName() { return "[c.getTaggedValue(c, 'Simulation', 'simulName')/];"; }
 	public Object getSimulationInspectedObject() { return state; }
@@ -72,7 +72,7 @@ public class [c.name /]GUI extends GUIState {
 	
 	public void setupPortrayals()
 	{
-		Sim sim = (Sim) state;
+		[c.name/] sim = ([c.name/]) state;
 		
 [comment Iterate through Animats and Environments /]
 [for (ass:Association | c.getAssociations())]
@@ -146,7 +146,7 @@ public class [c.name /]GUI extends GUIState {
 
 	public static void main(String['[]'/] args){
 		
-		SimGUI vid = new SimGUI();
+		[c.name/]GUI vid = new [c.name/]GUI();
 		Console c = new Console(vid);
 		c.setVisible(true);
 	}

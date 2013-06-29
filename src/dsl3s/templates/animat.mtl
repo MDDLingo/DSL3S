@@ -30,6 +30,9 @@ import com.vividsolutions.jts.geom.Geometry;
 public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
 
 	protected Double wanderScope = 1.0;
+ [if c.getTaggedValue(c, 'Animat', 'stop').isNotNull()]
+ 	protected Double stopGoal = [c.getTaggedValue(c, 'Animat', 'stop')/];
+ [/if]
 
 	public [c.name/](Geometry geom) 
 	{

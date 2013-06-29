@@ -16,8 +16,19 @@ Issues:
 
 [template public behavPerish(c : Class) ? (c.hasStereotype('Animat'))]
 
-	protected void perish(Sim sim) {
-
+ [comment Get Simulation name /]
+  [for (assS:Association | c.getAssociations())]
+   [for (e:Element | assS.relatedElement) ]
+	[let sim: Class = e.oclAsType(Class)]
+	 [if (sim.isNotNull())]
+	  [if (sim.hasStereotype('Simulation'))]
+	protected void perish([sim.name/] sim) {
+	  [/if]
+	 [/if]
+    [/let]
+   [/for]
+  [/for]
+	
 [comment Iterate through linked States /]
 [for (ass:Association | c.getAssociations())]
   [comment Association: [ass.name/]

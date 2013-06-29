@@ -94,7 +94,7 @@ public class [c.name/] extends SimState {
  [/for]	 
 [/for]
 	
-	public Sim(long seed)
+	public [c.name/](long seed)
 	{
 		super(seed);
 	}
