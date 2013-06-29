@@ -31,7 +31,7 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
 
 	protected Double wanderScope = 1.0;
  [if c.getTaggedValue(c, 'Animat', 'stop').isNotNull()]
- 	protected Double stopGoal = [c.getTaggedValue(c, 'Animat', 'stop')/];
+ 	protected Double stopGoal = new Double([c.getTaggedValue(c, 'Animat', 'stop')/]);
  [/if]
 
 	public [c.name/](Geometry geom) 
@@ -177,7 +177,7 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
 
 	public static Double getMinDisplayValue() {
 
-		return
+		return new Double(
  [for (ass:Association | c.getAssociations())]
   [for (p:Element | ass.relatedElement) ]
    [let pClass: Class = p.oclAsType(Class)]
@@ -191,12 +191,12 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
    [/let]
   [/for]	 
  [/for]
-			0; // this zero is an artifact of code generation
+			0); // this zero is an artifact of code generation
 }
 
 	public static Double getMaxDisplayValue() {
 
-		return
+		return new Double(
  [for (ass:Association | c.getAssociations())]
   [for (p:Element | ass.relatedElement) ]
    [let pClass: Class = p.oclAsType(Class)]
@@ -210,12 +210,12 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
    [/let]
   [/for]	 
  [/for]
-			0; // this zero is an artifact of code generation
+			0); // this zero is an artifact of code generation
 }
 
 	public Double getDisplayValue() {
 
-		return
+		return new Double(
  [for (ass:Association | c.getAssociations())]
   [for (p:Element | ass.relatedElement) ]
    [let pClass: Class = p.oclAsType(Class)]
@@ -229,14 +229,25 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
    [/let]
   [/for]	 
  [/for]
-			0; // this zero is an artifact of code generation
+			0); // this zero is an artifact of code generation
 }
 
 
 	//@Override
 	public void step(SimState state) {
-		
-		Sim sim = (Sim) state;
+
+ [comment Get Simulation name /]
+  [for (assS:Association | c.getAssociations())]
+   [for (e:Element | assS.relatedElement) ]
+	[let sim: Class = e.oclAsType(Class)]
+	 [if (sim.isNotNull())]
+	  [if (sim.hasStereotype('Simulation'))]
+		[sim.name/] sim = ([sim.name/]) state;
+	  [/if]
+	 [/if]
+    [/let]
+   [/for]
+  [/for]
 
 		// Update state variables
  [for (ass:Association | c.getAssociations())]
