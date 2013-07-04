@@ -146,14 +146,14 @@
     </profileApplication>
   </uml:Model>
   <DSL3S:Simulation xmi:id="_ExmmkOClEeKY16wTGqVU7g" base_Class="_-aFq4OCkEeKY16wTGqVU7g" simulName="Freeze" spaceHeight="100" spaceWidth="100"/>
-  <DSL3S:Animat xmi:id="_VzJcAOClEeKY16wTGqVU7g" initNum="100" stop="1" base_Class="_UKXgUOClEeKY16wTGqVU7g"/>
+  <DSL3S:Animat xmi:id="_VzJcAOClEeKY16wTGqVU7g" initNum="100" stop="1" wanderer="true" base_Class="_UKXgUOClEeKY16wTGqVU7g"/>
   <DSL3S:State xmi:id="_egOEYOCmEeKY16wTGqVU7g" base_Class="_ZxRB8OCmEeKY16wTGqVU7g" maxValue="1"/>
   <DSL3S:Move xmi:id="_JIlL4OC7EeKY16wTGqVU7g" base_Class="_9n9BUOC6EeKY16wTGqVU7g"/>
   <DSL3S:State xmi:id="_ujd5AOC7EeKY16wTGqVU7g" base_Class="_i-FxUOC7EeKY16wTGqVU7g" maxValue="100" stepVariation="-100"/>
-  <DSL3S:Harvest xmi:id="_AvC4oOC8EeKY16wTGqVU7g" harvested="Neighbours" valueHarvested="1" base_Class="_a9MdAOC7EeKY16wTGqVU7g" scope="1.5"/>
-  <DSL3S:Animat xmi:id="_PdaJcOP8EeK6ROy64Uoi8w" initNum="1" stop="null" base_Class="_9IDiwOP7EeK6ROy64Uoi8w"/>
+  <DSL3S:Harvest xmi:id="_AvC4oOC8EeKY16wTGqVU7g" harvested="Mobile" valueHarvested="1" base_Class="_a9MdAOC7EeKY16wTGqVU7g" scope="1.5"/>
+  <DSL3S:Animat xmi:id="_PdaJcOP8EeK6ROy64Uoi8w" initNum="1" stop="null" base_Class="_9IDiwOP7EeK6ROy64Uoi8w" colourMax="0,0,255"/>
   <DSL3S:State xmi:id="_HGByUOP9EeK6ROy64Uoi8w" base_Class="_AuQ_AOP9EeK6ROy64Uoi8w" maxValue="1" display="true" initValue="1"/>
-  <DSL3S:Move xmi:id="_omJ6EOP9EeK6ROy64Uoi8w" base_Class="_hA7OEOP9EeK6ROy64Uoi8w" scope="1.5"/>
+  <DSL3S:Move xmi:id="_omJ6EOP9EeK6ROy64Uoi8w" weight="1" base_Class="_hA7OEOP9EeK6ROy64Uoi8w" scope="1.5" stop="1"/>
   <DSL3S:Simulation xmi:id="_yeuhsOP9EeK6ROy64Uoi8w" base_Class="_-aFq4OCkEeKY16wTGqVU7g" simulName="Freeze" spaceHeight="100" spaceWidth="100"/>
   <DSL3S:Animat xmi:id="_4iYtQOP9EeK6ROy64Uoi8w" initNum="100" stop="1" wanderer="true" base_Class="_UKXgUOClEeKY16wTGqVU7g" colourMin="192,192,192" colourMax="255,192,192"/>
   <DSL3S:State xmi:id="_F5jisOP-EeK6ROy64Uoi8w" base_Class="_i-FxUOC7EeKY16wTGqVU7g" maxValue="100" stepVariation="-100"/>
