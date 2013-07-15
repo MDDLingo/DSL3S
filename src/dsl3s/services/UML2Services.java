@@ -13,7 +13,7 @@ import org.eclipse.uml2.uml.Stereotype;
 
 public class UML2Services {
 	
-	protected String logFile = "/home/desousa/Desktop/out.txt";
+	protected String logFile = "/home/lads/Desktop/out.txt";
 	
 	 public boolean hasStereotype(Class clazz, String stereotypeName) throws IOException {
 		 Boolean DEBUG = false;
@@ -24,13 +24,13 @@ public class UML2Services {
 		 
 		 if(DEBUG) {
 		 	out = new PrintWriter(new FileWriter(logFile));
-			out.println("O nome do estereótipo principal: " + st.getName());
+			out.println("Main stereotype name: " + st.getName());
 		}
 		 
 		 if (st != null) return true;
 		 for (Stereotype stereotype : stereotypes) {
 			 
-			 if(DEBUG) out.println("No ciclo: " + stereotype.getName());
+			 if(DEBUG) out.println("Inside the cycle: " + stereotype.getName());
 
 			 if (stereotype.getName().equals(stereotypeName)) {
 				 return true;
@@ -45,7 +45,7 @@ public class UML2Services {
 		 
 		if(DEBUG) {
 			out = new PrintWriter(new FileWriter(logFile));
-			out.println("hasLinkedStereotype!!!!!!!!!!!!!!!!! : " + c.getName() + " " + linkedStereotype);
+			out.println("hasLinkedStereotype : " + c.getName() + " " + linkedStereotype);
 			out.flush();
 		}
 	
@@ -74,7 +74,7 @@ public class UML2Services {
 	 
 	public String getTaggedValue(Class c, String stereoTypeName, String propName) throws IOException {
 		
-		Boolean DEBUG = false;
+		Boolean DEBUG = true;
 		PrintWriter out = null;
 		Stereotype st = null;
 		
@@ -92,7 +92,7 @@ public class UML2Services {
 			
 			 List<Stereotype> stereotypes = c.getAppliedStereotypes();
 			 for (Stereotype stereotype : stereotypes) {
-				 if(DEBUG) out.println("O nome: " + stereotype.getName());
+				 if(DEBUG) out.println("Name: " + stereotype.getName());
 				 if (stereotype.getName().equals(stereoTypeName)) {
 					 st = stereotype;
 				 }
@@ -100,7 +100,7 @@ public class UML2Services {
 			
 			 if(DEBUG){
 				 out.println(st.toString());
-				 out.println("O stereo: " + st.getName());
+				 out.println("Stereotype: " + st.getName());
 			 }
 			 
 			Object val = c.getValue(st, propName);
@@ -108,7 +108,7 @@ public class UML2Services {
 				res = val.toString();
 			
 			if(DEBUG){
-				out.println("O resultado:");
+				out.println("Result:");
 				out.println(res);
 			}
 		}
@@ -149,7 +149,7 @@ public class UML2Services {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			out.println("A string: |" + str + "| len: " + str.length());
+			out.println("The string: |" + str + "| len: " + str.length());
 			out.close();
 		}
 			

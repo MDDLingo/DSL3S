@@ -66,11 +66,11 @@ Issues:
 			 {
 				     [if (hClass.getTaggedValue(hClass, 'Harvest', 'percentHarvested').isNotNull())]
 				this.state[sClass.name/] += 
-					(([haClass.name/]) obj).harvestPercent[hsClass.name/](percent[hClass.name/]);
+					(([haClass.name/]) obj).harvestPercent[hsClass.name/](percent[hClass.name/], maxImpact[hClass.name/]);
 			         [/if]
 			         [if (hClass.getTaggedValue(hClass, 'Harvest', 'valueHarvested').isNotNull())]
 				this.state[sClass.name/] += 
-					(([haClass.name/]) obj).harvestValue[hsClass.name/](value[hClass.name/]);
+					(([haClass.name/]) obj).harvestValue[hsClass.name/](value[hClass.name/], maxImpact[hClass.name/]);
 			         [/if]
 
 				(([haClass.name/]) obj).perish(sim);
@@ -99,11 +99,11 @@ Issues:
 		{
 			[if (hClass.getTaggedValue(hClass, 'Harvest', 'percentHarvested') <> 'null')]
 				this.state[sClass.name/] += 
-					(([heClass.name/]) obj).harvestPercent(percent[hClass.name/]);
+					(([heClass.name/]) obj).harvestPercent(percent[hClass.name/], maxImpact[hClass.name/]);
 			  [/if]
 			  [if (hClass.getTaggedValue(hClass, 'Harvest', 'valueHarvested') <> 'null')]
 				this.state[sClass.name/] +=
-					(([heClass.name/]) obj).harvestValue(value[hClass.name/]);
+					(([heClass.name/]) obj).harvestValue(value[hClass.name/], maxImpact[hClass.name/]);
 				
 			  [/if]
 				(([heClass.name/]) obj).perish(sim);

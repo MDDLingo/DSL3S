@@ -404,6 +404,10 @@
           <element xmi:type="uml:Property" href="DSL3S.profile.uml#_WMXTECayEeKp_6zQMPZWmQ"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_WMmjoSayEeKp_6zQMPZWmQ"/>
         </children>
+        <children xmi:type="notation:Shape" xmi:id="_9OM0gOvyEeK7nZQt8F3isw" type="3002" fontName="Ubuntu" fontHeight="11" lineColor="0">
+          <element xmi:type="uml:Property" href="DSL3S.profile.uml#_9NnlsOvyEeK7nZQt8F3isw"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_9OM0gevyEeK7nZQt8F3isw"/>
+        </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_78E-2iBeEeKpfttodweVYA"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_78E-2yBeEeKpfttodweVYA"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_78E-3CBeEeKpfttodweVYA"/>

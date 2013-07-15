@@ -62,17 +62,19 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
 		if (state[sClass.name/] > state[sClass.name/]Max) 
 			state[sClass.name/] = state[sClass.name/]Max;
 	}
-	public Double harvestPercent[sClass.name/](Double percent) {
+	public Double harvestPercent[sClass.name/](Double percent, Double max) {
 		Double harvested = state[sClass.name/] * percent / 100.0;
-		state[sClass.name/] -= harvested;
+		if((max != null) && (harvested > max)) setState[sClass.name/](state[sClass.name/] - max);
+		else setState[sClass.name/](state[sClass.name/] - harvested); 
 		return harvested;
 	}
-	public Double harvestValue[sClass.name/](Double value) {
-		Double res;
-		if(value < state[sClass.name/]) res = value;
-		else res = state[sClass.name/];
-		setState[sClass.name/](state[sClass.name/] - value);
-		return res;
+	public Double harvestValue[sClass.name/](Double value, Double max) {
+		Double harvested;
+		if(value < state[sClass.name/]) harvested = value;
+		else harvested = state[sClass.name/];
+		if((max != null) && (harvested > max)) setState[sClass.name/](state[sClass.name/] - max);
+		else setState[sClass.name/](state[sClass.name/] - harvested); 
+		return harvested;
 	}
 
 	[comment Iterate through linked Replicate /]
@@ -133,6 +135,7 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
 	      [if (pClass.getTaggedValue(pClass, 'Harvest', 'valueHarvested').isNotNull())]
  	protected static Double value[pClass.name/] = new Double([pClass.getTaggedValue(pClass, 'Harvest', 'valueHarvested')/]);			
 	      [/if]
+ 	protected static Double maxImpact[pClass.name/] = new Double([pClass.getTaggedValue(pClass, 'Harvest', 'maxImpact')/]);			
  	protected static Double scope[pClass.name/] = new Double([pClass.getTaggedValue(pClass, 'Harvest', 'scope')/]);			
 		 [/if]
         [/if]
