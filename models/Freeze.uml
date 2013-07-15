@@ -191,13 +191,13 @@
   </uml:Model>
   <DSL3S:Simulation xmi:id="_fbI4cO1zEeKydtnMgq0iAA" base_Class="_-aFq4OCkEeKY16wTGqVU7g" simulName="Freeze" spaceHeight="100" spaceWidth="100"/>
   <DSL3S:Animat xmi:id="_lXbQsO1zEeKydtnMgq0iAA" initNum="1" stop="null" base_Class="_9IDiwOP7EeK6ROy64Uoi8w" colourMax="0,0,255"/>
-  <DSL3S:Animat xmi:id="_mHsQAO1zEeKydtnMgq0iAA" initNum="100" stop="1" wanderer="true" base_Class="_UKXgUOClEeKY16wTGqVU7g"/>
+  <DSL3S:Animat xmi:id="_mHsQAO1zEeKydtnMgq0iAA" initNum="1000" stop="1" wanderer="true" base_Class="_UKXgUOClEeKY16wTGqVU7g"/>
   <DSL3S:State xmi:id="_nVAXsO1zEeKydtnMgq0iAA" base_Class="_AuQ_AOP9EeK6ROy64Uoi8w" minValue="1" maxValue="1" display="true" initValue="1"/>
   <DSL3S:State xmi:id="_oqT9wO1zEeKydtnMgq0iAA" base_Class="_i-FxUOC7EeKY16wTGqVU7g" maxValue="100" stepVariation="-100"/>
   <DSL3S:State xmi:id="_pbBB8O1zEeKydtnMgq0iAA" base_Class="_ZxRB8OCmEeKY16wTGqVU7g" maxValue="1"/>
-  <DSL3S:Move xmi:id="_qeG2oO1zEeKydtnMgq0iAA" weight="1" base_Class="_9n9BUOC6EeKY16wTGqVU7g" scope="1.5" stop="1"/>
-  <DSL3S:Move xmi:id="_rjw3IO1zEeKydtnMgq0iAA" base_Class="_hA7OEOP9EeK6ROy64Uoi8w" scope="1.5" stop="1"/>
-  <DSL3S:Harvest xmi:id="_sOG0oO1zEeKydtnMgq0iAA" harvested="Mobile" percentHarvested="1" base_Class="_2-p5YOjOEeK-J6PJ-81stw" scope="1.5" maxImpact="0"/>
-  <DSL3S:Harvest xmi:id="_tGJP4O1zEeKydtnMgq0iAA" harvested="Neighbours" valueHarvested="1" base_Class="_CvZjkOjPEeK-J6PJ-81stw" scope="1.5" maxImpact="0"/>
-  <DSL3S:Harvest xmi:id="_t1vg0O1zEeKydtnMgq0iAA" harvested="Frozen" valueHarvested="1" base_Class="_OWXmsOjPEeK-J6PJ-81stw" scope="1.5" maxImpact="0"/>
+  <DSL3S:Move xmi:id="_qeG2oO1zEeKydtnMgq0iAA" weight="1" base_Class="_9n9BUOC6EeKY16wTGqVU7g" scope="1" stop="1"/>
+  <DSL3S:Move xmi:id="_rjw3IO1zEeKydtnMgq0iAA" base_Class="_hA7OEOP9EeK6ROy64Uoi8w" weight="1" scope="1" stop="1"/>
+  <DSL3S:Harvest xmi:id="_sOG0oO1zEeKydtnMgq0iAA" harvested="Mobile" percentHarvested="1" base_Class="_2-p5YOjOEeK-J6PJ-81stw" scope="1" maxImpact="0"/>
+  <DSL3S:Harvest xmi:id="_tGJP4O1zEeKydtnMgq0iAA" harvested="Neighbours" valueHarvested="1" base_Class="_CvZjkOjPEeK-J6PJ-81stw" scope="1" maxImpact="0"/>
+  <DSL3S:Harvest xmi:id="_t1vg0O1zEeKydtnMgq0iAA" harvested="Frozen" valueHarvested="1" base_Class="_OWXmsOjPEeK-J6PJ-81stw" scope="1" maxImpact="0"/>
 </xmi:XMI>
