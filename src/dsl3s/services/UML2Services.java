@@ -74,7 +74,7 @@ public class UML2Services {
 	 
 	public String getTaggedValue(Class c, String stereoTypeName, String propName) throws IOException {
 		
-		Boolean DEBUG = true;
+		Boolean DEBUG = false;
 		PrintWriter out = null;
 		Stereotype st = null;
 		
