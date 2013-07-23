@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DSL3S="http:///schemas/DSL3S/_O74AMMNvEeK7baGOJhGPLQ/14" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:profile="http:///schemas/profile/_l4HVcBrZEeKjdP3IW4sVUw/14" xmlns:profile_1="http:///schemas/profile/_v5ed4BujEeK004p3DgS3UQ/15" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/DSL3S/_O74AMMNvEeK7baGOJhGPLQ/14 file:/media/Data/users/lads/Trabalho/Eclipse/Workspace.New/DSL3S/profile/DSL3S.profile.uml#_QTdeMMNvEeK7baGOJhGPLQ http:///schemas/profile/_l4HVcBrZEeKjdP3IW4sVUw/14 file:/media/Data/users/lads/Trabalho/Eclipse/Workspace.New/DSL3S/profile/DSL3S.profile.uml#_mgQTgBrZEeKjdP3IW4sVUw http:///schemas/profile/_v5ed4BujEeK004p3DgS3UQ/15 ../profile/DSL3S.profile.uml#_xBjgQBujEeK004p3DgS3UQ">
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DSL3S="http:///schemas/DSL3S/_0oj-8OvzEeK7nZQt8F3isw/18" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/DSL3S/_0oj-8OvzEeK7nZQt8F3isw/18 ../profile/DSL3S.profile.uml#_1Kj4wOvzEeK7nZQt8F3isw">
   <uml:Model xmi:id="_vKp30BrZEeKjdP3IW4sVUw" name="model">
     <packagedElement xmi:type="uml:Class" xmi:id="_wVEcgBrZEeKjdP3IW4sVUw" name="Sim"/>
     <packagedElement xmi:type="uml:Class" xmi:id="_xUdc8BrZEeKjdP3IW4sVUw" name="Fire">
@@ -117,21 +117,13 @@
       </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_IEQbMB02EeKTUOpZbz254A" name="Class0"/>
-    <profileApplication xmi:id="_sJ9rAMNvEeK7baGOJhGPLQ">
-      <eAnnotations xmi:id="_sKpngMNvEeK7baGOJhGPLQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="../profile/DSL3S.profile.uml#_QTdeMMNvEeK7baGOJhGPLQ"/>
+    <profileApplication xmi:id="_M5aL4PPEEeKJHYkq3Es3oA">
+      <eAnnotations xmi:id="_M57JQPPEEeKJHYkq3Es3oA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../profile/DSL3S.profile.uml#_1Kj4wOvzEeK7nZQt8F3isw"/>
       </eAnnotations>
       <appliedProfile href="../profile/DSL3S.profile.uml#_bf7O0CBZEeKpfttodweVYA"/>
     </profileApplication>
   </uml:Model>
-  <profile:Simulation xmi:id="_WapFYBraEeKjdP3IW4sVUw" simulName="Forest fire model" base_Class="_wVEcgBrZEeKjdP3IW4sVUw" spaceHeight="100" spaceWidth="100"/>
-  <profile:Animat xmi:id="_bqWEcBraEeKjdP3IW4sVUw" base_Class="_xUdc8BrZEeKjdP3IW4sVUw" initNum="2" scopeRadius="1" colourMax="186, 64, 64" colourMin="255, 255, 128"/>
-  <profile:State xmi:id="_yWHKYBrdEeKjdP3IW4sVUw" maxValue="5" minValue="1" stepVariation="-100" display="true" initValue="1" base_Class="_woGbUBrbEeKjdP3IW4sVUw"/>
-  <profile:Perish xmi:id="_x9pKkBreEeKjdP3IW4sVUw" base_Class="_t5KBcBreEeKjdP3IW4sVUw" upperThreshold="null" lowerThreshold="1"/>
-  <profile:Emerge xmi:id="_Ci6eQBrgEeKjdP3IW4sVUw" base_Class="_cTMa4BrfEeKjdP3IW4sVUw" probability="8" scope="1" required="true"/>
-  <profile:Emerge xmi:id="_UAPQwBrgEeKjdP3IW4sVUw" base_Class="_jMLE4BrfEeKjdP3IW4sVUw" probability="10" scope="1" required="true"/>
-  <profile_1:Harvest xmi:id="_YIzzIBulEeKfcr7W2TDBkw" base_Class="_tFSb4BrbEeKjdP3IW4sVUw" harvested="Forest" percentHarvested="null" maxIntake="null" valueHarvest="5"/>
-  <profile_1:Environment xmi:id="_dEmXsBulEeKfcr7W2TDBkw" maxValue="50" initRandom="true" display="true" base_Class="_yJVPcBrZEeKjdP3IW4sVUw" colourMin="128, 128, 128" colourMax="128,255,128"/>
   <DSL3S:Simulation xmi:id="_uo-rIMNvEeK7baGOJhGPLQ" base_Class="_wVEcgBrZEeKjdP3IW4sVUw" simulName="Forest Fire" spaceHeight="100" spaceWidth="100"/>
   <DSL3S:Animat xmi:id="_vpj-YMNvEeK7baGOJhGPLQ" initNum="3" base_Class="_xUdc8BrZEeKjdP3IW4sVUw" colourMin="255,255,0" colourMax="255,0,0"/>
   <DSL3S:Environment xmi:id="_wkc5UMNvEeK7baGOJhGPLQ" maxValue="100" initRandom="true" display="true" colourMin="64,64,64" colourMax="0,255,0" base_Class="_yJVPcBrZEeKjdP3IW4sVUw" inputLayer="data/Pasture.agrid"/>

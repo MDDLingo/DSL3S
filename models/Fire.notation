@@ -12,11 +12,11 @@
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wVMYVRrZEeKjdP3IW4sVUw" key="QualifiedNameDepth" value="1000"/>
       </eAnnotations>
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_WaxoQBraEeKjdP3IW4sVUw" source="Stereotype_Annotation">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_upJqQMNvEeK7baGOJhGPLQ" key="StereotypeWithQualifiedNameList" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_upKRUMNvEeK7baGOJhGPLQ" key="StereotypeList" value="profile::Simulation,DSL3S::Simulation,DSL3S::Simulation,DSL3S::Simulation,DSL3S::Simulation"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_upKRUcNvEeK7baGOJhGPLQ" key="Stereotype_Presentation_Kind" value="HorizontalStereo"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_upKRUsNvEeK7baGOJhGPLQ" key="PropStereoDisplay" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_upK4YMNvEeK7baGOJhGPLQ" key="StereotypePropertyLocation" value="Compartment"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ArqnMPPFEeKJHYkq3Es3oA" key="StereotypeWithQualifiedNameList" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ArqnMfPFEeKJHYkq3Es3oA" key="StereotypeList" value="profile::Simulation,DSL3S::Simulation,DSL3S::Simulation,DSL3S::Simulation,DSL3S::Simulation,DSL3S::Simulation"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ArqnMvPFEeKJHYkq3Es3oA" key="Stereotype_Presentation_Kind" value="HorizontalStereo"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ArqnM_PFEeKJHYkq3Es3oA" key="PropStereoDisplay" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ArqnNPPFEeKJHYkq3Es3oA" key="StereotypePropertyLocation" value="Compartment"/>
       </eAnnotations>
       <children xmi:type="notation:DecorationNode" xmi:id="_wVMYVhrZEeKjdP3IW4sVUw" type="5029"/>
       <children xmi:type="notation:BasicCompartment" xmi:id="_wVM_YBrZEeKjdP3IW4sVUw" type="7017">

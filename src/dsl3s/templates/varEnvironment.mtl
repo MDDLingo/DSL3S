@@ -42,7 +42,7 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
 		else setValue(value - harvested);
 		return harvested;
 	}
-	public Double harvestValue(Double val, Douvle max) {
+	public Double harvestValue(Double val, Double max) {
 		Double harvested;
 		if(val < value) harvested = val;
 		else harvested = value;
