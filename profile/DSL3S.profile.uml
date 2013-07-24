@@ -95,7 +95,7 @@
           </contents>
         </eAnnotations>
         <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_1Kj5EuvzEeK7nZQt8F3isw" name="initNum" ordered="false" lowerBound="1" eType="_1Kj4w-vzEeK7nZQt8F3isw" defaultValueLiteral="0"/>
-        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_1Kj5FOvzEeK7nZQt8F3isw" name="stop" ordered="false" lowerBound="1" eType="_1Kj4w-vzEeK7nZQt8F3isw" defaultValueLiteral="0"/>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_1Kj5FOvzEeK7nZQt8F3isw" name="stop" ordered="false" lowerBound="1" eType="_1Kj4w-vzEeK7nZQt8F3isw"/>
         <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_1Kj5FuvzEeK7nZQt8F3isw" name="wanderer" ordered="false" lowerBound="1" eType="_1Kj4xevzEeK7nZQt8F3isw" defaultValueLiteral="false"/>
         <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_1Kj5GOvzEeK7nZQt8F3isw" name="base_Class" ordered="false" lowerBound="1">
           <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Class"/>
