@@ -16,19 +16,21 @@ public class UML2Services {
 	protected String logFile = "/home/lads/Desktop/out.txt";
 	
 	 public boolean hasStereotype(Class clazz, String stereotypeName) throws IOException {
-		 Boolean DEBUG = false;
+		 Boolean DEBUG = true;
 		 PrintWriter out = null;
 			
 		 List<Stereotype> stereotypes = clazz.getAppliedStereotypes();
-		 Stereotype st = clazz.getAppliedStereotype(stereotypeName);
 		 
 		 if(DEBUG) {
 		 	out = new PrintWriter(new FileWriter(logFile));
-			out.println("Main stereotype name: " + st.getName());
-		}
+		 	out.println("##################################");
+		 	out.println("Class: " + clazz.getName());
+		 	out.println("Stereo: " + stereotypeName);
+		 	out.println("Nº found: " + stereotypes.size());
+		 }
 		 
-		 if (st != null) return true;
-		 for (Stereotype stereotype : stereotypes) {
+		 for (Stereotype stereotype : stereotypes) 
+		 {
 			 
 			 if(DEBUG) out.println("Inside the cycle: " + stereotype.getName());
 
@@ -38,7 +40,7 @@ public class UML2Services {
 		 }
 		 return false;
 	 }
-	 
+	  
 	 public boolean hasLinkedStereotype(Class c, String linkedStereotype) throws IOException {
 		Boolean DEBUG = false;
 		PrintWriter out = null;
