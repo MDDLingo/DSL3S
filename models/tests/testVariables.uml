@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DSL3S="http:///schemas/DSL3S/_x28DkP7FEeKCktSvh_wskw/19" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/DSL3S/_x28DkP7FEeKCktSvh_wskw/19 ../../profile/DSL3S.profile.uml#_yp8N0P7FEeKCktSvh_wskw">
+  <uml:Model xmi:id="_CnJRYP7GEeKCktSvh_wskw" name="model">
+    <packagedElement xmi:type="uml:Class" xmi:id="_DX28oP7GEeKCktSvh_wskw" name="Global"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_KjmKkP7GEeKCktSvh_wskw" name="Enviro"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Ocl1YP7GEeKCktSvh_wskw" name="State"/>
+    <profileApplication xmi:id="_GNiJQP7GEeKCktSvh_wskw">
+      <eAnnotations xmi:id="_GN7x4P7GEeKCktSvh_wskw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../../profile/DSL3S.profile.uml#_yp8N0P7FEeKCktSvh_wskw"/>
+      </eAnnotations>
+      <appliedProfile href="../../profile/DSL3S.profile.uml#_bf7O0CBZEeKpfttodweVYA"/>
+    </profileApplication>
+  </uml:Model>
+  <DSL3S:Global xmi:id="_H0dDwP7GEeKCktSvh_wskw" base_Class="_DX28oP7GEeKCktSvh_wskw"/>
+  <DSL3S:Environment xmi:id="_NNflAP7GEeKCktSvh_wskw" base_Class="_KjmKkP7GEeKCktSvh_wskw"/>
+  <DSL3S:State xmi:id="_RUkvIP7GEeKCktSvh_wskw" base_Class="_Ocl1YP7GEeKCktSvh_wskw"/>
+</xmi:XMI>
