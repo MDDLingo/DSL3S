@@ -21,15 +21,29 @@ import com.vividsolutions.jts.geom.Geometry;
 
 public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
 
-	protected Double value = new Double([c.getTaggedValue(c, 'Environment', 'initValue')/]); 
+	//protected Double value = new Double(); 
 	public static  Double stepVar = new Double([c.getTaggedValue(c, 'Environment', 'stepVariation')/]);
 	public static  Double valueMax = new Double([c.getTaggedValue(c, 'Environment', 'maxValue')/]);
 	public static  Double valueMin = new Double([c.getTaggedValue(c, 'Environment', 'minValue')/]);
 
 	protected Coordinate location;
 	public Coordinate getLocation() {return location;}
+
+	protected Variable var = new Variable(new Double([c.getTaggedValue(c, 'Environment', 'initValue')/]), valueMax, valueMin);
+	public void setValue(Double newValue) {var.setValue(newValue);}
+	public Double getValue() {return var.getValue();}
 	
-	public Double getValue() {return value;}
+	public Double harvestPercent(Double percent, Double max) 
+	{
+		return var.harvestPercent(percent, max);
+	}
+	
+	public Double harvestValue(Double val, Double max) 
+	{
+		return var.harvestValue(val, max);
+	}
+	
+	/*public Double getValue() {return value;}
 	public void setValue(Double newValue) {
 		value = newValue;
 		if (value > valueMax) value = valueMax;
@@ -49,7 +63,7 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
 		if((max != null) && (harvested > max)) setValue(value - max);
 		else setValue(value - harvested);
 		return harvested;
-	}
+	}*/
 
 	private Stoppable stopper = null;
     public void setStopper(Stoppable stopper) {this.stopper = stopper;}
@@ -64,10 +78,8 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
 	
 	public [c.name/](Double init, Geometry geom) 
 	{
-		super();
-		this.geometry = geom;
-		location = geom.getCentroid().getCoordinate();
-		value = init;
+		this(geom);
+		var.setValue(init);
 	}
 
 	public [c.name/](MersenneTwisterFast randGen, Geometry geom) 
@@ -75,11 +87,11 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
 		super();
 		this.geometry = geom;
 		location = geom.getCentroid().getCoordinate();
-		value = randGen.nextDouble() * (valueMax - valueMin) + valueMin;
+		var.setRandom(randGen);
 	}
 	
 	//@Override
-	public void step(SimState state) { setValue(value + stepVar); }
+	public void step(SimState state) { var.setValue(var.getValue() + stepVar); }
 	
 	[comment Makes sense? Must rethink this. /]
 	// This empty perish method facilitates things in the Animat Harvest process

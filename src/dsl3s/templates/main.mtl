@@ -11,6 +11,7 @@ Gathers all the modules in a single template.
 [import dsl3s::templates::sim/]
 [import dsl3s::templates::simGUI/]
 [import dsl3s::templates::factory/]
+[import dsl3s::templates::variable/]
 [import dsl3s::templates::animat/]
 [import dsl3s::templates::behavEmerge/]
 [import dsl3s::templates::animatPortrayal/]
@@ -23,10 +24,12 @@ Gathers all the modules in a single template.
 	[aClass.sim()/]
 	[aClass.sim_gui()/]
 	[aClass.factory()/]
+	[aClass.variable()/]
 	[aClass.animat()/]
 	[aClass.behavEmerge()/]
 	[aClass.animat_portrayal()/]
 	[aClass.environment()/]
 	[aClass.environment_portrayal()/]
+	
 
 [/template]
