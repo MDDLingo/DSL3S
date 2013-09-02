@@ -124,7 +124,7 @@
       <appliedProfile href="../profile/DSL3S.profile.uml#_bf7O0CBZEeKpfttodweVYA"/>
     </profileApplication>
   </uml:Model>
-  <DSL3S:Simulation xmi:id="_Du_pUBQGEeOL_dsJOHIJwA" base_Class="_wVEcgBrZEeKjdP3IW4sVUw simulName="Forest Fire" spaceHeight="100" spaceWidth="100"/>
+  <DSL3S:Simulation xmi:id="_Du_pUBQGEeOL_dsJOHIJwA" base_Class="_wVEcgBrZEeKjdP3IW4sVUw" simulName="Forest Fire" spaceHeight="100" spaceWidth="100"/>
   <DSL3S:Animat xmi:id="_EnohgBQGEeOL_dsJOHIJwA" base_Class="_xUdc8BrZEeKjdP3IW4sVUw" initNum="3" colourMin="255,255,0" colourMax="255,0,0"/>
   <DSL3S:Environment xmi:id="_FgjtkBQGEeOL_dsJOHIJwA" base_Class="_yJVPcBrZEeKjdP3IW4sVUw" maxValue="100" initRandom="true" display="true" colourMin="64,64,64" colourMax="0,255,0" inputLayer="data/Pasture.agrid"/>
   <DSL3S:Emerge xmi:id="_HKopwBQGEeOL_dsJOHIJwA" base_Class="_cTMa4BrfEeKjdP3IW4sVUw" probability="5" scope="1.0" required="true"/>
