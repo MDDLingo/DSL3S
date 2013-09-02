@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DSL3S="http:///schemas/DSL3S/_0oj-8OvzEeK7nZQt8F3isw/18" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/DSL3S/_0oj-8OvzEeK7nZQt8F3isw/18 ../profile/DSL3S.profile.uml#_1Kj4wOvzEeK7nZQt8F3isw">
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DSL3S="http:///schemas/DSL3S/_I9pjoP7KEeKCktSvh_wskw/22" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/DSL3S/_I9pjoP7KEeKCktSvh_wskw/22 ../profile/DSL3S.profile.uml#_JimDwP7KEeKCktSvh_wskw">
   <uml:Model xmi:id="_vKp30BrZEeKjdP3IW4sVUw" name="model">
     <packagedElement xmi:type="uml:Class" xmi:id="_wVEcgBrZEeKjdP3IW4sVUw" name="Sim"/>
     <packagedElement xmi:type="uml:Class" xmi:id="_xUdc8BrZEeKjdP3IW4sVUw" name="Fire">
@@ -117,19 +117,19 @@
       </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_IEQbMB02EeKTUOpZbz254A" name="Class0"/>
-    <profileApplication xmi:id="_M5aL4PPEEeKJHYkq3Es3oA">
-      <eAnnotations xmi:id="_M57JQPPEEeKJHYkq3Es3oA" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="../profile/DSL3S.profile.uml#_1Kj4wOvzEeK7nZQt8F3isw"/>
+    <profileApplication xmi:id="_7hVEUBQFEeOL_dsJOHIJwA">
+      <eAnnotations xmi:id="_7h6TIBQFEeOL_dsJOHIJwA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../profile/DSL3S.profile.uml#_JimDwP7KEeKCktSvh_wskw"/>
       </eAnnotations>
       <appliedProfile href="../profile/DSL3S.profile.uml#_bf7O0CBZEeKpfttodweVYA"/>
     </profileApplication>
   </uml:Model>
-  <DSL3S:Simulation xmi:id="_uo-rIMNvEeK7baGOJhGPLQ" base_Class="_wVEcgBrZEeKjdP3IW4sVUw" simulName="Forest Fire" spaceHeight="100" spaceWidth="100"/>
-  <DSL3S:Animat xmi:id="_vpj-YMNvEeK7baGOJhGPLQ" initNum="3" base_Class="_xUdc8BrZEeKjdP3IW4sVUw" colourMin="255,255,0" colourMax="255,0,0"/>
-  <DSL3S:Environment xmi:id="_wkc5UMNvEeK7baGOJhGPLQ" maxValue="100" initRandom="true" display="true" colourMin="64,64,64" colourMax="0,255,0" base_Class="_yJVPcBrZEeKjdP3IW4sVUw" inputLayer="data/Pasture.agrid"/>
-  <DSL3S:Emerge xmi:id="_ySoSYMNvEeK7baGOJhGPLQ" probability="5" scope="1.0" required="true" base_Class="_cTMa4BrfEeKjdP3IW4sVUw"></DSL3S:Emerge>
-  <DSL3S:Emerge xmi:id="_zuSYEMNvEeK7baGOJhGPLQ" probability="2" scope="1.5" required="true" base_Class="_jMLE4BrfEeKjdP3IW4sVUw"/>
-  <DSL3S:State xmi:id="_06noUMNvEeK7baGOJhGPLQ" base_Class="_woGbUBrbEeKjdP3IW4sVUw" maxValue="5" stepVariation="-5" display="true" initValue="1"/>
-  <DSL3S:Perish xmi:id="_2kvn0MNvEeK7baGOJhGPLQ" upperThreshold="6" base_Class="_t5KBcBreEeKjdP3IW4sVUw"/>
-  <DSL3S:Harvest xmi:id="_4jl6IMNvEeK7baGOJhGPLQ" harvested="Forest" valueHarvested="5" base_Class="_tFSb4BrbEeKjdP3IW4sVUw"/>
+  <DSL3S:Simulation xmi:id="_Du_pUBQGEeOL_dsJOHIJwA" base_Class="_wVEcgBrZEeKjdP3IW4sVUw simulName="Forest Fire" spaceHeight="100" spaceWidth="100"/>
+  <DSL3S:Animat xmi:id="_EnohgBQGEeOL_dsJOHIJwA" base_Class="_xUdc8BrZEeKjdP3IW4sVUw" initNum="3" colourMin="255,255,0" colourMax="255,0,0"/>
+  <DSL3S:Environment xmi:id="_FgjtkBQGEeOL_dsJOHIJwA" base_Class="_yJVPcBrZEeKjdP3IW4sVUw" maxValue="100" initRandom="true" display="true" colourMin="64,64,64" colourMax="0,255,0" inputLayer="data/Pasture.agrid"/>
+  <DSL3S:Emerge xmi:id="_HKopwBQGEeOL_dsJOHIJwA" base_Class="_cTMa4BrfEeKjdP3IW4sVUw" probability="5" scope="1.0" required="true"/>
+  <DSL3S:Emerge xmi:id="_IGnw4BQGEeOL_dsJOHIJwA" base_Class="_jMLE4BrfEeKjdP3IW4sVUw" probability="2" scope="1.5" required="true"/>
+  <DSL3S:State xmi:id="_JW2CoBQGEeOL_dsJOHIJwA" base_Class="_woGbUBrbEeKjdP3IW4sVUw" maxValue="5" stepVariation="-5" display="true" initValue="1"/>
+  <DSL3S:Perish xmi:id="_KdndcBQGEeOL_dsJOHIJwA" base_Class="_t5KBcBreEeKjdP3IW4sVUw" upperThreshold="6"/>
+  <DSL3S:Harvest xmi:id="_LTIwMBQGEeOL_dsJOHIJwA" base_Class="_tFSb4BrbEeKjdP3IW4sVUw" harvested="Forest" valueHarvested="5"/>
 </xmi:XMI>

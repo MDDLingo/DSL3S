@@ -792,7 +792,7 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qaquVBVtEeKKubxyzHq1vA"/>
       </children>
       <element xmi:type="uml:Class" href="PredatorPrey.uml#_qaehEBVtEeKKubxyzHq1vA"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qaqHQRVtEeKKubxyzHq1vA" x="828" y="49"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qaqHQRVtEeKKubxyzHq1vA" x="780" y="49"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_9RNWgBVtEeKKubxyzHq1vA" type="2008" fontName="Ubuntu" fontHeight="11" lineColor="0">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_9RN9kBVtEeKKubxyzHq1vA" source="ShadowFigure">
@@ -831,7 +831,7 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9ROkoBVtEeKKubxyzHq1vA"/>
       </children>
       <element xmi:type="uml:Class" href="PredatorPrey.uml#_9RDlgBVtEeKKubxyzHq1vA"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9RNWgRVtEeKKubxyzHq1vA" x="846" y="422"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9RNWgRVtEeKKubxyzHq1vA" x="798" y="422"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_E6nX4BVuEeKKubxyzHq1vA" type="2008" fontName="Ubuntu" fontHeight="11" lineColor="0">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_E6n-8BVuEeKKubxyzHq1vA" source="ShadowFigure">
@@ -1060,7 +1060,7 @@
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_5-LfgBVtEeKKubxyzHq1vA" fontName="Ubuntu" fontHeight="11"/>
       <element xmi:type="uml:Association" href="PredatorPrey.uml#_59_5UBVtEeKKubxyzHq1vA"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_5-LfgRVtEeKKubxyzHq1vA" points="[7, 54, 217, -141]$[7, 195, 217, 0]$[-205, 195, 5, 0]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_5-LfgRVtEeKKubxyzHq1vA" points="[0, 54, 162, -141]$[0, 195, 162, 0]$[-157, 195, 5, 0]"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8Z-MgBVtEeKKubxyzHq1vA" id="(0.95,0.2336448598130841)"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_BXEYoBVuEeKKubxyzHq1vA" type="4001" source="_9RNWgBVtEeKKubxyzHq1vA" target="_cDNgkBVtEeKKubxyzHq1vA" lineColor="0">
@@ -1084,7 +1084,7 @@
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_BXEYoRVuEeKKubxyzHq1vA" fontName="Ubuntu" fontHeight="11"/>
       <element xmi:type="uml:Association" href="PredatorPrey.uml#_BW8c0BVuEeKKubxyzHq1vA"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BXEYohVuEeKKubxyzHq1vA" points="[8, -14, 214, 67]$[8, -81, 214, 0]$[-204, -81, 2, 0]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BXEYohVuEeKKubxyzHq1vA" points="[0, -14, 158, 67]$[0, -81, 158, 0]$[-156, -81, 2, 0]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BXR0ABVuEeKKubxyzHq1vA" id="(0.31,0.1308411214953271)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BXR0ARVuEeKKubxyzHq1vA" id="(0.98,0.7757009345794392)"/>
     </edges>
