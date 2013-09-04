@@ -264,12 +264,12 @@
   <DSL3S:Move xmi:id="_X9-R0BQLEeOL_dsJOHIJwA" weight="1" base_Class="_5U5KkBVwEeKKubxyzHq1vA"/>
   <DSL3S:Replicate xmi:id="_Ys2KABQLEeOL_dsJOHIJwA" lowerThreshold="-1" upperThreshold="50" toll="20" inheritance="20" base_Class="_utXvEBVsEeKKubxyzHq1vA"/>
   <DSL3S:State xmi:id="_Ztz3wBQLEeOL_dsJOHIJwA" base_Class="_mB-FMBVsEeKKubxyzHq1vA" maxValue="100" stepVariation="-1" display="true" initValue="20" inputAttribute="energy"/>
-  <DSL3S:Harvest xmi:id="_agfR4BQLEeOL_dsJOHIJwA" harvested="Pasture" percentHarvested="100" base_Class="_euFOkBVxEeKKubxyzHq1vA"/>
+  <DSL3S:Harvest xmi:id="_agfR4BQLEeOL_dsJOHIJwA" harvested="PreyEnergy" percentHarvested="100" base_Class="_euFOkBVxEeKKubxyzHq1vA"/>
   <DSL3S:Perish xmi:id="_bS4_MBQLEeOL_dsJOHIJwA" upperThreshold="101" base_Class="_EuL64BVtEeKKubxyzHq1vA"/>
   <DSL3S:Move xmi:id="_dCLLgBQLEeOL_dsJOHIJwA" weight="-2" base_Class="_Jam8oBohEeKN07hQpA-1_g"/>
   <DSL3S:Replicate xmi:id="_eEmR0BQLEeOL_dsJOHIJwA" lowerThreshold="-1" upperThreshold="20" toll="10" inheritance="10" base_Class="_qaehEBVtEeKKubxyzHq1vA"/>
   <DSL3S:State xmi:id="_e7hSwBQLEeOL_dsJOHIJwA" base_Class="_cC-QABVtEeKKubxyzHq1vA" maxValue="50" stepVariation="-1" display="true" initValue="10" inputAttribute="null"/>
   <DSL3S:Move xmi:id="_f0zEIBQLEeOL_dsJOHIJwA" weight="1" base_Class="_YHKsUBVuEeKKubxyzHq1vA"/>
-  <DSL3S:Harvest xmi:id="_gnWicBQLEeOL_dsJOHIJwA" harvested="PreyEnergy" percentHarvested="100" base_Class="_GZoTkBVuEeKKubxyzHq1vA"/>
+  <DSL3S:Harvest xmi:id="_gnWicBQLEeOL_dsJOHIJwA" harvested="Pasture" percentHarvested="100" base_Class="_GZoTkBVuEeKKubxyzHq1vA"/>
   <DSL3S:Perish xmi:id="_hZdU0BQLEeOL_dsJOHIJwA" upperThreshold="51" base_Class="_9RDlgBVtEeKKubxyzHq1vA"/>
 </xmi:XMI>
