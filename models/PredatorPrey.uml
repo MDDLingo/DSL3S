@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DSL3S="http:///schemas/DSL3S/_0oj-8OvzEeK7nZQt8F3isw/18" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/DSL3S/_0oj-8OvzEeK7nZQt8F3isw/18 file:/media/Data/users/lads/Trabalho/Eclipse/Repositories/DSL3S/profile/DSL3S.profile.uml#_1Kj4wOvzEeK7nZQt8F3isw">
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DSL3S="http:///schemas/DSL3S/_I9pjoP7KEeKCktSvh_wskw/22" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/DSL3S/_I9pjoP7KEeKCktSvh_wskw/22 ../profile/DSL3S.profile.uml#_JimDwP7KEeKCktSvh_wskw">
   <uml:Model xmi:id="_uoB9EBVhEeKfCYUGa0wThA" name="model">
     <packagedElement xmi:type="uml:Class" xmi:id="_l0mjIBViEeKKubxyzHq1vA" name="Sim"/>
     <packagedElement xmi:type="uml:Class" xmi:id="_ui_PkBViEeKKubxyzHq1vA" name="Predator">
@@ -250,26 +250,26 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NP-rsxohEeKN07hQpA-1_g" value="1"/>
       </ownedEnd>
     </packagedElement>
-    <profileApplication xmi:id="__ClqwPQrEeKInfu3dotJIw">
-      <eAnnotations xmi:id="__DJrcPQrEeKInfu3dotJIw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="../profile/DSL3S.profile.uml#_1Kj4wOvzEeK7nZQt8F3isw"/>
+    <profileApplication xmi:id="_SfLG0BQLEeOL_dsJOHIJwA">
+      <eAnnotations xmi:id="_Sf7UwBQLEeOL_dsJOHIJwA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../profile/DSL3S.profile.uml#_JimDwP7KEeKCktSvh_wskw"/>
       </eAnnotations>
       <appliedProfile href="../profile/DSL3S.profile.uml#_bf7O0CBZEeKpfttodweVYA"/>
     </profileApplication>
   </uml:Model>
-  <DSL3S:Simulation xmi:id="_EGiJ8DDVEeK6DceGvYx0EA" base_Class="_l0mjIBViEeKKubxyzHq1vA" simulName="Predator Prey" spaceHeight="100" spaceWidth="100"/>
-  <DSL3S:Move xmi:id="_BXoE8DDbEeK6DceGvYx0EA" weight="1" base_Class="_5U5KkBVwEeKKubxyzHq1vA"/>
-  <DSL3S:Harvest xmi:id="_FgjCIDDbEeK6DceGvYx0EA" harvested="PreyEnergy" percentHarvested="100" base_Class="_euFOkBVxEeKKubxyzHq1vA"/>
-  <DSL3S:Perish xmi:id="_tWKFQDDbEeK6DceGvYx0EA" upperThreshold="101" base_Class="_EuL64BVtEeKKubxyzHq1vA"/>
-  <DSL3S:Replicate xmi:id="_YPshgDDeEeKzg9W6MgBbRw" lowerThreshold="-1" upperThreshold="50" toll="20" inheritance="20" base_Class="_utXvEBVsEeKKubxyzHq1vA"/>
-  <DSL3S:Move xmi:id="_JqVlMDDfEeKzg9W6MgBbRw" weight="-2" base_Class="_Jam8oBohEeKN07hQpA-1_g"/>
-  <DSL3S:Move xmi:id="_LsEzcDDfEeKzg9W6MgBbRw" weight="1" base_Class="_YHKsUBVuEeKKubxyzHq1vA"/>
-  <DSL3S:Harvest xmi:id="_OHpeADDfEeKzg9W6MgBbRw" harvested="Pasture" percentHarvested="100" base_Class="_GZoTkBVuEeKKubxyzHq1vA"/>
-  <DSL3S:Replicate xmi:id="_qwLksDDfEeKzg9W6MgBbRw" lowerThreshold="-1" upperThreshold="20" toll="10" inheritance="10" base_Class="_qaehEBVtEeKKubxyzHq1vA"/>
-  <DSL3S:Perish xmi:id="_wzGJYDDfEeKzg9W6MgBbRw" upperThreshold="51" base_Class="_9RDlgBVtEeKKubxyzHq1vA"/>
-  <DSL3S:Environment xmi:id="_fHKPIJ7oEeKD-LPFubo42g" maxValue="50" stepVariation="1" initRandom="true" display="true" colourMin="224,224,128" colourMax="32,128,32" base_Class="_3R_AABViEeKKubxyzHq1vA" inputLayer="data/Pasture.agrid"/>
-  <DSL3S:Animat xmi:id="_SSoXQJ7pEeKD-LPFubo42g" initNum="30" base_Class="_z1g5IBViEeKKubxyzHq1vA" colourMin="64,64,255" colourMax="32,32,186" scope="1"/>
-  <DSL3S:Animat xmi:id="_f_dToJ7pEeKD-LPFubo42g" initNum="10" wanderer="true" base_Class="_ui_PkBViEeKKubxyzHq1vA" colourMin="255,64,64" colourMax="192,0,0" inputLayer="data/Predators.shp" scope="1"/>
-  <DSL3S:State xmi:id="_CtiOAMJREeK4c-HWfcmPYA" base_Class="_mB-FMBVsEeKKubxyzHq1vA" maxValue="100" stepVariation="-1" display="true" initValue="20" inputAttribute="energy"/>
-  <DSL3S:State xmi:id="_QbfLwMJREeK4c-HWfcmPYA" base_Class="_cC-QABVtEeKKubxyzHq1vA" maxValue="50" stepVariation="-1" display="true" initValue="10" inputAttribute="null"/>
+  <DSL3S:Simulation xmi:id="_T1GX8BQLEeOL_dsJOHIJwA" base_Class="_l0mjIBViEeKKubxyzHq1vA" simulName="Predator Prey" spaceHeight="100" spaceWidth="100"/>
+  <DSL3S:Animat xmi:id="_VDLUoBQLEeOL_dsJOHIJwA" initNum="10" stop="null" wanderer="true" base_Class="_ui_PkBViEeKKubxyzHq1vA" colourMin="255,64,64" colourMax="192,0,0" inputLayer="data/Predators.shp" scope="1"/>
+  <DSL3S:Animat xmi:id="_V2lHgBQLEeOL_dsJOHIJwA" initNum="30" stop="null" base_Class="_z1g5IBViEeKKubxyzHq1vA" colourMin="64,64,255" colourMax="32,32,186" scope="1"/>
+  <DSL3S:Environment xmi:id="_We0MMBQLEeOL_dsJOHIJwA" base_Class="_3R_AABViEeKKubxyzHq1vA" maxValue="50" stepVariation="1" display="true" initRandom="true" inputLayer="data/Pasture.agrid" colourMin="224,224,128" colourMax="32,128,32"/>
+  <DSL3S:Move xmi:id="_X9-R0BQLEeOL_dsJOHIJwA" weight="1" base_Class="_5U5KkBVwEeKKubxyzHq1vA"/>
+  <DSL3S:Replicate xmi:id="_Ys2KABQLEeOL_dsJOHIJwA" lowerThreshold="-1" upperThreshold="50" toll="20" inheritance="20" base_Class="_utXvEBVsEeKKubxyzHq1vA"/>
+  <DSL3S:State xmi:id="_Ztz3wBQLEeOL_dsJOHIJwA" base_Class="_mB-FMBVsEeKKubxyzHq1vA" maxValue="100" stepVariation="-1" display="true" initValue="20" inputAttribute="energy"/>
+  <DSL3S:Harvest xmi:id="_agfR4BQLEeOL_dsJOHIJwA" harvested="Pasture" percentHarvested="100" base_Class="_euFOkBVxEeKKubxyzHq1vA"/>
+  <DSL3S:Perish xmi:id="_bS4_MBQLEeOL_dsJOHIJwA" upperThreshold="101" base_Class="_EuL64BVtEeKKubxyzHq1vA"/>
+  <DSL3S:Move xmi:id="_dCLLgBQLEeOL_dsJOHIJwA" weight="-2" base_Class="_Jam8oBohEeKN07hQpA-1_g"/>
+  <DSL3S:Replicate xmi:id="_eEmR0BQLEeOL_dsJOHIJwA" lowerThreshold="-1" upperThreshold="20" toll="10" inheritance="10" base_Class="_qaehEBVtEeKKubxyzHq1vA"/>
+  <DSL3S:State xmi:id="_e7hSwBQLEeOL_dsJOHIJwA" base_Class="_cC-QABVtEeKKubxyzHq1vA" maxValue="50" stepVariation="-1" display="true" initValue="10" inputAttribute="null"/>
+  <DSL3S:Move xmi:id="_f0zEIBQLEeOL_dsJOHIJwA" weight="1" base_Class="_YHKsUBVuEeKKubxyzHq1vA"/>
+  <DSL3S:Harvest xmi:id="_gnWicBQLEeOL_dsJOHIJwA" harvested="PreyEnergy" percentHarvested="100" base_Class="_GZoTkBVuEeKKubxyzHq1vA"/>
+  <DSL3S:Perish xmi:id="_hZdU0BQLEeOL_dsJOHIJwA" upperThreshold="51" base_Class="_9RDlgBVtEeKKubxyzHq1vA"/>
 </xmi:XMI>
