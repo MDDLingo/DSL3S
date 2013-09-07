@@ -50,11 +50,17 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
 	///////////////////////////////////////////////////////
     // State: [sClass.name/]
 	
-	protected Double state[sClass.name/] = new Double([sClass.getTaggedValue(sClass, 'State', 'initValue')/]);
+	//protected Double state[sClass.name/] = new Double([sClass.getTaggedValue(sClass, 'State', 'initValue')/]);
 	protected static Double state[sClass.name/]Min = new Double([sClass.getTaggedValue(sClass, 'State', 'minValue')/]);
 	protected static Double state[sClass.name/]Max = new Double([sClass.getTaggedValue(sClass, 'State', 'maxValue')/]);
 	protected static Double state[sClass.name/]Var = new Double([sClass.getTaggedValue(sClass, 'State', 'stepVariation')/]);
-	public Double getState[sClass.name/]() {return state[sClass.name/];}
+
+	public Variable state[sClass.name/] = new Variable(
+			new Double([sClass.getTaggedValue(sClass, 'State', 'initValue')/]), 
+			state[sClass.name/]Min, 
+			state[sClass.name/]Max);
+
+	/*public Double getState[sClass.name/]() {return state[sClass.name/];}
     public void setState[sClass.name/](Double newState) {
 		state[sClass.name/] = newState;
 		if (state[sClass.name/] < state[sClass.name/]Min) 
@@ -75,7 +81,7 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
 		if((max != null) && (harvested > max)) setState[sClass.name/](state[sClass.name/] - max);
 		else setState[sClass.name/](state[sClass.name/] - harvested); 
 		return harvested;
-	}
+	}*/
 
 	[comment Iterate through linked Replicate /]
 	// Replicate constants
@@ -229,7 +235,7 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
     [if (pClass.isNotNull())]
      [if (pClass.hasStereotype('State'))]
       [if (pClass.getTaggedValue(pClass, 'State', 'display') = 'true')]
-		 	state[pClass.name/] +
+		 	state[pClass.name/].getValue() +
       [/if]
      [/if]
     [/if]
@@ -262,7 +268,7 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
    [let pClass: Class = p.oclAsType(Class)]
     [if (pClass.isNotNull())]
      [if (pClass.hasStereotype('State'))]
-		setState[pClass.name/](state[pClass.name/] += state[pClass.name/]Var);
+		state[pClass.name/].add(state[pClass.name/]Var);
 	 [/if]
     [/if]
    [/let]

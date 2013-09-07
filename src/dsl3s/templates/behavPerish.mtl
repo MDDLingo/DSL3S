@@ -42,12 +42,12 @@ Issues:
        [if (pClass.isNotNull())]
         [if (pClass.hasStereotype('Perish'))]
 		 [if pClass.getTaggedValue(pClass, 'Perish', 'upperThreshold').isNotNull()]
-		if(state[sClass.name/] >= upperThresh[pClass.name/]) 
+		if(state[sClass.name/].getValue() >= upperThresh[pClass.name/]) 
 			sim.addTo[c.name/]Garbage(this);
 		 [/if]
 
 		 [if pClass.getTaggedValue(pClass, 'Perish', 'lowerThreshold').isNotNull()]
-		if(state[sClass.name/] <= lowerThresh[pClass.name/]) 
+		if(state[sClass.name/].getValue() <= lowerThresh[pClass.name/]) 
 			sim.addTo[c.name/]Garbage(this);
 		 [/if]
        [/if]

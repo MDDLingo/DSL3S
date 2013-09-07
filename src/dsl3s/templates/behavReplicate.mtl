@@ -40,25 +40,25 @@ Issues:
        [if (rClass.isNotNull())]
         [if (rClass.hasStereotype('Replicate'))]
 		 [if rClass.getTaggedValue(rClass, 'Replicate', 'upperThreshold').isNotNull()]
-		if (state[sClass.name/] > upperThresh[rClass.name/]) {
+		if (state[sClass.name/].getValue() > upperThresh[rClass.name/]) {
 			[c.name/] new[c.name/] = sim.create[c.name/]( 
 					randMove(location.x, sim.random), 
 					randMove(location.y, sim.random));
            [if rClass.getTaggedValue(rClass, 'Replicate', 'inheritance').isNotNull()]
-			new[c.name/].setState[sClass.name/](inheritance[rClass.name/]);
+			new[c.name/].state[sClass.name/].setValue(inheritance[rClass.name/]);
            [/if]
-			state[sClass.name/] -= toll[rClass.name/];
+			state[sClass.name/].subtract(toll[rClass.name/]);
 		}
 		 [/if]
 		[if rClass.getTaggedValue(rClass, 'Replicate', 'lowerThreshold').isNotNull()]
-		if (state[sClass.name/] < lowerThresh[rClass.name/]) {
+		if (state[sClass.name/].getValue() < lowerThresh[rClass.name/]) {
 			[c.name/] new[c.name/] = sim.create[c.name/]( 
 					randMove(location.x, sim.random), 
 					randMove(location.y, sim.random));
 		 [if rClass.getTaggedValue(rClass, 'Replicate', 'inheritance').isNotNull()]
-			new[c.name/].setState[sClass.name/](inheritance[rClass.name/]);
+			new[c.name/].state[sClass.name/].setValue(inheritance[rClass.name/]);
          [/if]
-			state[sClass.name/] -= toll[rClass.name/];
+			state[sClass.name/].subtract(toll[rClass.name/]);
 		}
 		[/if]
        [/if]
