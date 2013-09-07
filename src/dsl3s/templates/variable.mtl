@@ -17,6 +17,13 @@ public /*abstract*/ class Variable
 	protected Double value; 
 	protected Double valueMax;
 	protected Double valueMin;
+	
+	public Variable(Double val, Double min, Double max) 
+	{
+		value = val;
+		valueMax = max;	
+		valueMin = min;
+	}
 
 	public Double getValue() {return value;}
 	
@@ -25,6 +32,16 @@ public /*abstract*/ class Variable
 		value = newValue;
 		if (value > valueMax) value = valueMax;
 		if (value < valueMin) value = valueMin;
+	}
+	
+	public void add(Double addition)
+	{
+		setValue(value + addition);
+	}
+	
+	public void subtract(Double subtraction)
+	{
+		setValue(value - subtraction);
 	}
 	
 	public void setRandom(MersenneTwisterFast randGen)
@@ -51,15 +68,7 @@ public /*abstract*/ class Variable
 	}
 	
 	//public Variable() {}
-
-	public Variable(Double val, Double max, Double min) 
-	{
-		value = val;
-		valueMax = max;	
-		valueMin = min;
-	}
 }
-
 
 [/file]
 

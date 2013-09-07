@@ -29,7 +29,7 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
 	protected Coordinate location;
 	public Coordinate getLocation() {return location;}
 
-	protected Variable var = new Variable(new Double([c.getTaggedValue(c, 'Environment', 'initValue')/]), valueMax, valueMin);
+	protected Variable var = new Variable(new Double([c.getTaggedValue(c, 'Environment', 'initValue')/]), valueMin, valueMax);
 	public void setValue(Double newValue) {var.setValue(newValue);}
 	public Double getValue() {return var.getValue();}
 	
