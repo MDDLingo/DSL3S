@@ -13,7 +13,7 @@ import org.eclipse.uml2.uml.Stereotype;
 
 public class UML2Services {
 	
-	protected String logFile = "/home/lads/Desktop/out.txt";
+	protected String logFile = "/home/desousa/Desktop/out.txt";
 	
 	 public boolean hasStereotype(Class clazz, String stereotypeName) throws IOException {
 		 Boolean DEBUG = true;
@@ -27,6 +27,7 @@ public class UML2Services {
 		 	out.println("Class: " + clazz.getName());
 		 	out.println("Stereo: " + stereotypeName);
 		 	out.println("Nº found: " + stereotypes.size());
+		 	out.close();
 		 }
 		 
 		 for (Stereotype stereotype : stereotypes) 
