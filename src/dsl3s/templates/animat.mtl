@@ -49,8 +49,7 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
     [if (sClass.hasStereotype('State'))]
 	///////////////////////////////////////////////////////
     // State: [sClass.name/]
-	
-	//protected Double state[sClass.name/] = new Double([sClass.getTaggedValue(sClass, 'State', 'initValue')/]);
+
 	protected static Double state[sClass.name/]Min = new Double([sClass.getTaggedValue(sClass, 'State', 'minValue')/]);
 	protected static Double state[sClass.name/]Max = new Double([sClass.getTaggedValue(sClass, 'State', 'maxValue')/]);
 	protected static Double state[sClass.name/]Var = new Double([sClass.getTaggedValue(sClass, 'State', 'stepVariation')/]);
@@ -59,31 +58,7 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
 			new Double([sClass.getTaggedValue(sClass, 'State', 'initValue')/]), 
 			state[sClass.name/]Min, 
 			state[sClass.name/]Max);
-
-	/*public Double getState[sClass.name/]() {return state[sClass.name/];}
-    public void setState[sClass.name/](Double newState) {
-		state[sClass.name/] = newState;
-		if (state[sClass.name/] < state[sClass.name/]Min) 
-			state[sClass.name/] = state[sClass.name/]Min;
-		if (state[sClass.name/] > state[sClass.name/]Max) 
-			state[sClass.name/] = state[sClass.name/]Max;
-	}
-	public Double harvestPercent[sClass.name/](Double percent, Double max) {
-		Double harvested = state[sClass.name/] * percent / 100.0;
-		if((max != null) && (harvested > max)) setState[sClass.name/](state[sClass.name/] - max);
-		else setState[sClass.name/](state[sClass.name/] - harvested); 
-		return harvested;
-	}
-	public Double harvestValue[sClass.name/](Double value, Double max) {
-		Double harvested;
-		if(value < state[sClass.name/]) harvested = value;
-		else harvested = state[sClass.name/];
-		if((max != null) && (harvested > max)) setState[sClass.name/](state[sClass.name/] - max);
-		else setState[sClass.name/](state[sClass.name/] - harvested); 
-		return harvested;
-	}*/
-
-	[comment Iterate through linked Replicate /]
+[comment Iterate through linked Replicate /]
 	// Replicate constants
      [for (assR:Association | sClass.getAssociations())]
       [for (r:Element | assR.relatedElement) ]

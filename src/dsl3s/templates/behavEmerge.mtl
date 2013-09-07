@@ -116,7 +116,7 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
 						prob[eClass.name/];
 			[/if]
 			[if (eClass.getTaggedValue(eClass, 'Emerge', 'upperThreshold').isNotNull())]
-					weight[eClass.name/] += (([aClass.name/]) obj).getState[sClass.name/]();
+					weight[eClass.name/] += (([aClass.name/]) obj).state[sClass.name/].getValue();
 			[/if]
 				}
            [/if]
