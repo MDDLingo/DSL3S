@@ -13,10 +13,11 @@ import org.eclipse.uml2.uml.Stereotype;
 
 public class UML2Services {
 	
-	protected String logFile = "/home/desousa/Desktop/out.txt";
+	protected String logFile = "/tmp/DSL3Sout.txt";
 	
-	 public boolean hasStereotype(Class clazz, String stereotypeName) throws IOException {
-		 Boolean DEBUG = true;
+	 public boolean hasStereotype(Class clazz, String stereotypeName) throws IOException 
+	 {
+		 Boolean DEBUG = false;
 		 PrintWriter out = null;
 			
 		 List<Stereotype> stereotypes = clazz.getAppliedStereotypes();
@@ -42,7 +43,8 @@ public class UML2Services {
 		 return false;
 	 }
 	  
-	 public boolean hasLinkedStereotype(Class c, String linkedStereotype) throws IOException {
+	 public boolean hasLinkedStereotype(Class c, String linkedStereotype) throws IOException 
+	 {
 		Boolean DEBUG = false;
 		PrintWriter out = null;
 		 
@@ -75,8 +77,8 @@ public class UML2Services {
 		 return false;
 	 }
 	 
-	public String getTaggedValue(Class c, String stereoTypeName, String propName) throws IOException {
-		
+	public String getTaggedValue(Class c, String stereoTypeName, String propName) throws IOException 
+	{	
 		Boolean DEBUG = false;
 		PrintWriter out = null;
 		Stereotype st = null;
@@ -134,13 +136,14 @@ public class UML2Services {
 		return first + name.substring(1);
 	}
 	
-	 public boolean isNotNull(Class clazz) {
+	 public boolean isNotNull(Class clazz) 
+	 {
 		 if (clazz == null) return false;
 		 else return true;
 	 }
 	 
-	 public boolean isNotNull(String str) {
-		 
+	 public boolean isNotNull(String str) 
+	 {	 
 		Boolean DEBUG = false;
 		PrintWriter out = null;
 			
