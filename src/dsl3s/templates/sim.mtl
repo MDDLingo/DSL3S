@@ -94,16 +94,18 @@ public class [c.name/] extends SimState {
  [/for]	 
 [/for]
 
+	// Global variables
 [for (assG:Association | c.getAssociations())]
  [for (g:Element | assG.relatedElement) ]
   [let gClass: Class = g.oclAsType(Class)] 
   [if (gClass.isNotNull())]
    [if (gClass.hasStereotype('Global'))]
-		public Variable global[gClass.name/] = new Variable(
-			new Double([gClass.getTaggedValue(gClass, 'Global', 'initValue')/]), 
-			new Double([gClass.getTaggedValue(gClass, 'Global', 'minValue')/]), 
-			new Double([gClass.getTaggedValue(gClass, 'Global', 'maxValue')/]));
-		protected static Double global[gClass.name/]Var = new Double([gClass.getTaggedValue(gClass, 'Global', 'stepVariation')/]);
+	public Variable global[gClass.name/] = new Variable(
+		new Double([gClass.getTaggedValue(gClass, 'Global', 'initValue')/]),  // initial
+		new Double([gClass.getTaggedValue(gClass, 'Global', 'minValue')/]),  // minimum
+		new Double([gClass.getTaggedValue(gClass, 'Global', 'maxValue')/])); // maximum
+	protected static Double global[gClass.name/]Var = new Double([gClass.getTaggedValue(gClass, 'Global', 'stepVariation')/]);
+
    [/if]
   [/if]
   [/let]
@@ -223,25 +225,6 @@ public class [c.name/] extends SimState {
 		{
 			public void step(SimState state) 
 			{ 
-[for (assG:Association | c.getAssociations())]
- [for (g:Element | assG.relatedElement) ]
-  [let gClass: Class = g.oclAsType(Class)] 
-  [if (gClass.isNotNull())]
-   [if (gClass.hasStereotype('Global'))]
-				global[gClass.name/].add(global[gClass.name/]Var);
-   [/if]
-  [/if]
-  [/let]
- [/for]	 
-[/for]	
-			}
-		});
-
-		// Update global variables at the end of each time step
-		schedule.scheduleRepeating(schedule.EPOCH, 1, new Steppable()
-		{
-			public void step(SimState state) 
-			{ 
 
  [for (ass:Association | c.getAssociations())]
   [for (p:Property | ass.memberEnd) ]
@@ -253,6 +236,25 @@ public class [c.name/] extends SimState {
    [/if]
   [/for]	 
  [/for]	
+			}
+		});
+
+		// Update global variables at the end of each time step
+		schedule.scheduleRepeating(schedule.EPOCH, 1, new Steppable()
+		{
+			public void step(SimState state) 
+			{ 
+[for (assG:Association | c.getAssociations())]
+ [for (g:Element | assG.relatedElement) ]
+  [let gClass: Class = g.oclAsType(Class)] 
+  [if (gClass.isNotNull())]
+   [if (gClass.hasStereotype('Global'))]
+				global[gClass.name/].add(global[gClass.name/]Var);
+   [/if]
+  [/if]
+  [/let]
+ [/for]	 
+[/for]	
 			}
 		});
 	}
