@@ -11,10 +11,15 @@ the respective environment spaces or animats.
 [template public factory(c : Class) ? (c.hasStereotype('Simulation'))]
 
 [file ('Factory.java', false, 'UTF-8')]
+import java.util.List;
+import java.util.ArrayList;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.io.FileReader;
 import java.net.URL;
+
+import au.com.bytecode.opencsv.CSVReader;
 
 import sim.engine.Schedule;
 import sim.util.Bag;
@@ -32,8 +37,8 @@ import com.vividsolutions.jts.geom.GeometryFactory;
 import com.vividsolutions.jts.geom.Point;
 import com.vividsolutions.jts.geom.Polygon;
 
-public class Factory {
-
+public class Factory 
+{
 	protected static Boolean DEBUG = true;
 
 	protected static GeometryFactory geomFactory = new GeometryFactory();
@@ -223,6 +228,49 @@ MasonGeometry class.
   [/let]
   [/for]	 
  [/for]
+
+	protected static List<Double> readGlobal(String filePath)
+	{
+		List<Double> array = new ArrayList<Double>(); 
+		String ['['/][']'/] nextLine = null;
+		int lineNumber = 0;
+		CSVReader reader = null;
+      
+		try //Open file 
+		{
+			reader = new CSVReader(new FileReader(filePath));
+		}
+		catch(Exception ex)
+		{
+		    System.out.println("Couldn't read the input file " + filePath + " :\n" + ex.getMessage());
+		    return null;
+		}
+	    
+		try  //First line
+		{
+			nextLine = reader.readNext();
+			array.add(new Double(nextLine['['/]0[']'/]));
+		}
+		catch(Exception ex)
+		{
+		  System.out.println("Couldn't process the first line of '" + filePath + "', but it could be an header; moving on.");
+		}
+	    
+		try //Remaining lines
+		{ 
+	      while ((nextLine = reader.readNext()) != null) {
+	        lineNumber++;        
+	        array.add(new Double(nextLine['['/]0[']'/]));
+	      }
+		}
+		catch(Exception ex)
+		{
+			System.out.println("Error processing " + filePath + " Couldn't convert '" + nextLine['['/]0[']'/] + "' to double:\n" + ex.getMessage());
+			return null;
+		}
+		
+		return array;
+	}
 }
 
 [/file]
