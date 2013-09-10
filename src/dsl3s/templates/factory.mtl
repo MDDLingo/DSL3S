@@ -253,7 +253,7 @@ MasonGeometry class.
 		}
 		catch(Exception ex)
 		{
-		  System.out.println("Couldn't process the first line of '" + filePath + "', but it could be an header; moving on.");
+		  if(DEBUG) System.out.println("Couldn't process the first line of '" + filePath + "', but it could be an header; moving on.");
 		}
 	    
 		try //Remaining lines
