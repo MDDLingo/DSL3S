@@ -51,5 +51,5 @@
   <DSL3S:Simulation xmi:id="_GiQNIBmCEeOt-OY2H5xcGA" base_Class="_pjWL4A62EeKaKMubw_DKHg" simulName="TEst" spaceHeight="100" spaceWidth="100"/>
   <DSL3S:Animat xmi:id="_LAer8BmCEeOt-OY2H5xcGA" initNum="1" base_Class="_yvcIAA62EeKaKMubw_DKHg"/>
   <DSL3S:Environment xmi:id="_PCa3YBmCEeOt-OY2H5xcGA" base_Class="_4Hg_8A62EeKaKMubw_DKHg" maxValue="1" initRandom="true"/>
-  <DSL3S:Global xmi:id="_R3-50BmDEeOt-OY2H5xcGA" base_Class="_TXFKgBmCEeOt-OY2H5xcGA" maxValue="1" stepVariation="-1" initValue="1"/>
+  <DSL3S:Global xmi:id="_R3-50BmDEeOt-OY2H5xcGA" base_Class="_TXFKgBmCEeOt-OY2H5xcGA" maxValue="1" stepVariation="-1" initValue="1" inputFile="data/test.csv"/>
 </xmi:XMI>
