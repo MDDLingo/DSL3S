@@ -33,6 +33,10 @@ public /*abstract*/ class Variable
 		if (value > valueMax) value = valueMax;
 		if (value < valueMin) value = valueMin;
 	}
+
+	public Double getMin() {return valueMin;}
+
+	public Double getMax() {return valueMax;}
 	
 	public void add(Double addition)
 	{

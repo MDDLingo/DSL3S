@@ -125,11 +125,11 @@
     </profileApplication>
   </uml:Model>
   <DSL3S:Simulation xmi:id="_Du_pUBQGEeOL_dsJOHIJwA" base_Class="_wVEcgBrZEeKjdP3IW4sVUw" simulName="Forest Fire" spaceHeight="100" spaceWidth="100"/>
-  <DSL3S:Animat xmi:id="_EnohgBQGEeOL_dsJOHIJwA" base_Class="_xUdc8BrZEeKjdP3IW4sVUw" initNum="3" colourMin="255,255,0" colourMax="255,0,0"/>
-  <DSL3S:Environment xmi:id="_FgjtkBQGEeOL_dsJOHIJwA" base_Class="_yJVPcBrZEeKjdP3IW4sVUw" maxValue="100" initRandom="true" display="true" colourMin="64,64,64" colourMax="0,255,0" inputLayer="data/Pasture.agrid"/>
-  <DSL3S:Emerge xmi:id="_HKopwBQGEeOL_dsJOHIJwA" base_Class="_cTMa4BrfEeKjdP3IW4sVUw" probability="5" scope="1.0" required="true"/>
-  <DSL3S:Emerge xmi:id="_IGnw4BQGEeOL_dsJOHIJwA" base_Class="_jMLE4BrfEeKjdP3IW4sVUw" probability="2" scope="1.5" required="true"/>
+  <DSL3S:Animat xmi:id="_EnohgBQGEeOL_dsJOHIJwA" initNum="3" base_Class="_xUdc8BrZEeKjdP3IW4sVUw" colourMin="255,255,0" colourMax="255,0,0"/>
+  <DSL3S:Environment xmi:id="_FgjtkBQGEeOL_dsJOHIJwA" base_Class="_yJVPcBrZEeKjdP3IW4sVUw" maxValue="100" display="true" initRandom="true" inputLayer="data/Pasture.agrid" colourMin="64,64,64" colourMax="0,255,0"/>
+  <DSL3S:Emerge xmi:id="_HKopwBQGEeOL_dsJOHIJwA" probability="5" scope="1.0" required="true" base_Class="_cTMa4BrfEeKjdP3IW4sVUw"/>
+  <DSL3S:Emerge xmi:id="_IGnw4BQGEeOL_dsJOHIJwA" probability="2" scope="1.5" required="true" base_Class="_jMLE4BrfEeKjdP3IW4sVUw"/>
   <DSL3S:State xmi:id="_JW2CoBQGEeOL_dsJOHIJwA" base_Class="_woGbUBrbEeKjdP3IW4sVUw" maxValue="5" stepVariation="-5" display="true" initValue="1"/>
-  <DSL3S:Perish xmi:id="_KdndcBQGEeOL_dsJOHIJwA" base_Class="_t5KBcBreEeKjdP3IW4sVUw" upperThreshold="6"/>
-  <DSL3S:Harvest xmi:id="_LTIwMBQGEeOL_dsJOHIJwA" base_Class="_tFSb4BrbEeKjdP3IW4sVUw" harvested="Forest" valueHarvested="5"/>
+  <DSL3S:Perish xmi:id="_KdndcBQGEeOL_dsJOHIJwA" upperThreshold="6" base_Class="_t5KBcBreEeKjdP3IW4sVUw"/>
+  <DSL3S:Harvest xmi:id="_LTIwMBQGEeOL_dsJOHIJwA" harvested="Forest" valueHarvested="5" base_Class="_tFSb4BrbEeKjdP3IW4sVUw"/>
 </xmi:XMI>

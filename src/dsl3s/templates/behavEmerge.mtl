@@ -62,7 +62,18 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
 	//@Override
 	public void step(SimState state) {
 
-		Sim sim = (Sim) state;
+[comment Iterate through linked Simulation /]
+[for (assE:Association | c.getAssociations())]
+ [for (e:Element | assE.relatedElement) ]
+ [let sClass: Class = e.oclAsType(Class)] 
+  [if (sClass.isNotNull())]
+   [if (sClass.hasStereotype('Simulation'))]
+		[sClass.name/] sim = ([sClass.name/]) state;
+   [/if]
+  [/if]
+ [/let]
+ [/for]	 
+[/for] [comment Simulation /]
 		Coordinate coord = new Coordinate(0.0, 0.0);
 
 		[comment Assumes a discretisation of space /]
@@ -93,7 +104,7 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
  [let eClass: Class = e.oclAsType(Class)] 
   [if (eClass.isNotNull())]
    [if (eClass.hasStereotype('Emerge'))]
-	[comment Iterate through linked States and Environments/]
+	[comment Iterate through linked States/]
     [for (assS:Association | eClass.getAssociations())]
      [for (s:Element | assS.relatedElement) ]
      [let sClass: Class = s.oclAsType(Class)]
@@ -125,6 +136,7 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
 	     [/for]	 
 	    [/for] [comment Animats /]
 	   [/if] [comment States /]
+	   [comment Iterate through linked Environments/]
 	   [if (sClass.hasStereotype('Environment'))]
 				Bag neigh[sClass.name/] = sim.space[sClass.name/].getObjectsWithinDistance(point, scope[eClass.name/]);
 				for (Object obj : neigh[sClass.name/]) 
@@ -139,6 +151,18 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
 					weight[eClass.name/] += (([sClass.name/]) obj).getValue();
 			[/if]
 				}
+       [/if]
+	   [comment Iterate through linked Globals/]
+	   [if (sClass.hasStereotype('Global'))]
+		[if (eClass.getTaggedValue(eClass, 'Emerge', 'probability').isNotNull())]
+				weight[eClass.name/] += 
+					(sim.global[sClass.name/].getValue() + sim.global[sClass.name/].getMin() + 0.0) /
+					(sim.global[sClass.name/].getMax() - sim.global[sClass.name/].getMin() + 0.0) *
+					prob[eClass.name/];
+		[/if]
+		[if (eClass.getTaggedValue(eClass, 'Emerge', 'upperThreshold').isNotNull())]
+				weight[eClass.name/] += sim.global[sClass.name/].getValue();
+		[/if]
        [/if]
 	  [/if]
 	 [/let]
