@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DSL3S="http:///schemas/DSL3S/__6uUEBWSEeOwad1GzWDyLw/23" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/DSL3S/__6uUEBWSEeOwad1GzWDyLw/23 ../profile/DSL3S.profile.uml#_Au1RkBWTEeOwad1GzWDyLw">
+  <uml:Model xmi:id="_JmqKYBvUEeOjmZiRzPqkag" name="model">
+    <packagedElement xmi:type="uml:Association" xmi:id="_Hn3F8BvVEeOjmZiRzPqkag" name="start_sprawl_0" memberEnd="_Hn3F8RvVEeOjmZiRzPqkag _Hn130BvVEeOjmZiRzPqkag">
+      <ownedEnd xmi:id="_Hn3F8RvVEeOjmZiRzPqkag" name="start" type="_-aySYBvUEeOjmZiRzPqkag" association="_Hn3F8BvVEeOjmZiRzPqkag">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Hn3F8hvVEeOjmZiRzPqkag" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Hn3F8xvVEeOjmZiRzPqkag" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_KBvHYBvVEeOjmZiRzPqkag" name="SimulationView">
+      <packagedElement xmi:type="uml:Class" xmi:id="_1dJB8BvUEeOjmZiRzPqkag" name="Sprawl"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_-aySYBvUEeOjmZiRzPqkag" name="Start">
+        <ownedAttribute xmi:id="_Hn130BvVEeOjmZiRzPqkag" name="sprawl" type="_1dJB8BvUEeOjmZiRzPqkag" association="_Hn3F8BvVEeOjmZiRzPqkag">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Hn130RvVEeOjmZiRzPqkag" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Hn130hvVEeOjmZiRzPqkag" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_dOIY4BvXEeOjmZiRzPqkag" name="sprawl" type="_1dJB8BvUEeOjmZiRzPqkag" association="_dOI_8BvXEeOjmZiRzPqkag">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dOIY4RvXEeOjmZiRzPqkag" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dOIY4hvXEeOjmZiRzPqkag" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_e5RFABvXEeOjmZiRzPqkag" name="age" type="_OcxvUBvVEeOjmZiRzPqkag" association="_e5STIBvXEeOjmZiRzPqkag">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_e5RFARvXEeOjmZiRzPqkag" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_e5RFAhvXEeOjmZiRzPqkag" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_OcxvUBvVEeOjmZiRzPqkag" name="Age">
+        <ownedAttribute xmi:id="_QOSwQBvVEeOjmZiRzPqkag" name="start" type="_-aySYBvUEeOjmZiRzPqkag" association="_QOVMgBvVEeOjmZiRzPqkag">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QOSwQRvVEeOjmZiRzPqkag" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QOSwQhvVEeOjmZiRzPqkag" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gHLpoBvXEeOjmZiRzPqkag" name="start" type="_-aySYBvUEeOjmZiRzPqkag" association="_gHM3wBvXEeOjmZiRzPqkag">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gHLpoRvXEeOjmZiRzPqkag" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gHLpohvXEeOjmZiRzPqkag" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_QOVMgBvVEeOjmZiRzPqkag" name="age_start_0" memberEnd="_QOVMgRvVEeOjmZiRzPqkag _QOSwQBvVEeOjmZiRzPqkag">
+        <ownedEnd xmi:id="_QOVMgRvVEeOjmZiRzPqkag" name="age" type="_OcxvUBvVEeOjmZiRzPqkag" association="_QOVMgBvVEeOjmZiRzPqkag">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QOVMghvVEeOjmZiRzPqkag" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QOVMgxvVEeOjmZiRzPqkag" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_euzMUBvVEeOjmZiRzPqkag" name="Speed">
+        <ownedAttribute xmi:id="_kzvKQBvVEeOjmZiRzPqkag" name="sprawl" type="_1dJB8BvUEeOjmZiRzPqkag" association="_kzxmgBvVEeOjmZiRzPqkag">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_kzvKQRvVEeOjmZiRzPqkag" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_kzvKQhvVEeOjmZiRzPqkag" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_kzxmgBvVEeOjmZiRzPqkag" name="speed_sprawl_0" memberEnd="_kzxmgRvVEeOjmZiRzPqkag _kzvKQBvVEeOjmZiRzPqkag">
+        <ownedEnd xmi:id="_kzxmgRvVEeOjmZiRzPqkag" name="speed" type="_euzMUBvVEeOjmZiRzPqkag" association="_kzxmgBvVEeOjmZiRzPqkag">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_kzxmghvVEeOjmZiRzPqkag" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_kzxmgxvVEeOjmZiRzPqkag" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_dOI_8BvXEeOjmZiRzPqkag" name="start_sprawl_0" memberEnd="_dOI_8RvXEeOjmZiRzPqkag _dOIY4BvXEeOjmZiRzPqkag">
+        <ownedEnd xmi:id="_dOI_8RvXEeOjmZiRzPqkag" name="start" type="_-aySYBvUEeOjmZiRzPqkag" association="_dOI_8BvXEeOjmZiRzPqkag">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dOI_8hvXEeOjmZiRzPqkag" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dOI_8xvXEeOjmZiRzPqkag" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_e5STIBvXEeOjmZiRzPqkag" name="start_age_0" memberEnd="_e5STIRvXEeOjmZiRzPqkag _e5RFABvXEeOjmZiRzPqkag">
+        <ownedEnd xmi:id="_e5STIRvXEeOjmZiRzPqkag" name="start" type="_-aySYBvUEeOjmZiRzPqkag" association="_e5STIBvXEeOjmZiRzPqkag">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_e5STIhvXEeOjmZiRzPqkag" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_e5STIxvXEeOjmZiRzPqkag" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gHM3wBvXEeOjmZiRzPqkag" name="age_start_1" memberEnd="_gHM3wRvXEeOjmZiRzPqkag _gHLpoBvXEeOjmZiRzPqkag">
+        <ownedEnd xmi:id="_gHM3wRvXEeOjmZiRzPqkag" name="age" type="_OcxvUBvVEeOjmZiRzPqkag" association="_gHM3wBvXEeOjmZiRzPqkag">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gHM3whvXEeOjmZiRzPqkag" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gHM3wxvXEeOjmZiRzPqkag" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_rhKEgBvVEeOjmZiRzPqkag" name="SprawlView">
+      <packagedElement xmi:type="uml:Class" xmi:id="_a1sz0BvVEeOjmZiRzPqkag" name="SprawlSpeed">
+        <ownedAttribute xmi:id="_3n7-MBvXEeOjmZiRzPqkag" name="start" type="_-aySYBvUEeOjmZiRzPqkag" association="_3n_BgBvXEeOjmZiRzPqkag">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3n7-MRvXEeOjmZiRzPqkag" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3n7-MhvXEeOjmZiRzPqkag" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_5oKJgBvXEeOjmZiRzPqkag" name="speed" type="_euzMUBvVEeOjmZiRzPqkag" association="_5oLXoBvXEeOjmZiRzPqkag">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5oKJgRvXEeOjmZiRzPqkag" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5oKJghvXEeOjmZiRzPqkag" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_3n_BgBvXEeOjmZiRzPqkag" name="emerge_start_0" memberEnd="_3n_BgRvXEeOjmZiRzPqkag _3n7-MBvXEeOjmZiRzPqkag">
+        <ownedEnd xmi:id="_3n_BgRvXEeOjmZiRzPqkag" name="emerge" type="_a1sz0BvVEeOjmZiRzPqkag" association="_3n_BgBvXEeOjmZiRzPqkag">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3n_BghvXEeOjmZiRzPqkag" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3n_BgxvXEeOjmZiRzPqkag" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_5oLXoBvXEeOjmZiRzPqkag" name="emerge_speed_0" memberEnd="_5oLXoRvXEeOjmZiRzPqkag _5oKJgBvXEeOjmZiRzPqkag">
+        <ownedEnd xmi:id="_5oLXoRvXEeOjmZiRzPqkag" name="emerge" type="_a1sz0BvVEeOjmZiRzPqkag" association="_5oLXoBvXEeOjmZiRzPqkag">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5oLXohvXEeOjmZiRzPqkag" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5oLXoxvXEeOjmZiRzPqkag" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GbaZkBvYEeOjmZiRzPqkag" name="SprawlAge">
+        <ownedAttribute xmi:id="_IVhV0BvYEeOjmZiRzPqkag" name="start" type="_-aySYBvUEeOjmZiRzPqkag" association="_IVmOUBvYEeOjmZiRzPqkag">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IVhV0RvYEeOjmZiRzPqkag" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IVhV0hvYEeOjmZiRzPqkag" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_Ma2zgBvYEeOjmZiRzPqkag" name="age" type="_OcxvUBvVEeOjmZiRzPqkag" association="_Ma3akBvYEeOjmZiRzPqkag">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ma2zgRvYEeOjmZiRzPqkag" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ma2zghvYEeOjmZiRzPqkag" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_IVmOUBvYEeOjmZiRzPqkag" name="sprawlAge_start_0" memberEnd="_IVmOURvYEeOjmZiRzPqkag _IVhV0BvYEeOjmZiRzPqkag">
+        <ownedEnd xmi:id="_IVmOURvYEeOjmZiRzPqkag" name="sprawlAge" type="_GbaZkBvYEeOjmZiRzPqkag" association="_IVmOUBvYEeOjmZiRzPqkag">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IVmOUhvYEeOjmZiRzPqkag" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IVm1YBvYEeOjmZiRzPqkag" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Ma3akBvYEeOjmZiRzPqkag" name="sprawlAge_age_0" memberEnd="_Ma3akRvYEeOjmZiRzPqkag _Ma2zgBvYEeOjmZiRzPqkag">
+        <ownedEnd xmi:id="_Ma3akRvYEeOjmZiRzPqkag" name="sprawlAge" type="_GbaZkBvYEeOjmZiRzPqkag" association="_Ma3akBvYEeOjmZiRzPqkag">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ma4BoBvYEeOjmZiRzPqkag" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ma4BoRvYEeOjmZiRzPqkag" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_0-sLYBvUEeOjmZiRzPqkag">
+      <eAnnotations xmi:id="_0-8DABvUEeOjmZiRzPqkag" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../profile/DSL3S.profile.uml#_Au1RkBWTEeOwad1GzWDyLw"/>
+      </eAnnotations>
+      <appliedProfile href="../profile/DSL3S.profile.uml#_bf7O0CBZEeKpfttodweVYA"/>
+    </profileApplication>
+  </uml:Model>
+  <DSL3S:Simulation xmi:id="_3O1pEBvUEeOjmZiRzPqkag" base_Class="_1dJB8BvUEeOjmZiRzPqkag" simulName="Sprawl" spaceHeight="100" spaceWidth="100"/>
+  <DSL3S:Animat xmi:id="__-Db8BvUEeOjmZiRzPqkag" initNum="1" base_Class="_-aySYBvUEeOjmZiRzPqkag" colourMin="0,255,255" colourMax="255,0,0"/>
+  <DSL3S:State xmi:id="_T9AdsBvVEeOjmZiRzPqkag" base_Class="_OcxvUBvVEeOjmZiRzPqkag" maxValue="100" stepVariation="-1" display="true" initValue="100"/>
+  <DSL3S:Emerge xmi:id="_dF7xEBvVEeOjmZiRzPqkag" probability="10" required="true" base_Class="_a1sz0BvVEeOjmZiRzPqkag"/>
+  <DSL3S:Global xmi:id="_gNFIMBvVEeOjmZiRzPqkag" base_Class="_euzMUBvVEeOjmZiRzPqkag" maxValue="100"/>
+  <DSL3S:Emerge xmi:id="_PWvV0BvYEeOjmZiRzPqkag" probability="1" scope="1" required="true" base_Class="_GbaZkBvYEeOjmZiRzPqkag"/>
+</xmi:XMI>
