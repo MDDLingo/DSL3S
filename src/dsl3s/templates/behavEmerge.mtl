@@ -60,8 +60,8 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
 	}
 
 	//@Override
-	public void step(SimState state) {
-
+	public void step(SimState state) 
+	{
 [comment Iterate through linked Simulation /]
 [for (assE:Association | c.getAssociations())]
  [for (e:Element | assE.relatedElement) ]
@@ -217,7 +217,8 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
 		}
 	}
 
-	protected Boolean isOccupied(GeomVectorField space, Geometry point, Double dist)  {
+	protected Boolean isOccupied(GeomVectorField space, Geometry point, Double dist)  
+	{
 		Bag local = space.getObjectsWithinDistance(point, dist);
 		if (local.numObjs > 0) return true;
 		return false;
