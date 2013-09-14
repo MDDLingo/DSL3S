@@ -97,6 +97,6 @@
   <DSL3S:Animat xmi:id="_yQOZABvfEeOjmZiRzPqkag" initNum="1" base_Class="_wzcR8BvfEeOjmZiRzPqkag" colourMin="0,255,255" colourMax="255,0,0"/>
   <DSL3S:State xmi:id="_SB-6cBvgEeOjmZiRzPqkag" base_Class="_Qd4DYBvgEeOjmZiRzPqkag" maxValue="100" stepVariation="-1" display="true" initValue="100"/>
   <DSL3S:Global xmi:id="_kNAgcBvgEeOjmZiRzPqkag" base_Class="_h0JLoBvgEeOjmZiRzPqkag" maxValue="100" stepVariation="-1" initValue="100"/>
-  <DSL3S:Emerge xmi:id="_6qs1gBvgEeOjmZiRzPqkag" probability="10" base_Class="_1ILoIBvgEeOjmZiRzPqkag"/>
-  <DSL3S:Emerge xmi:id="_IHkDQBvhEeOjmZiRzPqkag" probability="1" scope="1" required="true" base_Class="_Byn6cBvhEeOjmZiRzPqkag"/>
+  <DSL3S:Emerge xmi:id="_6qs1gBvgEeOjmZiRzPqkag" probability="8" base_Class="_1ILoIBvgEeOjmZiRzPqkag"/>
+  <DSL3S:Emerge xmi:id="_IHkDQBvhEeOjmZiRzPqkag" probability="0.1" scope="1.4" required="true" base_Class="_Byn6cBvhEeOjmZiRzPqkag"/>
 </xmi:XMI>
