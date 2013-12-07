@@ -37,7 +37,7 @@ To run this project the following pieces of software are required:
 . Acceleo (3.3.1) - Eclipse extension for code generation [4];
 
 The versions referenced are those presently supporting development and should 
-be read as indicative. DSL3S has also been tested with the 3.7 and 3.7 versions 
+be read as indicative. DSL3S has also been tested with the 3.6 and 3.7 versions 
 of Eclipse, with which the equivalent development pipeline should also yield a 
 fully functional project. DSL3S hasn't been tested on later versions of Eclipse
 but it should be likewise functional.
