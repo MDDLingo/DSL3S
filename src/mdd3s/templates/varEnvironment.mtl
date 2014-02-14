@@ -1,0 +1,103 @@
+[comment encoding = UTF-8 /]
+[module varEnvironment('http://www.eclipse.org/uml2/3.0.0/UML')]
+[import mdd3s::templates::services/]
+
+[comment
+Date: 09-08-2012    Author: Luís de Sousa  (luis.a.de.sousa@gmail.com)
+Environment variable class.
+/]
+
+[template public environment(c : Class) ? (c.hasStereotype('Environment'))]
+
+[file (c.name.concat('.java'), false, 'UTF-8')]
+
+import ec.util.MersenneTwisterFast;
+import sim.engine.SimState;
+import sim.engine.Steppable;
+import sim.engine.Stoppable;
+import sim.util.geo.MasonGeometry;
+import com.vividsolutions.jts.geom.Coordinate;
+import com.vividsolutions.jts.geom.Geometry;
+
+public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
+
+	//protected Double value = new Double(); 
+	public static  Double stepVar = new Double([c.getTaggedValue(c, 'Environment', 'stepVariation')/]);
+	public static  Double valueMax = new Double([c.getTaggedValue(c, 'Environment', 'maxValue')/]);
+	public static  Double valueMin = new Double([c.getTaggedValue(c, 'Environment', 'minValue')/]);
+
+	protected Coordinate location;
+	public Coordinate getLocation() {return location;}
+
+	protected Variable var = new Variable(new Double([c.getTaggedValue(c, 'Environment', 'initValue')/]), valueMin, valueMax);
+	public void setValue(Double newValue) {var.setValue(newValue);}
+	public Double getValue() {return var.getValue();}
+	
+	public Double harvestPercent(Double percent, Double max) 
+	{
+		return var.harvestPercent(percent, max);
+	}
+	
+	public Double harvestValue(Double val, Double max) 
+	{
+		return var.harvestValue(val, max);
+	}
+	
+	/*public Double getValue() {return value;}
+	public void setValue(Double newValue) {
+		value = newValue;
+		if (value > valueMax) value = valueMax;
+		if (value < valueMin) value = valueMin;
+	}
+	
+	public Double harvestPercent(Double percent, Double max) {
+		Double harvested = value * percent / 100.0;
+		if((max != null) && (harvested > max)) setValue(value - max);
+		else setValue(value - harvested);
+		return harvested;
+	}
+	public Double harvestValue(Double val, Double max) {
+		Double harvested;
+		if(val < value) harvested = val;
+		else harvested = value;
+		if((max != null) && (harvested > max)) setValue(value - max);
+		else setValue(value - harvested);
+		return harvested;
+	}*/
+
+	private Stoppable stopper = null;
+    public void setStopper(Stoppable stopper) {this.stopper = stopper;}
+    public void stop() {stopper.stop();}
+
+	public [c.name/](Geometry geom) 
+	{
+		super();
+		this.geometry = geom;
+		location = geom.getCentroid().getCoordinate();
+	}
+	
+	public [c.name/](Double init, Geometry geom) 
+	{
+		this(geom);
+		var.setValue(init);
+	}
+
+	public [c.name/](MersenneTwisterFast randGen, Geometry geom) 
+	{
+		super();
+		this.geometry = geom;
+		location = geom.getCentroid().getCoordinate();
+		var.setRandom(randGen);
+	}
+	
+	//@Override
+	public void step(SimState state) { var.setValue(var.getValue() + stepVar); }
+	
+	[comment Makes sense? Must rethink this. /]
+	// This empty perish method facilitates things in the Animat Harvest process
+	public void perish(Sim sim) {}
+
+}
+
+[/file]
+[/template]

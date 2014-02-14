@@ -11,8 +11,8 @@ Fresh install from GitHub
   [right click > Build PAth > Configure Build Path > Add Library > Plug-in Dependencies > Select Acceleo > Next > Select all checkboxes > Finish]
   
 . Open the file META-INF/MANIFEST.MF, make sure Export-Package and Import-Package look like this:
-Export-Package: dsl3s.templates,
- dsl3s.templates.tests
+Export-Package: mdd3s.templates,
+ mdd3s.templates.tests
 Import-Package: org.eclipse.uml2.uml
 
 . The org.eclipse.osgi_?.?.?.v? jar might be needed in the Build Path, check for it at:

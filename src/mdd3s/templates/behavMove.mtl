@@ -1,0 +1,124 @@
+[comment encoding = UTF-8 /]
+[module behavMove('http://www.eclipse.org/uml2/3.0.0/UML')]
+[import mdd3s::templates::services/]
+
+[comment
+Date: 17-08-2012    Author: Luís de Sousa
+Generates the Move function to be included in the Animat class.
+Issues:
+. Missing the wanderer case
+/]
+
+[template public behavMove(c : Class) ? (c.hasStereotype('Animat'))]
+[comment Check first if this class has linked Moved stereotypes /]
+[if (c.hasLinkedStereotype('Move'))]	
+ [comment Get Simulation name /]
+  [for (assS:Association | c.getAssociations())]
+   [for (e:Element | assS.relatedElement) ]
+	[let sim: Class = e.oclAsType(Class)]
+	 [if (sim.isNotNull())]
+	  [if (sim.hasStereotype('Simulation'))]
+	public void move([sim.name/] sim) {
+	  [/if]
+	 [/if]
+    [/let]
+   [/for]
+  [/for]
+		
+		Coordinate nextLoc = this.location;
+		Double best = 0.0;
+		HashMap<Coordinate, Double> map = new HashMap<Coordinate,Double>();
+		
+[comment Iterate through linked Moves /]
+[for (assM:Association | c.getAssociations())]
+ [for (m:Element | assM.relatedElement) ]
+ [let mClass: Class = m.oclAsType(Class)] 
+  [if (mClass.isNotNull())]
+   [if (mClass.hasStereotype('Move'))]
+    [comment Iterate through linked States & Environements /]
+	[for (assSE:Association | mClass.getAssociations())]
+  	 [for (se:Element | assSE.relatedElement) ]
+     [let seClass: Class = se.oclAsType(Class)]
+      [if (seClass.isNotNull())]
+	   [comment If it is linked to a State /]
+       [if (seClass.hasStereotype('State'))]
+        [comment Iterate through linked Animats /]
+        [for (assA:Association | seClass.getAssociations())]
+  	     [for (a:Element | assA.relatedElement) ]
+         [let aClass: Class = a.oclAsType(Class)]
+          [if (aClass.isNotNull())]
+           [if (aClass.hasStereotype('Animat'))]
+		
+		// Iterate [aClass.name/] neighbourhood
+		Bag neigh[aClass.name/] = sim.space[aClass.name/].getObjectsWithinDistance(this, scope[mClass.name/]);
+		
+		for (Object obj : neigh[aClass.name/]) {
+			
+			Coordinate objLocation = (([aClass.name/]) obj).getLocation();
+			Double current = map.get(objLocation);
+			if(current == null) current = 0.0;
+			current += weight[mClass.name/] * (([aClass.name/]) obj).state[seClass.name/].getValue();
+			map.put(objLocation, current);
+		}
+
+	       [/if]
+	      [/if]
+         [/let]
+	     [/for]	 
+	    [/for] [comment Animats /]
+       [/if]
+       [comment If it is linked to an Environment Variable /]
+       [if (seClass.hasStereotype('Environment'))]
+
+		// Iterate [seClass.name/] neighbourhood
+		Bag neigh[seClass.name/] = sim.space[seClass.name/].getObjectsWithinDistance(this, scope[mClass.name/]);
+		
+		for (Object obj : neigh[seClass.name/]) {
+			
+			Coordinate objLocation = (([seClass.name/]) obj).getLocation();
+			Double current = map.get(objLocation);
+			if(current == null) current = 0.0;
+			current += weight[mClass.name/] * (([seClass.name/]) obj).getValue();
+			map.put(objLocation, current);
+		}
+
+	   [/if]
+	  [/if]
+     [/let]
+     [/for]	 
+    [/for] [comment States & Environements /]
+   [/if]
+  [/if]
+ [/let]
+ [/for]	 
+[/for] [comment Moves /]
+
+		for(Coordinate c : map.keySet())
+		{
+			if(map.get(c) > best)
+			{
+				best = map.get(c);
+				nextLoc = c;
+			}
+		}
+
+
+ [if c.getTaggedValue(c, 'Animat', 'stop').isNotNull()]
+ 		// Stop if goal achieved
+		if(best >= stopGoal) return;
+ [/if]
+
+ [if (c.getTaggedValue(c, 'Animat', 'wanderer') = 'true')]
+		// Wander if nothing interesting around
+		if((nextLoc.x == location.x) && (nextLoc.y == location.y)){
+			nextLoc = new Coordinate(
+				randMove(location.x, sim.random),
+				randMove(location.y, sim.random));
+		}
+ [/if]
+
+		sim.space[c.name/].setGeometryLocation(this, new PointMoveTo(nextLoc));
+		location = nextLoc;
+	}
+[/if] [comment Linked check /]
+[/template]
