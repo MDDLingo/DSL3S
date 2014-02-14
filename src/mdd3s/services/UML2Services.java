@@ -89,25 +89,28 @@ public class UML2Services {
 		
 		String res = null;
 		if(DEBUG)
-			{
+		{
 			out = new PrintWriter(new FileWriter(logFile, true));
 			out.println("\n\n####################################");
 			out.println("Class : " + c.getName());
 			out.println("Stereo: " + stereoTypeName);
 			out.println("Prpert: " + propName + "\n");
-			}
+		}
 		
-		try {		
-			
+		try 
+		{			
 			 List<Stereotype> stereotypes = c.getAppliedStereotypes();
-			 for (Stereotype stereotype : stereotypes) {
+			 for (Stereotype stereotype : stereotypes) 
+			 {
 				 if(DEBUG) out.println("Name: " + stereotype.getName());
-				 if (stereotype.getName().equals(stereoTypeName)) {
+				 if (stereotype.getName().equals(stereoTypeName)) 
+				 {
 					 st = stereotype;
 				 }
 			 }
 			
-			 if(DEBUG){
+			 if(DEBUG)
+			 {
 				 out.println(st.toString());
 				 out.println("Stereotype: " + st.getName());
 			 }
@@ -116,13 +119,16 @@ public class UML2Services {
 			if(val != null)
 				res = val.toString();
 			
-			if(DEBUG){
+			if(DEBUG)
+			{
 				out.println("Result:");
 				out.println(res);
 			}
 		}
-		catch (Exception ex) {
-			if(DEBUG){
+		catch (Exception ex) 
+		{
+			if(DEBUG)
+			{
 				out.println(ex.getMessage());
 				out.println(ex.toString());
 				ex.printStackTrace(out);
@@ -153,10 +159,12 @@ public class UML2Services {
 			
 		if(DEBUG)
 		{
-			try {
+			try 
+			{
 				out = new PrintWriter(new FileWriter(logFile, true));
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
+			} 
+			catch (IOException e) 
+			{
 				e.printStackTrace();
 			}
 			out.println("The string: |" + str + "| len: " + str.length());
