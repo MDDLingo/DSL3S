@@ -1,0 +1,48 @@
+@variables 
+{
+  dsl3sRed: #fe8d12;
+  dsl3sGreen: #fe8d12;
+  dsl3sBlue: #fe8d12;
+  dsl3sYellow: #fe8d12;
+  dsl3sGrey: #777777;
+}
+
+[appliedStereotypes~="Simulation"]
+{
+	gradient: dsl3sRed vertical;
+	background-color: dsl3sGreen;
+	bold:true;
+	shadow:true;
+	elementIcon:true;
+	qualifiedNameDepth:full;
+}
+
+[appliedStereotypes~="Animat"]
+{
+	gradient: dsl3sRed vertical;
+	background-color: dsl3sYellow;
+	bold:true;
+	shadow:true;
+	elementIcon:true;
+	qualifiedNameDepth:full;
+}
+
+[appliedStereotypes~="Environment"]
+{
+	gradient: dsl3sBlue vertical;
+	background-color: dsl3sGreen;
+	bold:true;
+	shadow:true;
+	elementIcon:true;
+	qualifiedNameDepth:full;
+}
+
+[appliedStereotypes~="State"]
+{
+	gradient: dsl3sBlue vertical;
+	background-color: dsl3sYellow;
+	bold:true;
+	shadow:true;
+	elementIcon:true;
+	qualifiedNameDepth:full;
+}
