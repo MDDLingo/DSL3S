@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Acceleo DSL3S Module Runtime Plug-in
-Bundle-SymbolicName: DSL3S
+Bundle-SymbolicName: DSL3S;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: mdd3s.Activator
 Bundle-Vendor: Eclipse Modeling Project
