@@ -51,6 +51,18 @@
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DCiAg6xXEeOgHYIEg56prw" value="1"/>
         </ownedEnd>
       </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_bCbQsKxuEeO4B8LU8denRg" name="Roads">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_tCRhcKxuEeO4B8LU8denRg" name="sprawl" type="_oZj14BvfEeOjmZiRzPqkag" association="_tCUkwKxuEeO4B8LU8denRg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tCRhcaxuEeO4B8LU8denRg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tCRhcqxuEeO4B8LU8denRg" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_tCUkwKxuEeO4B8LU8denRg" name="roads_sprawl_1" memberEnd="_tCUkwaxuEeO4B8LU8denRg _tCRhcKxuEeO4B8LU8denRg">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_tCUkwaxuEeO4B8LU8denRg" name="roads" type="_bCbQsKxuEeO4B8LU8denRg" association="_tCUkwKxuEeO4B8LU8denRg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tCUkwqxuEeO4B8LU8denRg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tCVL0KxuEeO4B8LU8denRg" value="1"/>
+        </ownedEnd>
+      </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_l1DRwBvfEeOjmZiRzPqkag" name="SprawlView">
       <packagedElement xmi:type="uml:Class" xmi:id="_1ILoIBvgEeOjmZiRzPqkag" name="SprawlSpeed">
@@ -119,6 +131,28 @@
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XUyYw6xXEeOgHYIEg56prw" value="1"/>
         </ownedEnd>
       </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_xHylUKxuEeO4B8LU8denRg" name="SprawlRoads">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_502cEKxuEeO4B8LU8denRg" name="roads" type="_bCbQsKxuEeO4B8LU8denRg" association="_503qMKxuEeO4B8LU8denRg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_502cEaxuEeO4B8LU8denRg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_502cEqxuEeO4B8LU8denRg" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_96yWsKxuEeO4B8LU8denRg" name="anim" type="_wzcR8BvfEeOjmZiRzPqkag" association="_96zk0KxuEeO4B8LU8denRg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_96yWsaxuEeO4B8LU8denRg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_96yWsqxuEeO4B8LU8denRg" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_503qMKxuEeO4B8LU8denRg" name="sprawlRoads_roads_1" memberEnd="_503qMaxuEeO4B8LU8denRg _502cEKxuEeO4B8LU8denRg">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_503qMaxuEeO4B8LU8denRg" name="sprawlRoads" type="_xHylUKxuEeO4B8LU8denRg" association="_503qMKxuEeO4B8LU8denRg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_503qMqxuEeO4B8LU8denRg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_503qM6xuEeO4B8LU8denRg" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_96zk0KxuEeO4B8LU8denRg" name="sprawlRoads_anim_1" memberEnd="_96zk0axuEeO4B8LU8denRg _96yWsKxuEeO4B8LU8denRg">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_96zk0axuEeO4B8LU8denRg" name="sprawlRoads" type="_xHylUKxuEeO4B8LU8denRg" association="_96zk0KxuEeO4B8LU8denRg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_96zk0qxuEeO4B8LU8denRg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_96zk06xuEeO4B8LU8denRg" value="1"/>
+        </ownedEnd>
+      </packagedElement>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_rIZasBvfEeOjmZiRzPqkag">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rJiqMBvfEeOjmZiRzPqkag" source="http://www.eclipse.org/uml2/2.0.0/UML">
@@ -133,6 +167,8 @@
   <DSL3S:Global xmi:id="_kNAgcBvgEeOjmZiRzPqkag" base_Class="_h0JLoBvgEeOjmZiRzPqkag" maxValue="100" stepVariation="-1" initValue="100"/>
   <DSL3S:Emerge xmi:id="_6qs1gBvgEeOjmZiRzPqkag" probability="8" base_Class="_1ILoIBvgEeOjmZiRzPqkag"/>
   <DSL3S:Emerge xmi:id="_IHkDQBvhEeOjmZiRzPqkag" probability="0.1" scope="1.4" required="true" base_Class="_Byn6cBvhEeOjmZiRzPqkag"/>
-  <DSL3S:Environment xmi:id="_GUlnIKxXEeOgHYIEg56prw" base_Class="__2C2YKxWEeOgHYIEg56prw" display="true&#xA;" inputLayer="data/Polygons.shp" colourMin="128,128,192" colourMax="128,128,192"/>
+  <DSL3S:Environment xmi:id="_GUlnIKxXEeOgHYIEg56prw" base_Class="__2C2YKxWEeOgHYIEg56prw" maxValue="1" display="true&#xA;" initValue="1" inputLayer="data/Polygons.shp" colourMin="128,128,192" colourMax="128,128,192"/>
   <DSL3S:Emerge xmi:id="_jn-osKxXEeOgHYIEg56prw" probability="-100&#xA;" scope="1.4" base_Class="_RoHJ0KxXEeOgHYIEg56prw"/>
+  <DSL3S:Environment xmi:id="_fgGV4KxuEeO4B8LU8denRg" base_Class="_bCbQsKxuEeO4B8LU8denRg" maxValue="1" display="true" initValue="1" inputLayer="data/Lines.shp" colourMin="192,192,64" colourMax="192,192,64"/>
+  <DSL3S:Emerge xmi:id="_FxkFsKxvEeO4B8LU8denRg" probability="10" scope="1.4" base_Class="_xHylUKxuEeO4B8LU8denRg"/>
 </xmi:XMI>
