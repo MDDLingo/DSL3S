@@ -212,10 +212,6 @@ public class [c.name/] extends SimState {
  [/for]	 
 [/for]
 
-		/********************************************
-         * Perhaps these three methods should be merged
-         */
-
 		// Update spatial index at the start of each time step
 		schedule.scheduleRepeating(new Steppable()
 		{
