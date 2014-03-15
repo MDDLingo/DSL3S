@@ -131,7 +131,9 @@ public class Factory
 		{
 			for(Object geom : layer.getGeometries())
 			{
-				[aClass.name/] new[aClass.name/] = new [aClass.name/]((Geometry) geom);
+				System.out.println("The class: " + geom.getClass().getName() + "\n\n\n");
+				Geometry g = ((MasonGeometry) geom).getGeometry();
+				[aClass.name/] new[aClass.name/] = new [aClass.name/](g);
 				new[aClass.name/].setStopper(schedule.scheduleRepeating(new[aClass.name/]));
 				space.addGeometry(new[aClass.name/]);
 			}
