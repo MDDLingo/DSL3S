@@ -133,6 +133,6 @@
   <DSL3S:Global xmi:id="_kNAgcBvgEeOjmZiRzPqkag" base_Class="_h0JLoBvgEeOjmZiRzPqkag" maxValue="100" stepVariation="-1" initValue="100"/>
   <DSL3S:Emerge xmi:id="_6qs1gBvgEeOjmZiRzPqkag" probability="8" base_Class="_1ILoIBvgEeOjmZiRzPqkag"/>
   <DSL3S:Emerge xmi:id="_IHkDQBvhEeOjmZiRzPqkag" probability="0.1" scope="1.4" required="true" base_Class="_Byn6cBvhEeOjmZiRzPqkag"/>
-  <DSL3S:Environment xmi:id="_GUlnIKxXEeOgHYIEg56prw" base_Class="__2C2YKxWEeOgHYIEg56prw" display="true&#xA;" inputLayer="data/Polygons.shp&#xA;" colourMin="128,128,192" colourMax="128,128,192"/>
+  <DSL3S:Environment xmi:id="_GUlnIKxXEeOgHYIEg56prw" base_Class="__2C2YKxWEeOgHYIEg56prw" display="true&#xA;" inputLayer="data/Polygons.shp" colourMin="128,128,192" colourMax="128,128,192"/>
   <DSL3S:Emerge xmi:id="_jn-osKxXEeOgHYIEg56prw" probability="-100&#xA;" scope="1.4" base_Class="_RoHJ0KxXEeOgHYIEg56prw"/>
 </xmi:XMI>

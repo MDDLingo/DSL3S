@@ -95,7 +95,17 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
 	
 	[comment Makes sense? Must rethink this. /]
 	// This empty perish method facilitates things in the Animat Harvest process
-	public void perish(Sim sim) {}
+  [for (assS:Association | c.getAssociations())]
+   [for (e:Element | assS.relatedElement) ]
+	[let sim: Class = e.oclAsType(Class)]
+	 [if (sim.isNotNull())]
+	  [if (sim.hasStereotype('Simulation'))]
+	protected void perish([sim.name/] sim) {}
+	  [/if]
+	 [/if]
+    [/let]
+   [/for]
+  [/for]
 
 }
 
