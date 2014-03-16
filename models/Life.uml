@@ -1,111 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DSL3S="http:///schemas/DSL3S/_I9pjoP7KEeKCktSvh_wskw/22" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/DSL3S/_I9pjoP7KEeKCktSvh_wskw/22 ../profile/DSL3S.profile.uml#_JimDwP7KEeKCktSvh_wskw">
+<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DSL3S="http:///schemas/DSL3S/_I9pjoP7KEeKCktSvh_wskw/22" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http:///schemas/DSL3S/_I9pjoP7KEeKCktSvh_wskw/22 ../profile/DSL3S.profile.uml#_JimDwP7KEeKCktSvh_wskw">
   <uml:Model xmi:id="_BJ00wCQ-EeK2oPEGStcpwg" name="model">
-    <packagedElement xmi:type="uml:Class" xmi:id="_B_3r8CQ-EeK2oPEGStcpwg" name="Sim"/>
-    <packagedElement xmi:type="uml:Class" xmi:id="_KES1YCQ-EeK2oPEGStcpwg" name="Life">
-      <ownedAttribute xmi:id="_NVpRYCQ-EeK2oPEGStcpwg" name="sim" type="_B_3r8CQ-EeK2oPEGStcpwg" association="_NVqfgCQ-EeK2oPEGStcpwg">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NVpRYSQ-EeK2oPEGStcpwg" value="1"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NVpRYiQ-EeK2oPEGStcpwg" value="1"/>
-      </ownedAttribute>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_NVqfgCQ-EeK2oPEGStcpwg" name="life_sim_0" memberEnd="_NVqfgSQ-EeK2oPEGStcpwg _NVpRYCQ-EeK2oPEGStcpwg">
-      <ownedEnd xmi:id="_NVqfgSQ-EeK2oPEGStcpwg" name="life" type="_KES1YCQ-EeK2oPEGStcpwg" association="_NVqfgCQ-EeK2oPEGStcpwg">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NVqfgiQ-EeK2oPEGStcpwg" value="1"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_NVqfgCQ-EeK2oPEGStcpwg" name="" memberEnd="_NVqfgSQ-EeK2oPEGStcpwg _NVpRYCQ-EeK2oPEGStcpwg">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_NVqfgSQ-EeK2oPEGStcpwg" name="life" type="_KES1YCQ-EeK2oPEGStcpwg" association="_NVqfgCQ-EeK2oPEGStcpwg">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NVqfgyQ-EeK2oPEGStcpwg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NVqfgiQ-EeK2oPEGStcpwg" value="1"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_OFA40CQ-EeK2oPEGStcpwg" name="Alive">
-      <ownedAttribute xmi:id="_SoFbYCQ-EeK2oPEGStcpwg" name="life" type="_KES1YCQ-EeK2oPEGStcpwg" association="_SoJFwCQ-EeK2oPEGStcpwg">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SoFbYSQ-EeK2oPEGStcpwg" value="1"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SoFbYiQ-EeK2oPEGStcpwg" value="1"/>
-      </ownedAttribute>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_SoJFwCQ-EeK2oPEGStcpwg" name="alive_life_0" memberEnd="_SoJFwSQ-EeK2oPEGStcpwg _SoFbYCQ-EeK2oPEGStcpwg">
-      <ownedEnd xmi:id="_SoJFwSQ-EeK2oPEGStcpwg" name="alive" type="_OFA40CQ-EeK2oPEGStcpwg" association="_SoJFwCQ-EeK2oPEGStcpwg">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SoJs0CQ-EeK2oPEGStcpwg" value="1"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_SoJFwCQ-EeK2oPEGStcpwg" name="" memberEnd="_SoJFwSQ-EeK2oPEGStcpwg _SoFbYCQ-EeK2oPEGStcpwg">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_SoJFwSQ-EeK2oPEGStcpwg" name="alive" type="_OFA40CQ-EeK2oPEGStcpwg" association="_SoJFwCQ-EeK2oPEGStcpwg">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SoJs0SQ-EeK2oPEGStcpwg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SoJs0CQ-EeK2oPEGStcpwg" value="1"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_TckMUCQ-EeK2oPEGStcpwg" name="New">
-      <ownedAttribute xmi:id="_Yn_vYCQ-EeK2oPEGStcpwg" name="" type="_OFA40CQ-EeK2oPEGStcpwg" association="_YoCLoCQ-EeK2oPEGStcpwg">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Yn_vYSQ-EeK2oPEGStcpwg" value="1"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Yn_vYiQ-EeK2oPEGStcpwg" value="1"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:id="_Z66v0CQ-EeK2oPEGStcpwg" name="life" type="_KES1YCQ-EeK2oPEGStcpwg" association="_Z6_BQCQ-EeK2oPEGStcpwg">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Z66v0SQ-EeK2oPEGStcpwg" value="1"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Z66v0iQ-EeK2oPEGStcpwg" value="1"/>
-      </ownedAttribute>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_YoCLoCQ-EeK2oPEGStcpwg" name="new_alive_0" memberEnd="_YoCLoSQ-EeK2oPEGStcpwg _Yn_vYCQ-EeK2oPEGStcpwg">
-      <ownedEnd xmi:id="_YoCLoSQ-EeK2oPEGStcpwg" name="" type="_TckMUCQ-EeK2oPEGStcpwg" association="_YoCLoCQ-EeK2oPEGStcpwg">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YoCLoiQ-EeK2oPEGStcpwg" value="1"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_YoCLoCQ-EeK2oPEGStcpwg" name="" memberEnd="_YoCLoSQ-EeK2oPEGStcpwg _Yn_vYCQ-EeK2oPEGStcpwg">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_YoCLoSQ-EeK2oPEGStcpwg" name="" type="_TckMUCQ-EeK2oPEGStcpwg" association="_YoCLoCQ-EeK2oPEGStcpwg">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YoCLoyQ-EeK2oPEGStcpwg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YoCLoiQ-EeK2oPEGStcpwg" value="1"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_Z6_BQCQ-EeK2oPEGStcpwg" name="new_life_0" memberEnd="_Z6_BQSQ-EeK2oPEGStcpwg _Z66v0CQ-EeK2oPEGStcpwg">
-      <ownedEnd xmi:id="_Z6_BQSQ-EeK2oPEGStcpwg" name="new" type="_TckMUCQ-EeK2oPEGStcpwg" association="_Z6_BQCQ-EeK2oPEGStcpwg">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Z6_BQiQ-EeK2oPEGStcpwg" value="1"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_Z6_BQCQ-EeK2oPEGStcpwg" name="" memberEnd="_Z6_BQSQ-EeK2oPEGStcpwg _Z66v0CQ-EeK2oPEGStcpwg">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_Z6_BQSQ-EeK2oPEGStcpwg" name="new" type="_TckMUCQ-EeK2oPEGStcpwg" association="_Z6_BQCQ-EeK2oPEGStcpwg">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Z6_BQyQ-EeK2oPEGStcpwg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Z6_BQiQ-EeK2oPEGStcpwg" value="1"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_blgCUCQ-EeK2oPEGStcpwg" name="Neighbours">
-      <ownedAttribute xmi:id="_hUovYCQ-EeK2oPEGStcpwg" name="" type="_KES1YCQ-EeK2oPEGStcpwg" association="_hUrysCQ-EeK2oPEGStcpwg">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hUovYSQ-EeK2oPEGStcpwg" value="1"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hUovYiQ-EeK2oPEGStcpwg" value="1"/>
-      </ownedAttribute>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_hUrysCQ-EeK2oPEGStcpwg" name="neighbours_life_0" memberEnd="_hUrysSQ-EeK2oPEGStcpwg _hUovYCQ-EeK2oPEGStcpwg">
-      <ownedEnd xmi:id="_hUrysSQ-EeK2oPEGStcpwg" name="" type="_blgCUCQ-EeK2oPEGStcpwg" association="_hUrysCQ-EeK2oPEGStcpwg">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hUrysiQ-EeK2oPEGStcpwg" value="1"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_hUrysCQ-EeK2oPEGStcpwg" name="" memberEnd="_hUrysSQ-EeK2oPEGStcpwg _hUovYCQ-EeK2oPEGStcpwg">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_hUrysSQ-EeK2oPEGStcpwg" name="" type="_blgCUCQ-EeK2oPEGStcpwg" association="_hUrysCQ-EeK2oPEGStcpwg">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hUrysyQ-EeK2oPEGStcpwg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hUrysiQ-EeK2oPEGStcpwg" value="1"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_jYYv0CQ-EeK2oPEGStcpwg" name="Count">
-      <ownedAttribute xmi:id="_kRnd4CQ-EeK2oPEGStcpwg" name="" type="_OFA40CQ-EeK2oPEGStcpwg" association="_kRosACQ-EeK2oPEGStcpwg">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_kRnd4SQ-EeK2oPEGStcpwg" value="1"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_kRnd4iQ-EeK2oPEGStcpwg" value="1"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:id="_lkW4ICQ-EeK2oPEGStcpwg" name="neighbours" type="_blgCUCQ-EeK2oPEGStcpwg" association="_lkXfMCQ-EeK2oPEGStcpwg">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lkW4ISQ-EeK2oPEGStcpwg" value="1"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lkW4IiQ-EeK2oPEGStcpwg" value="1"/>
-      </ownedAttribute>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_kRosACQ-EeK2oPEGStcpwg" name="count_alive_0" memberEnd="_kRosASQ-EeK2oPEGStcpwg _kRnd4CQ-EeK2oPEGStcpwg">
-      <ownedEnd xmi:id="_kRosASQ-EeK2oPEGStcpwg" name="" type="_jYYv0CQ-EeK2oPEGStcpwg" association="_kRosACQ-EeK2oPEGStcpwg">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_kRosAiQ-EeK2oPEGStcpwg" value="1"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_kRosACQ-EeK2oPEGStcpwg" name="" memberEnd="_kRosASQ-EeK2oPEGStcpwg _kRnd4CQ-EeK2oPEGStcpwg">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_kRosASQ-EeK2oPEGStcpwg" name="" type="_jYYv0CQ-EeK2oPEGStcpwg" association="_kRosACQ-EeK2oPEGStcpwg">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_kRosAyQ-EeK2oPEGStcpwg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_kRosAiQ-EeK2oPEGStcpwg" value="1"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_lkXfMCQ-EeK2oPEGStcpwg" name="count_neighbours_0" memberEnd="_lkXfMSQ-EeK2oPEGStcpwg _lkW4ICQ-EeK2oPEGStcpwg">
-      <ownedEnd xmi:id="_lkXfMSQ-EeK2oPEGStcpwg" name="count" type="_jYYv0CQ-EeK2oPEGStcpwg" association="_lkXfMCQ-EeK2oPEGStcpwg">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lkXfMiQ-EeK2oPEGStcpwg" value="1"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_lkXfMCQ-EeK2oPEGStcpwg" name="" memberEnd="_lkXfMSQ-EeK2oPEGStcpwg _lkW4ICQ-EeK2oPEGStcpwg">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_lkXfMSQ-EeK2oPEGStcpwg" name="count" type="_jYYv0CQ-EeK2oPEGStcpwg" association="_lkXfMCQ-EeK2oPEGStcpwg">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lkXfMyQ-EeK2oPEGStcpwg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lkXfMiQ-EeK2oPEGStcpwg" value="1"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_CkmUMCQ_EeK2oPEGStcpwg" name="Crowd">
-      <ownedAttribute xmi:id="_Do638CQ_EeK2oPEGStcpwg" name="" type="_blgCUCQ-EeK2oPEGStcpwg" association="_Do8GECQ_EeK2oPEGStcpwg">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Do638SQ_EeK2oPEGStcpwg" value="1"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Do638iQ_EeK2oPEGStcpwg" value="1"/>
-      </ownedAttribute>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_Do8GECQ_EeK2oPEGStcpwg" name="crowd_neighbours_0" memberEnd="_Do8GESQ_EeK2oPEGStcpwg _Do638CQ_EeK2oPEGStcpwg">
-      <ownedEnd xmi:id="_Do8GESQ_EeK2oPEGStcpwg" name="" type="_CkmUMCQ_EeK2oPEGStcpwg" association="_Do8GECQ_EeK2oPEGStcpwg">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Do8GEiQ_EeK2oPEGStcpwg" value="1"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_Do8GECQ_EeK2oPEGStcpwg" name="" memberEnd="_Do8GESQ_EeK2oPEGStcpwg _Do638CQ_EeK2oPEGStcpwg">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_Do8GESQ_EeK2oPEGStcpwg" name="" type="_CkmUMCQ_EeK2oPEGStcpwg" association="_Do8GECQ_EeK2oPEGStcpwg">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Do8GEyQ_EeK2oPEGStcpwg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Do8GEiQ_EeK2oPEGStcpwg" value="1"/>
       </ownedEnd>
     </packagedElement>
-    <profileApplication xmi:id="_Nc3x8BQIEeOL_dsJOHIJwA">
-      <eAnnotations xmi:id="_NdVsABQIEeOL_dsJOHIJwA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <packagedElement xmi:type="uml:Package" xmi:id="_uCBAwK0qEeOTVPe64UkdBQ" name="Life View">
+      <packagedElement xmi:type="uml:Class" xmi:id="_B_3r8CQ-EeK2oPEGStcpwg" name="Sim"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_KES1YCQ-EeK2oPEGStcpwg" name="Life">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_NVpRYCQ-EeK2oPEGStcpwg" name="sim" type="_B_3r8CQ-EeK2oPEGStcpwg" association="_NVqfgCQ-EeK2oPEGStcpwg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NVpRYiQ-EeK2oPEGStcpwg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NVpRYSQ-EeK2oPEGStcpwg" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_blgCUCQ-EeK2oPEGStcpwg" name="Neighbours">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_hUovYCQ-EeK2oPEGStcpwg" name="" type="_KES1YCQ-EeK2oPEGStcpwg" association="_hUrysCQ-EeK2oPEGStcpwg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hUovYiQ-EeK2oPEGStcpwg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hUovYSQ-EeK2oPEGStcpwg" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_CkmUMCQ_EeK2oPEGStcpwg" name="Crowd">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Do638CQ_EeK2oPEGStcpwg" name="" type="_blgCUCQ-EeK2oPEGStcpwg" association="_Do8GECQ_EeK2oPEGStcpwg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Do638iQ_EeK2oPEGStcpwg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Do638SQ_EeK2oPEGStcpwg" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jYYv0CQ-EeK2oPEGStcpwg" name="Count">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_kRnd4CQ-EeK2oPEGStcpwg" name="" type="_OFA40CQ-EeK2oPEGStcpwg" association="_kRosACQ-EeK2oPEGStcpwg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_kRnd4iQ-EeK2oPEGStcpwg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_kRnd4SQ-EeK2oPEGStcpwg" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_lkW4ICQ-EeK2oPEGStcpwg" name="neighbours" type="_blgCUCQ-EeK2oPEGStcpwg" association="_lkXfMCQ-EeK2oPEGStcpwg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lkW4IiQ-EeK2oPEGStcpwg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lkW4ISQ-EeK2oPEGStcpwg" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_OFA40CQ-EeK2oPEGStcpwg" name="Alive">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_SoFbYCQ-EeK2oPEGStcpwg" name="life" type="_KES1YCQ-EeK2oPEGStcpwg" association="_SoJFwCQ-EeK2oPEGStcpwg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SoFbYiQ-EeK2oPEGStcpwg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SoFbYSQ-EeK2oPEGStcpwg" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_TckMUCQ-EeK2oPEGStcpwg" name="New">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Yn_vYCQ-EeK2oPEGStcpwg" name="" type="_OFA40CQ-EeK2oPEGStcpwg" association="_YoCLoCQ-EeK2oPEGStcpwg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Yn_vYiQ-EeK2oPEGStcpwg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Yn_vYSQ-EeK2oPEGStcpwg" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Z66v0CQ-EeK2oPEGStcpwg" name="life" type="_KES1YCQ-EeK2oPEGStcpwg" association="_Z6_BQCQ-EeK2oPEGStcpwg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Z66v0iQ-EeK2oPEGStcpwg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Z66v0SQ-EeK2oPEGStcpwg" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_Nc3x8BQIEeOL_dsJOHIJwA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_NdVsABQIEeOL_dsJOHIJwA" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="../profile/DSL3S.profile.uml#_JimDwP7KEeKCktSvh_wskw"/>
       </eAnnotations>
-      <appliedProfile href="../profile/DSL3S.profile.uml#_bf7O0CBZEeKpfttodweVYA"/>
+      <appliedProfile xmi:type="uml:Profile" href="../profile/DSL3S.profile.uml#_bf7O0CBZEeKpfttodweVYA"/>
     </profileApplication>
   </uml:Model>
   <DSL3S:Simulation xmi:id="_PBzIYBQIEeOL_dsJOHIJwA" base_Class="_B_3r8CQ-EeK2oPEGStcpwg" simulName="Game Of Life" spaceHeight="100" spaceWidth="100"/>
   <DSL3S:Animat xmi:id="_Py0VoBQIEeOL_dsJOHIJwA" base_Class="_KES1YCQ-EeK2oPEGStcpwg" inputLayer="data/Life.shp"/>
-  <DSL3S:Emerge xmi:id="_TRyW4BQIEeOL_dsJOHIJwA" base_Class="_TckMUCQ-EeK2oPEGStcpwg" scope="1.5" required="true" lowerThreshold="3" upperThreshold="3"/>
+  <DSL3S:Emerge xmi:id="_TRyW4BQIEeOL_dsJOHIJwA" scope="1.5" required="true" lowerThreshold="3" upperThreshold="3" base_Class="_TckMUCQ-EeK2oPEGStcpwg"/>
   <DSL3S:State xmi:id="_UQDV8BQIEeOL_dsJOHIJwA" base_Class="_OFA40CQ-EeK2oPEGStcpwg" minValue="1" maxValue="1" display="true" initValue="1"/>
-  <DSL3S:Harvest xmi:id="_VNa9IBQIEeOL_dsJOHIJwA" base_Class="_jYYv0CQ-EeK2oPEGStcpwg" harvested="Alive" valueHarvested="1" scope="1.5"/>
-  <DSL3S:Perish xmi:id="_WUZzUBQIEeOL_dsJOHIJwA" base_Class="_CkmUMCQ_EeK2oPEGStcpwg" upperThreshold="4" lowerThreshold="1"/>
+  <DSL3S:Harvest xmi:id="_VNa9IBQIEeOL_dsJOHIJwA" harvested="Alive" valueHarvested="1" base_Class="_jYYv0CQ-EeK2oPEGStcpwg" scope="1.5"/>
+  <DSL3S:Perish xmi:id="_WUZzUBQIEeOL_dsJOHIJwA" upperThreshold="4" lowerThreshold="1" base_Class="_CkmUMCQ_EeK2oPEGStcpwg"/>
   <DSL3S:State xmi:id="_sMjyYBQIEeOL_dsJOHIJwA" base_Class="_blgCUCQ-EeK2oPEGStcpwg" maxValue="8" stepVariation="-10" initValue="3"/>
 </xmi:XMI>
