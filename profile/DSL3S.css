@@ -1,10 +1,12 @@
 @variables 
 {
-  dsl3sRed: #fe8d12;
-  dsl3sGreen: #fe8d12;
-  dsl3sBlue: #fe8d12;
-  dsl3sYellow: #fe8d12;
+  dsl3sRed: #ff7777;
+  dsl3sGreen: #77ff77;
+  dsl3sBlue: #7777ff;
+  dsl3sYellow: #d4ff2a;
   dsl3sGrey: #777777;
+  dsl3sCyan: #55ddff;
+  dsl3sMagenta: #de8787;
 }
 
 [appliedStereotypes~="Simulation"]
@@ -41,6 +43,66 @@
 {
 	gradient: dsl3sBlue vertical;
 	background-color: dsl3sYellow;
+	bold:true;
+	shadow:true;
+	elementIcon:true;
+	qualifiedNameDepth:full;
+}
+
+[appliedStereotypes~="Global"]
+{
+	gradient: dsl3sBlue vertical;
+	background-color: dsl3sGrey;
+	bold:true;
+	shadow:true;
+	elementIcon:true;
+	qualifiedNameDepth:full;
+}
+
+[appliedStereotypes~="Emerge"]
+{
+	gradient: dsl3sYellow vertical;
+	background-color: dsl3sWhite;
+	bold:true;
+	shadow:true;
+	elementIcon:true;
+	qualifiedNameDepth:full;
+}
+
+[appliedStereotypes~="Move"]
+{
+	gradient: dsl3sCyan vertical;
+	background-color: dsl3sWhite;
+	bold:true;
+	shadow:true;
+	elementIcon:true;
+	qualifiedNameDepth:full;
+}
+
+[appliedStereotypes~="Harvest"]
+{
+	gradient: dsl3sCyan vertical;
+	background-color: dsl3sRed;
+	bold:true;
+	shadow:true;
+	elementIcon:true;
+	qualifiedNameDepth:full;
+}
+
+[appliedStereotypes~="Replicate"]
+{
+	gradient: dsl3sCyan vertical;
+	background-color: dsl3sMagenta;
+	bold:true;
+	shadow:true;
+	elementIcon:true;
+	qualifiedNameDepth:full;
+}
+
+[appliedStereotypes~="Perish"]
+{
+	gradient: dsl3sCyan vertical;
+	background-color: dsl3sGrey;
 	bold:true;
 	shadow:true;
 	elementIcon:true;
