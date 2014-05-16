@@ -1,127 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DSL3S="http:///schemas/DSL3S/_I9pjoP7KEeKCktSvh_wskw/22" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/DSL3S/_I9pjoP7KEeKCktSvh_wskw/22 ../profile/DSL3S.profile.uml#_JimDwP7KEeKCktSvh_wskw">
+<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DSL3S="http:///schemas/DSL3S/_I9pjoP7KEeKCktSvh_wskw/22" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http:///schemas/DSL3S/_I9pjoP7KEeKCktSvh_wskw/22 ../profile/DSL3S.profile.uml#_JimDwP7KEeKCktSvh_wskw">
   <uml:Model xmi:id="_vKp30BrZEeKjdP3IW4sVUw" name="model">
-    <packagedElement xmi:type="uml:Class" xmi:id="_wVEcgBrZEeKjdP3IW4sVUw" name="Sim"/>
-    <packagedElement xmi:type="uml:Class" xmi:id="_xUdc8BrZEeKjdP3IW4sVUw" name="Fire">
-      <ownedAttribute xmi:id="_1TL8UBrZEeKjdP3IW4sVUw" name="sim" type="_wVEcgBrZEeKjdP3IW4sVUw" association="_1TO_oBrZEeKjdP3IW4sVUw">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1TL8URrZEeKjdP3IW4sVUw" value="1"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1TL8UhrZEeKjdP3IW4sVUw" value="1"/>
-      </ownedAttribute>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_yJVPcBrZEeKjdP3IW4sVUw" name="Forest">
-      <ownedAttribute xmi:id="_04EtoBrZEeKjdP3IW4sVUw" name="sim" type="_wVEcgBrZEeKjdP3IW4sVUw" association="_04FUsBrZEeKjdP3IW4sVUw">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_04EtoRrZEeKjdP3IW4sVUw" value="1"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_04EtohrZEeKjdP3IW4sVUw" value="1"/>
-      </ownedAttribute>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_04FUsBrZEeKjdP3IW4sVUw" name="forest_sim_0" memberEnd="_04FUsRrZEeKjdP3IW4sVUw _04EtoBrZEeKjdP3IW4sVUw">
-      <ownedEnd xmi:id="_04FUsRrZEeKjdP3IW4sVUw" name="forest" type="_yJVPcBrZEeKjdP3IW4sVUw" association="_04FUsBrZEeKjdP3IW4sVUw">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_04FUshrZEeKjdP3IW4sVUw" value="1"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_04FUsBrZEeKjdP3IW4sVUw" name="" memberEnd="_04FUsRrZEeKjdP3IW4sVUw _04EtoBrZEeKjdP3IW4sVUw">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_04FUsRrZEeKjdP3IW4sVUw" name="forest" type="_yJVPcBrZEeKjdP3IW4sVUw" association="_04FUsBrZEeKjdP3IW4sVUw">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_04FUsxrZEeKjdP3IW4sVUw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_04FUshrZEeKjdP3IW4sVUw" value="1"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_1TO_oBrZEeKjdP3IW4sVUw" name="fire_sim_0" memberEnd="_1TO_oRrZEeKjdP3IW4sVUw _1TL8UBrZEeKjdP3IW4sVUw">
-      <ownedEnd xmi:id="_1TO_oRrZEeKjdP3IW4sVUw" name="fire" type="_xUdc8BrZEeKjdP3IW4sVUw" association="_1TO_oBrZEeKjdP3IW4sVUw">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1TO_ohrZEeKjdP3IW4sVUw" value="1"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_1TO_oBrZEeKjdP3IW4sVUw" name="" memberEnd="_1TO_oRrZEeKjdP3IW4sVUw _1TL8UBrZEeKjdP3IW4sVUw">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_1TO_oRrZEeKjdP3IW4sVUw" name="fire" type="_xUdc8BrZEeKjdP3IW4sVUw" association="_1TO_oBrZEeKjdP3IW4sVUw">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1TO_oxrZEeKjdP3IW4sVUw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1TO_ohrZEeKjdP3IW4sVUw" value="1"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_tFSb4BrbEeKjdP3IW4sVUw" name="Burn">
-      <ownedAttribute xmi:id="_EsY-IBreEeKjdP3IW4sVUw" name="" type="_yJVPcBrZEeKjdP3IW4sVUw" association="_EsZlMBreEeKjdP3IW4sVUw">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EsY-IRreEeKjdP3IW4sVUw" value="1"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EsY-IhreEeKjdP3IW4sVUw" value="1"/>
-      </ownedAttribute>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_woGbUBrbEeKjdP3IW4sVUw" name="Intensity">
-      <ownedAttribute xmi:id="_Ab4yQBreEeKjdP3IW4sVUw" name="" type="_xUdc8BrZEeKjdP3IW4sVUw" association="_Ab7OgBreEeKjdP3IW4sVUw">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ab4yQRreEeKjdP3IW4sVUw" value="1"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ab4yQhreEeKjdP3IW4sVUw" value="1"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:id="_A1aFgBreEeKjdP3IW4sVUw" name="" type="_tFSb4BrbEeKjdP3IW4sVUw" association="_A1dv4BreEeKjdP3IW4sVUw">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_A1aFgRreEeKjdP3IW4sVUw" value="1"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_A1aFghreEeKjdP3IW4sVUw" value="1"/>
-      </ownedAttribute>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_Ab7OgBreEeKjdP3IW4sVUw" name="intensity_fire_0" memberEnd="_Ab7OgRreEeKjdP3IW4sVUw _Ab4yQBreEeKjdP3IW4sVUw">
-      <ownedEnd xmi:id="_Ab7OgRreEeKjdP3IW4sVUw" name="" type="_woGbUBrbEeKjdP3IW4sVUw" association="_Ab7OgBreEeKjdP3IW4sVUw">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ab7OghreEeKjdP3IW4sVUw" value="1"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_Ab7OgBreEeKjdP3IW4sVUw" name="" memberEnd="_Ab7OgRreEeKjdP3IW4sVUw _Ab4yQBreEeKjdP3IW4sVUw">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_Ab7OgRreEeKjdP3IW4sVUw" name="" type="_woGbUBrbEeKjdP3IW4sVUw" association="_Ab7OgBreEeKjdP3IW4sVUw">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ab7OgxreEeKjdP3IW4sVUw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ab7OghreEeKjdP3IW4sVUw" value="1"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_A1dv4BreEeKjdP3IW4sVUw" name="intensity_burn_0" memberEnd="_A1dv4RreEeKjdP3IW4sVUw _A1aFgBreEeKjdP3IW4sVUw">
-      <ownedEnd xmi:id="_A1dv4RreEeKjdP3IW4sVUw" name="" type="_woGbUBrbEeKjdP3IW4sVUw" association="_A1dv4BreEeKjdP3IW4sVUw">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_A1dv4hreEeKjdP3IW4sVUw" value="1"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_A1dv4BreEeKjdP3IW4sVUw" name="" memberEnd="_A1dv4RreEeKjdP3IW4sVUw _A1aFgBreEeKjdP3IW4sVUw">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_A1dv4RreEeKjdP3IW4sVUw" name="" type="_woGbUBrbEeKjdP3IW4sVUw" association="_A1dv4BreEeKjdP3IW4sVUw">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_A1dv4xreEeKjdP3IW4sVUw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_A1dv4hreEeKjdP3IW4sVUw" value="1"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_EsZlMBreEeKjdP3IW4sVUw" name="burn_forest_0" memberEnd="_EsZlMRreEeKjdP3IW4sVUw _EsY-IBreEeKjdP3IW4sVUw">
-      <ownedEnd xmi:id="_EsZlMRreEeKjdP3IW4sVUw" name="" type="_tFSb4BrbEeKjdP3IW4sVUw" association="_EsZlMBreEeKjdP3IW4sVUw">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EsZlMhreEeKjdP3IW4sVUw" value="1"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_EsZlMBreEeKjdP3IW4sVUw" name="" memberEnd="_EsZlMRreEeKjdP3IW4sVUw _EsY-IBreEeKjdP3IW4sVUw">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_EsZlMRreEeKjdP3IW4sVUw" name="" type="_tFSb4BrbEeKjdP3IW4sVUw" association="_EsZlMBreEeKjdP3IW4sVUw">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EsZlMxreEeKjdP3IW4sVUw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EsZlMhreEeKjdP3IW4sVUw" value="1"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_t5KBcBreEeKjdP3IW4sVUw" name="Extinguish">
-      <ownedAttribute xmi:id="_yi2JYBreEeKjdP3IW4sVUw" name="" type="_woGbUBrbEeKjdP3IW4sVUw" association="_yi5MsBreEeKjdP3IW4sVUw">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_yi2JYRreEeKjdP3IW4sVUw" value="1"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_yi2JYhreEeKjdP3IW4sVUw" value="1"/>
-      </ownedAttribute>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_yi5MsBreEeKjdP3IW4sVUw" name="extinguish_intensity_0" memberEnd="_yi5MsRreEeKjdP3IW4sVUw _yi2JYBreEeKjdP3IW4sVUw">
-      <ownedEnd xmi:id="_yi5MsRreEeKjdP3IW4sVUw" name="" type="_t5KBcBreEeKjdP3IW4sVUw" association="_yi5MsBreEeKjdP3IW4sVUw">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_yi5MshreEeKjdP3IW4sVUw" value="1"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_yi5MsBreEeKjdP3IW4sVUw" name="" memberEnd="_yi5MsRreEeKjdP3IW4sVUw _yi2JYBreEeKjdP3IW4sVUw">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_yi5MsRreEeKjdP3IW4sVUw" name="" type="_t5KBcBreEeKjdP3IW4sVUw" association="_yi5MsBreEeKjdP3IW4sVUw">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_yi5MsxreEeKjdP3IW4sVUw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_yi5MshreEeKjdP3IW4sVUw" value="1"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_cTMa4BrfEeKjdP3IW4sVUw" name="EmergeForest">
-      <ownedAttribute xmi:id="_11H9ABrfEeKjdP3IW4sVUw" name="" type="_xUdc8BrZEeKjdP3IW4sVUw" association="_11JyMBrfEeKjdP3IW4sVUw">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_11H9ARrfEeKjdP3IW4sVUw" value="1"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_11H9AhrfEeKjdP3IW4sVUw" value="1"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:id="_3DcxUBrfEeKjdP3IW4sVUw" name="" type="_yJVPcBrZEeKjdP3IW4sVUw" association="_3DdYYBrfEeKjdP3IW4sVUw">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3DcxURrfEeKjdP3IW4sVUw" value="1"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3DcxUhrfEeKjdP3IW4sVUw" value="1"/>
-      </ownedAttribute>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_jMLE4BrfEeKjdP3IW4sVUw" name="EmergeIntensity">
-      <ownedAttribute xmi:id="_wkkCUBrfEeKjdP3IW4sVUw" name="" type="_xUdc8BrZEeKjdP3IW4sVUw" association="_wknssBrfEeKjdP3IW4sVUw">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wkkCURrfEeKjdP3IW4sVUw" value="1"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wkkpYBrfEeKjdP3IW4sVUw" value="1"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:id="_w_9k4BrfEeKjdP3IW4sVUw" name="" type="_woGbUBrbEeKjdP3IW4sVUw" association="_xABPQBrfEeKjdP3IW4sVUw">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_w_9k4RrfEeKjdP3IW4sVUw" value="1"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_w_9k4hrfEeKjdP3IW4sVUw" value="1"/>
-      </ownedAttribute>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_wknssBrfEeKjdP3IW4sVUw" name="emergeIntensity_fire_0" memberEnd="_wknssRrfEeKjdP3IW4sVUw _wkkCUBrfEeKjdP3IW4sVUw">
-      <ownedEnd xmi:id="_wknssRrfEeKjdP3IW4sVUw" name="" type="_jMLE4BrfEeKjdP3IW4sVUw" association="_wknssBrfEeKjdP3IW4sVUw">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wknsshrfEeKjdP3IW4sVUw" value="1"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_wknssBrfEeKjdP3IW4sVUw" name="" memberEnd="_wknssRrfEeKjdP3IW4sVUw _wkkCUBrfEeKjdP3IW4sVUw">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_wknssRrfEeKjdP3IW4sVUw" name="" type="_jMLE4BrfEeKjdP3IW4sVUw" association="_wknssBrfEeKjdP3IW4sVUw">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wknssxrfEeKjdP3IW4sVUw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wknsshrfEeKjdP3IW4sVUw" value="1"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_xABPQBrfEeKjdP3IW4sVUw" name="emergeIntensity_intensity_0" memberEnd="_xABPQRrfEeKjdP3IW4sVUw _w_9k4BrfEeKjdP3IW4sVUw">
-      <ownedEnd xmi:id="_xABPQRrfEeKjdP3IW4sVUw" name="" type="_jMLE4BrfEeKjdP3IW4sVUw" association="_xABPQBrfEeKjdP3IW4sVUw">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_xABPQhrfEeKjdP3IW4sVUw" value="1"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_xABPQBrfEeKjdP3IW4sVUw" name="" memberEnd="_xABPQRrfEeKjdP3IW4sVUw _w_9k4BrfEeKjdP3IW4sVUw">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_xABPQRrfEeKjdP3IW4sVUw" name="" type="_jMLE4BrfEeKjdP3IW4sVUw" association="_xABPQBrfEeKjdP3IW4sVUw">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_xABPQxrfEeKjdP3IW4sVUw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_xABPQhrfEeKjdP3IW4sVUw" value="1"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_11JyMBrfEeKjdP3IW4sVUw" name="emergeForest_fire_0" memberEnd="_11JyMRrfEeKjdP3IW4sVUw _11H9ABrfEeKjdP3IW4sVUw">
-      <ownedEnd xmi:id="_11JyMRrfEeKjdP3IW4sVUw" name="" type="_cTMa4BrfEeKjdP3IW4sVUw" association="_11JyMBrfEeKjdP3IW4sVUw">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_11JyMhrfEeKjdP3IW4sVUw" value="1"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_11JyMBrfEeKjdP3IW4sVUw" name="" memberEnd="_11JyMRrfEeKjdP3IW4sVUw _11H9ABrfEeKjdP3IW4sVUw">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_11JyMRrfEeKjdP3IW4sVUw" name="" type="_cTMa4BrfEeKjdP3IW4sVUw" association="_11JyMBrfEeKjdP3IW4sVUw">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_11JyMxrfEeKjdP3IW4sVUw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_11JyMhrfEeKjdP3IW4sVUw" value="1"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_3DdYYBrfEeKjdP3IW4sVUw" name="emergeForest_forest_0" memberEnd="_3DdYYRrfEeKjdP3IW4sVUw _3DcxUBrfEeKjdP3IW4sVUw">
-      <ownedEnd xmi:id="_3DdYYRrfEeKjdP3IW4sVUw" name="" type="_cTMa4BrfEeKjdP3IW4sVUw" association="_3DdYYBrfEeKjdP3IW4sVUw">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3DdYYhrfEeKjdP3IW4sVUw" value="1"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_3DdYYBrfEeKjdP3IW4sVUw" name="" memberEnd="_3DdYYRrfEeKjdP3IW4sVUw _3DcxUBrfEeKjdP3IW4sVUw">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_3DdYYRrfEeKjdP3IW4sVUw" name="" type="_cTMa4BrfEeKjdP3IW4sVUw" association="_3DdYYBrfEeKjdP3IW4sVUw">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3DdYYxrfEeKjdP3IW4sVUw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3DdYYhrfEeKjdP3IW4sVUw" value="1"/>
       </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_IEQbMB02EeKTUOpZbz254A" name="Class0"/>
-    <profileApplication xmi:id="_7hVEUBQFEeOL_dsJOHIJwA">
-      <eAnnotations xmi:id="_7h6TIBQFEeOL_dsJOHIJwA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <packagedElement xmi:type="uml:Package" xmi:id="_Mz7IQN0OEeO3X9w9Cy58AA" name="Forest Fire View">
+      <packagedElement xmi:type="uml:Class" xmi:id="_wVEcgBrZEeKjdP3IW4sVUw" name="Sim"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_jBkZsN0PEeO3X9w9Cy58AA" name="Emerge View">
+      <packagedElement xmi:type="uml:Class" xmi:id="_cTMa4BrfEeKjdP3IW4sVUw" name="EmergeForest">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_11H9ABrfEeKjdP3IW4sVUw" name="" type="_xUdc8BrZEeKjdP3IW4sVUw" association="_11JyMBrfEeKjdP3IW4sVUw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_11H9AhrfEeKjdP3IW4sVUw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_11H9ARrfEeKjdP3IW4sVUw" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_3DcxUBrfEeKjdP3IW4sVUw" name="" type="_yJVPcBrZEeKjdP3IW4sVUw" association="_3DdYYBrfEeKjdP3IW4sVUw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3DcxUhrfEeKjdP3IW4sVUw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3DcxURrfEeKjdP3IW4sVUw" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jMLE4BrfEeKjdP3IW4sVUw" name="EmergeIntensity">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_wkkCUBrfEeKjdP3IW4sVUw" name="" type="_xUdc8BrZEeKjdP3IW4sVUw" association="_wknssBrfEeKjdP3IW4sVUw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wkkpYBrfEeKjdP3IW4sVUw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wkkCURrfEeKjdP3IW4sVUw" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_w_9k4BrfEeKjdP3IW4sVUw" name="" type="_woGbUBrbEeKjdP3IW4sVUw" association="_xABPQBrfEeKjdP3IW4sVUw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_w_9k4hrfEeKjdP3IW4sVUw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_w_9k4RrfEeKjdP3IW4sVUw" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_km4xsN0PEeO3X9w9Cy58AA" name="Fire View">
+      <packagedElement xmi:type="uml:Class" xmi:id="_xUdc8BrZEeKjdP3IW4sVUw" name="Fire">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_1TL8UBrZEeKjdP3IW4sVUw" name="sim" type="_wVEcgBrZEeKjdP3IW4sVUw" association="_1TO_oBrZEeKjdP3IW4sVUw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1TL8UhrZEeKjdP3IW4sVUw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1TL8URrZEeKjdP3IW4sVUw" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_woGbUBrbEeKjdP3IW4sVUw" name="Intensity">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Ab4yQBreEeKjdP3IW4sVUw" name="" type="_xUdc8BrZEeKjdP3IW4sVUw" association="_Ab7OgBreEeKjdP3IW4sVUw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ab4yQhreEeKjdP3IW4sVUw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ab4yQRreEeKjdP3IW4sVUw" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_A1aFgBreEeKjdP3IW4sVUw" name="" type="_tFSb4BrbEeKjdP3IW4sVUw" association="_A1dv4BreEeKjdP3IW4sVUw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_A1aFghreEeKjdP3IW4sVUw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_A1aFgRreEeKjdP3IW4sVUw" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_t5KBcBreEeKjdP3IW4sVUw" name="Extinguish">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_yi2JYBreEeKjdP3IW4sVUw" name="" type="_woGbUBrbEeKjdP3IW4sVUw" association="_yi5MsBreEeKjdP3IW4sVUw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_yi2JYhreEeKjdP3IW4sVUw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_yi2JYRreEeKjdP3IW4sVUw" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_tFSb4BrbEeKjdP3IW4sVUw" name="Burn">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_EsY-IBreEeKjdP3IW4sVUw" name="" type="_yJVPcBrZEeKjdP3IW4sVUw" association="_EsZlMBreEeKjdP3IW4sVUw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EsY-IhreEeKjdP3IW4sVUw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EsY-IRreEeKjdP3IW4sVUw" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_l3I4oN0PEeO3X9w9Cy58AA" name="Spatial View">
+      <packagedElement xmi:type="uml:Class" xmi:id="_yJVPcBrZEeKjdP3IW4sVUw" name="Forest">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_04EtoBrZEeKjdP3IW4sVUw" name="sim" type="_wVEcgBrZEeKjdP3IW4sVUw" association="_04FUsBrZEeKjdP3IW4sVUw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_04EtohrZEeKjdP3IW4sVUw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_04EtoRrZEeKjdP3IW4sVUw" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_7hVEUBQFEeOL_dsJOHIJwA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_7h6TIBQFEeOL_dsJOHIJwA" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="../profile/DSL3S.profile.uml#_JimDwP7KEeKCktSvh_wskw"/>
       </eAnnotations>
-      <appliedProfile href="../profile/DSL3S.profile.uml#_bf7O0CBZEeKpfttodweVYA"/>
+      <appliedProfile xmi:type="uml:Profile" href="../profile/DSL3S.profile.uml#_bf7O0CBZEeKpfttodweVYA"/>
     </profileApplication>
   </uml:Model>
   <DSL3S:Simulation xmi:id="_Du_pUBQGEeOL_dsJOHIJwA" base_Class="_wVEcgBrZEeKjdP3IW4sVUw" simulName="Forest Fire" spaceHeight="100" spaceWidth="100"/>
