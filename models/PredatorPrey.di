@@ -10,6 +10,12 @@
     <availablePage>
       <emfPageIdentifier href="PredatorPrey.notation#_SIKMsBVtEeKKubxyzHq1vA"/>
     </availablePage>
+    <availablePage>
+      <emfPageIdentifier href="PredatorPrey.notation#_Xxh58O5UEeO00oyT07T5Aw"/>
+    </availablePage>
+    <availablePage>
+      <emfPageIdentifier href="PredatorPrey.notation#_AN8aMO5cEeO00oyT07T5Aw"/>
+    </availablePage>
   </pageList>
   <sashModel currentSelection="//@sashModel/@windows.0/@children.0">
     <windows>
@@ -22,6 +28,12 @@
         </children>
         <children>
           <emfPageIdentifier href="PredatorPrey.notation#_SIKMsBVtEeKKubxyzHq1vA"/>
+        </children>
+        <children>
+          <emfPageIdentifier href="PredatorPrey.notation#_Xxh58O5UEeO00oyT07T5Aw"/>
+        </children>
+        <children>
+          <emfPageIdentifier href="PredatorPrey.notation#_AN8aMO5cEeO00oyT07T5Aw"/>
         </children>
       </children>
     </windows>
