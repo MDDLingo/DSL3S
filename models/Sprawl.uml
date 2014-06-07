@@ -1,104 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DSL3S="http:///schemas/DSL3S/__6uUEBWSEeOwad1GzWDyLw/23" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http:///schemas/DSL3S/__6uUEBWSEeOwad1GzWDyLw/23 ../profile/DSL3S.profile.uml#_Au1RkBWTEeOwad1GzWDyLw">
+<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DSL3S="http:///schemas/DSL3S/_nY3zgO5aEeO00oyT07T5Aw/25" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http:///schemas/DSL3S/_nY3zgO5aEeO00oyT07T5Aw/25 ../profile/DSL3S.profile.uml#_nftbUO5aEeO00oyT07T5Aw">
   <uml:Model xmi:id="_h-B84BvfEeOjmZiRzPqkag" name="model">
     <packagedElement xmi:type="uml:Package" xmi:id="_jtERkBvfEeOjmZiRzPqkag" name="SimulationView">
-      <packagedElement xmi:type="uml:Class" xmi:id="_oZj14BvfEeOjmZiRzPqkag" name="Sprawl"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_wzcR8BvfEeOjmZiRzPqkag" name="Urbe">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_3rnDoBvfEeOjmZiRzPqkag" name="sprawl" type="_oZj14BvfEeOjmZiRzPqkag" association="_3ro40BvfEeOjmZiRzPqkag">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3rnDohvfEeOjmZiRzPqkag" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3rnDoRvfEeOjmZiRzPqkag" value="1"/>
-        </ownedAttribute>
-      </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_3ro40BvfEeOjmZiRzPqkag" name="anim_sprawl_0" memberEnd="_3ro40RvfEeOjmZiRzPqkag _3rnDoBvfEeOjmZiRzPqkag">
-        <ownedEnd xmi:type="uml:Property" xmi:id="_3ro40RvfEeOjmZiRzPqkag" name="anim" type="_wzcR8BvfEeOjmZiRzPqkag" association="_3ro40BvfEeOjmZiRzPqkag">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_3ro40RvfEeOjmZiRzPqkag" name="anim" type="_wzcR8BvfEeOjmZiRzPqkag" aggregation="shared" association="_3ro40BvfEeOjmZiRzPqkag">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3ro40xvfEeOjmZiRzPqkag" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3ro40hvfEeOjmZiRzPqkag" value="1"/>
         </ownedEnd>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_Qd4DYBvgEeOjmZiRzPqkag" name="Age">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_ZuxnABvgEeOjmZiRzPqkag" name="anim" type="_wzcR8BvfEeOjmZiRzPqkag" association="_Zuy1IBvgEeOjmZiRzPqkag">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZuxnAhvgEeOjmZiRzPqkag" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZuxnARvgEeOjmZiRzPqkag" value="1"/>
-        </ownedAttribute>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_3rnDoBvfEeOjmZiRzPqkag" name="sprawl" type="_oZj14BvfEeOjmZiRzPqkag" association="_3ro40BvfEeOjmZiRzPqkag">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3rnDohvfEeOjmZiRzPqkag" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3rnDoRvfEeOjmZiRzPqkag" value="1"/>
+        </ownedEnd>
       </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_Zuy1IBvgEeOjmZiRzPqkag" name="age_anim_0" memberEnd="_Zuy1IRvgEeOjmZiRzPqkag _ZuxnABvgEeOjmZiRzPqkag">
-        <ownedEnd xmi:type="uml:Property" xmi:id="_Zuy1IRvgEeOjmZiRzPqkag" name="age" type="_Qd4DYBvgEeOjmZiRzPqkag" association="_Zuy1IBvgEeOjmZiRzPqkag">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_Zuy1IRvgEeOjmZiRzPqkag" name="age" type="_Qd4DYBvgEeOjmZiRzPqkag" aggregation="composite" association="_Zuy1IBvgEeOjmZiRzPqkag">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Zuy1IxvgEeOjmZiRzPqkag" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Zuy1IhvgEeOjmZiRzPqkag" value="1"/>
         </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_ZuxnABvgEeOjmZiRzPqkag" name="anim" type="_wzcR8BvfEeOjmZiRzPqkag" association="_Zuy1IBvgEeOjmZiRzPqkag">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZuxnAhvgEeOjmZiRzPqkag" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZuxnARvgEeOjmZiRzPqkag" value="1"/>
+        </ownedEnd>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_h0JLoBvgEeOjmZiRzPqkag" name="Speed">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_ryjVgBvgEeOjmZiRzPqkag" name="sprawl" type="_oZj14BvfEeOjmZiRzPqkag" association="_rylxwBvgEeOjmZiRzPqkag">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ryjVghvgEeOjmZiRzPqkag" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ryjVgRvgEeOjmZiRzPqkag" value="1"/>
-        </ownedAttribute>
-      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_h0JLoBvgEeOjmZiRzPqkag" name="Speed"/>
       <packagedElement xmi:type="uml:Association" xmi:id="_rylxwBvgEeOjmZiRzPqkag" name="speed_sprawl_0" memberEnd="_rylxwRvgEeOjmZiRzPqkag _ryjVgBvgEeOjmZiRzPqkag">
-        <ownedEnd xmi:type="uml:Property" xmi:id="_rylxwRvgEeOjmZiRzPqkag" name="speed" type="_h0JLoBvgEeOjmZiRzPqkag" association="_rylxwBvgEeOjmZiRzPqkag">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_rylxwRvgEeOjmZiRzPqkag" name="speed" type="_h0JLoBvgEeOjmZiRzPqkag" aggregation="composite" association="_rylxwBvgEeOjmZiRzPqkag">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rylxwxvgEeOjmZiRzPqkag" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rylxwhvgEeOjmZiRzPqkag" value="1"/>
         </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_ryjVgBvgEeOjmZiRzPqkag" name="sprawl" type="_oZj14BvfEeOjmZiRzPqkag" association="_rylxwBvgEeOjmZiRzPqkag">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ryjVghvgEeOjmZiRzPqkag" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ryjVgRvgEeOjmZiRzPqkag" value="1"/>
+        </ownedEnd>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="__2C2YKxWEeOgHYIEg56prw" name="Protected">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_DCgyYKxXEeOgHYIEg56prw" name="sprawl" type="_oZj14BvfEeOjmZiRzPqkag" association="_DCiAgKxXEeOgHYIEg56prw">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DCgyYaxXEeOgHYIEg56prw" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DCgyYqxXEeOgHYIEg56prw" value="1"/>
-        </ownedAttribute>
-      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="__2C2YKxWEeOgHYIEg56prw" name="Protected"/>
       <packagedElement xmi:type="uml:Association" xmi:id="_DCiAgKxXEeOgHYIEg56prw" name="" memberEnd="_DCiAgaxXEeOgHYIEg56prw _DCgyYKxXEeOgHYIEg56prw _DCgyYKxXEeOgHYIEg56prw">
-        <ownedEnd xmi:type="uml:Property" xmi:id="_DCiAgaxXEeOgHYIEg56prw" name="protected" type="__2C2YKxWEeOgHYIEg56prw" association="_DCiAgKxXEeOgHYIEg56prw">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_DCiAgaxXEeOgHYIEg56prw" name="protected" type="__2C2YKxWEeOgHYIEg56prw" aggregation="composite" association="_DCiAgKxXEeOgHYIEg56prw">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DCiAgqxXEeOgHYIEg56prw" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DCiAg6xXEeOgHYIEg56prw" value="1"/>
         </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_DCgyYKxXEeOgHYIEg56prw" name="sprawl" type="_oZj14BvfEeOjmZiRzPqkag" association="_DCiAgKxXEeOgHYIEg56prw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DCgyYaxXEeOgHYIEg56prw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DCgyYqxXEeOgHYIEg56prw" value="1"/>
+        </ownedEnd>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_bCbQsKxuEeO4B8LU8denRg" name="Roads">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_tCRhcKxuEeO4B8LU8denRg" name="sprawl" type="_oZj14BvfEeOjmZiRzPqkag" association="_tCUkwKxuEeO4B8LU8denRg">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tCRhcaxuEeO4B8LU8denRg" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tCRhcqxuEeO4B8LU8denRg" value="1"/>
-        </ownedAttribute>
-      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_bCbQsKxuEeO4B8LU8denRg" name="Roads"/>
       <packagedElement xmi:type="uml:Association" xmi:id="_tCUkwKxuEeO4B8LU8denRg" name="" memberEnd="_tCUkwaxuEeO4B8LU8denRg _tCRhcKxuEeO4B8LU8denRg _tCRhcKxuEeO4B8LU8denRg">
-        <ownedEnd xmi:type="uml:Property" xmi:id="_tCUkwaxuEeO4B8LU8denRg" name="roads" type="_bCbQsKxuEeO4B8LU8denRg" association="_tCUkwKxuEeO4B8LU8denRg">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_tCUkwaxuEeO4B8LU8denRg" name="roads" type="_bCbQsKxuEeO4B8LU8denRg" aggregation="composite" association="_tCUkwKxuEeO4B8LU8denRg">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tCUkwqxuEeO4B8LU8denRg" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tCVL0KxuEeO4B8LU8denRg" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_tCRhcKxuEeO4B8LU8denRg" name="sprawl" type="_oZj14BvfEeOjmZiRzPqkag" association="_tCUkwKxuEeO4B8LU8denRg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tCRhcaxuEeO4B8LU8denRg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tCRhcqxuEeO4B8LU8denRg" value="1"/>
         </ownedEnd>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_l1DRwBvfEeOjmZiRzPqkag" name="SprawlView">
-      <packagedElement xmi:type="uml:Class" xmi:id="_1ILoIBvgEeOjmZiRzPqkag" name="SprawlSpeed">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_7CWggBvgEeOjmZiRzPqkag" name="speed" type="_h0JLoBvgEeOjmZiRzPqkag" association="_7CXHkBvgEeOjmZiRzPqkag">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7CWgghvgEeOjmZiRzPqkag" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7CWggRvgEeOjmZiRzPqkag" value="1"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_78miQBvgEeOjmZiRzPqkag" name="anim" type="_wzcR8BvfEeOjmZiRzPqkag" association="_78o-gBvgEeOjmZiRzPqkag">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_78miQhvgEeOjmZiRzPqkag" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_78miQRvgEeOjmZiRzPqkag" value="1"/>
-        </ownedAttribute>
-      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_1ILoIBvgEeOjmZiRzPqkag" name="SprawlSpeed"/>
       <packagedElement xmi:type="uml:Association" xmi:id="_7CXHkBvgEeOjmZiRzPqkag" name="sprawlSpeed_speed_0" memberEnd="_7CXHkRvgEeOjmZiRzPqkag _7CWggBvgEeOjmZiRzPqkag">
         <ownedEnd xmi:type="uml:Property" xmi:id="_7CXHkRvgEeOjmZiRzPqkag" name="sprawlSpeed" type="_1ILoIBvgEeOjmZiRzPqkag" association="_7CXHkBvgEeOjmZiRzPqkag">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7CXHkxvgEeOjmZiRzPqkag" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7CXHkhvgEeOjmZiRzPqkag" value="1"/>
         </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_7CWggBvgEeOjmZiRzPqkag" name="speed" type="_h0JLoBvgEeOjmZiRzPqkag" association="_7CXHkBvgEeOjmZiRzPqkag">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7CWgghvgEeOjmZiRzPqkag" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7CWggRvgEeOjmZiRzPqkag" value="1"/>
+        </ownedEnd>
       </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_78o-gBvgEeOjmZiRzPqkag" name="sprawlSpeed_anim_0" memberEnd="_78o-gRvgEeOjmZiRzPqkag _78miQBvgEeOjmZiRzPqkag">
-        <ownedEnd xmi:type="uml:Property" xmi:id="_78o-gRvgEeOjmZiRzPqkag" name="sprawlSpeed" type="_1ILoIBvgEeOjmZiRzPqkag" association="_78o-gBvgEeOjmZiRzPqkag">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_78o-gRvgEeOjmZiRzPqkag" name="sprawlSpeed" type="_1ILoIBvgEeOjmZiRzPqkag" aggregation="composite" association="_78o-gBvgEeOjmZiRzPqkag">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_78o-gxvgEeOjmZiRzPqkag" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_78o-ghvgEeOjmZiRzPqkag" value="1"/>
         </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_78miQBvgEeOjmZiRzPqkag" name="anim" type="_wzcR8BvfEeOjmZiRzPqkag" association="_78o-gBvgEeOjmZiRzPqkag">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_78miQhvgEeOjmZiRzPqkag" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_78miQRvgEeOjmZiRzPqkag" value="1"/>
+        </ownedEnd>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_Byn6cBvhEeOjmZiRzPqkag" name="SprawlAge">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_DDqrkBvhEeOjmZiRzPqkag" name="anim" type="_wzcR8BvfEeOjmZiRzPqkag" association="_DDtH0BvhEeOjmZiRzPqkag">
+      <packagedElement xmi:type="uml:Class" xmi:id="_Byn6cBvhEeOjmZiRzPqkag" name="SprawlAge"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_DDtH0BvhEeOjmZiRzPqkag" name="sprawlAge_anim_0" memberEnd="_DDtH0RvhEeOjmZiRzPqkag _DDqrkBvhEeOjmZiRzPqkag">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_DDqrkBvhEeOjmZiRzPqkag" name="anim" type="_wzcR8BvfEeOjmZiRzPqkag" association="_DDtH0BvhEeOjmZiRzPqkag">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DDqrkhvhEeOjmZiRzPqkag" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DDqrkRvhEeOjmZiRzPqkag" value="1"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_EONzIBvhEeOjmZiRzPqkag" name="age" type="_Qd4DYBvgEeOjmZiRzPqkag" association="_EOPoUBvhEeOjmZiRzPqkag">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EONzIhvhEeOjmZiRzPqkag" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EONzIRvhEeOjmZiRzPqkag" value="1"/>
-        </ownedAttribute>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_DDtH0BvhEeOjmZiRzPqkag" name="sprawlAge_anim_0" memberEnd="_DDtH0RvhEeOjmZiRzPqkag _DDqrkBvhEeOjmZiRzPqkag">
-        <ownedEnd xmi:type="uml:Property" xmi:id="_DDtH0RvhEeOjmZiRzPqkag" name="sprawlAge" type="_Byn6cBvhEeOjmZiRzPqkag" association="_DDtH0BvhEeOjmZiRzPqkag">
+        </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_DDtH0RvhEeOjmZiRzPqkag" name="sprawlAge" type="_Byn6cBvhEeOjmZiRzPqkag" aggregation="composite" association="_DDtH0BvhEeOjmZiRzPqkag">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DDtH0xvhEeOjmZiRzPqkag" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DDtH0hvhEeOjmZiRzPqkag" value="1"/>
         </ownedEnd>
@@ -108,21 +94,20 @@
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EOPoUxvhEeOjmZiRzPqkag" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EOPoUhvhEeOjmZiRzPqkag" value="1"/>
         </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_EONzIBvhEeOjmZiRzPqkag" name="age" type="_Qd4DYBvgEeOjmZiRzPqkag" association="_EOPoUBvhEeOjmZiRzPqkag">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EONzIhvhEeOjmZiRzPqkag" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EONzIRvhEeOjmZiRzPqkag" value="1"/>
+        </ownedEnd>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_RoHJ0KxXEeOgHYIEg56prw" name="SprawlProtect">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_VJ6coKxXEeOgHYIEg56prw" name="anim" type="_wzcR8BvfEeOjmZiRzPqkag" association="_VJ8R0KxXEeOgHYIEg56prw">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VJ6coaxXEeOgHYIEg56prw" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VJ6coqxXEeOgHYIEg56prw" value="1"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_XUxKoKxXEeOgHYIEg56prw" name="protected" type="__2C2YKxWEeOgHYIEg56prw" association="_XUyYwKxXEeOgHYIEg56prw">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XUxKoaxXEeOgHYIEg56prw" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XUxKoqxXEeOgHYIEg56prw" value="1"/>
-        </ownedAttribute>
-      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_RoHJ0KxXEeOgHYIEg56prw" name="SprawlProtect"/>
       <packagedElement xmi:type="uml:Association" xmi:id="_VJ8R0KxXEeOgHYIEg56prw" name="" memberEnd="_VJ8R0axXEeOgHYIEg56prw _VJ6coKxXEeOgHYIEg56prw">
-        <ownedEnd xmi:type="uml:Property" xmi:id="_VJ8R0axXEeOgHYIEg56prw" name="sprawlProtect" type="_RoHJ0KxXEeOgHYIEg56prw" association="_VJ8R0KxXEeOgHYIEg56prw">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_VJ8R0axXEeOgHYIEg56prw" name="sprawlProtect" type="_RoHJ0KxXEeOgHYIEg56prw" aggregation="composite" association="_VJ8R0KxXEeOgHYIEg56prw">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VJ8R0qxXEeOgHYIEg56prw" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VJ8R06xXEeOgHYIEg56prw" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_VJ6coKxXEeOgHYIEg56prw" name="anim" type="_wzcR8BvfEeOjmZiRzPqkag" association="_VJ8R0KxXEeOgHYIEg56prw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VJ6coaxXEeOgHYIEg56prw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VJ6coqxXEeOgHYIEg56prw" value="1"/>
         </ownedEnd>
       </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_XUyYwKxXEeOgHYIEg56prw" name="" memberEnd="_XUyYwaxXEeOgHYIEg56prw _XUxKoKxXEeOgHYIEg56prw">
@@ -130,27 +115,30 @@
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XUyYwqxXEeOgHYIEg56prw" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XUyYw6xXEeOgHYIEg56prw" value="1"/>
         </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_XUxKoKxXEeOgHYIEg56prw" name="protected" type="__2C2YKxWEeOgHYIEg56prw" association="_XUyYwKxXEeOgHYIEg56prw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XUxKoaxXEeOgHYIEg56prw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XUxKoqxXEeOgHYIEg56prw" value="1"/>
+        </ownedEnd>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_xHylUKxuEeO4B8LU8denRg" name="SprawlRoads">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_502cEKxuEeO4B8LU8denRg" name="roads" type="_bCbQsKxuEeO4B8LU8denRg" association="_503qMKxuEeO4B8LU8denRg">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_502cEaxuEeO4B8LU8denRg" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_502cEqxuEeO4B8LU8denRg" value="1"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_96yWsKxuEeO4B8LU8denRg" name="anim" type="_wzcR8BvfEeOjmZiRzPqkag" association="_96zk0KxuEeO4B8LU8denRg">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_96yWsaxuEeO4B8LU8denRg" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_96yWsqxuEeO4B8LU8denRg" value="1"/>
-        </ownedAttribute>
-      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_xHylUKxuEeO4B8LU8denRg" name="SprawlRoads"/>
       <packagedElement xmi:type="uml:Association" xmi:id="_503qMKxuEeO4B8LU8denRg" name="" memberEnd="_503qMaxuEeO4B8LU8denRg _502cEKxuEeO4B8LU8denRg">
         <ownedEnd xmi:type="uml:Property" xmi:id="_503qMaxuEeO4B8LU8denRg" name="sprawlRoads" type="_xHylUKxuEeO4B8LU8denRg" association="_503qMKxuEeO4B8LU8denRg">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_503qMqxuEeO4B8LU8denRg" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_503qM6xuEeO4B8LU8denRg" value="1"/>
         </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_502cEKxuEeO4B8LU8denRg" name="roads" type="_bCbQsKxuEeO4B8LU8denRg" association="_503qMKxuEeO4B8LU8denRg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_502cEaxuEeO4B8LU8denRg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_502cEqxuEeO4B8LU8denRg" value="1"/>
+        </ownedEnd>
       </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_96zk0KxuEeO4B8LU8denRg" name="" memberEnd="_96zk0axuEeO4B8LU8denRg _96yWsKxuEeO4B8LU8denRg">
-        <ownedEnd xmi:type="uml:Property" xmi:id="_96zk0axuEeO4B8LU8denRg" name="sprawlRoads" type="_xHylUKxuEeO4B8LU8denRg" association="_96zk0KxuEeO4B8LU8denRg">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_96zk0axuEeO4B8LU8denRg" name="sprawlRoads" type="_xHylUKxuEeO4B8LU8denRg" aggregation="composite" association="_96zk0KxuEeO4B8LU8denRg">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_96zk0qxuEeO4B8LU8denRg" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_96zk06xuEeO4B8LU8denRg" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_96yWsKxuEeO4B8LU8denRg" name="anim" type="_wzcR8BvfEeOjmZiRzPqkag" association="_96zk0KxuEeO4B8LU8denRg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_96yWsaxuEeO4B8LU8denRg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_96yWsqxuEeO4B8LU8denRg" value="1"/>
         </ownedEnd>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_bCbQsKxuEeO4B8LU8denRg" name="Roads">
@@ -167,22 +155,27 @@
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DCgyYqxXEeOgHYIEg56prw" value="1"/>
         </ownedAttribute>
       </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Qd4DYBvgEeOjmZiRzPqkag" name="Age"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_7XwvkO51EeO00oyT07T5Aw" name="Scenario View">
+      <packagedElement xmi:type="uml:Class" xmi:id="_wzcR8BvfEeOjmZiRzPqkag" name="Urbe"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_oZj14BvfEeOjmZiRzPqkag" name="Sprawl"/>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_rIZasBvfEeOjmZiRzPqkag">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rJiqMBvfEeOjmZiRzPqkag" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="../profile/DSL3S.profile.uml#_Au1RkBWTEeOwad1GzWDyLw"/>
+        <references xmi:type="ecore:EPackage" href="../profile/DSL3S.profile.uml#_nftbUO5aEeO00oyT07T5Aw"/>
       </eAnnotations>
       <appliedProfile xmi:type="uml:Profile" href="../profile/DSL3S.profile.uml#_bf7O0CBZEeKpfttodweVYA"/>
     </profileApplication>
   </uml:Model>
   <DSL3S:Simulation xmi:id="_sNpLgBvfEeOjmZiRzPqkag" base_Class="_oZj14BvfEeOjmZiRzPqkag" simulName="Sprawl" spaceHeight="100" spaceWidth="100"/>
   <DSL3S:Animat xmi:id="_yQOZABvfEeOjmZiRzPqkag" initNum="1" base_Class="_wzcR8BvfEeOjmZiRzPqkag" colourMin="0,255,255" colourMax="255,0,0"/>
-  <DSL3S:State xmi:id="_SB-6cBvgEeOjmZiRzPqkag" base_Class="_Qd4DYBvgEeOjmZiRzPqkag" maxValue="100" stepVariation="-1" display="true" initValue="100"/>
+  <DSL3S:Attribute xmi:id="_SB-6cBvgEeOjmZiRzPqkag" base_Class="_Qd4DYBvgEeOjmZiRzPqkag" maxValue="100" stepVariation="-1" display="true" initValue="100"/>
   <DSL3S:Global xmi:id="_kNAgcBvgEeOjmZiRzPqkag" base_Class="_h0JLoBvgEeOjmZiRzPqkag" maxValue="100" stepVariation="-1" initValue="100"/>
   <DSL3S:Emerge xmi:id="_6qs1gBvgEeOjmZiRzPqkag" probability="8" base_Class="_1ILoIBvgEeOjmZiRzPqkag"/>
   <DSL3S:Emerge xmi:id="_IHkDQBvhEeOjmZiRzPqkag" probability="0.1" scope="1.4" required="true" base_Class="_Byn6cBvhEeOjmZiRzPqkag"/>
-  <DSL3S:Environment xmi:id="_GUlnIKxXEeOgHYIEg56prw" base_Class="__2C2YKxWEeOgHYIEg56prw" maxValue="1" display="true&#xA;" initValue="1" inputLayer="data/Polygons.shp" colourMin="128,128,192" colourMax="128,128,192"/>
+  <DSL3S:Spatial xmi:id="_GUlnIKxXEeOgHYIEg56prw" base_Class="__2C2YKxWEeOgHYIEg56prw" maxValue="1" display="true&#xA;" initValue="1" inputLayer="data/Polygons.shp" colourMin="128,128,192" colourMax="128,128,192"/>
   <DSL3S:Emerge xmi:id="_jn-osKxXEeOgHYIEg56prw" probability="-100" scope="1.4" base_Class="_RoHJ0KxXEeOgHYIEg56prw"/>
-  <DSL3S:Environment xmi:id="_fgGV4KxuEeO4B8LU8denRg" base_Class="_bCbQsKxuEeO4B8LU8denRg" maxValue="1" display="true" initValue="1" inputLayer="data/Lines.shp" colourMin="192,192,64" colourMax="192,192,64"/>
+  <DSL3S:Spatial xmi:id="_fgGV4KxuEeO4B8LU8denRg" base_Class="_bCbQsKxuEeO4B8LU8denRg" maxValue="1" display="true" initValue="1" inputLayer="data/Lines.shp" colourMin="192,192,64" colourMax="192,192,64"/>
   <DSL3S:Emerge xmi:id="_FxkFsKxvEeO4B8LU8denRg" probability="10" scope="1.4" base_Class="_xHylUKxuEeO4B8LU8denRg"/>
 </xmi:XMI>
