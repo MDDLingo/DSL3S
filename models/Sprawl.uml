@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DSL3S="http:///schemas/DSL3S/_nY3zgO5aEeO00oyT07T5Aw/25" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http:///schemas/DSL3S/_nY3zgO5aEeO00oyT07T5Aw/25 ../profile/DSL3S.profile.uml#_nftbUO5aEeO00oyT07T5Aw">
   <uml:Model xmi:id="_h-B84BvfEeOjmZiRzPqkag" name="model">
-    <packagedElement xmi:type="uml:Package" xmi:id="_jtERkBvfEeOjmZiRzPqkag" name="SimulationView">
+    <packagedElement xmi:type="uml:Package" xmi:id="_jtERkBvfEeOjmZiRzPqkag" name="Simulation View">
       <packagedElement xmi:type="uml:Association" xmi:id="_3ro40BvfEeOjmZiRzPqkag" name="anim_sprawl_0" memberEnd="_3ro40RvfEeOjmZiRzPqkag _3rnDoBvfEeOjmZiRzPqkag">
         <ownedEnd xmi:type="uml:Property" xmi:id="_3ro40RvfEeOjmZiRzPqkag" name="anim" type="_wzcR8BvfEeOjmZiRzPqkag" aggregation="shared" association="_3ro40BvfEeOjmZiRzPqkag">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3ro40xvfEeOjmZiRzPqkag" value="1"/>
@@ -56,7 +56,7 @@
         </ownedEnd>
       </packagedElement>
     </packagedElement>
-    <packagedElement xmi:type="uml:Package" xmi:id="_l1DRwBvfEeOjmZiRzPqkag" name="SprawlView">
+    <packagedElement xmi:type="uml:Package" xmi:id="_l1DRwBvfEeOjmZiRzPqkag" name="Sprawl View">
       <packagedElement xmi:type="uml:Class" xmi:id="_1ILoIBvgEeOjmZiRzPqkag" name="SprawlSpeed"/>
       <packagedElement xmi:type="uml:Association" xmi:id="_7CXHkBvgEeOjmZiRzPqkag" name="sprawlSpeed_speed_0" memberEnd="_7CXHkRvgEeOjmZiRzPqkag _7CWggBvgEeOjmZiRzPqkag">
         <ownedEnd xmi:type="uml:Property" xmi:id="_7CXHkRvgEeOjmZiRzPqkag" name="sprawlSpeed" type="_1ILoIBvgEeOjmZiRzPqkag" association="_7CXHkBvgEeOjmZiRzPqkag">
