@@ -56,7 +56,7 @@
         </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_zU59IO5ZEeO00oyT07T5Aw" name="predEnergy_predator_1" memberEnd="_zU59Ie5ZEeO00oyT07T5Aw _zU4vAO5ZEeO00oyT07T5Aw">
-        <ownedEnd xmi:type="uml:Property" xmi:id="_zU59Ie5ZEeO00oyT07T5Aw" name="predEnergy" type="_xwF7cO5ZEeO00oyT07T5Aw" association="_zU59IO5ZEeO00oyT07T5Aw">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_zU59Ie5ZEeO00oyT07T5Aw" name="predEnergy" type="_xwF7cO5ZEeO00oyT07T5Aw" aggregation="composite" association="_zU59IO5ZEeO00oyT07T5Aw">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zU59Iu5ZEeO00oyT07T5Aw" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zU59I-5ZEeO00oyT07T5Aw" value="1"/>
         </ownedEnd>
@@ -100,7 +100,7 @@
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_3R_AABViEeKKubxyzHq1vA" name="Pasture"/>
       <packagedElement xmi:type="uml:Association" xmi:id="_1OmQYO5eEeO00oyT07T5Aw" name="pasture_sim_1" memberEnd="_1OmQYe5eEeO00oyT07T5Aw _1OlpUO5eEeO00oyT07T5Aw">
-        <ownedEnd xmi:type="uml:Property" xmi:id="_1OmQYe5eEeO00oyT07T5Aw" name="pasture" type="_3R_AABViEeKKubxyzHq1vA" association="_1OmQYO5eEeO00oyT07T5Aw">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_1OmQYe5eEeO00oyT07T5Aw" name="pasture" type="_3R_AABViEeKKubxyzHq1vA" aggregation="composite" association="_1OmQYO5eEeO00oyT07T5Aw">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1OmQYu5eEeO00oyT07T5Aw" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1OmQY-5eEeO00oyT07T5Aw" value="1"/>
         </ownedEnd>
@@ -231,13 +231,13 @@
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jtauFe5dEeO00oyT07T5Aw" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jtauFu5dEeO00oyT07T5Aw" value="1"/>
         </ownedEnd>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_jtauEO5dEeO00oyT07T5Aw" name="preyEnergy" type="_cC-QABVtEeKKubxyzHq1vA" association="_jtauE-5dEeO00oyT07T5Aw">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_jtauEO5dEeO00oyT07T5Aw" name="preyEnergy" type="_cC-QABVtEeKKubxyzHq1vA" aggregation="composite" association="_jtauE-5dEeO00oyT07T5Aw">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jtauEe5dEeO00oyT07T5Aw" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jtauEu5dEeO00oyT07T5Aw" value="1"/>
         </ownedEnd>
       </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_svBmk-5fEeO00oyT07T5Aw" name="prey_sim_1" memberEnd="_svBmlO5fEeO00oyT07T5Aw _svBmkO5fEeO00oyT07T5Aw">
-        <ownedEnd xmi:type="uml:Property" xmi:id="_svBmlO5fEeO00oyT07T5Aw" name="prey" type="_z1g5IBViEeKKubxyzHq1vA" association="_svBmk-5fEeO00oyT07T5Aw">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_svBmlO5fEeO00oyT07T5Aw" name="prey" type="_z1g5IBViEeKKubxyzHq1vA" aggregation="shared" association="_svBmk-5fEeO00oyT07T5Aw">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_svBmle5fEeO00oyT07T5Aw" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_svBmlu5fEeO00oyT07T5Aw" value="1"/>
         </ownedEnd>
@@ -247,7 +247,7 @@
         </ownedEnd>
       </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_tLBmE-5fEeO00oyT07T5Aw" name="predator_sim_1" memberEnd="_tLBmFO5fEeO00oyT07T5Aw _tLBmEO5fEeO00oyT07T5Aw">
-        <ownedEnd xmi:type="uml:Property" xmi:id="_tLBmFO5fEeO00oyT07T5Aw" name="predator" type="_ui_PkBViEeKKubxyzHq1vA" association="_tLBmE-5fEeO00oyT07T5Aw">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_tLBmFO5fEeO00oyT07T5Aw" name="predator" type="_ui_PkBViEeKKubxyzHq1vA" aggregation="shared" association="_tLBmE-5fEeO00oyT07T5Aw">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tLBmFe5fEeO00oyT07T5Aw" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tLBmFu5fEeO00oyT07T5Aw" value="1"/>
         </ownedEnd>

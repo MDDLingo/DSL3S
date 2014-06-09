@@ -159,7 +159,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eG9WfhVsEeKKubxyzHq1vA"/>
           </children>
           <element xmi:type="uml:Class" href="PredatorPrey.uml#_ui_PkBViEeKKubxyzHq1vA"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eG8vYRVsEeKKubxyzHq1vA" x="14" y="14" width="125" height="126"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eG8vYRVsEeKKubxyzHq1vA" x="10" y="9" width="125" height="126"/>
         </children>
         <children xmi:type="notation:Shape" xmi:id="_utlKcBVsEeKKubxyzHq1vA" type="2008" fontName="Ubuntu" fontHeight="11" lineColor="0">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_utmYkBVsEeKKubxyzHq1vA" source="ShadowFigure">
@@ -205,7 +205,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_utm_rxVsEeKKubxyzHq1vA"/>
           </children>
           <element xmi:type="uml:Class" href="PredatorPrey.uml#_utXvEBVsEeKKubxyzHq1vA"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_utlKcRVsEeKKubxyzHq1vA" x="392" y="14" width="136" height="138"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_utlKcRVsEeKKubxyzHq1vA" x="233" y="9" width="142" height="138"/>
         </children>
         <children xmi:type="notation:Shape" xmi:id="_EuRacBVtEeKKubxyzHq1vA" type="2008" fontName="Ubuntu" fontHeight="11" lineColor="0">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_EuRachVtEeKKubxyzHq1vA" source="ShadowFigure">
@@ -244,7 +244,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EuTPqRVtEeKKubxyzHq1vA"/>
           </children>
           <element xmi:type="uml:Class" href="PredatorPrey.uml#_EuL64BVtEeKKubxyzHq1vA"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EuRacRVtEeKKubxyzHq1vA" x="384" y="199" width="144" height="108"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EuRacRVtEeKKubxyzHq1vA" x="233" y="183" width="142" height="108"/>
         </children>
         <children xmi:type="notation:Shape" xmi:id="_xwHJkO5ZEeO00oyT07T5Aw" type="3010" fontName="Ubuntu" fontHeight="11">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JpTMQO5aEeO00oyT07T5Aw" source="Stereotype_Annotation">
@@ -274,13 +274,13 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xwHwpO5ZEeO00oyT07T5Aw"/>
           </children>
           <element xmi:type="uml:Class" href="PredatorPrey.uml#_xwF7cO5ZEeO00oyT07T5Aw"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xwHJke5ZEeO00oyT07T5Aw" x="181" y="14" width="162"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xwHJke5ZEeO00oyT07T5Aw" x="10" y="183" width="162" height="153"/>
         </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_fjN35K0JEeOwIOVcIgmabQ"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fjN35a0JEeOwIOVcIgmabQ"/>
       </children>
       <element xmi:type="uml:Package" href="PredatorPrey.uml#_fjLboK0JEeOwIOVcIgmabQ"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fjN34a0JEeOwIOVcIgmabQ" x="9" y="11" width="548" height="352"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fjN34a0JEeOwIOVcIgmabQ" x="-140" y="-15" width="394" height="381"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_cmtEoRVsEeKKubxyzHq1vA"/>
     <element xmi:type="uml:Model" href="PredatorPrey.uml#_uoB9EBVhEeKfCYUGa0wThA"/>
@@ -305,7 +305,7 @@
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_zU6kMe5ZEeO00oyT07T5Aw"/>
       <element xmi:type="uml:Association" href="PredatorPrey.uml#_zU59IO5ZEeO00oyT07T5Aw"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_zU6kMu5ZEeO00oyT07T5Aw" points="[-1, 0, 65, -16]$[-43, 0, 23, -16]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_zU6kMu5ZEeO00oyT07T5Aw" points="[66, -76, -35, 81]$[66, -124, -35, 33]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_zVKb0O5ZEeO00oyT07T5Aw" id="(0.006172839506172839,0.4967741935483871)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_zVKb0e5ZEeO00oyT07T5Aw" id="(0.82,0.74)"/>
     </edges>
@@ -323,7 +323,7 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_z3klWu5ZEeO00oyT07T5Aw" y="20"/>
       </children>
       <children xmi:type="notation:DecorationNode" xmi:id="_z3klW-5ZEeO00oyT07T5Aw" type="6033">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_z3klXO5ZEeO00oyT07T5Aw" x="7" y="20"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_z3klXO5ZEeO00oyT07T5Aw" x="-3" y="21"/>
       </children>
       <children xmi:type="notation:DecorationNode" xmi:id="_z3lMYO5ZEeO00oyT07T5Aw" type="6034">
         <layoutConstraint xmi:type="notation:Location" xmi:id="_z3lMYe5ZEeO00oyT07T5Aw" y="-20"/>
@@ -347,14 +347,14 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_0Ut0Ue5ZEeO00oyT07T5Aw" y="20"/>
       </children>
       <children xmi:type="notation:DecorationNode" xmi:id="_0Ut0Uu5ZEeO00oyT07T5Aw" type="6033">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_0Ut0U-5ZEeO00oyT07T5Aw" y="20"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_0Ut0U-5ZEeO00oyT07T5Aw" x="8" y="20"/>
       </children>
       <children xmi:type="notation:DecorationNode" xmi:id="_0Ut0VO5ZEeO00oyT07T5Aw" type="6034">
         <layoutConstraint xmi:type="notation:Location" xmi:id="_0Ut0Ve5ZEeO00oyT07T5Aw" y="-20"/>
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_0UtNQe5ZEeO00oyT07T5Aw"/>
       <element xmi:type="uml:Association" href="PredatorPrey.uml#_0Ur_IO5ZEeO00oyT07T5Aw"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_0UtNQu5ZEeO00oyT07T5Aw" points="[-4, -2, 113, 70]$[-114, -22, 3, 50]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_0UtNQu5ZEeO00oyT07T5Aw" points="[-4, 12, 138, -17]$[-61, 12, 81, -17]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0U6BkO5ZEeO00oyT07T5Aw" id="(0.027777777777777776,0.4351851851851852)"/>
     </edges>
   </notation:Diagram>
@@ -858,7 +858,7 @@
           </children>
           <styles xmi:type="notation:BooleanValueStyle" xmi:id="_d_NuwO5VEeO00oyT07T5Aw" name="shape_visibility" booleanValue="true"/>
           <element xmi:type="uml:Class" href="PredatorPrey.uml#_z1g5IBViEeKKubxyzHq1vA"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_f6I_0e5UEeO00oyT07T5Aw" x="185" y="10"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_f6I_0e5UEeO00oyT07T5Aw" x="169" y="9"/>
         </children>
         <children xmi:type="notation:Shape" xmi:id="_gYAAgO5UEeO00oyT07T5Aw" type="2008" fontName="Ubuntu" fontHeight="11">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_2BLEMO5bEeO00oyT07T5Aw" source="Stereotype_Annotation">
@@ -888,7 +888,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gYAnlO5UEeO00oyT07T5Aw"/>
           </children>
           <element xmi:type="uml:Class" href="PredatorPrey.uml#_ui_PkBViEeKKubxyzHq1vA"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gYAAge5UEeO00oyT07T5Aw" x="185" y="154"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gYAAge5UEeO00oyT07T5Aw" x="169" y="143"/>
         </children>
         <children xmi:type="notation:Shape" xmi:id="_hTZ30O5fEeO00oyT07T5Aw" type="2008" fontName="Ubuntu" fontHeight="11">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_sA-NwO5fEeO00oyT07T5Aw" source="Stereotype_Annotation">
@@ -918,13 +918,13 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hTZ34e5fEeO00oyT07T5Aw"/>
           </children>
           <element xmi:type="uml:Class" href="PredatorPrey.uml#_vaEtAO5eEeO00oyT07T5Aw"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hTZ30e5fEeO00oyT07T5Aw" x="15" y="11"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hTZ30e5fEeO00oyT07T5Aw" x="12" y="9"/>
         </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_Y2J_se5UEeO00oyT07T5Aw"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Y2J_su5UEeO00oyT07T5Aw"/>
       </children>
       <element xmi:type="uml:Package" href="PredatorPrey.uml#_Y2G8YO5UEeO00oyT07T5Aw"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Y2JYoe5UEeO00oyT07T5Aw" x="26" y="22" width="309" height="309"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Y2JYoe5UEeO00oyT07T5Aw" x="26" y="22" width="290" height="286"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_Xxh58e5UEeO00oyT07T5Aw"/>
     <element xmi:type="uml:Model" href="PredatorPrey.uml#_uoB9EBVhEeKfCYUGa0wThA"/>
@@ -1008,7 +1008,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FaFH4O5cEeO00oyT07T5Aw"/>
           </children>
           <element xmi:type="uml:Class" href="PredatorPrey.uml#_5U5KkBVwEeKKubxyzHq1vA"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FaDSse5cEeO00oyT07T5Aw" x="295" y="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FaDSse5cEeO00oyT07T5Aw" x="356" y="32"/>
         </children>
         <children xmi:type="notation:Shape" xmi:id="_J954YO5cEeO00oyT07T5Aw" type="2008" fontName="Ubuntu" fontHeight="11">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1DC9IO5dEeO00oyT07T5Aw" source="Stereotype_Annotation">
@@ -1038,7 +1038,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_J96ff-5cEeO00oyT07T5Aw"/>
           </children>
           <element xmi:type="uml:Class" href="PredatorPrey.uml#_euFOkBVxEeKKubxyzHq1vA"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_J954Ye5cEeO00oyT07T5Aw" x="181" y="163" width="155"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_J954Ye5cEeO00oyT07T5Aw" x="209" y="299" width="155"/>
         </children>
         <children xmi:type="notation:Shape" xmi:id="_MYKUUO5cEeO00oyT07T5Aw" type="2008" fontName="Ubuntu" fontHeight="11">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_953M0O5dEeO00oyT07T5Aw" source="Stereotype_Annotation">
@@ -1068,7 +1068,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MYK7bu5cEeO00oyT07T5Aw"/>
           </children>
           <element xmi:type="uml:Class" href="PredatorPrey.uml#_cC-QABVtEeKKubxyzHq1vA"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MYKUUe5cEeO00oyT07T5Aw" x="567" y="163" width="109"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MYKUUe5cEeO00oyT07T5Aw" x="454" y="308" width="109"/>
         </children>
         <children xmi:type="notation:Shape" xmi:id="_O9nToO5cEeO00oyT07T5Aw" type="2008" fontName="Ubuntu" fontHeight="11">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3Tk1UO5dEeO00oyT07T5Aw" source="Stereotype_Annotation">
@@ -1098,7 +1098,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_O9nTse5cEeO00oyT07T5Aw"/>
           </children>
           <element xmi:type="uml:Class" href="PredatorPrey.uml#_Jam8oBohEeKN07hQpA-1_g"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_O9nToe5cEeO00oyT07T5Aw" x="291" y="298"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_O9nToe5cEeO00oyT07T5Aw" x="121" y="5" width="119"/>
         </children>
         <children xmi:type="notation:Shape" xmi:id="_Xf76AO5cEeO00oyT07T5Aw" type="3010" fontName="Ubuntu" fontHeight="11">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_bHyKcO5cEeO00oyT07T5Aw" source="Stereotype_Annotation">
@@ -1128,7 +1128,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Xf8hH-5cEeO00oyT07T5Aw"/>
           </children>
           <element xmi:type="uml:Class" href="PredatorPrey.uml#_Xf6r4O5cEeO00oyT07T5Aw"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Xf76Ae5cEeO00oyT07T5Aw" x="394" y="163" width="123"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Xf76Ae5cEeO00oyT07T5Aw" x="225" y="154" width="123"/>
         </children>
         <children xmi:type="notation:Shape" xmi:id="_iOEQoO5cEeO00oyT07T5Aw" type="2008" fontName="Ubuntu" fontHeight="11">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_-vzWUO5dEeO00oyT07T5Aw" source="Stereotype_Annotation">
@@ -1158,7 +1158,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iOE3ue5cEeO00oyT07T5Aw"/>
           </children>
           <element xmi:type="uml:Class" href="PredatorPrey.uml#_z1g5IBViEeKKubxyzHq1vA"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iOEQoe5cEeO00oyT07T5Aw" x="576" y="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iOEQoe5cEeO00oyT07T5Aw" x="463" y="154"/>
         </children>
         <children xmi:type="notation:Shape" xmi:id="_ikd-cO5cEeO00oyT07T5Aw" type="2008" fontName="Ubuntu" fontHeight="11">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6hZcMO5dEeO00oyT07T5Aw" source="Stereotype_Annotation">
@@ -1188,7 +1188,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ikfMlO5cEeO00oyT07T5Aw"/>
           </children>
           <element xmi:type="uml:Class" href="PredatorPrey.uml#_ui_PkBViEeKKubxyzHq1vA"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ikd-ce5cEeO00oyT07T5Aw" x="15" y="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ikd-ce5cEeO00oyT07T5Aw" x="32" y="154"/>
         </children>
         <children xmi:type="notation:Shape" xmi:id="_k8gz4O5cEeO00oyT07T5Aw" type="2008" fontName="Ubuntu" fontHeight="11">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5vDZQO5dEeO00oyT07T5Aw" source="Stereotype_Annotation">
@@ -1218,13 +1218,13 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_k8ha9O5cEeO00oyT07T5Aw"/>
           </children>
           <element xmi:type="uml:Class" href="PredatorPrey.uml#_xwF7cO5ZEeO00oyT07T5Aw"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_k8gz4e5cEeO00oyT07T5Aw" x="13" y="163" width="112"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_k8gz4e5cEeO00oyT07T5Aw" x="32" y="308" width="112"/>
         </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_B4DLlO5cEeO00oyT07T5Aw"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_B4DLle5cEeO00oyT07T5Aw"/>
       </children>
       <element xmi:type="uml:Package" href="PredatorPrey.uml#_B4B9cO5cEeO00oyT07T5Aw"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_B4DLke5cEeO00oyT07T5Aw" x="26" y="24" width="727" height="453"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_B4DLke5cEeO00oyT07T5Aw" x="26" y="24" width="584" height="452"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_AN8aMe5cEeO00oyT07T5Aw"/>
     <element xmi:type="uml:Model" href="PredatorPrey.uml#_uoB9EBVhEeKfCYUGa0wThA"/>
@@ -1245,11 +1245,11 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_nMYkxe5cEeO00oyT07T5Aw" y="20"/>
       </children>
       <children xmi:type="notation:DecorationNode" xmi:id="_nMYkxu5cEeO00oyT07T5Aw" type="6034">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_nMYkx-5cEeO00oyT07T5Aw" y="-11"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_nMYkx-5cEeO00oyT07T5Aw" x="17" y="-14"/>
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_nMX9se5cEeO00oyT07T5Aw"/>
       <element xmi:type="uml:Association" href="PredatorPrey.uml#_K49BwBVyEeKKubxyzHq1vA"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_nMX9su5cEeO00oyT07T5Aw" points="[50, 1, -175, -127]$[194, 1, -31, -127]$[194, 129, -31, 1]$[222, 129, -3, 1]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_nMX9su5cEeO00oyT07T5Aw" points="[27, 55, -54, -201]$[27, 262, -54, 6]$[78, 262, -3, 6]"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_VAzTMO5eEeO00oyT07T5Aw" id="(0.03,0.2909090909090909)"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_n5W_gO5cEeO00oyT07T5Aw" type="4001" source="_J954YO5cEeO00oyT07T5Aw" target="_Xf76AO5cEeO00oyT07T5Aw">
@@ -1296,7 +1296,7 @@
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_tT8_8e5cEeO00oyT07T5Aw"/>
       <element xmi:type="uml:Association" href="PredatorPrey.uml#_lhtPoN0ZEeO3X9w9Cy58AA"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_tT8_8u5cEeO00oyT07T5Aw" points="[54, 7, -227, 293]$[356, 7, 75, 293]$[356, -283, 75, 3]$[331, -283, 50, 3]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_tT8_8u5cEeO00oyT07T5Aw" points="[60, -40, -268, -187]$[328, -40, 0, -187]$[328, 97, 0, -50]"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_7BwzwO5cEeO00oyT07T5Aw" type="4001" source="_MYKUUO5cEeO00oyT07T5Aw" target="_Xf76AO5cEeO00oyT07T5Aw" routing="Rectilinear">
       <children xmi:type="notation:DecorationNode" xmi:id="_7Bxa0O5cEeO00oyT07T5Aw" type="6001">
@@ -1315,15 +1315,15 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_7Bxa2e5cEeO00oyT07T5Aw" x="11" y="21"/>
       </children>
       <children xmi:type="notation:DecorationNode" xmi:id="_7Bxa2u5cEeO00oyT07T5Aw" type="6034">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_7Bxa2-5cEeO00oyT07T5Aw" y="-20"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_7Bxa2-5cEeO00oyT07T5Aw" x="20" y="-13"/>
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_7Bwzwe5cEeO00oyT07T5Aw"/>
       <element xmi:type="uml:Association" href="PredatorPrey.uml#_7BvloO5cEeO00oyT07T5Aw"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_7Bwzwu5cEeO00oyT07T5Aw" points="[-50, -2, 71, 0]$[-74, -2, 47, 0]$[-102, -2, 19, 0]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kKFmgO5eEeO00oyT07T5Aw" id="(0.027522935779816515,0.7181818181818181)"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_7Bwzwu5cEeO00oyT07T5Aw" points="[-2, 6, 112, 156]$[-67, 6, 47, 156]$[-67, -156, 47, -6]$[-108, -156, 6, -6]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kKFmgO5eEeO00oyT07T5Aw" id="(0.01834862385321101,0.78)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_7B-PIO5cEeO00oyT07T5Aw" id="(0.9512195121951219,0.8)"/>
     </edges>
-    <edges xmi:type="notation:Connector" xmi:id="_8g3PAO5cEeO00oyT07T5Aw" type="4001" source="_FaDSsO5cEeO00oyT07T5Aw" target="_ikd-cO5cEeO00oyT07T5Aw">
+    <edges xmi:type="notation:Connector" xmi:id="_8g3PAO5cEeO00oyT07T5Aw" type="4001" source="_FaDSsO5cEeO00oyT07T5Aw" target="_ikd-cO5cEeO00oyT07T5Aw" routing="Rectilinear">
       <children xmi:type="notation:DecorationNode" xmi:id="_8g3PA-5cEeO00oyT07T5Aw" type="6001">
         <layoutConstraint xmi:type="notation:Location" xmi:id="_8g3PBO5cEeO00oyT07T5Aw" y="-20"/>
       </children>
@@ -1344,7 +1344,7 @@
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_8g3PAe5cEeO00oyT07T5Aw"/>
       <element xmi:type="uml:Association" href="PredatorPrey.uml#_ob8TgN0WEeO3X9w9Cy58AA"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_8g3PAu5cEeO00oyT07T5Aw" points="[-50, -8, 230, 0]$[-230, 0, 50, 8]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_8g3PAu5cEeO00oyT07T5Aw" points="[-50, -5, 273, -117]$[-109, -5, 214, -117]$[-109, 39, 214, -73]$[-325, 39, -2, -73]$[-325, 62, -2, -50]"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_9Jvz8O5cEeO00oyT07T5Aw" type="4001" source="_k8gz4O5cEeO00oyT07T5Aw" target="_ikd-cO5cEeO00oyT07T5Aw">
       <children xmi:type="notation:DecorationNode" xmi:id="_9Jvz8-5cEeO00oyT07T5Aw" type="6001">
@@ -1369,7 +1369,7 @@
       <element xmi:type="uml:Association" href="PredatorPrey.uml#_zU59IO5ZEeO00oyT07T5Aw"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9Jvz8u5cEeO00oyT07T5Aw" points="[2, -50, 0, 86]$[0, -86, -2, 50]"/>
     </edges>
-    <edges xmi:type="notation:Connector" xmi:id="_O31mUO5dEeO00oyT07T5Aw" type="4001" source="_O9nToO5cEeO00oyT07T5Aw" target="_k8gz4O5cEeO00oyT07T5Aw">
+    <edges xmi:type="notation:Connector" xmi:id="_O31mUO5dEeO00oyT07T5Aw" type="4001" source="_O9nToO5cEeO00oyT07T5Aw" target="_k8gz4O5cEeO00oyT07T5Aw" routing="Rectilinear">
       <children xmi:type="notation:DecorationNode" xmi:id="_O32NYO5dEeO00oyT07T5Aw" type="6001">
         <layoutConstraint xmi:type="notation:Location" xmi:id="_O32NYe5dEeO00oyT07T5Aw" y="-20"/>
       </children>
@@ -1390,7 +1390,7 @@
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_O31mUe5dEeO00oyT07T5Aw"/>
       <element xmi:type="uml:Association" href="PredatorPrey.uml#_O30YM-5dEeO00oyT07T5Aw"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_O31mUu5dEeO00oyT07T5Aw" points="[-12, 0, 226, 141]$[-238, 0, 0, 141]$[-238, -91, 0, 50]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_O31mUu5dEeO00oyT07T5Aw" points="[-14, -10, 40, -298]$[-127, -10, -73, -298]$[-127, 290, -73, 2]$[-110, 290, -56, 2]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_O4GsEO5dEeO00oyT07T5Aw" id="(0.12,0.57)"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_TTLwQO5dEeO00oyT07T5Aw" type="4001" source="_k8gz4O5cEeO00oyT07T5Aw" target="_J954YO5cEeO00oyT07T5Aw">
