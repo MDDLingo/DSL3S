@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DSL3S="http:///schemas/DSL3S/_nY3zgO5aEeO00oyT07T5Aw/25" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http:///schemas/DSL3S/_nY3zgO5aEeO00oyT07T5Aw/25 ../profile/DSL3S.profile.uml#_nftbUO5aEeO00oyT07T5Aw">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DSL3S="http:///schemas/DSL3S/_DCacAPDEEeOA5dbinY6UPQ/26" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http:///schemas/DSL3S/_DCacAPDEEeOA5dbinY6UPQ/26 ../profile/DSL3S.profile.uml#_Djd6oPDEEeOA5dbinY6UPQ">
   <notation:Diagram xmi:id="_uoxj8BVhEeKfCYUGa0wThA" type="PapyrusUMLClassDiagram" name="SimulationView" measurementUnit="Pixel">
-    <children xmi:type="notation:Shape" xmi:id="_qURcIK0IEeOwIOVcIgmabQ" type="2007" fontHeight="11">
+    <children xmi:type="notation:Shape" xmi:id="_qURcIK0IEeOwIOVcIgmabQ" type="2007" fontName="Arial" fontHeight="11">
       <children xmi:type="notation:DecorationNode" xmi:id="_qURcIq0IEeOwIOVcIgmabQ" type="5026">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__Z08wK0MEeOwIOVcIgmabQ" source="QualifiedName">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__Z08wa0MEeOwIOVcIgmabQ" key="QualifiedNameDepth" value="0"/>
         </eAnnotations>
       </children>
       <children xmi:type="notation:DecorationNode" xmi:id="_qURcI60IEeOwIOVcIgmabQ" type="7016">
-        <children xmi:type="notation:Shape" xmi:id="_3SA1MBViEeKKubxyzHq1vA" type="2008" fontName="Ubuntu" fontHeight="11" lineColor="0">
+        <children xmi:type="notation:Shape" xmi:id="_3SA1MBViEeKKubxyzHq1vA" type="2008" fontName="Arial" fontHeight="11" lineColor="0">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3SCDUBViEeKKubxyzHq1vA" source="ShadowFigure">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3SCDURViEeKKubxyzHq1vA" key="ShadowFigure_Value" value="false"/>
           </eAnnotations>
@@ -45,9 +45,9 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3SD4iRViEeKKubxyzHq1vA"/>
           </children>
           <element xmi:type="uml:Class" href="PredatorPrey.uml#_3R_AABViEeKKubxyzHq1vA"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3SA1MRViEeKKubxyzHq1vA" x="215" y="11" width="199" height="138"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3SA1MRViEeKKubxyzHq1vA" x="183" y="7" width="199" height="138"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_vaF7IO5eEeO00oyT07T5Aw" type="3010" fontName="Ubuntu" fontHeight="11">
+        <children xmi:type="notation:Shape" xmi:id="_vaF7IO5eEeO00oyT07T5Aw" type="3010" fontName="Arial" fontHeight="11">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_z5mMUO5eEeO00oyT07T5Aw" source="Stereotype_Annotation">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_SnQMcO5fEeO00oyT07T5Aw" key="StereotypeWithQualifiedNameList" value=""/>
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_SnQMce5fEeO00oyT07T5Aw" key="StereotypeList" value="DSL3S::Simulation"/>
@@ -75,13 +75,13 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vaGiNO5eEeO00oyT07T5Aw"/>
           </children>
           <element xmi:type="uml:Class" href="PredatorPrey.uml#_vaEtAO5eEeO00oyT07T5Aw"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vaF7Ie5eEeO00oyT07T5Aw" x="14" y="11" width="125"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vaF7Ie5eEeO00oyT07T5Aw" x="8" y="7" width="125"/>
         </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_qURcJK0IEeOwIOVcIgmabQ"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qURcJa0IEeOwIOVcIgmabQ"/>
       </children>
       <element xmi:type="uml:Package" href="PredatorPrey.uml#_qTq_MK0IEeOwIOVcIgmabQ"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qURcIa0IEeOwIOVcIgmabQ" x="19" y="5" width="437" height="197"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qURcIa0IEeOwIOVcIgmabQ" x="19" y="5" width="401" height="189"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_uoxj8RVhEeKfCYUGa0wThA"/>
     <element xmi:type="uml:Model" href="PredatorPrey.uml#_uoB9EBVhEeKfCYUGa0wThA"/>
@@ -106,13 +106,13 @@
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_1OoFke5eEeO00oyT07T5Aw"/>
       <element xmi:type="uml:Association" href="PredatorPrey.uml#_1OmQYO5eEeO00oyT07T5Aw"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_1OoFku5eEeO00oyT07T5Aw" points="[-32, 9, 99, 32]$[-108, 9, 23, 32]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_1OoFku5eEeO00oyT07T5Aw" points="[-32, 7, 73, 29]$[-82, 7, 23, 29]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_1O3WIO5eEeO00oyT07T5Aw" id="(0.16080402010050251,0.3695652173913043)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_1O3WIe5eEeO00oyT07T5Aw" id="(0.82,0.25961538461538464)"/>
     </edges>
   </notation:Diagram>
   <notation:Diagram xmi:id="_cmtEoBVsEeKKubxyzHq1vA" type="PapyrusUMLClassDiagram" name="PredatorView" measurementUnit="Pixel">
-    <children xmi:type="notation:Shape" xmi:id="_fjN34K0JEeOwIOVcIgmabQ" type="2007" fontHeight="11">
+    <children xmi:type="notation:Shape" xmi:id="_fjN34K0JEeOwIOVcIgmabQ" type="2007" fontName="Arial" fontHeight="11">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1_w2EK0MEeOwIOVcIgmabQ" source="Stereotype_Annotation">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1_yEMK0MEeOwIOVcIgmabQ" key="StereotypeWithQualifiedNameList" value=""/>
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1_yEMa0MEeOwIOVcIgmabQ" key="StereotypeList" value=""/>
@@ -122,7 +122,7 @@
       </eAnnotations>
       <children xmi:type="notation:DecorationNode" xmi:id="_fjN34q0JEeOwIOVcIgmabQ" type="5026"/>
       <children xmi:type="notation:DecorationNode" xmi:id="_fjN3460JEeOwIOVcIgmabQ" type="7016">
-        <children xmi:type="notation:Shape" xmi:id="_eG8vYBVsEeKKubxyzHq1vA" type="2008" fontName="Ubuntu" fontHeight="11" lineColor="0">
+        <children xmi:type="notation:Shape" xmi:id="_eG8vYBVsEeKKubxyzHq1vA" type="2008" fontName="Arial" fontHeight="11" lineColor="0">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_eG8vYhVsEeKKubxyzHq1vA" source="ShadowFigure">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eG8vYxVsEeKKubxyzHq1vA" key="ShadowFigure_Value" value="false"/>
           </eAnnotations>
@@ -161,7 +161,7 @@
           <element xmi:type="uml:Class" href="PredatorPrey.uml#_ui_PkBViEeKKubxyzHq1vA"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eG8vYRVsEeKKubxyzHq1vA" x="10" y="9" width="125" height="126"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_utlKcBVsEeKKubxyzHq1vA" type="2008" fontName="Ubuntu" fontHeight="11" lineColor="0">
+        <children xmi:type="notation:Shape" xmi:id="_utlKcBVsEeKKubxyzHq1vA" type="2008" fontName="Arial" fontHeight="11" lineColor="0">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_utmYkBVsEeKKubxyzHq1vA" source="ShadowFigure">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_utmYkRVsEeKKubxyzHq1vA" key="ShadowFigure_Value" value="false"/>
           </eAnnotations>
@@ -207,7 +207,7 @@
           <element xmi:type="uml:Class" href="PredatorPrey.uml#_utXvEBVsEeKKubxyzHq1vA"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_utlKcRVsEeKKubxyzHq1vA" x="233" y="9" width="142" height="138"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_EuRacBVtEeKKubxyzHq1vA" type="2008" fontName="Ubuntu" fontHeight="11" lineColor="0">
+        <children xmi:type="notation:Shape" xmi:id="_EuRacBVtEeKKubxyzHq1vA" type="2008" fontName="Arial" fontHeight="11" lineColor="0">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_EuRachVtEeKKubxyzHq1vA" source="ShadowFigure">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_EuRacxVtEeKKubxyzHq1vA" key="ShadowFigure_Value" value="false"/>
           </eAnnotations>
@@ -246,7 +246,7 @@
           <element xmi:type="uml:Class" href="PredatorPrey.uml#_EuL64BVtEeKKubxyzHq1vA"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EuRacRVtEeKKubxyzHq1vA" x="233" y="183" width="142" height="108"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_xwHJkO5ZEeO00oyT07T5Aw" type="3010" fontName="Ubuntu" fontHeight="11">
+        <children xmi:type="notation:Shape" xmi:id="_xwHJkO5ZEeO00oyT07T5Aw" type="3010" fontName="Arial" fontHeight="11">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JpTMQO5aEeO00oyT07T5Aw" source="Stereotype_Annotation">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_iZBY4O5bEeO00oyT07T5Aw" key="StereotypeWithQualifiedNameList" value=""/>
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_iZBY4e5bEeO00oyT07T5Aw" key="StereotypeList" value="DSL3S::Attribute"/>
@@ -359,10 +359,10 @@
     </edges>
   </notation:Diagram>
   <notation:Diagram xmi:id="_SIKMsBVtEeKKubxyzHq1vA" type="PapyrusUMLClassDiagram" name="PreyDiagram" measurementUnit="Pixel">
-    <children xmi:type="notation:Shape" xmi:id="_GH7T0K0KEeOwIOVcIgmabQ" type="2007" fontHeight="11">
+    <children xmi:type="notation:Shape" xmi:id="_GH7T0K0KEeOwIOVcIgmabQ" type="2007" fontName="Arial" fontHeight="11">
       <children xmi:type="notation:DecorationNode" xmi:id="_GH7T0q0KEeOwIOVcIgmabQ" type="5026"/>
       <children xmi:type="notation:DecorationNode" xmi:id="_GH7T060KEeOwIOVcIgmabQ" type="7016">
-        <children xmi:type="notation:Shape" xmi:id="_cDNgkBVtEeKKubxyzHq1vA" type="2008" fontName="Ubuntu" fontHeight="11" lineColor="0">
+        <children xmi:type="notation:Shape" xmi:id="_cDNgkBVtEeKKubxyzHq1vA" type="2008" fontName="Arial" fontHeight="11" lineColor="0">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_cDNgkhVtEeKKubxyzHq1vA" source="ShadowFigure">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cDNgkxVtEeKKubxyzHq1vA" key="ShadowFigure_Value" value="false"/>
           </eAnnotations>
@@ -401,7 +401,7 @@
           <element xmi:type="uml:Class" href="PredatorPrey.uml#_cC-QABVtEeKKubxyzHq1vA"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cDNgkRVtEeKKubxyzHq1vA" x="185" y="13" width="120" height="124"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_W7Cs4BVtEeKKubxyzHq1vA" type="2008" fontName="Ubuntu" fontHeight="11" lineColor="0">
+        <children xmi:type="notation:Shape" xmi:id="_W7Cs4BVtEeKKubxyzHq1vA" type="2008" fontName="Arial" fontHeight="11" lineColor="0">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_W7DT8BVtEeKKubxyzHq1vA" source="ShadowFigure">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_W7DT8RVtEeKKubxyzHq1vA" key="ShadowFigure_Value" value="false"/>
           </eAnnotations>
@@ -412,11 +412,11 @@
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_W7DT9RVtEeKKubxyzHq1vA" key="QualifiedNameDepth" value="1000"/>
           </eAnnotations>
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KEmlAO5WEeO00oyT07T5Aw" source="Stereotype_Annotation">
-            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NdtO0O5WEeO00oyT07T5Aw" key="StereotypeWithQualifiedNameList" value=""/>
-            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NdtO0e5WEeO00oyT07T5Aw" key="StereotypeList" value="DSL3S::Animat"/>
-            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NdtO0u5WEeO00oyT07T5Aw" key="PropStereoDisplay" value="DSL3S::Animat.initNum,DSL3S::Animat.wanderer,DSL3S::Animat.inputLayer"/>
-            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NdtO0-5WEeO00oyT07T5Aw" key="Stereotype_Presentation_Kind" value="HorizontalStereo"/>
-            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NdtO1O5WEeO00oyT07T5Aw" key="StereotypePropertyLocation" value="Compartment"/>
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NI-cUPDEEeOA5dbinY6UPQ" key="StereotypeWithQualifiedNameList" value=""/>
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NI_DYPDEEeOA5dbinY6UPQ" key="StereotypeList" value="DSL3S::Animat"/>
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NI_DYfDEEeOA5dbinY6UPQ" key="PropStereoDisplay" value=",DSL3S::Animat.wanderer,DSL3S::Animat.inputLayer,DSL3S::Animat.initNum"/>
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NI_qcPDEEeOA5dbinY6UPQ" key="Stereotype_Presentation_Kind" value="HorizontalStereo"/>
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NI_qcfDEEeOA5dbinY6UPQ" key="StereotypePropertyLocation" value="Compartment"/>
           </eAnnotations>
           <children xmi:type="notation:DecorationNode" xmi:id="_W7DT9hVtEeKKubxyzHq1vA" type="5029"/>
           <children xmi:type="notation:BasicCompartment" xmi:id="_W7DT9xVtEeKKubxyzHq1vA" visible="false" type="7017">
@@ -440,7 +440,7 @@
           <element xmi:type="uml:Class" href="PredatorPrey.uml#_z1g5IBViEeKKubxyzHq1vA"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_W7Cs4RVtEeKKubxyzHq1vA" x="14" y="13" width="114"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_9RNWgBVtEeKKubxyzHq1vA" type="2008" fontName="Ubuntu" fontHeight="11" lineColor="0">
+        <children xmi:type="notation:Shape" xmi:id="_9RNWgBVtEeKKubxyzHq1vA" type="2008" fontName="Arial" fontHeight="11" lineColor="0">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_9RN9kBVtEeKKubxyzHq1vA" source="ShadowFigure">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_9RN9kRVtEeKKubxyzHq1vA" key="ShadowFigure_Value" value="false"/>
           </eAnnotations>
@@ -479,7 +479,7 @@
           <element xmi:type="uml:Class" href="PredatorPrey.uml#_9RDlgBVtEeKKubxyzHq1vA"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9RNWgRVtEeKKubxyzHq1vA" x="367" y="203" width="134" height="108"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_E6nX4BVuEeKKubxyzHq1vA" type="2008" fontName="Ubuntu" fontHeight="11" lineColor="0">
+        <children xmi:type="notation:Shape" xmi:id="_E6nX4BVuEeKKubxyzHq1vA" type="2008" fontName="Arial" fontHeight="11" lineColor="0">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_E6n-8BVuEeKKubxyzHq1vA" source="ShadowFigure">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_E6n-8RVuEeKKubxyzHq1vA" key="ShadowFigure_Value" value="false"/>
           </eAnnotations>
@@ -490,11 +490,11 @@
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_E6n-9RVuEeKKubxyzHq1vA" key="QualifiedNameDepth" value="1000"/>
           </eAnnotations>
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8nr3cO5WEeO00oyT07T5Aw" source="Stereotype_Annotation">
-            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ojTmUO5aEeO00oyT07T5Aw" key="StereotypeWithQualifiedNameList" value=""/>
-            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ojTmUe5aEeO00oyT07T5Aw" key="StereotypeList" value=""/>
-            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ojTmUu5aEeO00oyT07T5Aw" key="Stereotype_Presentation_Kind" value="HorizontalStereo"/>
-            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ojUNYO5aEeO00oyT07T5Aw" key="PropStereoDisplay" value=""/>
-            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ojUNYe5aEeO00oyT07T5Aw" key="StereotypePropertyLocation" value="Compartment"/>
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PAW0sPDEEeOA5dbinY6UPQ" key="StereotypeWithQualifiedNameList" value=""/>
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PAXbwPDEEeOA5dbinY6UPQ" key="StereotypeList" value="DSL3S::Spatial"/>
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PAXbwfDEEeOA5dbinY6UPQ" key="Stereotype_Presentation_Kind" value="HorizontalStereo"/>
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PAYC0PDEEeOA5dbinY6UPQ" key="PropStereoDisplay" value=""/>
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PAYC0fDEEeOA5dbinY6UPQ" key="StereotypePropertyLocation" value="Compartment"/>
           </eAnnotations>
           <children xmi:type="notation:DecorationNode" xmi:id="_E6n-9hVuEeKKubxyzHq1vA" type="5029"/>
           <children xmi:type="notation:BasicCompartment" xmi:id="_E6n-9xVuEeKKubxyzHq1vA" type="7017">
@@ -522,9 +522,9 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E6n_BRVuEeKKubxyzHq1vA"/>
           </children>
           <element xmi:type="uml:Class" href="PredatorPrey.uml#_3R_AABViEeKKubxyzHq1vA"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E6nX4RVuEeKKubxyzHq1vA" x="192" y="361" width="107"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E6nX4RVuEeKKubxyzHq1vA" x="192" y="361" width="107" height="104"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_4u__kO5fEeO00oyT07T5Aw" type="3010" fontName="Ubuntu" fontHeight="11">
+        <children xmi:type="notation:Shape" xmi:id="_4u__kO5fEeO00oyT07T5Aw" type="3010" fontName="Arial" fontHeight="11">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_DjyX0O5gEeO00oyT07T5Aw" source="Stereotype_Annotation">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LrbNUO5gEeO00oyT07T5Aw" key="StereotypeWithQualifiedNameList" value=""/>
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LrbNUe5gEeO00oyT07T5Aw" key="StereotypeList" value="DSL3S::Harvest"/>
@@ -554,7 +554,7 @@
           <element xmi:type="uml:Class" href="PredatorPrey.uml#_4u-xcO5fEeO00oyT07T5Aw"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4u__ke5fEeO00oyT07T5Aw" x="168" y="203" width="155"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_Y6fPoO5gEeO00oyT07T5Aw" type="3010" fontName="Ubuntu" fontHeight="11">
+        <children xmi:type="notation:Shape" xmi:id="_Y6fPoO5gEeO00oyT07T5Aw" type="3010" fontName="Arial" fontHeight="11">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_bAQCQO5gEeO00oyT07T5Aw" source="Stereotype_Annotation">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fEG5QO5gEeO00oyT07T5Aw" key="StereotypeWithQualifiedNameList" value=""/>
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fEG5Qe5gEeO00oyT07T5Aw" key="StereotypeList" value="DSL3S::Move"/>
@@ -584,7 +584,7 @@
           <element xmi:type="uml:Class" href="PredatorPrey.uml#_Y6eBgO5gEeO00oyT07T5Aw"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Y6fPoe5gEeO00oyT07T5Aw" x="14" y="203" width="116"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_sOhFEO5gEeO00oyT07T5Aw" type="3010" fontName="Ubuntu" fontHeight="11">
+        <children xmi:type="notation:Shape" xmi:id="_sOhFEO5gEeO00oyT07T5Aw" type="3010" fontName="Arial" fontHeight="11">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_yw9eYO5gEeO00oyT07T5Aw" source="Stereotype_Annotation">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_FZVuwO5hEeO00oyT07T5Aw" key="StereotypeWithQualifiedNameList" value=""/>
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_FZVuwe5hEeO00oyT07T5Aw" key="StereotypeList" value="DSL3S::Replicate"/>
@@ -802,10 +802,10 @@
     </edges>
   </notation:Diagram>
   <notation:Diagram xmi:id="_Xxh58O5UEeO00oyT07T5Aw" type="PapyrusUMLClassDiagram" name="Scenario View" measurementUnit="Pixel">
-    <children xmi:type="notation:Shape" xmi:id="_Y2JYoO5UEeO00oyT07T5Aw" type="2007" fontName="Ubuntu" fontHeight="11">
+    <children xmi:type="notation:Shape" xmi:id="_Y2JYoO5UEeO00oyT07T5Aw" type="2007" fontName="Arial" fontHeight="11">
       <children xmi:type="notation:DecorationNode" xmi:id="_Y2JYou5UEeO00oyT07T5Aw" type="5026"/>
       <children xmi:type="notation:DecorationNode" xmi:id="_Y2J_sO5UEeO00oyT07T5Aw" type="7016">
-        <children xmi:type="notation:Shape" xmi:id="_f6I_0O5UEeO00oyT07T5Aw" type="2008" fontName="Ubuntu" fontHeight="11">
+        <children xmi:type="notation:Shape" xmi:id="_f6I_0O5UEeO00oyT07T5Aw" type="2008" fontName="Arial" fontHeight="11">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_g8wd8O5VEeO00oyT07T5Aw" source="ShadowFigure">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_g8xFAO5VEeO00oyT07T5Aw" key="ShadowFigure_Value" value="false"/>
           </eAnnotations>
@@ -860,7 +860,7 @@
           <element xmi:type="uml:Class" href="PredatorPrey.uml#_z1g5IBViEeKKubxyzHq1vA"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_f6I_0e5UEeO00oyT07T5Aw" x="169" y="9"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_gYAAgO5UEeO00oyT07T5Aw" type="2008" fontName="Ubuntu" fontHeight="11">
+        <children xmi:type="notation:Shape" xmi:id="_gYAAgO5UEeO00oyT07T5Aw" type="2008" fontName="Arial" fontHeight="11">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_2BLEMO5bEeO00oyT07T5Aw" source="Stereotype_Annotation">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_2FSIIO5bEeO00oyT07T5Aw" key="StereotypeWithQualifiedNameList" value=""/>
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_2FSvMO5bEeO00oyT07T5Aw" key="StereotypeList" value="DSL3S::Animat"/>
@@ -890,7 +890,7 @@
           <element xmi:type="uml:Class" href="PredatorPrey.uml#_ui_PkBViEeKKubxyzHq1vA"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gYAAge5UEeO00oyT07T5Aw" x="169" y="143"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_hTZ30O5fEeO00oyT07T5Aw" type="2008" fontName="Ubuntu" fontHeight="11">
+        <children xmi:type="notation:Shape" xmi:id="_hTZ30O5fEeO00oyT07T5Aw" type="2008" fontName="Arial" fontHeight="11">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_sA-NwO5fEeO00oyT07T5Aw" source="Stereotype_Annotation">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sGoJ0O5fEeO00oyT07T5Aw" key="StereotypeWithQualifiedNameList" value=""/>
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sGow4O5fEeO00oyT07T5Aw" key="StereotypeList" value="DSL3S::Simulation"/>
@@ -977,10 +977,10 @@
     </edges>
   </notation:Diagram>
   <notation:Diagram xmi:id="_AN8aMO5cEeO00oyT07T5Aw" type="PapyrusUMLClassDiagram" name="InteractionsView" measurementUnit="Pixel">
-    <children xmi:type="notation:Shape" xmi:id="_B4DLkO5cEeO00oyT07T5Aw" type="2007" fontName="Ubuntu" fontHeight="11">
+    <children xmi:type="notation:Shape" xmi:id="_B4DLkO5cEeO00oyT07T5Aw" type="2007" fontName="Arial" fontHeight="11">
       <children xmi:type="notation:DecorationNode" xmi:id="_B4DLku5cEeO00oyT07T5Aw" type="5026"/>
       <children xmi:type="notation:DecorationNode" xmi:id="_B4DLk-5cEeO00oyT07T5Aw" type="7016">
-        <children xmi:type="notation:Shape" xmi:id="_FaDSsO5cEeO00oyT07T5Aw" type="2008" fontName="Ubuntu" fontHeight="11">
+        <children xmi:type="notation:Shape" xmi:id="_FaDSsO5cEeO00oyT07T5Aw" type="2008" fontName="Arial" fontHeight="11">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_7o4BoO5dEeO00oyT07T5Aw" source="Stereotype_Annotation">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8dac8O5dEeO00oyT07T5Aw" key="StereotypeWithQualifiedNameList" value=""/>
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8dac8e5dEeO00oyT07T5Aw" key="StereotypeList" value="DSL3S::Move"/>
@@ -1010,7 +1010,7 @@
           <element xmi:type="uml:Class" href="PredatorPrey.uml#_5U5KkBVwEeKKubxyzHq1vA"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FaDSse5cEeO00oyT07T5Aw" x="356" y="32"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_J954YO5cEeO00oyT07T5Aw" type="2008" fontName="Ubuntu" fontHeight="11">
+        <children xmi:type="notation:Shape" xmi:id="_J954YO5cEeO00oyT07T5Aw" type="2008" fontName="Arial" fontHeight="11">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1DC9IO5dEeO00oyT07T5Aw" source="Stereotype_Annotation">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_2L7QwO5dEeO00oyT07T5Aw" key="StereotypeWithQualifiedNameList" value=""/>
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_2L7Qwe5dEeO00oyT07T5Aw" key="StereotypeList" value="DSL3S::Harvest"/>
@@ -1040,7 +1040,7 @@
           <element xmi:type="uml:Class" href="PredatorPrey.uml#_euFOkBVxEeKKubxyzHq1vA"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_J954Ye5cEeO00oyT07T5Aw" x="209" y="299" width="155"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_MYKUUO5cEeO00oyT07T5Aw" type="2008" fontName="Ubuntu" fontHeight="11">
+        <children xmi:type="notation:Shape" xmi:id="_MYKUUO5cEeO00oyT07T5Aw" type="2008" fontName="Arial" fontHeight="11">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_953M0O5dEeO00oyT07T5Aw" source="Stereotype_Annotation">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_-ArmgO5dEeO00oyT07T5Aw" key="StereotypeWithQualifiedNameList" value=""/>
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_-Armge5dEeO00oyT07T5Aw" key="StereotypeList" value="DSL3S::Attribute"/>
@@ -1070,7 +1070,7 @@
           <element xmi:type="uml:Class" href="PredatorPrey.uml#_cC-QABVtEeKKubxyzHq1vA"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MYKUUe5cEeO00oyT07T5Aw" x="454" y="308" width="109"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_O9nToO5cEeO00oyT07T5Aw" type="2008" fontName="Ubuntu" fontHeight="11">
+        <children xmi:type="notation:Shape" xmi:id="_O9nToO5cEeO00oyT07T5Aw" type="2008" fontName="Arial" fontHeight="11">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3Tk1UO5dEeO00oyT07T5Aw" source="Stereotype_Annotation">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4DIqAO5dEeO00oyT07T5Aw" key="StereotypeWithQualifiedNameList" value=""/>
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4DIqAe5dEeO00oyT07T5Aw" key="StereotypeList" value="DSL3S::Move"/>
@@ -1100,7 +1100,7 @@
           <element xmi:type="uml:Class" href="PredatorPrey.uml#_Jam8oBohEeKN07hQpA-1_g"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_O9nToe5cEeO00oyT07T5Aw" x="121" y="5" width="119"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_Xf76AO5cEeO00oyT07T5Aw" type="3010" fontName="Ubuntu" fontHeight="11">
+        <children xmi:type="notation:Shape" xmi:id="_Xf76AO5cEeO00oyT07T5Aw" type="3010" fontName="Arial" fontHeight="11">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_bHyKcO5cEeO00oyT07T5Aw" source="Stereotype_Annotation">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bHyKce5cEeO00oyT07T5Aw" key="StereotypeWithQualifiedNameList" value=""/>
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bHyKcu5cEeO00oyT07T5Aw" key="StereotypeList" value="DSL3S::Supply"/>
@@ -1130,7 +1130,7 @@
           <element xmi:type="uml:Class" href="PredatorPrey.uml#_Xf6r4O5cEeO00oyT07T5Aw"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Xf76Ae5cEeO00oyT07T5Aw" x="225" y="154" width="123"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_iOEQoO5cEeO00oyT07T5Aw" type="2008" fontName="Ubuntu" fontHeight="11">
+        <children xmi:type="notation:Shape" xmi:id="_iOEQoO5cEeO00oyT07T5Aw" type="2008" fontName="Arial" fontHeight="11">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_-vzWUO5dEeO00oyT07T5Aw" source="Stereotype_Annotation">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_-1zQoO5dEeO00oyT07T5Aw" key="StereotypeWithQualifiedNameList" value=""/>
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_-1zQoe5dEeO00oyT07T5Aw" key="StereotypeList" value="DSL3S::Animat"/>
@@ -1160,7 +1160,7 @@
           <element xmi:type="uml:Class" href="PredatorPrey.uml#_z1g5IBViEeKKubxyzHq1vA"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iOEQoe5cEeO00oyT07T5Aw" x="463" y="154"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_ikd-cO5cEeO00oyT07T5Aw" type="2008" fontName="Ubuntu" fontHeight="11">
+        <children xmi:type="notation:Shape" xmi:id="_ikd-cO5cEeO00oyT07T5Aw" type="2008" fontName="Arial" fontHeight="11">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6hZcMO5dEeO00oyT07T5Aw" source="Stereotype_Annotation">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6nakoO5dEeO00oyT07T5Aw" key="StereotypeWithQualifiedNameList" value=""/>
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6nakoe5dEeO00oyT07T5Aw" key="StereotypeList" value="DSL3S::Animat"/>
@@ -1190,7 +1190,7 @@
           <element xmi:type="uml:Class" href="PredatorPrey.uml#_ui_PkBViEeKKubxyzHq1vA"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ikd-ce5cEeO00oyT07T5Aw" x="32" y="154"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_k8gz4O5cEeO00oyT07T5Aw" type="2008" fontName="Ubuntu" fontHeight="11">
+        <children xmi:type="notation:Shape" xmi:id="_k8gz4O5cEeO00oyT07T5Aw" type="2008" fontName="Arial" fontHeight="11">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5vDZQO5dEeO00oyT07T5Aw" source="Stereotype_Annotation">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_51BeYO5dEeO00oyT07T5Aw" key="StereotypeWithQualifiedNameList" value=""/>
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_51BeYe5dEeO00oyT07T5Aw" key="StereotypeList" value="DSL3S::Attribute"/>
@@ -1289,7 +1289,7 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_tT9nB-5cEeO00oyT07T5Aw" y="20"/>
       </children>
       <children xmi:type="notation:DecorationNode" xmi:id="_tT9nCO5cEeO00oyT07T5Aw" type="6033">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_tT9nCe5cEeO00oyT07T5Aw" y="20"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_tT9nCe5cEeO00oyT07T5Aw" x="-29" y="18"/>
       </children>
       <children xmi:type="notation:DecorationNode" xmi:id="_tT9nCu5cEeO00oyT07T5Aw" type="6034">
         <layoutConstraint xmi:type="notation:Location" xmi:id="_tT9nC-5cEeO00oyT07T5Aw" y="-20"/>
@@ -1337,7 +1337,7 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_8g32Fe5cEeO00oyT07T5Aw" y="20"/>
       </children>
       <children xmi:type="notation:DecorationNode" xmi:id="_8g32Fu5cEeO00oyT07T5Aw" type="6033">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_8g32F-5cEeO00oyT07T5Aw" y="20"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8g32F-5cEeO00oyT07T5Aw" x="-25" y="18"/>
       </children>
       <children xmi:type="notation:DecorationNode" xmi:id="_8g32GO5cEeO00oyT07T5Aw" type="6034">
         <layoutConstraint xmi:type="notation:Location" xmi:id="_8g32Ge5cEeO00oyT07T5Aw" y="-20"/>
@@ -1386,7 +1386,7 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_O32Nae5dEeO00oyT07T5Aw" y="20"/>
       </children>
       <children xmi:type="notation:DecorationNode" xmi:id="_O32Nau5dEeO00oyT07T5Aw" type="6034">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_O32Na-5dEeO00oyT07T5Aw" y="-20"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_O32Na-5dEeO00oyT07T5Aw" x="-17" y="-11"/>
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_O31mUe5dEeO00oyT07T5Aw"/>
       <element xmi:type="uml:Association" href="PredatorPrey.uml#_O30YM-5dEeO00oyT07T5Aw"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DSL3S="http:///schemas/DSL3S/_nY3zgO5aEeO00oyT07T5Aw/25" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http:///schemas/DSL3S/_nY3zgO5aEeO00oyT07T5Aw/25 ../profile/DSL3S.profile.uml#_nftbUO5aEeO00oyT07T5Aw">
+<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DSL3S="http:///schemas/DSL3S/_DCacAPDEEeOA5dbinY6UPQ/26" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http:///schemas/DSL3S/_DCacAPDEEeOA5dbinY6UPQ/26 ../profile/DSL3S.profile.uml#_Djd6oPDEEeOA5dbinY6UPQ">
   <uml:Model xmi:id="_vKp30BrZEeKjdP3IW4sVUw" name="model">
     <packagedElement xmi:type="uml:Association" xmi:id="_04FUsBrZEeKjdP3IW4sVUw" name="" memberEnd="_04FUsRrZEeKjdP3IW4sVUw _04EtoBrZEeKjdP3IW4sVUw">
       <ownedEnd xmi:type="uml:Property" xmi:id="_04FUsRrZEeKjdP3IW4sVUw" name="forest" type="_yJVPcBrZEeKjdP3IW4sVUw" aggregation="composite" association="_04FUsBrZEeKjdP3IW4sVUw">
@@ -22,7 +22,7 @@
       </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_Ab7OgBreEeKjdP3IW4sVUw" name="" memberEnd="_Ab7OgRreEeKjdP3IW4sVUw _Ab4yQBreEeKjdP3IW4sVUw">
-      <ownedEnd xmi:type="uml:Property" xmi:id="_Ab7OgRreEeKjdP3IW4sVUw" name="" type="_woGbUBrbEeKjdP3IW4sVUw" association="_Ab7OgBreEeKjdP3IW4sVUw">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_Ab7OgRreEeKjdP3IW4sVUw" name="" type="_woGbUBrbEeKjdP3IW4sVUw" aggregation="composite" association="_Ab7OgBreEeKjdP3IW4sVUw">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ab7OgxreEeKjdP3IW4sVUw" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ab7OghreEeKjdP3IW4sVUw" value="1"/>
       </ownedEnd>
@@ -36,13 +36,13 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_A1dv4xreEeKjdP3IW4sVUw" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_A1dv4hreEeKjdP3IW4sVUw" value="1"/>
       </ownedEnd>
-      <ownedEnd xmi:type="uml:Property" xmi:id="_A1aFgBreEeKjdP3IW4sVUw" name="" type="_tFSb4BrbEeKjdP3IW4sVUw" association="_A1dv4BreEeKjdP3IW4sVUw">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_A1aFgBreEeKjdP3IW4sVUw" name="" type="_7bklcPDOEeO0X8xO7IawQw" association="_A1dv4BreEeKjdP3IW4sVUw">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_A1aFghreEeKjdP3IW4sVUw" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_A1aFgRreEeKjdP3IW4sVUw" value="1"/>
       </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_EsZlMBreEeKjdP3IW4sVUw" name="" memberEnd="_EsZlMRreEeKjdP3IW4sVUw _EsY-IBreEeKjdP3IW4sVUw">
-      <ownedEnd xmi:type="uml:Property" xmi:id="_EsZlMRreEeKjdP3IW4sVUw" name="" type="_tFSb4BrbEeKjdP3IW4sVUw" association="_EsZlMBreEeKjdP3IW4sVUw">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_EsZlMRreEeKjdP3IW4sVUw" name="" type="_7bklcPDOEeO0X8xO7IawQw" association="_EsZlMBreEeKjdP3IW4sVUw">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EsZlMxreEeKjdP3IW4sVUw" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EsZlMhreEeKjdP3IW4sVUw" value="1"/>
       </ownedEnd>
@@ -106,10 +106,10 @@
     <packagedElement xmi:type="uml:Package" xmi:id="_km4xsN0PEeO3X9w9Cy58AA" name="Fire View">
       <packagedElement xmi:type="uml:Class" xmi:id="_woGbUBrbEeKjdP3IW4sVUw" name="Intensity"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_t5KBcBreEeKjdP3IW4sVUw" name="Extinguish"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_tFSb4BrbEeKjdP3IW4sVUw" name="Burn"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_cTMa4BrfEeKjdP3IW4sVUw" name="EmergeForest"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_yJVPcBrZEeKjdP3IW4sVUw" name="Forest"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_jMLE4BrfEeKjdP3IW4sVUw" name="EmergeIntensity"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_7bklcPDOEeO0X8xO7IawQw" name="Burn2"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_MrBIYO8sEeO8qtiIPFDgNA" name="Scenario View">
       <packagedElement xmi:type="uml:Class" xmi:id="_xUdc8BrZEeKjdP3IW4sVUw" name="Fire"/>
@@ -117,7 +117,7 @@
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_7hVEUBQFEeOL_dsJOHIJwA">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_7h6TIBQFEeOL_dsJOHIJwA" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="../profile/DSL3S.profile.uml#_nftbUO5aEeO00oyT07T5Aw"/>
+        <references xmi:type="ecore:EPackage" href="../profile/DSL3S.profile.uml#_Djd6oPDEEeOA5dbinY6UPQ"/>
       </eAnnotations>
       <appliedProfile xmi:type="uml:Profile" href="../profile/DSL3S.profile.uml#_bf7O0CBZEeKpfttodweVYA"/>
     </profileApplication>
@@ -129,5 +129,5 @@
   <DSL3S:Emerge xmi:id="_IGnw4BQGEeOL_dsJOHIJwA" probability="2" scope="1.5" required="true" base_Class="_jMLE4BrfEeKjdP3IW4sVUw"/>
   <DSL3S:Attribute xmi:id="_JW2CoBQGEeOL_dsJOHIJwA" base_Class="_woGbUBrbEeKjdP3IW4sVUw" maxValue="5" stepVariation="-5" display="true" initValue="1"/>
   <DSL3S:Perish xmi:id="_KdndcBQGEeOL_dsJOHIJwA" upperThreshold="6" base_Class="_t5KBcBreEeKjdP3IW4sVUw"/>
-  <DSL3S:Harvest xmi:id="_LTIwMBQGEeOL_dsJOHIJwA" valueHarvested="5" base_Class="_tFSb4BrbEeKjdP3IW4sVUw"/>
+  <DSL3S:Harvest xmi:id="_-6KMMPDOEeO0X8xO7IawQw" valueHarvested="5" base_Class="_7bklcPDOEeO0X8xO7IawQw"/>
 </xmi:XMI>

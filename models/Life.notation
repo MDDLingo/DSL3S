@@ -545,7 +545,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2OqoD-7nEeOdtbYJsa7Y0g"/>
           </children>
           <element xmi:type="uml:Class" href="Life.uml#_jYYv0CQ-EeK2oPEGStcpwg"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2OqA8e7nEeOdtbYJsa7Y0g" x="369" y="13" width="133"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2OqA8e7nEeOdtbYJsa7Y0g" x="168" y="162" width="133"/>
         </children>
         <children xmi:type="notation:Shape" xmi:id="_3QTrMO7nEeOdtbYJsa7Y0g" type="2008" fontName="Ubuntu" fontHeight="11">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_WzrLUO7oEeOdtbYJsa7Y0g" source="Stereotype_Annotation">
@@ -605,13 +605,13 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CGVZlO7oEeOdtbYJsa7Y0g"/>
           </children>
           <element xmi:type="uml:Class" href="Life.uml#_CGMPoO7oEeOdtbYJsa7Y0g"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CGTkYe7oEeOdtbYJsa7Y0g" x="194" y="162"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CGTkYe7oEeOdtbYJsa7Y0g" x="11" y="323"/>
         </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_q9kuQu7nEeOdtbYJsa7Y0g"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_q9kuQ-7nEeOdtbYJsa7Y0g"/>
       </children>
       <element xmi:type="uml:Package" href="Life.uml#_q9iSAO7nEeOdtbYJsa7Y0g"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_q9kHMe7nEeOdtbYJsa7Y0g" x="22" y="22" width="527" height="308"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_q9kHMe7nEeOdtbYJsa7Y0g" x="22" y="22" width="323" height="466"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_KU3Wse7nEeOdtbYJsa7Y0g"/>
     <element xmi:type="uml:Model" href="Life.uml#_BJ00wCQ-EeK2oPEGStcpwg"/>
@@ -682,7 +682,7 @@
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_dINF0e8nEeO8qtiIPFDgNA"/>
       <element xmi:type="uml:Association" href="Life.uml#_dHhwYO8nEeO8qtiIPFDgNA"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_dINF0u8nEeO8qtiIPFDgNA" points="[3, -17, -144, -22]$[82, -17, -65, -22]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_dINF0u8nEeO8qtiIPFDgNA" points="[-46, 27, -11, -139]$[-46, 88, -11, -78]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_4C3VcO8nEeO8qtiIPFDgNA" id="(0.97,0.73)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_dIZTEO8nEeO8qtiIPFDgNA" id="(0.65,0.78)"/>
     </edges>
@@ -730,7 +730,7 @@
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_d-nwce8nEeO8qtiIPFDgNA"/>
       <element xmi:type="uml:Association" href="Life.uml#_d-lUMO8nEeO8qtiIPFDgNA"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_d-nwcu8nEeO8qtiIPFDgNA" points="[48, 65, 193, -97]$[48, 172, 193, 10]$[-95, 172, 50, 10]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_d-nwcu8nEeO8qtiIPFDgNA" points="[48, 65, 177, -108]$[48, 176, 177, 3]$[-79, 176, 50, 3]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_d-z9sO8nEeO8qtiIPFDgNA" id="(0.15037593984962405,0.4090909090909091)"/>
     </edges>
   </notation:Diagram>
