@@ -34,7 +34,7 @@
     <packagedElement xmi:type="uml:Package" xmi:id="_qTq_MK0IEeOwIOVcIgmabQ" name="Simulation View"/>
     <packagedElement xmi:type="uml:Package" xmi:id="_fjLboK0JEeOwIOVcIgmabQ" name="PredatorView">
       <packagedElement xmi:type="uml:Association" xmi:id="_ob8TgN0WEeO3X9w9Cy58AA" name="predator_prawl" memberEnd="_ob8Tgd0WEeO3X9w9Cy58AA _ob7scN0WEeO3X9w9Cy58AA">
-        <ownedEnd xmi:type="uml:Property" xmi:id="_ob8Tgd0WEeO3X9w9Cy58AA" name="prawl" type="_5U5KkBVwEeKKubxyzHq1vA" association="_ob8TgN0WEeO3X9w9Cy58AA">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_ob8Tgd0WEeO3X9w9Cy58AA" name="prawl" type="_5U5KkBVwEeKKubxyzHq1vA" aggregation="composite" association="_ob8TgN0WEeO3X9w9Cy58AA">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ob8Tgt0WEeO3X9w9Cy58AA" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ob8Tg90WEeO3X9w9Cy58AA" value="1"/>
         </ownedEnd>
@@ -89,7 +89,7 @@
     <packagedElement xmi:type="uml:Package" xmi:id="_GHyw8K0KEeOwIOVcIgmabQ" name="Prey View">
       <packagedElement xmi:type="uml:Class" xmi:id="_9RDlgBVtEeKKubxyzHq1vA" name="PreyPerish"/>
       <packagedElement xmi:type="uml:Association" xmi:id="_lhtPoN0ZEeO3X9w9Cy58AA" name="fleePredator_Prey" memberEnd="_lhtPod0ZEeO3X9w9Cy58AA _lhsBgN0ZEeO3X9w9Cy58AA">
-        <ownedEnd xmi:type="uml:Property" xmi:id="_lhtPod0ZEeO3X9w9Cy58AA" name="movePredator" type="_Jam8oBohEeKN07hQpA-1_g" association="_lhtPoN0ZEeO3X9w9Cy58AA">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_lhtPod0ZEeO3X9w9Cy58AA" name="movePredator" type="_Jam8oBohEeKN07hQpA-1_g" aggregation="composite" association="_lhtPoN0ZEeO3X9w9Cy58AA">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lhtPot0ZEeO3X9w9Cy58AA" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lhtPo90ZEeO3X9w9Cy58AA" value="1"/>
         </ownedEnd>
@@ -261,7 +261,7 @@
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iLh9Mu5gEeO00oyT07T5Aw" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iLh9M-5gEeO00oyT07T5Aw" value="1"/>
         </ownedEnd>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_iLhWIO5gEeO00oyT07T5Aw" name="seekPasture" type="_Y6eBgO5gEeO00oyT07T5Aw" association="_iLh9MO5gEeO00oyT07T5Aw">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_iLhWIO5gEeO00oyT07T5Aw" name="seekPasture" type="_Y6eBgO5gEeO00oyT07T5Aw" aggregation="composite" association="_iLh9MO5gEeO00oyT07T5Aw">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iLhWIe5gEeO00oyT07T5Aw" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iLhWIu5gEeO00oyT07T5Aw" value="1"/>
         </ownedEnd>

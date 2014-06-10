@@ -1340,7 +1340,7 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_8g32F-5cEeO00oyT07T5Aw" x="-25" y="18"/>
       </children>
       <children xmi:type="notation:DecorationNode" xmi:id="_8g32GO5cEeO00oyT07T5Aw" type="6034">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_8g32Ge5cEeO00oyT07T5Aw" y="-20"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8g32Ge5cEeO00oyT07T5Aw" y="-13"/>
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_8g3PAe5cEeO00oyT07T5Aw"/>
       <element xmi:type="uml:Association" href="PredatorPrey.uml#_ob8TgN0WEeO3X9w9Cy58AA"/>

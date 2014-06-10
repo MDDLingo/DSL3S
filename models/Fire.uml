@@ -62,7 +62,7 @@
       </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_wknssBrfEeKjdP3IW4sVUw" name="" memberEnd="_wknssRrfEeKjdP3IW4sVUw _wkkCUBrfEeKjdP3IW4sVUw">
-      <ownedEnd xmi:type="uml:Property" xmi:id="_wknssRrfEeKjdP3IW4sVUw" name="" type="_jMLE4BrfEeKjdP3IW4sVUw" association="_wknssBrfEeKjdP3IW4sVUw">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_wknssRrfEeKjdP3IW4sVUw" name="" type="_jMLE4BrfEeKjdP3IW4sVUw" aggregation="composite" association="_wknssBrfEeKjdP3IW4sVUw">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wknssxrfEeKjdP3IW4sVUw" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wknsshrfEeKjdP3IW4sVUw" value="1"/>
       </ownedEnd>
@@ -82,7 +82,7 @@
       </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_11JyMBrfEeKjdP3IW4sVUw" name="" memberEnd="_11JyMRrfEeKjdP3IW4sVUw _11H9ABrfEeKjdP3IW4sVUw">
-      <ownedEnd xmi:type="uml:Property" xmi:id="_11JyMRrfEeKjdP3IW4sVUw" name="" type="_cTMa4BrfEeKjdP3IW4sVUw" association="_11JyMBrfEeKjdP3IW4sVUw">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_11JyMRrfEeKjdP3IW4sVUw" name="" type="_cTMa4BrfEeKjdP3IW4sVUw" aggregation="composite" association="_11JyMBrfEeKjdP3IW4sVUw">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_11JyMxrfEeKjdP3IW4sVUw" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_11JyMhrfEeKjdP3IW4sVUw" value="1"/>
       </ownedEnd>

@@ -565,7 +565,7 @@
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_wkzS4RrfEeKjdP3IW4sVUw" fontName="Ubuntu" fontHeight="11"/>
       <element xmi:type="uml:Association" href="Fire.uml#_wknssBrfEeKjdP3IW4sVUw"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_wkzS4hrfEeKjdP3IW4sVUw" points="[-2, -15, 110, -9]$[-104, -15, 8, -9]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_wkzS4hrfEeKjdP3IW4sVUw" points="[-2, -11, 110, -5]$[-104, -11, 8, -5]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_wk-SABrfEeKjdP3IW4sVUw" id="(0.014388489208633094,0.4051724137931034)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_wk-SARrfEeKjdP3IW4sVUw" id="(0.93,0.37272727272727274)"/>
     </edges>
