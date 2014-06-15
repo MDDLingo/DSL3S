@@ -55,7 +55,7 @@ Generates the Move function to be included in the Animat class.
 			Coordinate objLocation = (([aClass.name/]) obj).getLocation();
 			Double current = map.get(objLocation);
 			if(current == null) current = 0.0;
-			current += weight[mClass.name/] * (([aClass.name/]) obj).state[seClass.name/].getValue();
+			current += weight[mClass.name/] * (([aClass.name/]) obj).attribute[seClass.name/].getValue();
 			map.put(objLocation, current);
 		}
 

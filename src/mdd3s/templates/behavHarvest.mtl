@@ -60,12 +60,12 @@ class of that type.
 			if(obj != this)
 			 {
 				     [if (hClass.getTaggedValue(hClass, 'Harvest', 'percentHarvested').isNotNull())]
-				state[sClass.name/].add( 
-					(([haClass.name/]) obj).state[hsClass.name/].harvestPercent(percent[hClass.name/], maxImpact[hClass.name/]));
+				attribute[sClass.name/].add( 
+					(([haClass.name/]) obj).attribute[hsClass.name/].harvestPercent(percent[hClass.name/], maxImpact[hClass.name/]));
 			         [/if]
 			         [if (hClass.getTaggedValue(hClass, 'Harvest', 'valueHarvested').isNotNull())]
-				state[sClass.name/].add( 
-					(([haClass.name/]) obj).state[hsClass.name/].harvestValue(value[hClass.name/], maxImpact[hClass.name/]));
+				attribute[sClass.name/].add( 
+					(([haClass.name/]) obj).attribute[hsClass.name/].harvestValue(value[hClass.name/], maxImpact[hClass.name/]));
 			         [/if]
 
 				(([haClass.name/]) obj).perish(sim);
@@ -93,11 +93,11 @@ class of that type.
 		for(Object obj : neigh[heClass.name/]) 
 		{
 			[if (hClass.getTaggedValue(hClass, 'Harvest', 'percentHarvested') <> 'null')]
-				state[sClass.name/].add( 
+				attribute[sClass.name/].add( 
 					(([heClass.name/]) obj).harvestPercent(percent[hClass.name/], maxImpact[hClass.name/]));
 			  [/if]
 			  [if (hClass.getTaggedValue(hClass, 'Harvest', 'valueHarvested') <> 'null')]
-				state[sClass.name/].add(
+				attribute[sClass.name/].add(
 					(([heClass.name/]) obj).harvestValue(value[hClass.name/], maxImpact[hClass.name/]));
 				
 			  [/if]

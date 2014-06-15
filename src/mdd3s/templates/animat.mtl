@@ -50,14 +50,14 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
 	///////////////////////////////////////////////////////
     // Attribute: [sClass.name/]
 
-	protected static Double state[sClass.name/]Min = new Double([sClass.getTaggedValue(sClass, 'Attribute', 'minValue')/]);
-	protected static Double state[sClass.name/]Max = new Double([sClass.getTaggedValue(sClass, 'Attribute', 'maxValue')/]);
-	protected static Double state[sClass.name/]Var = new Double([sClass.getTaggedValue(sClass, 'Attribute', 'stepVariation')/]);
+	protected static Double attribute[sClass.name/]Min = new Double([sClass.getTaggedValue(sClass, 'Attribute', 'minValue')/]);
+	protected static Double attribute[sClass.name/]Max = new Double([sClass.getTaggedValue(sClass, 'Attribute', 'maxValue')/]);
+	protected static Double attribute[sClass.name/] = new Double([sClass.getTaggedValue(sClass, 'Attribute', 'stepVariation')/]);
 
-	public Variable state[sClass.name/] = new Variable(
+	public Variable attribute[sClass.name/] = new Variable(
 			new Double([sClass.getTaggedValue(sClass, 'Attribute', 'initValue')/]), 
-			state[sClass.name/]Min, 
-			state[sClass.name/]Max);
+			attribute[sClass.name/]Min, 
+			attribute[sClass.name/]Max);
 [comment Iterate through linked Replicate /]
 	// Replicate constants
      [for (assR:Association | sClass.getAssociations())]
@@ -172,7 +172,7 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
     [if (pClass.isNotNull())]
      [if (pClass.hasStereotype('Attribute'))]
       [if (pClass.getTaggedValue(pClass, 'Attribute', 'display') = 'true')]
-		 	state[pClass.name/]Min +
+		 	attribute[pClass.name/]Min +
       [/if]
      [/if]
     [/if]
@@ -191,7 +191,7 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
     [if (pClass.isNotNull())]
      [if (pClass.hasStereotype('Attribute'))]
       [if (pClass.getTaggedValue(pClass, 'Attribute', 'display') = 'true')]
-		 	state[pClass.name/]Max +
+		 	attribute[pClass.name/]Max +
       [/if]
      [/if]
     [/if]
@@ -210,7 +210,7 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
     [if (pClass.isNotNull())]
      [if (pClass.hasStereotype('Attribute'))]
       [if (pClass.getTaggedValue(pClass, 'Attribute', 'display') = 'true')]
-		 	state[pClass.name/].getValue() +
+		 	attribute[pClass.name/].getValue() +
       [/if]
      [/if]
     [/if]
@@ -237,13 +237,13 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
    [/for]
   [/for]
 
-		// Update state variables
+		// Update attribute
  [for (ass:Association | c.getAssociations())]
   [for (p:Element | ass.relatedElement) ]
    [let pClass: Class = p.oclAsType(Class)]
     [if (pClass.isNotNull())]
      [if (pClass.hasStereotype('Attribute'))]
-		state[pClass.name/].add(state[pClass.name/]Var);
+		attribute[pClass.name/].add(attribute[pClass.name/]);
 	 [/if]
     [/if]
    [/let]

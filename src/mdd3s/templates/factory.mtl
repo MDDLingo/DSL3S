@@ -204,7 +204,7 @@ MasonGeometry class.
 	   [if (sClass.isNotNull())]
 	    [if (sClass.hasStereotype('Attribute'))]
          [if (sClass.getTaggedValue(sClass, 'Attribute', 'inputAttribute').isNotNull())]
-			new[aClass.name/].state[sClass.name/].setValue(getAttributeValue((MasonGeometry) geom, "[sClass.getTaggedValue(sClass, 'Attribute', 'inputAttribute')/]"));
+			new[aClass.name/].attribute[sClass.name/].setValue(getAttributeValue((MasonGeometry) geom, "[sClass.getTaggedValue(sClass, 'Attribute', 'inputAttribute')/]"));
          [/if]
         [/if]
        [/if]
