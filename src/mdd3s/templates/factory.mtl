@@ -5,7 +5,7 @@
 [comment
 Date: 10-04-2013    Author: Luís de Sousa  (luis.a.de.sousa@gmail.com)
 Generates a factory class contining methods to load spatial layers, creating
-the respective environment spaces or animats.
+the respective spatial or animat instances.
 /]
 
 [template public factory(c : Class) ? (c.hasStereotype('Simulation'))]

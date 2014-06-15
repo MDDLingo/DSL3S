@@ -7,7 +7,7 @@ Date: 09-08-2012    Author: Luís de Sousa  (luis.a.de.sousa@gmail.com)
 Spatial class.
 /]
 
-[template public environment(c : Class) ? (c.hasStereotype('Spatial'))]
+[template public spatial(c : Class) ? (c.hasStereotype('Spatial'))]
 
 [file (c.name.concat('.java'), false, 'UTF-8')]
 

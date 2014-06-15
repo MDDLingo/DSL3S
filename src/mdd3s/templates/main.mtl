@@ -28,8 +28,8 @@ Gathers all the modules in a single template.
 	[aClass.animat()/]
 	[aClass.behavEmerge()/]
 	[aClass.animat_portrayal()/]
-	[aClass.environment()/]
-	[aClass.environment_portrayal()/]
+	[aClass.spatial()/]
+	[aClass.spatial_portrayal()/]
 	
 
 [/template]

@@ -163,7 +163,7 @@ public class [c.name/] extends SimState {
  [/for]
 
 		/**
-		 * . Update the space between environment cells
+		 * . Update the space between spatial cells
          * . init Animats with Double x,y
 		 */
 		if(globalMBR == null)

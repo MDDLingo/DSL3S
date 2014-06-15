@@ -9,7 +9,7 @@ Issues:
 . Where should the colours be set? Maybe random?
 /]
 
-[template public environment_portrayal(c : Class) ? (c.hasStereotype('Spatial'))]
+[template public spatial_portrayal(c : Class) ? (c.hasStereotype('Spatial'))]
 
 [file (c.name.concat('Portrayal.java'), false, 'UTF-8')]
 
