@@ -177,14 +177,14 @@ property of the Animat class than to have the Animat class inheriting from the
 MasonGeometry class.
 /]
 		Bag desiredAttributes = new Bag();
-	 [comment Iterate through linked States /]
+	 [comment Iterate through linked Attributes /]
 	 [for (ass:Association | aClass.getAssociations())]
 	  [for (s:Element | ass.relatedElement) ]
 	   [let sClass: Class = s.oclAsType(Class)]
 	   [if (sClass.isNotNull())]
-	    [if (sClass.hasStereotype('State'))]
-         [if (sClass.getTaggedValue(sClass, 'State', 'inputAttribute').isNotNull())]
-		desiredAttributes.add("[sClass.getTaggedValue(sClass, 'State', 'inputAttribute')/]");
+	    [if (sClass.hasStereotype('Attribute'))]
+         [if (sClass.getTaggedValue(sClass, 'Attribute', 'inputAttribute').isNotNull())]
+		desiredAttributes.add("[sClass.getTaggedValue(sClass, 'Attribute', 'inputAttribute')/]");
          [/if]
         [/if]
        [/if]
@@ -202,9 +202,9 @@ MasonGeometry class.
 	  [for (s:Element | ass.relatedElement) ]
 	   [let sClass: Class = s.oclAsType(Class)]
 	   [if (sClass.isNotNull())]
-	    [if (sClass.hasStereotype('State'))]
-         [if (sClass.getTaggedValue(sClass, 'State', 'inputAttribute').isNotNull())]
-			new[aClass.name/].state[sClass.name/].setValue(getAttributeValue((MasonGeometry) geom, "[sClass.getTaggedValue(sClass, 'State', 'inputAttribute')/]"));
+	    [if (sClass.hasStereotype('Attribute'))]
+         [if (sClass.getTaggedValue(sClass, 'Attribute', 'inputAttribute').isNotNull())]
+			new[aClass.name/].state[sClass.name/].setValue(getAttributeValue((MasonGeometry) geom, "[sClass.getTaggedValue(sClass, 'Attribute', 'inputAttribute')/]"));
          [/if]
         [/if]
        [/if]

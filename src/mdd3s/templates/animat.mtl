@@ -41,21 +41,21 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
 		location = geom.getCentroid().getCoordinate();
 	}
 	
- [comment Iterate through linked States /]
+ [comment Iterate through linked Attributes /]
  [for (ass:Association | c.getAssociations())]
   [for (s:Element | ass.relatedElement) ]
    [let sClass: Class = s.oclAsType(Class)]
    [if (sClass.isNotNull())]
-    [if (sClass.hasStereotype('State'))]
+    [if (sClass.hasStereotype('Attribute'))]
 	///////////////////////////////////////////////////////
-    // State: [sClass.name/]
+    // Attribute: [sClass.name/]
 
-	protected static Double state[sClass.name/]Min = new Double([sClass.getTaggedValue(sClass, 'State', 'minValue')/]);
-	protected static Double state[sClass.name/]Max = new Double([sClass.getTaggedValue(sClass, 'State', 'maxValue')/]);
-	protected static Double state[sClass.name/]Var = new Double([sClass.getTaggedValue(sClass, 'State', 'stepVariation')/]);
+	protected static Double state[sClass.name/]Min = new Double([sClass.getTaggedValue(sClass, 'Attribute', 'minValue')/]);
+	protected static Double state[sClass.name/]Max = new Double([sClass.getTaggedValue(sClass, 'Attribute', 'maxValue')/]);
+	protected static Double state[sClass.name/]Var = new Double([sClass.getTaggedValue(sClass, 'Attribute', 'stepVariation')/]);
 
 	public Variable state[sClass.name/] = new Variable(
-			new Double([sClass.getTaggedValue(sClass, 'State', 'initValue')/]), 
+			new Double([sClass.getTaggedValue(sClass, 'Attribute', 'initValue')/]), 
 			state[sClass.name/]Min, 
 			state[sClass.name/]Max);
 [comment Iterate through linked Replicate /]
@@ -134,7 +134,7 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
     [/if]
    [/let]
   [/for]	 
- [/for]  [comment States/]
+ [/for]  [comment Attributes/]
 
 	// Movement weights
  [for (ass:Association | c.getAssociations())]
@@ -170,8 +170,8 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
   [for (p:Element | ass.relatedElement) ]
    [let pClass: Class = p.oclAsType(Class)]
     [if (pClass.isNotNull())]
-     [if (pClass.hasStereotype('State'))]
-      [if (pClass.getTaggedValue(pClass, 'State', 'display') = 'true')]
+     [if (pClass.hasStereotype('Attribute'))]
+      [if (pClass.getTaggedValue(pClass, 'Attribute', 'display') = 'true')]
 		 	state[pClass.name/]Min +
       [/if]
      [/if]
@@ -189,8 +189,8 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
   [for (p:Element | ass.relatedElement) ]
    [let pClass: Class = p.oclAsType(Class)]
     [if (pClass.isNotNull())]
-     [if (pClass.hasStereotype('State'))]
-      [if (pClass.getTaggedValue(pClass, 'State', 'display') = 'true')]
+     [if (pClass.hasStereotype('Attribute'))]
+      [if (pClass.getTaggedValue(pClass, 'Attribute', 'display') = 'true')]
 		 	state[pClass.name/]Max +
       [/if]
      [/if]
@@ -208,8 +208,8 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
   [for (p:Element | ass.relatedElement) ]
    [let pClass: Class = p.oclAsType(Class)]
     [if (pClass.isNotNull())]
-     [if (pClass.hasStereotype('State'))]
-      [if (pClass.getTaggedValue(pClass, 'State', 'display') = 'true')]
+     [if (pClass.hasStereotype('Attribute'))]
+      [if (pClass.getTaggedValue(pClass, 'Attribute', 'display') = 'true')]
 		 	state[pClass.name/].getValue() +
       [/if]
      [/if]
@@ -242,7 +242,7 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
   [for (p:Element | ass.relatedElement) ]
    [let pClass: Class = p.oclAsType(Class)]
     [if (pClass.isNotNull())]
-     [if (pClass.hasStereotype('State'))]
+     [if (pClass.hasStereotype('Attribute'))]
 		state[pClass.name/].add(state[pClass.name/]Var);
 	 [/if]
     [/if]
@@ -250,12 +250,12 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
   [/for]	 
  [/for]
 
-[comment Iterate through linked States /]
+[comment Iterate through linked Attributes /]
 [for (ass:Association | c.getAssociations())]
  [for (s:Element | ass.relatedElement) ]
   [let sClass: Class = s.oclAsType(Class)]
    [if (sClass.isNotNull())]
-    [if (sClass.hasStereotype('State'))]
+    [if (sClass.hasStereotype('Attribute'))]
 	 [if (sClass.hasLinkedStereotype('Harvest'))]
 		harvest[sClass.name/](sim);
 	 [/if]
@@ -263,7 +263,7 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
   [/if]
  [/let]
  [/for]	 
-[/for] [comment States /]
+[/for] [comment Attributes /]
 
 		perish(sim);
 		

@@ -27,12 +27,12 @@ Issues:
    [/for]
   [/for]
 	
-[comment Iterate through linked States /]
+[comment Iterate through linked Attributes /]
 [for (ass:Association | c.getAssociations())]
   [for (s:Element | ass.relatedElement) ]
   [let sClass: Class = s.oclAsType(Class)]
    [if (sClass.isNotNull())]
-    [if (sClass.hasStereotype('State'))]
+    [if (sClass.hasStereotype('Attribute'))]
 	[comment Iterate through linked Replicate /]
      [for (assR:Association | sClass.getAssociations())]
       [for (r:Element | assR.relatedElement) ]
@@ -70,7 +70,7 @@ Issues:
   [/if]
   [/let]
  [/for]	 
-[/for] [comment States/]
+[/for] [comment Attributes/]
 	
 	}
 

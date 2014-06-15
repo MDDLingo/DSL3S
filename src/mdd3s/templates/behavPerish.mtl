@@ -8,9 +8,6 @@ Generates the Perish function to be included in the Animat class.
 Instead of filtering for the Perish stereotype, this module starts with
 the Animat stereotype, so that it only generates the code for a specific
 class of that type.
-
-Issues:
-. stop method must be invoked here, other Perish may not work.
 /]
 
 
@@ -29,12 +26,12 @@ Issues:
    [/for]
   [/for]
 	
-[comment Iterate through linked States /]
+[comment Iterate through linked Attributes /]
 [for (ass:Association | c.getAssociations())]
   [comment Association: [ass.name/]
   [for (s:Element | ass.relatedElement) ]
    [let sClass: Class = s.oclAsType(Class)]
-    [if (sClass.hasStereotype('State'))]
+    [if (sClass.hasStereotype('Attribute'))]
 	[comment Iterate through linked Perish /]
      [for (assP:Association | sClass.getAssociations())]
       [for (p:Element | assP.relatedElement) ]

@@ -5,8 +5,6 @@
 [comment
 Date: 17-08-2012    Author: Luís de Sousa
 Generates the Move function to be included in the Animat class.
-Issues:
-. Missing the wanderer case
 /]
 
 [template public behavMove(c : Class) ? (c.hasStereotype('Animat'))]
@@ -35,13 +33,13 @@ Issues:
  [let mClass: Class = m.oclAsType(Class)] 
   [if (mClass.isNotNull())]
    [if (mClass.hasStereotype('Move'))]
-    [comment Iterate through linked States & Environements /]
+    [comment Iterate through linked Attributes & Environements /]
 	[for (assSE:Association | mClass.getAssociations())]
   	 [for (se:Element | assSE.relatedElement) ]
      [let seClass: Class = se.oclAsType(Class)]
       [if (seClass.isNotNull())]
-	   [comment If it is linked to a State /]
-       [if (seClass.hasStereotype('State'))]
+	   [comment If it is linked to a Attribute /]
+       [if (seClass.hasStereotype('Attribute'))]
         [comment Iterate through linked Animats /]
         [for (assA:Association | seClass.getAssociations())]
   	     [for (a:Element | assA.relatedElement) ]
@@ -86,7 +84,7 @@ Issues:
 	  [/if]
      [/let]
      [/for]	 
-    [/for] [comment States & Environements /]
+    [/for] [comment Attributes & Environements /]
    [/if]
   [/if]
  [/let]

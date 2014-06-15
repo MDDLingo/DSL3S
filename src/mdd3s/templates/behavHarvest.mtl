@@ -8,20 +8,15 @@ Generates the Harvest function to be included in the Animat class.
 Instead of filtering for the Harvest stereotype, this module starts with
 the Animat stereotype, so that it only generates the code for a specific
 class of that type.
-
-Issues:
-. Doesn't include max harvest amount
-. Generates an empty function for the harvested Animat State
-. Not teste with more than one Harvest feeding a single State
 /]
 
 [template public behavHarvest(c : Class) ? (c.hasStereotype('Animat'))]
-[comment Iterate through linked States /]
+[comment Iterate through linked Attributes /]
 [for (ass:Association | c.getAssociations())]
  [for (s:Element | ass.relatedElement) ]
   [let sClass: Class = s.oclAsType(Class)]
    [if (sClass.isNotNull())]
-    [if (sClass.hasStereotype('State'))]
+    [if (sClass.hasStereotype('Attribute'))]
 	 [if (sClass.hasLinkedStereotype('Harvest'))]
 	 [comment Get Simulation name /]
 	  [for (assS:Association | c.getAssociations())]
@@ -44,12 +39,12 @@ Issues:
          [if (hClass.hasStereotype('Harvest'))]
 		  [if (hClass.getTaggedValue(hClass, 'Harvest', 'harvested') <> sClass.name)]
 
-		  [comment Iterate through harvested States /]
+		  [comment Iterate through harvested Attributes /]
            [for (assHS:Association | hClass.getAssociations())]
             [for (hs:Element | assHS.relatedElement) ]
 		    [let hsClass: Class = hs.oclAsType(Class)]
              [if (hsClass.isNotNull())]
-              [if (hsClass.hasStereotype('State'))]
+              [if (hsClass.hasStereotype('Attribute'))]
 			   [if (hsClass.name <> sClass.name)]
 
 		 	    [comment Iterate through harvested Animat /]
@@ -87,7 +82,7 @@ Issues:
             [/if]
             [/let]
            [/for]	 
-          [/for] [comment States /]
+          [/for] [comment Attributes /]
 		  [comment Iterate through harvested Environments /]
           [for (assHE:Association | hClass.getAssociations())]
            [for (he:Element | assHE.relatedElement) ]
@@ -127,5 +122,5 @@ Issues:
   [/if]
  [/let]
  [/for]	 
-[/for] [comment States /]
+[/for] [comment Attributes /]
 [/template]
