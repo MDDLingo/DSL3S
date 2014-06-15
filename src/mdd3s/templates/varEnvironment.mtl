@@ -1,13 +1,13 @@
 [comment encoding = UTF-8 /]
-[module varEnvironment('http://www.eclipse.org/uml2/3.0.0/UML')]
+[module Spatial('http://www.eclipse.org/uml2/3.0.0/UML')]
 [import mdd3s::templates::services/]
 
 [comment
 Date: 09-08-2012    Author: Luís de Sousa  (luis.a.de.sousa@gmail.com)
-Environment variable class.
+Spatial class.
 /]
 
-[template public environment(c : Class) ? (c.hasStereotype('Environment'))]
+[template public environment(c : Class) ? (c.hasStereotype('Spatial'))]
 
 [file (c.name.concat('.java'), false, 'UTF-8')]
 
@@ -22,14 +22,14 @@ import com.vividsolutions.jts.geom.Geometry;
 public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
 
 	//protected Double value = new Double(); 
-	public static  Double stepVar = new Double([c.getTaggedValue(c, 'Environment', 'stepVariation')/]);
-	public static  Double valueMax = new Double([c.getTaggedValue(c, 'Environment', 'maxValue')/]);
-	public static  Double valueMin = new Double([c.getTaggedValue(c, 'Environment', 'minValue')/]);
+	public static  Double stepVar = new Double([c.getTaggedValue(c, 'Spatial', 'stepVariation')/]);
+	public static  Double valueMax = new Double([c.getTaggedValue(c, 'Spatial', 'maxValue')/]);
+	public static  Double valueMin = new Double([c.getTaggedValue(c, 'Spatial', 'minValue')/]);
 
 	protected Coordinate location;
 	public Coordinate getLocation() {return location;}
 
-	protected Variable var = new Variable(new Double([c.getTaggedValue(c, 'Environment', 'initValue')/]), valueMin, valueMax);
+	protected Variable var = new Variable(new Double([c.getTaggedValue(c, 'Spatial', 'initValue')/]), valueMin, valueMax);
 	public void setValue(Double newValue) {var.setValue(newValue);}
 	public Double getValue() {return var.getValue();}
 	

@@ -83,12 +83,12 @@ class of that type.
             [/let]
            [/for]	 
           [/for] [comment Attributes /]
-		  [comment Iterate through harvested Environments /]
+		  [comment Iterate through harvested Spatials /]
           [for (assHE:Association | hClass.getAssociations())]
            [for (he:Element | assHE.relatedElement) ]
 		    [let heClass: Class = he.oclAsType(Class)]
             [if (heClass.isNotNull())]
-             [if (heClass.hasStereotype('Environment'))]
+             [if (heClass.hasStereotype('Spatial'))]
 		Bag neigh[heClass.name/] = sim.space[heClass.name/].getObjectsWithinDistance(this, scope[hClass.name/]);
 		for(Object obj : neigh[heClass.name/]) 
 		{
@@ -108,7 +108,7 @@ class of that type.
             [/if]
            [/let]
            [/for]	 
-          [/for] [comment Environment /]
+          [/for] [comment Spatial /]
 
          [/if]
         [/if]

@@ -36,7 +36,7 @@ public class [c.name /]GUI extends GUIState {
    [if (aClass.hasStereotype('Animat'))]
 	GeomVectorFieldPortrayal portrayal[aClass.name/] = new GeomVectorFieldPortrayal();
    [/if]
-   [if (aClass.hasStereotype('Environment'))]
+   [if (aClass.hasStereotype('Spatial'))]
 	GeomVectorFieldPortrayal portrayal[aClass.name/] = new GeomVectorFieldPortrayal();
    [/if]
   [/if]
@@ -74,11 +74,11 @@ public class [c.name /]GUI extends GUIState {
 	{
 		[c.name/] sim = ([c.name/]) state;
 		
-[comment Iterate through Animats and Environments /]
+[comment Iterate through Animats and Spatials /]
 [for (ass:Association | c.getAssociations())]
   [for (a:Element | ass.relatedElement) ]
    [let aClass: Class = a.oclAsType(Class)]
-	[if (aClass.hasStereotype('Environment'))]
+	[if (aClass.hasStereotype('Spatial'))]
 		portrayal[aClass.name/].setField(sim.space[aClass.name/]);
 		portrayal[aClass.name/].setPortrayalForAll(new [aClass.name/]Portrayal());
 
@@ -114,11 +114,11 @@ public class [c.name /]GUI extends GUIState {
 		
 		// so the frame appears in the "Display" list
 		displayFrame.setVisible(true);
-[comment Iterate through Environments /]
+[comment Iterate through Spatials /]
 [for (ass:Association | c.getAssociations())]
   [for (a:Element | ass.relatedElement) ]
    [let aClass: Class = a.oclAsType(Class)]
-	[if (aClass.hasStereotype('Environment'))]
+	[if (aClass.hasStereotype('Spatial'))]
 		display.attach(portrayal[aClass.name/], "[aClass.name/]");
 	[/if]
   [/let]

@@ -15,8 +15,8 @@ Gathers all the modules in a single template.
 [import mdd3s::templates::animat/]
 [import mdd3s::templates::behavEmerge/]
 [import mdd3s::templates::animatPortrayal/]
-[import mdd3s::templates::varEnvironment/]
-[import mdd3s::templates::varEnvironPortrayal/]
+[import mdd3s::templates::Spatial/]
+[import mdd3s::templates::SpatialPortrayal/]
 
 [template public mainClass(aClass : Class)]
 	

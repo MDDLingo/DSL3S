@@ -71,10 +71,10 @@ public class [c.name/] extends SimState {
 		garbage[aClass.name/] = new ArrayList<MasonGeometry>();
 	}
    [/if]
-   [if (aClass.hasStereotype('Environment'))]
+   [if (aClass.hasStereotype('Spatial'))]
 
-	[if (aClass.getTaggedValue(aClass, 'Environment', 'inputLayer').isNotNull())]
-	public String inputLayer[aClass.name/] = "[aClass.getTaggedValue(aClass, 'Environment', 'inputLayer')/]";
+	[if (aClass.getTaggedValue(aClass, 'Spatial', 'inputLayer').isNotNull())]
+	public String inputLayer[aClass.name/] = "[aClass.getTaggedValue(aClass, 'Spatial', 'inputLayer')/]";
 	[/if]
 	public GeomVectorField space[aClass.name/] = new GeomVectorField(spaceWidth, spaceHeight);
 
@@ -143,8 +143,8 @@ public class [c.name/] extends SimState {
  [for (a:Element | assA.relatedElement) ]
   [let aClass: Class = a.oclAsType(Class)] 
   [if (aClass.isNotNull())]
-   [if (aClass.hasStereotype('Environment'))]
-	 [if (aClass.getTaggedValue(aClass, 'Environment', 'inputLayer').isNotNull())]
+   [if (aClass.hasStereotype('Spatial'))]
+	 [if (aClass.getTaggedValue(aClass, 'Spatial', 'inputLayer').isNotNull())]
 		Factory.load[aClass.name/]FromLayer(inputLayer[aClass.name/], space[aClass.name/], schedule);
 		if(globalMBR == null) globalMBR = space[aClass.name/].getMBR();
 		else globalMBR.expandToInclude(space[aClass.name/].getMBR());
@@ -175,7 +175,7 @@ public class [c.name/] extends SimState {
  [for (ass:Association | c.getAssociations())]
   [for (p:Property | ass.memberEnd) ]
    [if (p.class.isNotNull())]
-    [if (p.class.hasStereotype('Environment'))]
+    [if (p.class.hasStereotype('Spatial'))]
 		space[p.class.name/].setMBR(globalMBR);
     [/if]
 	[if (p.class.hasStereotype('Animat'))]
@@ -189,8 +189,8 @@ public class [c.name/] extends SimState {
  [for (a:Element | assA.relatedElement) ]
   [let aClass: Class = a.oclAsType(Class)] 
    [if (aClass.isNotNull())]
-    [if (aClass.hasStereotype('Environment'))]
-	 [if (aClass.getTaggedValue(aClass, 'Environment', 'inputLayer').isNull())]
+    [if (aClass.hasStereotype('Spatial'))]
+	 [if (aClass.getTaggedValue(aClass, 'Spatial', 'inputLayer').isNull())]
 		init[aClass.name/]Objects();
 
      [/if]
@@ -278,8 +278,8 @@ public class [c.name/] extends SimState {
   [for (p:Element | ass.relatedElement) ]
    [let pClass: Class = p.oclAsType(Class)]
     [if (pClass.isNotNull())]
-     [if (pClass.hasStereotype('Environment'))]
-	  [if (pClass.getTaggedValue(pClass, 'Environment', 'inputLayer').isNull())]
+     [if (pClass.hasStereotype('Spatial'))]
+	  [if (pClass.getTaggedValue(pClass, 'Spatial', 'inputLayer').isNull())]
 	public void init[pClass.name/]Objects() {
 
 		for (int i=0; i < spaceWidth; i++)
@@ -289,7 +289,7 @@ public class [c.name/] extends SimState {
 					globalMBR.getMinX() + widthInterval / 2 + new Double(i) * widthInterval, 
 					globalMBR.getMinY() + heightInterval / 2 + new Double(j) * heightInterval);
 				Geometry geom = geomFactory.createPoint(coord);
-			  [if (pClass.getTaggedValue(pClass, 'Environment', 'initRandom') = 'true')]
+			  [if (pClass.getTaggedValue(pClass, 'Spatial', 'initRandom') = 'true')]
 				[pClass.name/] obj = new [pClass.name/](random, geom);
 			  [else]
 				[pClass.name/] obj = new [pClass.name/](geom);

@@ -136,8 +136,8 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
 	     [/for]	 
 	    [/for] [comment Animats /]
 	   [/if] [comment Attributes /]
-	   [comment Iterate through linked Environments/]
-	   [if (sClass.hasStereotype('Environment'))]
+	   [comment Iterate through linked Spatials/]
+	   [if (sClass.hasStereotype('Spatial'))]
 				Bag neigh[sClass.name/] = sim.space[sClass.name/].getObjectsWithinDistance(point, scope[eClass.name/]);
 				for (Object obj : neigh[sClass.name/]) 
 				{

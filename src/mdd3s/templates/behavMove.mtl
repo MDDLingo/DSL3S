@@ -65,8 +65,8 @@ Generates the Move function to be included in the Animat class.
 	     [/for]	 
 	    [/for] [comment Animats /]
        [/if]
-       [comment If it is linked to an Environment Variable /]
-       [if (seClass.hasStereotype('Environment'))]
+       [comment If it is linked to an Spatial Variable /]
+       [if (seClass.hasStereotype('Spatial'))]
 
 		// Iterate [seClass.name/] neighbourhood
 		Bag neigh[seClass.name/] = sim.space[seClass.name/].getObjectsWithinDistance(this, scope[mClass.name/]);

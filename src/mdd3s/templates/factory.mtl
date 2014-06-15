@@ -119,9 +119,9 @@ public class Factory
   [for (a:Element | assA.relatedElement) ]
   [let aClass: Class = a.oclAsType(Class)] 
    [if (aClass.isNotNull())]
-    [if (aClass.hasStereotype('Environment'))]
+    [if (aClass.hasStereotype('Spatial'))]
 
-	 [if (aClass.getTaggedValue(aClass, 'Environment', 'inputLayer').isNotNull())]
+	 [if (aClass.getTaggedValue(aClass, 'Spatial', 'inputLayer').isNotNull())]
 	protected static GeomVectorField load[aClass.name/]FromLayer(String filePath, GeomVectorField space, Schedule schedule)
 	{
 		GeomVectorField layer = loadVectorLayer(filePath, null);

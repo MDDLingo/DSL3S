@@ -4,12 +4,12 @@
 
 [comment
 Date: 17-08-2012    Author: Luís de Sousa  (luis.a.de.sousa@gmail.com)
-Generates the Portrayal class for the Environment stereotype.
+Generates the Portrayal class for the Spatial stereotype.
 Issues:
 . Where should the colours be set? Maybe random?
 /]
 
-[template public environment_portrayal(c : Class) ? (c.hasStereotype('Environment'))]
+[template public environment_portrayal(c : Class) ? (c.hasStereotype('Spatial'))]
 
 [file (c.name.concat('Portrayal.java'), false, 'UTF-8')]
 
@@ -27,8 +27,8 @@ public class [c.name/]Portrayal extends GeomPortrayal {
 	final SimpleColorMap map = new SimpleColorMap(
 		[c.name/].valueMin, 
 		[c.name/].valueMax, 
-		new Color([c.getTaggedValue(c, 'Environment', 'colourMin')/]), 
-		new Color([c.getTaggedValue(c, 'Environment', 'colourMax')/]));
+		new Color([c.getTaggedValue(c, 'Spatial', 'colourMin')/]), 
+		new Color([c.getTaggedValue(c, 'Spatial', 'colourMax')/]));
 	
 	public void draw(Object object, Graphics2D graphics, DrawInfo2D info)
     {
