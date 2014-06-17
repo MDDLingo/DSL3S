@@ -1,5 +1,5 @@
 [comment encoding = UTF-8 /]
-[module behavMove('http://www.eclipse.org/uml2/3.0.0/UML')]
+[module operMove('http://www.eclipse.org/uml2/3.0.0/UML')]
 [import mdd3s::templates::services/]
 
 [comment
@@ -7,7 +7,7 @@ Date: 17-08-2012    Author: Luís de Sousa
 Generates the Move function to be included in the Animat class.
 /]
 
-[template public behavMove(c : Class) ? (c.hasStereotype('Animat'))]
+[template public operMove(c : Class) ? (c.hasStereotype('Animat'))]
 [comment Check first if this class has linked Moved stereotypes /]
 [if (c.hasLinkedStereotype('Move'))]	
  [comment Get Simulation name /]

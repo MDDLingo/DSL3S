@@ -1,5 +1,5 @@
 [comment encoding = UTF-8 /]
-[module behavPerish('http://www.eclipse.org/uml2/3.0.0/UML')]
+[module operPerish('http://www.eclipse.org/uml2/3.0.0/UML')]
 [import mdd3s::templates::services/]
 
 [comment
@@ -11,7 +11,7 @@ class of that type.
 /]
 
 
-[template public behavPerish(c : Class) ? (c.hasStereotype('Animat'))]
+[template public operPerish(c : Class) ? (c.hasStereotype('Animat'))]
 
  [comment Get Simulation name /]
   [for (assS:Association | c.getAssociations())]

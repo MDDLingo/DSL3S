@@ -1,6 +1,6 @@
 [comment encoding = UTF-8 /]
 [module testBehavEmerge('http://www.eclipse.org/uml2/3.0.0/UML')/]
-[import mdd3s::templates::behavEmerge/]
+[import mdd3s::templates::operEmerge/]
 
 
 [template public testBehavEmergeClass(aClass : Class)]

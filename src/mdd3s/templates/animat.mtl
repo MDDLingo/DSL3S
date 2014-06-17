@@ -7,10 +7,10 @@ Date: 15-06-2012    Author: Luís de Sousa
 Skeleton of the Animat class. 
 /]
 
-[import mdd3s::templates::behavHarvest/]
-[import mdd3s::templates::behavPerish/]
-[import mdd3s::templates::behavReplicate/]
-[import mdd3s::templates::behavMove/]
+[import mdd3s::templates::operHarvest/]
+[import mdd3s::templates::operPerish/]
+[import mdd3s::templates::operReplicate/]
+[import mdd3s::templates::operMove/]
 
 [template public animat(c : Class) ? (c.hasStereotype('Animat'))]
 [comment @main /]
@@ -274,13 +274,13 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
  [/if]
 	}
 
- [c.behavHarvest() /]
+ [c.operHarvest() /]
 
- [c.behavPerish() /]
+ [c.operPerish() /]
 
- [c.behavMove() /]
+ [c.operMove() /]
 
- [c.behavReplicate() /]
+ [c.operReplicate() /]
 
 	protected double randMove(double val, MersenneTwisterFast randGen) {
 		return val + (randGen.nextDouble() - randGen.nextDouble()) * wanderScope;

@@ -1,5 +1,5 @@
 [comment encoding = UTF-8 /]
-[module behavEmerge('http://www.eclipse.org/uml2/3.0.0/UML')]
+[module operEmerge('http://www.eclipse.org/uml2/3.0.0/UML')]
 [import mdd3s::templates::services/]
 
 [comment
@@ -7,7 +7,7 @@ Date: 22-09-2012    Author: Luís de Sousa
 Generates the Emerge class for an Animat.
 /]
 
-[template public behavEmerge(c : Class) ? (c.hasStereotype('Animat'))]
+[template public operEmerge(c : Class) ? (c.hasStereotype('Animat'))]
 
 [if (c.hasLinkedStereotype('Emerge'))]
 [file (c.name.concat('Emerge.java'), false, 'UTF-8')]

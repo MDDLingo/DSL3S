@@ -1,5 +1,5 @@
 [comment encoding = UTF-8 /]
-[module behavHarvest('http://www.eclipse.org/uml2/3.0.0/UML')]
+[module operHarvest('http://www.eclipse.org/uml2/3.0.0/UML')]
 [import mdd3s::templates::services/]
 
 [comment
@@ -10,7 +10,7 @@ the Animat stereotype, so that it only generates the code for a specific
 class of that type.
 /]
 
-[template public behavHarvest(c : Class) ? (c.hasStereotype('Animat'))]
+[template public operHarvest(c : Class) ? (c.hasStereotype('Animat'))]
 [comment Iterate through linked Attributes /]
 [for (ass:Association | c.getAssociations())]
  [for (s:Element | ass.relatedElement) ]

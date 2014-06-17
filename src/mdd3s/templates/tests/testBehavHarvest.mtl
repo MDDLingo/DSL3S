@@ -1,6 +1,6 @@
 [comment encoding = UTF-8 /]
 [module testBehavHarvest('http://www.eclipse.org/uml2/3.0.0/UML')/]
-[import mdd3s::templates::behavHarvest/]
+[import mdd3s::templates::operHarvest/]
 [import mdd3s::templates::services/]
 
 

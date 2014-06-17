@@ -1,5 +1,5 @@
 [comment encoding = UTF-8 /]
-[module behavReplicate('http://www.eclipse.org/uml2/3.0.0/UML')]
+[module operReplicate('http://www.eclipse.org/uml2/3.0.0/UML')]
 [import mdd3s::templates::services/]
 
 [comment
@@ -13,7 +13,7 @@ Issues:
 . It doesn't use the inheritance property yet;
 /]
 
-[template public behavReplicate(c : Class) ? (c.hasStereotype('Animat'))]
+[template public operReplicate(c : Class) ? (c.hasStereotype('Animat'))]
  [comment Get Simulation name /]
   [for (assS:Association | c.getAssociations())]
    [for (e:Element | assS.relatedElement) ]
