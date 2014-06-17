@@ -1,0 +1,48 @@
+[comment encoding = UTF-8 /]
+[module operSupply('http://www.eclipse.org/uml2/3.0.0/UML')]
+[import mdd3s::templates::services/]
+
+[comment
+Date: 17-06-2014    Author: Luís de Sousa
+Generates the Supply function to be included in the Animat class.
+Instead of filtering for the Perish stereotype, this module starts with
+the Animat stereotype, so that it only generates the code for specific
+classes of that type.
+/]
+
+
+[template public operSupply(c : Class) ? (c.hasStereotype('Animat'))]
+	
+[comment Iterate through linked Attributes /]
+[for (ass:Association | c.getAssociations())]
+  [comment Association: [ass.name/]
+  [for (s:Element | ass.relatedElement) ]
+   [let sClass: Class = s.oclAsType(Class)]
+    [if (sClass.hasStereotype('Attribute'))]
+	[comment Iterate through linked Supply /]
+     [for (assP:Association | sClass.getAssociations())]
+      [for (p:Element | assP.relatedElement) ]
+	   [let pClass : Class = p.oclAsType(Class)]
+       [if (pClass.isNotNull())]
+        [if (pClass.hasStereotype('Supply'))]
+
+		 [if pClass.getTaggedValue(pClass, 'Supply', 'maxImpact').isNotNull()]
+	Double maxImpact[pClass.name/] = [pClass.getTaggedValue(pClass, 'Supply', 'maxImpact')/]
+		 [else]
+	Double maxImpact[pClass.name/] = null;
+		 [/if]
+	protected Double supply[sClass.name/](Double value) 
+	{
+		return attribute[sClass.name/].harvestValue(value, maxImpact[pClass.name/]);
+	}
+       [/if]
+      [/if]
+      [/let]
+     [/for]	 
+    [/for]
+   [/if]
+  [/let]
+ [/for]	 
+[/for]
+
+[/template]
