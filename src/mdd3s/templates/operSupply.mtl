@@ -31,9 +31,14 @@ classes of that type.
 		 [else]
 	Double maxImpact[pClass.name/] = null;
 		 [/if]
-	protected Double supply[sClass.name/](Double value) 
+	protected Double supplyValue[sClass.name/](Double value) 
 	{
-		return attribute[sClass.name/].harvestValue(value, maxImpact[pClass.name/]);
+		return attribute[sClass.name/].supplyValue(value, maxImpact[pClass.name/]);
+	}
+
+	protected Double supplyPercent[sClass.name/](Double value) 
+	{
+		return attribute[sClass.name/].supplyValue(value, maxImpact[pClass.name/]);
 	}
        [/if]
       [/if]

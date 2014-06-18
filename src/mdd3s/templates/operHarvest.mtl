@@ -61,11 +61,11 @@ class of that type.
 			 {
 				     [if (hClass.getTaggedValue(hClass, 'Harvest', 'percentHarvested').isNotNull())]
 				attribute[sClass.name/].add( 
-					(([haClass.name/]) obj).supplyPercent(percent[hClass.name/]));
+					(([haClass.name/]) obj).supplyPercent[hsClass.name/](percent[hClass.name/]));
 			         [/if]
 			         [if (hClass.getTaggedValue(hClass, 'Harvest', 'valueHarvested').isNotNull())]
 				attribute[sClass.name/].add( 
-					(([haClass.name/]) obj).supplyValue(value[hClass.name/]));
+					(([haClass.name/]) obj).supplyValue[hsClass.name/](value[hClass.name/]));
 			         [/if]
 
 				(([haClass.name/]) obj).perish(sim);
