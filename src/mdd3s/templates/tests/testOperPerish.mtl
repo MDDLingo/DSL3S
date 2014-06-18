@@ -1,14 +1,14 @@
 [comment encoding = UTF-8 /]
-[module testBehavPerish('http://www.eclipse.org/uml2/3.0.0/UML')/]
+[module testOperPerish('http://www.eclipse.org/uml2/3.0.0/UML')/]
 [import mdd3s::templates::operPerish/]
 [import mdd3s::templates::services/]
 
 
-[template public testPerishClass(c : Class) ? (c.hasStereotype('Animat'))]
+[template public testOperPerish(c : Class) ? (c.hasStereotype('Animat'))]
 [comment @main /]
 [file (c.name.concat('.test'), false, 'UTF-8')]
 	
-	[c.behavPerish()/]
+	[c.operPerish()/]
 
 [/file]
 	

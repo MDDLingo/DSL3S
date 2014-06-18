@@ -42,7 +42,7 @@ public class TestBehavReplicate extends AbstractAcceleoGenerator {
      *
      * @generated
      */
-    public static final String[] TEMPLATE_NAMES = { "testBehavReplicateClass" };
+    public static final String[] TEMPLATE_NAMES = { "testOperReplicate" };
     
     /**
      * The list of properties files from the launch parameters (Launch configuration).

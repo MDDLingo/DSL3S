@@ -42,7 +42,7 @@ public class TestBehavMove extends AbstractAcceleoGenerator {
      *
      * @generated
      */
-    public static final String[] TEMPLATE_NAMES = { "testBehavMoveClass" };
+    public static final String[] TEMPLATE_NAMES = { "testOperMove" };
     
     /**
      * The list of properties files from the launch parameters (Launch configuration).

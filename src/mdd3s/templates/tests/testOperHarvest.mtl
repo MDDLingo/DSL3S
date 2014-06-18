@@ -1,14 +1,14 @@
 [comment encoding = UTF-8 /]
-[module testBehavHarvest('http://www.eclipse.org/uml2/3.0.0/UML')/]
+[module testOperHarvest('http://www.eclipse.org/uml2/3.0.0/UML')/]
 [import mdd3s::templates::operHarvest/]
 [import mdd3s::templates::services/]
 
 
-[template public testBehavHarvestClass(c : Class) ? (c.hasStereotype('Animat'))]
+[template public testOperHarvest(c : Class) ? (c.hasStereotype('Animat'))]
 [comment @main /]
 
 [file (c.name.concat('.test'), false, 'UTF-8')]
-	[c.behavHarvest()/]
+	[c.operHarvest()/]
 [/file]
 	
 [/template]

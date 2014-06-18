@@ -42,7 +42,7 @@ public class TestBehavHarvest extends AbstractAcceleoGenerator {
      *
      * @generated
      */
-    public static final String[] TEMPLATE_NAMES = { "testBehavHarvestClass" };
+    public static final String[] TEMPLATE_NAMES = { "testOperHarvest" };
     
     /**
      * The list of properties files from the launch parameters (Launch configuration).

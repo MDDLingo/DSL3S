@@ -42,7 +42,7 @@ public class TestBehavPerish extends AbstractAcceleoGenerator {
      *
      * @generated
      */
-    public static final String[] TEMPLATE_NAMES = { "testPerishClass" };
+    public static final String[] TEMPLATE_NAMES = { "testOperPerish" };
     
     /**
      * The list of properties files from the launch parameters (Launch configuration).

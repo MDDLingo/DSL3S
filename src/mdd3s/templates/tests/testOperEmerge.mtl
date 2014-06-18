@@ -1,11 +1,11 @@
 [comment encoding = UTF-8 /]
-[module testBehavEmerge('http://www.eclipse.org/uml2/3.0.0/UML')/]
+[module testOperEmerge('http://www.eclipse.org/uml2/3.0.0/UML')/]
 [import mdd3s::templates::operEmerge/]
 
 
 [template public testBehavEmergeClass(aClass : Class)]
 	
 	[comment @main /]
-	[aClass.behavEmerge()/]
+	[aClass.operEmerge()/]
 	
 [/template]

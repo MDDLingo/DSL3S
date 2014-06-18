@@ -1,14 +1,14 @@
 [comment encoding = UTF-8 /]
-[module testBehavMove('http://www.eclipse.org/uml2/3.0.0/UML')/]
+[module testOperMove('http://www.eclipse.org/uml2/3.0.0/UML')/]
 [import mdd3s::templates::operMove/]
 [import mdd3s::templates::services/]
 
 
-[template public testBehavMoveClass(c : Class) ? (c.hasStereotype('Animat'))]
+[template public testOperMove(c : Class) ? (c.hasStereotype('Animat'))]
 [comment @main /]
 
 [file (c.name.concat('.test'), false, 'UTF-8')]
-	[c.behavMove()/]
+	[c.operMove()/]
 [/file]
 	
 [/template]
