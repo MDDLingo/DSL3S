@@ -33,37 +33,15 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
 	public void setValue(Double newValue) {var.setValue(newValue);}
 	public Double getValue() {return var.getValue();}
 	
-	public Double harvestPercent(Double percent, Double max) 
+	public Double supplyPercent(Double percent, Double max) 
 	{
-		return var.harvestPercent(percent, max);
+		return var.supplyPercent(percent, max);
 	}
 	
-	public Double harvestValue(Double val, Double max) 
+	public Double supplyValue(Double val, Double max) 
 	{
-		return var.harvestValue(val, max);
+		return var.supplyValue(val, max);
 	}
-	
-	/*public Double getValue() {return value;}
-	public void setValue(Double newValue) {
-		value = newValue;
-		if (value > valueMax) value = valueMax;
-		if (value < valueMin) value = valueMin;
-	}
-	
-	public Double harvestPercent(Double percent, Double max) {
-		Double harvested = value * percent / 100.0;
-		if((max != null) && (harvested > max)) setValue(value - max);
-		else setValue(value - harvested);
-		return harvested;
-	}
-	public Double harvestValue(Double val, Double max) {
-		Double harvested;
-		if(val < value) harvested = val;
-		else harvested = value;
-		if((max != null) && (harvested > max)) setValue(value - max);
-		else setValue(value - harvested);
-		return harvested;
-	}*/
 
 	private Stoppable stopper = null;
     public void setStopper(Stoppable stopper) {this.stopper = stopper;}
