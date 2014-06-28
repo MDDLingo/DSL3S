@@ -19,6 +19,7 @@ class of that type.
 	[let sim: Class = e.oclAsType(Class)]
 	 [if (sim.isNotNull())]
 	  [if (sim.hasStereotype('Simulation'))]
+    // [assS.name/]
 	protected void perish([sim.name/] sim) {
 	  [/if]
 	 [/if]

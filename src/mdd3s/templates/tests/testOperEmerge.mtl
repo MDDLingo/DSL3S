@@ -3,7 +3,7 @@
 [import mdd3s::templates::operEmerge/]
 
 
-[template public testBehavEmergeClass(aClass : Class)]
+[template public testOperEmerge(aClass : Class)]
 	
 	[comment @main /]
 	[aClass.operEmerge()/]
