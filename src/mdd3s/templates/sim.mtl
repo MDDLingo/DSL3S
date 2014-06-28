@@ -23,8 +23,8 @@ import com.vividsolutions.jts.geom.Envelope;
 import com.vividsolutions.jts.geom.Geometry;
 import com.vividsolutions.jts.geom.GeometryFactory;
 
-public class [c.name/] extends SimState {
-
+public class [c.name/] extends SimState 
+{
 	//Simulation space
 	public Integer spaceWidth = [c.getTaggedValue(c, 'Simulation', 'spaceWidth')/];
 	public Integer spaceHeight = [c.getTaggedValue(c, 'Simulation', 'spaceHeight')/];
@@ -305,43 +305,46 @@ public class [c.name/] extends SimState {
   [/for]	 
  [/for]
 
- [for (ass:Association | c.getAssociations())]
-  [for (p:Property | ass.memberEnd) ]
-   [if (p.class.isNotNull())]
-    [if (p.class.hasStereotype('Animat'))]
 
-	protected void init[p.class.name/](double x, double y) 
+[for (assA:Association | c.getAssociations())]
+ [for (a:Element | assA.relatedElement) ]
+  [let aClass: Class = a.oclAsType(Class)] 
+  [if (aClass.isNotNull())]
+   [if (aClass.hasStereotype('Animat'))]
+
+	protected void init[aClass.name/](double x, double y) 
 	{
-		[p.class.name/] new[p.class.name/] = Factory.generate[p.class.name/](x, y, schedule);
-		space[p.class.name/].addGeometry(new[p.class.name/]);
+		[aClass.name/] new[aClass.name/] = Factory.generate[aClass.name/](x, y, schedule);
+		space[aClass.name/].addGeometry(new[aClass.name/]);
 	}
 
-	public [p.class.name/] create[p.class.name/](double x, double y) 
+	public [aClass.name/] create[aClass.name/](double x, double y) 
 	{
-		[p.class.name/] new[p.class.name/] = Factory.generate[p.class.name/](x, y, schedule);
-		newAnimats[p.class.name/].add(new[p.class.name/]);
-		return new[p.class.name/];
+		[aClass.name/] new[aClass.name/] = Factory.generate[aClass.name/](x, y, schedule);
+		newAnimats[aClass.name/].add(new[aClass.name/]);
+		return new[aClass.name/];
 	}
 
-	protected void castNew[p.class.name/] () 
+	protected void castNew[aClass.name/] () 
 	{	
-		for(int i = 0; i < newAnimats[p.class.name/].size(); i++) 
+		for(int i = 0; i < newAnimats[aClass.name/].size(); i++) 
 		{
-			[p.class.name/] new[p.class.name/] = newAnimats[p.class.name/].get(i);
-			space[p.class.name/].addGeometry(new[p.class.name/]);
+			[aClass.name/] new[aClass.name/] = newAnimats[aClass.name/].get(i);
+			space[aClass.name/].addGeometry(new[aClass.name/]);
 		}
-		newAnimats[p.class.name/] = new ArrayList<[p.class.name/]>();
+		newAnimats[aClass.name/] = new ArrayList<[aClass.name/]>();
 	}
 
-	 [if (p.class.hasLinkedStereotype('Emerge'))]
-	public void createEmerge[p.class.name/]() {
-		[p.class.name/]Emerge emerge = new [p.class.name/]Emerge();
+	 [if (aClass.hasLinkedStereotype('Emerge'))]
+	public void createEmerge[aClass.name/]() {
+		[aClass.name/]Emerge emerge = new [aClass.name/]Emerge();
 		emerge.setStopper(schedule.scheduleRepeating(emerge));
 	}
 	 [/if]
 
     [/if]
    [/if]
+   [/let]
   [/for]	 
  [/for]
 
