@@ -277,11 +277,11 @@
   <DSL3S:Animat xmi:id="_VDLUoBQLEeOL_dsJOHIJwA" initNum="10" stop="null" wanderer="true" base_Class="_ui_PkBViEeKKubxyzHq1vA" colourMin="255,64,64" colourMax="192,0,0" inputLayer="data/Predators.shp"/>
   <DSL3S:Animat xmi:id="_V2lHgBQLEeOL_dsJOHIJwA" initNum="30" stop="null" base_Class="_z1g5IBViEeKKubxyzHq1vA" colourMin="64,64,255" colourMax="32,32,186"/>
   <DSL3S:Spatial xmi:id="_We0MMBQLEeOL_dsJOHIJwA" base_Class="_3R_AABViEeKKubxyzHq1vA" maxValue="50" stepVariation="1" display="true" initRandom="true" inputLayer="data/Pasture.agrid" colourMin="224,224,128" colourMax="32,128,32"/>
-  <DSL3S:Move xmi:id="_X9-R0BQLEeOL_dsJOHIJwA" weight="1" base_Class="_5U5KkBVwEeKKubxyzHq1vA"/>
+  <DSL3S:Move xmi:id="_X9-R0BQLEeOL_dsJOHIJwA" weight="1" base_Class="_5U5KkBVwEeKKubxyzHq1vA" stop="null"/>
   <DSL3S:Replicate xmi:id="_Ys2KABQLEeOL_dsJOHIJwA" lowerThreshold="-1" upperThreshold="50" toll="20" inheritance="20" base_Class="_utXvEBVsEeKKubxyzHq1vA"/>
   <DSL3S:Harvest xmi:id="_agfR4BQLEeOL_dsJOHIJwA" percentHarvested="100" base_Class="_euFOkBVxEeKKubxyzHq1vA"/>
   <DSL3S:Perish xmi:id="_bS4_MBQLEeOL_dsJOHIJwA" upperThreshold="101" base_Class="_EuL64BVtEeKKubxyzHq1vA"/>
-  <DSL3S:Move xmi:id="_dCLLgBQLEeOL_dsJOHIJwA" weight="-2" base_Class="_Jam8oBohEeKN07hQpA-1_g"/>
+  <DSL3S:Move xmi:id="_dCLLgBQLEeOL_dsJOHIJwA" weight="-2" base_Class="_Jam8oBohEeKN07hQpA-1_g" stop="null"/>
   <DSL3S:Attribute xmi:id="_e7hSwBQLEeOL_dsJOHIJwA" base_Class="_cC-QABVtEeKKubxyzHq1vA" maxValue="50" stepVariation="-1" display="true" initValue="10" inputAttribute="null"/>
   <DSL3S:Perish xmi:id="_hZdU0BQLEeOL_dsJOHIJwA" upperThreshold="51" base_Class="_9RDlgBVtEeKKubxyzHq1vA"/>
   <ecore:EAnnotation xmi:id="_nGKhYK0IEeOwIOVcIgmabQ" source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData" references="_VDLUoBQLEeOL_dsJOHIJwA">
@@ -291,9 +291,9 @@
     <contents xmi:type="ecore:EObject" xmi:id="_nGLIca0IEeOwIOVcIgmabQ" scope="1"/>
   </ecore:EAnnotation>
   <DSL3S:Attribute xmi:id="_JpO60O5aEeO00oyT07T5Aw" base_Class="_xwF7cO5ZEeO00oyT07T5Aw" maxValue="100" stepVariation="-1" display="true" initValue="20" inputAttribute="energy"/>
-  <DSL3S:Supply xmi:id="_bHrcwO5cEeO00oyT07T5Aw" base_Class="_Xf6r4O5cEeO00oyT07T5Aw"/>
+  <DSL3S:Supply xmi:id="_bHrcwO5cEeO00oyT07T5Aw" maxImpact="null" base_Class="_Xf6r4O5cEeO00oyT07T5Aw"/>
   <DSL3S:Simulation xmi:id="_z5dpcO5eEeO00oyT07T5Aw" base_Class="_vaEtAO5eEeO00oyT07T5Aw" simulName="PredatorPrey" spaceHeight="100" spaceWidth="100"/>
   <DSL3S:Harvest xmi:id="_DjtfUO5gEeO00oyT07T5Aw" percentHarvested="100" base_Class="_4u-xcO5fEeO00oyT07T5Aw"/>
-  <DSL3S:Move xmi:id="_bAG4UO5gEeO00oyT07T5Aw" weight="1" base_Class="_Y6eBgO5gEeO00oyT07T5Aw"/>
+  <DSL3S:Move xmi:id="_bAG4UO5gEeO00oyT07T5Aw" weight="1" base_Class="_Y6eBgO5gEeO00oyT07T5Aw" stop="null"/>
   <DSL3S:Replicate xmi:id="_yw3-0O5gEeO00oyT07T5Aw" lowerThreshold="-1" upperThreshold="20" toll="10" inheritance="10" base_Class="_sOf28O5gEeO00oyT07T5Aw"/>
 </xmi:XMI>

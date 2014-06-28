@@ -618,7 +618,7 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GH7T1a0KEeOwIOVcIgmabQ"/>
       </children>
       <element xmi:type="uml:Package" href="PredatorPrey.uml#_GHyw8K0KEeOwIOVcIgmabQ"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GH7T0a0KEeOwIOVcIgmabQ" x="13" y="9" width="523" height="508"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GH7T0a0KEeOwIOVcIgmabQ" x="6" y="8" width="523" height="508"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_SIKMsRVtEeKKubxyzHq1vA"/>
     <element xmi:type="uml:Model" href="PredatorPrey.uml#_uoB9EBVhEeKfCYUGa0wThA"/>
@@ -649,7 +649,7 @@
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_BXEYoRVuEeKKubxyzHq1vA" fontName="Ubuntu" fontHeight="11"/>
       <element xmi:type="uml:Association" href="PredatorPrey.uml#_BW8c0BVuEeKKubxyzHq1vA"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BXEYohVuEeKKubxyzHq1vA" points="[-1, 0, 65, 94]$[-15, 0, 51, 94]$[-15, -101, 51, -7]$[-63, -101, 3, -7]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BXEYohVuEeKKubxyzHq1vA" points="[0, -13, 65, 117]$[-22, -13, 43, 117]$[-22, -125, 43, 5]$[-62, -125, 3, 5]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BXR0ABVuEeKKubxyzHq1vA" id="(0.0070921985815602835,0.3333333333333333)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BXR0ARVuEeKKubxyzHq1vA" id="(0.98,0.7757009345794392)"/>
     </edges>
