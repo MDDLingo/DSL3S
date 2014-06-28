@@ -27,8 +27,8 @@ import sim.util.geo.PointMoveTo;
 import com.vividsolutions.jts.geom.Coordinate;
 import com.vividsolutions.jts.geom.Geometry;
 
-public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
-
+public class [c.name/] extends MasonGeometry implements Steppable, Stoppable 
+{
 	protected Double wanderScope = 1.0;
  [if c.getTaggedValue(c, 'Animat', 'stop').isNotNull()]
  	protected Double stopGoal = new Double([c.getTaggedValue(c, 'Animat', 'stop')/]);
@@ -52,7 +52,7 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
 
 	protected static Double attribute[sClass.name/]Min = new Double([sClass.getTaggedValue(sClass, 'Attribute', 'minValue')/]);
 	protected static Double attribute[sClass.name/]Max = new Double([sClass.getTaggedValue(sClass, 'Attribute', 'maxValue')/]);
-	protected static Double attribute[sClass.name/] = new Double([sClass.getTaggedValue(sClass, 'Attribute', 'stepVariation')/]);
+	protected static Double attribute[sClass.name/]Step = new Double([sClass.getTaggedValue(sClass, 'Attribute', 'stepVariation')/]);
 
 	public Variable attribute[sClass.name/] = new Variable(
 			new Double([sClass.getTaggedValue(sClass, 'Attribute', 'initValue')/]), 
@@ -115,12 +115,7 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
 	      [/if]
 	      [if (pClass.getTaggedValue(pClass, 'Harvest', 'valueHarvested').isNotNull())]
  	protected static Double value[pClass.name/] = new Double([pClass.getTaggedValue(pClass, 'Harvest', 'valueHarvested')/]);			
-	      [/if]
-		  [if (pClass.getTaggedValue(pClass, 'Harvest', 'maxImpact').isNotNull())]
- 	protected static Double maxImpact[pClass.name/] = new Double([pClass.getTaggedValue(pClass, 'Harvest', 'maxImpact')/]);
-		  [else]
-	protected static Double maxImpact[pClass.name/] = null;	
-		  [/if]		
+	      [/if]		
  	protected static Double scope[pClass.name/] = new Double([pClass.getTaggedValue(pClass, 'Harvest', 'scope')/]);			
 		 [/if]
         [/if]
@@ -243,7 +238,7 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
    [let pClass: Class = p.oclAsType(Class)]
     [if (pClass.isNotNull())]
      [if (pClass.hasStereotype('Attribute'))]
-		attribute[pClass.name/].add(attribute[pClass.name/]);
+		attribute[pClass.name/].add(attribute[pClass.name/]Step);
 	 [/if]
     [/if]
    [/let]
