@@ -150,7 +150,8 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable
  	public Boolean Stopped() {return stopped;}
 	private Stoppable stopper = null;
     public void setStopper(Stoppable stopper)   {this.stopper = stopper;}
-    public void stop() {
+    public void stop() 
+	{
     	stopped = true;
     	stopper.stop();
     }
@@ -277,7 +278,8 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable
 
  [c.operReplicate() /]
 
-	protected double randMove(double val, MersenneTwisterFast randGen) {
+	protected double randMove(double val, MersenneTwisterFast randGen) 
+	{
 		return val + (randGen.nextDouble() - randGen.nextDouble()) * wanderScope;
 	}
 

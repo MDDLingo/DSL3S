@@ -16,17 +16,16 @@ Generates the Move function to be included in the Animat class.
 	[let sim: Class = e.oclAsType(Class)]
 	 [if (sim.isNotNull())]
 	  [if (sim.hasStereotype('Simulation'))]
-	public void move([sim.name/] sim) {
+	public void move([sim.name/] sim) 
+	{
+		Coordinate nextLoc = this.location;
+		Double best = 0.0;
+		HashMap<Coordinate, Double> map = new HashMap<Coordinate,Double>();
 	  [/if]
 	 [/if]
     [/let]
    [/for]
   [/for]
-		
-		Coordinate nextLoc = this.location;
-		Double best = 0.0;
-		HashMap<Coordinate, Double> map = new HashMap<Coordinate,Double>();
-		
 [comment Iterate through linked Moves /]
 [for (assM:Association | c.getAssociations())]
  [for (m:Element | assM.relatedElement) ]
@@ -46,12 +45,12 @@ Generates the Move function to be included in the Animat class.
          [let aClass: Class = a.oclAsType(Class)]
           [if (aClass.isNotNull())]
            [if (aClass.hasStereotype('Animat'))]
-		
+
 		// Iterate [aClass.name/] neighbourhood
 		Bag neigh[aClass.name/] = sim.space[aClass.name/].getObjectsWithinDistance(this, scope[mClass.name/]);
 		
-		for (Object obj : neigh[aClass.name/]) {
-			
+		for (Object obj : neigh[aClass.name/]) 
+		{
 			Coordinate objLocation = (([aClass.name/]) obj).getLocation();
 			Double current = map.get(objLocation);
 			if(current == null) current = 0.0;
@@ -71,8 +70,8 @@ Generates the Move function to be included in the Animat class.
 		// Iterate [seClass.name/] neighbourhood
 		Bag neigh[seClass.name/] = sim.space[seClass.name/].getObjectsWithinDistance(this, scope[mClass.name/]);
 		
-		for (Object obj : neigh[seClass.name/]) {
-			
+		for (Object obj : neigh[seClass.name/]) 
+		{	
 			Coordinate objLocation = (([seClass.name/]) obj).getLocation();
 			Double current = map.get(objLocation);
 			if(current == null) current = 0.0;
@@ -108,7 +107,8 @@ Generates the Move function to be included in the Animat class.
 
  [if (c.getTaggedValue(c, 'Animat', 'wanderer') = 'true')]
 		// Wander if nothing interesting around
-		if((nextLoc.x == location.x) && (nextLoc.y == location.y)){
+		if((nextLoc.x == location.x) && (nextLoc.y == location.y))
+		{
 			nextLoc = new Coordinate(
 				randMove(location.x, sim.random),
 				randMove(location.y, sim.random));
