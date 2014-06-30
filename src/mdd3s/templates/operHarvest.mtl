@@ -24,7 +24,8 @@ class of that type.
   		[let sim: Class = e.oclAsType(Class)]
    		 [if (sim.isNotNull())]
     	  [if (sim.hasStereotype('Simulation'))]
-	public void harvest[sClass.name/]([sim.name/] sim) {
+	public void harvest[sClass.name/]([sim.name/] sim) 
+	{
 		  [/if]
 		 [/if]
         [/let]
@@ -38,7 +39,6 @@ class of that type.
         [if (hClass.isNotNull())]
          [if (hClass.hasStereotype('Harvest'))]
 		  [if (hClass.getTaggedValue(hClass, 'Harvest', 'harvested') <> sClass.name)]
-
 		  [comment Iterate through harvested Attributes /]
            [for (assHS:Association | hClass.getAssociations())]
             [for (hs:Element | assHS.relatedElement) ]
@@ -46,7 +46,6 @@ class of that type.
              [if (hsClass.isNotNull())]
               [if (hsClass.hasStereotype('Attribute'))]
 			   [if (hsClass.name <> sClass.name)]
-
 		 	    [comment Iterate through harvested Animat /]
            	    [for (assHA:Association | hsClass.getAssociations())]
                  [for (ha:Element | assHA.relatedElement) ]
@@ -58,7 +57,7 @@ class of that type.
 		for(Object obj : neigh[haClass.name/]) 
 		{
 			if(obj != this)
-			 {
+			{
 				     [if (hClass.getTaggedValue(hClass, 'Harvest', 'percentHarvested').isNotNull())]
 				attribute[sClass.name/].add( 
 					(([haClass.name/]) obj).supplyPercent[hsClass.name/](percent[hClass.name/]));
@@ -103,13 +102,11 @@ class of that type.
 			  [/if]
 				(([heClass.name/]) obj).perish(sim);
 		}
-		
              [/if]
             [/if]
            [/let]
            [/for]	 
           [/for] [comment Spatial /]
-
          [/if]
         [/if]
        [/if]
