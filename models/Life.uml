@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DSL3S="http:///schemas/DSL3S/_nY3zgO5aEeO00oyT07T5Aw/25" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http:///schemas/DSL3S/_nY3zgO5aEeO00oyT07T5Aw/25 ../profile/DSL3S.profile.uml#_nftbUO5aEeO00oyT07T5Aw">
+<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DSL3S="http:///schemas/DSL3S/_DCacAPDEEeOA5dbinY6UPQ/26" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http:///schemas/DSL3S/_DCacAPDEEeOA5dbinY6UPQ/26 ../profile/DSL3S.profile.uml#_Djd6oPDEEeOA5dbinY6UPQ">
   <uml:Model xmi:id="_BJ00wCQ-EeK2oPEGStcpwg" name="model">
     <packagedElement xmi:type="uml:Association" xmi:id="_NVqfgCQ-EeK2oPEGStcpwg" name="sim_life" memberEnd="_NVqfgSQ-EeK2oPEGStcpwg _NVpRYCQ-EeK2oPEGStcpwg">
       <ownedEnd xmi:type="uml:Property" xmi:id="_NVqfgSQ-EeK2oPEGStcpwg" name="life" type="_KES1YCQ-EeK2oPEGStcpwg" association="_NVqfgCQ-EeK2oPEGStcpwg">
@@ -117,7 +117,7 @@
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_Nc3x8BQIEeOL_dsJOHIJwA">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_NdVsABQIEeOL_dsJOHIJwA" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="../profile/DSL3S.profile.uml#_nftbUO5aEeO00oyT07T5Aw"/>
+        <references xmi:type="ecore:EPackage" href="../profile/DSL3S.profile.uml#_Djd6oPDEEeOA5dbinY6UPQ"/>
       </eAnnotations>
       <appliedProfile xmi:type="uml:Profile" href="../profile/DSL3S.profile.uml#_bf7O0CBZEeKpfttodweVYA"/>
     </profileApplication>
