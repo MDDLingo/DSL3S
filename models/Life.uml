@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DSL3S="http:///schemas/DSL3S/_DCacAPDEEeOA5dbinY6UPQ/26" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http:///schemas/DSL3S/_DCacAPDEEeOA5dbinY6UPQ/26 ../profile/DSL3S.profile.uml#_Djd6oPDEEeOA5dbinY6UPQ">
   <uml:Model xmi:id="_BJ00wCQ-EeK2oPEGStcpwg" name="model">
-    <packagedElement xmi:type="uml:Association" xmi:id="_NVqfgCQ-EeK2oPEGStcpwg" name="sim_life" memberEnd="_NVqfgSQ-EeK2oPEGStcpwg _NVpRYCQ-EeK2oPEGStcpwg">
-      <ownedEnd xmi:type="uml:Property" xmi:id="_NVqfgSQ-EeK2oPEGStcpwg" name="life" type="_KES1YCQ-EeK2oPEGStcpwg" association="_NVqfgCQ-EeK2oPEGStcpwg">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NVqfgyQ-EeK2oPEGStcpwg" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NVqfgiQ-EeK2oPEGStcpwg" value="1"/>
-      </ownedEnd>
-      <ownedEnd xmi:type="uml:Property" xmi:id="_NVpRYCQ-EeK2oPEGStcpwg" name="sim" type="_B_3r8CQ-EeK2oPEGStcpwg" association="_NVqfgCQ-EeK2oPEGStcpwg">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NVpRYiQ-EeK2oPEGStcpwg" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NVpRYSQ-EeK2oPEGStcpwg" value="1"/>
-      </ownedEnd>
-    </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_SoJFwCQ-EeK2oPEGStcpwg" name="life_alive" memberEnd="_SoJFwSQ-EeK2oPEGStcpwg _SoFbYCQ-EeK2oPEGStcpwg">
       <ownedEnd xmi:type="uml:Property" xmi:id="_SoJFwSQ-EeK2oPEGStcpwg" name="alive" type="_OFA40CQ-EeK2oPEGStcpwg" aggregation="composite" association="_SoJFwCQ-EeK2oPEGStcpwg">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SoJs0SQ-EeK2oPEGStcpwg" value="1"/>
@@ -21,7 +11,7 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SoFbYSQ-EeK2oPEGStcpwg" value="1"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_YoCLoCQ-EeK2oPEGStcpwg" name="" memberEnd="_YoCLoSQ-EeK2oPEGStcpwg _Yn_vYCQ-EeK2oPEGStcpwg">
+    <packagedElement xmi:type="uml:Association" xmi:id="_YoCLoCQ-EeK2oPEGStcpwg" name="alive_new" memberEnd="_YoCLoSQ-EeK2oPEGStcpwg _Yn_vYCQ-EeK2oPEGStcpwg">
       <ownedEnd xmi:type="uml:Property" xmi:id="_YoCLoSQ-EeK2oPEGStcpwg" name="" type="_TckMUCQ-EeK2oPEGStcpwg" association="_YoCLoCQ-EeK2oPEGStcpwg">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YoCLoyQ-EeK2oPEGStcpwg" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YoCLoiQ-EeK2oPEGStcpwg" value="1"/>
@@ -31,8 +21,8 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Yn_vYSQ-EeK2oPEGStcpwg" value="1"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_Z6_BQCQ-EeK2oPEGStcpwg" name="" memberEnd="_Z6_BQSQ-EeK2oPEGStcpwg _Z66v0CQ-EeK2oPEGStcpwg">
-      <ownedEnd xmi:type="uml:Property" xmi:id="_Z6_BQSQ-EeK2oPEGStcpwg" name="new" type="_TckMUCQ-EeK2oPEGStcpwg" association="_Z6_BQCQ-EeK2oPEGStcpwg">
+    <packagedElement xmi:type="uml:Association" xmi:id="_Z6_BQCQ-EeK2oPEGStcpwg" name="life_new" memberEnd="_Z6_BQSQ-EeK2oPEGStcpwg _Z66v0CQ-EeK2oPEGStcpwg">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_Z6_BQSQ-EeK2oPEGStcpwg" name="new" type="_TckMUCQ-EeK2oPEGStcpwg" aggregation="composite" association="_Z6_BQCQ-EeK2oPEGStcpwg">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Z6_BQyQ-EeK2oPEGStcpwg" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Z6_BQiQ-EeK2oPEGStcpwg" value="1"/>
       </ownedEnd>
@@ -51,7 +41,7 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hUovYSQ-EeK2oPEGStcpwg" value="1"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_Do8GECQ_EeK2oPEGStcpwg" name="" memberEnd="_Do8GESQ_EeK2oPEGStcpwg _Do638CQ_EeK2oPEGStcpwg">
+    <packagedElement xmi:type="uml:Association" xmi:id="_Do8GECQ_EeK2oPEGStcpwg" name="neighbours_crowd" memberEnd="_Do8GESQ_EeK2oPEGStcpwg _Do638CQ_EeK2oPEGStcpwg">
       <ownedEnd xmi:type="uml:Property" xmi:id="_Do8GESQ_EeK2oPEGStcpwg" name="" type="_CkmUMCQ_EeK2oPEGStcpwg" association="_Do8GECQ_EeK2oPEGStcpwg">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Do8GEyQ_EeK2oPEGStcpwg" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Do8GEiQ_EeK2oPEGStcpwg" value="1"/>
