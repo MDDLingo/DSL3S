@@ -27,10 +27,11 @@ classes of that type.
         [if (pClass.hasStereotype('Supply'))]
 
 		 [if pClass.getTaggedValue(pClass, 'Supply', 'maxImpact').isNotNull()]
-	Double maxImpact[pClass.name/] = [pClass.getTaggedValue(pClass, 'Supply', 'maxImpact')/]
+	protected static Double maxImpact[pClass.name/] = new Double([pClass.getTaggedValue(pClass, 'Supply', 'maxImpact')/]);
 		 [else]
-	Double maxImpact[pClass.name/] = null;
+	protected static Double maxImpact[pClass.name/] = null;
 		 [/if]
+
 	protected Double supplyValue[sClass.name/](Double value) 
 	{
 		return attribute[sClass.name/].supplyValue(value, maxImpact[pClass.name/]);
