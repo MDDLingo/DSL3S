@@ -66,7 +66,7 @@ public class [c.name/] extends SimState
 	}
 	protected void collect[aClass.name/]Garbage()  {
 		for (MasonGeometry anim : garbage[aClass.name/]) 
-~       {
+       {
 			space[aClass.name/].removeGeometry(anim);
 			((Stoppable) anim).stop();
 		}
