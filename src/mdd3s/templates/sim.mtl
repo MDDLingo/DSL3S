@@ -129,15 +129,17 @@ public class [c.name/] extends SimState
 	{
 		super.start();
 
- [for (ass:Association | c.getAssociations())]
-  [for (p:Property | ass.memberEnd) ]
-   [if (p.class.isNotNull())]
-    [if (p.class.hasStereotype('Animat'))]
-		space[p.class.name/].clear();
+[for (assA:Association | c.getAssociations())]
+ [for (a:Element | assA.relatedElement) ]
+  [let aClass: Class = a.oclAsType(Class)] 
+   [if (aClass.isNotNull())]
+    [if (aClass.hasStereotype('Animat'))]
+		space[aClass.name/].clear();
     [/if]
    [/if]
-  [/for]	 
- [/for]
+  [/let]
+ [/for]	 
+[/for]
 
 [for (assA:Association | c.getAssociations())]
  [for (a:Element | assA.relatedElement) ]
@@ -172,16 +174,20 @@ public class [c.name/] extends SimState
 		widthInterval = globalMBR.getWidth() / spaceWidth;
 		heightInterval = globalMBR.getWidth() / spaceHeight;
 
- [for (ass:Association | c.getAssociations())]
-  [for (p:Property | ass.memberEnd) ]
-   [if (p.class.isNotNull())]
-    [if (p.class.hasStereotype('Spatial'))]
-		space[p.class.name/].setMBR(globalMBR);
+
+
+ [for (assA:Association | c.getAssociations())]
+  [for (a:Element | assA.relatedElement) ]
+   [let aClass: Class = a.oclAsType(Class)] 
+    [if (aClass.isNotNull())]
+     [if (aClass.hasStereotype('Spatial'))]
+		space[aClass.name/].setMBR(globalMBR);
+     [/if]
+	 [if (aClass.hasStereotype('Animat'))]
+		space[aClass.name/].setMBR(globalMBR);
+     [/if]
     [/if]
-	[if (p.class.hasStereotype('Animat'))]
-		space[p.class.name/].setMBR(globalMBR);
-    [/if]
-   [/if]
+   [/let]
   [/for]	 
  [/for]
 
@@ -217,15 +223,17 @@ public class [c.name/] extends SimState
 		{
 			public void step(SimState state) 
 			{ 
- [for (ass:Association | c.getAssociations())]
-  [for (p:Property | ass.memberEnd) ]
-   [if (p.class.isNotNull())]
-    [if (p.class.hasStereotype('Animat'))]
-				space[p.class.name/].updateSpatialIndex();
+ [for (assA:Association | c.getAssociations())]
+  [for (a:Element | assA.relatedElement) ]
+   [let aClass: Class = a.oclAsType(Class)] 
+    [if (aClass.isNotNull())]
+     [if (aClass.hasStereotype('Animat'))]
+				space[aClass.name/].updateSpatialIndex();
+     [/if]
     [/if]
-   [/if]
+   [/let]
   [/for]	 
- [/for]	
+ [/for]
 			}
 		},-1,1);
 
@@ -240,7 +248,7 @@ public class [c.name/] extends SimState
   [let gClass: Class = g.oclAsType(Class)] 
   [if (gClass.isNotNull())]
    [if (gClass.hasStereotype('Global'))]
-	[if (gClass. getTaggedValue(gClass,  'Global', 'inputFile').isNotNull())]
+	[if (gClass.getTaggedValue(gClass,  'Global', 'inputFile').isNotNull())]
 				global[gClass.name/].setValue(list[gClass.name/].get(step));
 	[else]
 				global[gClass.name/].add(global[gClass.name/]Var);
@@ -260,16 +268,18 @@ public class [c.name/] extends SimState
 			public void step(SimState state) 
 			{ 
 
- [for (ass:Association | c.getAssociations())]
-  [for (p:Property | ass.memberEnd) ]
-   [if (p.class.isNotNull())]
-    [if (p.class.hasStereotype('Animat'))]
-				collect[p.class.name/]Garbage();
-				castNew[p.class.name/]();
+ [for (assA:Association | c.getAssociations())]
+  [for (a:Element | assA.relatedElement) ]
+   [let aClass: Class = a.oclAsType(Class)] 
+    [if (aClass.isNotNull())]
+     [if (aClass.hasStereotype('Animat'))]
+				collect[aClass.name/]Garbage();
+				castNew[aClass.name/]();
+     [/if]
     [/if]
-   [/if]
+   [/let]
   [/for]	 
- [/for]	
+ [/for]
 			}
 		});
 	}
