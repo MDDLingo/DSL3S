@@ -60,11 +60,13 @@ public class [c.name/] extends SimState
 	public GeomVectorField space[aClass.name/] = new GeomVectorField(spaceWidth, spaceHeight);
 
 	protected ArrayList<MasonGeometry> garbage[aClass.name/] = new ArrayList<MasonGeometry>();
-	public void addTo[aClass.name/]Garbage(MasonGeometry anim) {
+	public void addTo[aClass.name/]Garbage(MasonGeometry anim) 
+    {
 		garbage[aClass.name/].add(anim);
 	}
 	protected void collect[aClass.name/]Garbage()  {
-		for (MasonGeometry anim : garbage[aClass.name/]) {
+		for (MasonGeometry anim : garbage[aClass.name/]) 
+~       {
 			space[aClass.name/].removeGeometry(anim);
 			((Stoppable) anim).stop();
 		}
@@ -290,8 +292,8 @@ public class [c.name/] extends SimState
     [if (pClass.isNotNull())]
      [if (pClass.hasStereotype('Spatial'))]
 	  [if (pClass.getTaggedValue(pClass, 'Spatial', 'inputLayer').isNull())]
-	public void init[pClass.name/]Objects() {
-
+	public void init[pClass.name/]Objects() 
+    {
 		for (int i=0; i < spaceWidth; i++)
 			for (int j=0; j < spaceHeight; j++)
 			{
@@ -346,7 +348,8 @@ public class [c.name/] extends SimState
 	}
 
 	 [if (aClass.hasLinkedStereotype('Emerge'))]
-	public void createEmerge[aClass.name/]() {
+	public void createEmerge[aClass.name/]() 
+	{
 		[aClass.name/]Emerge emerge = new [aClass.name/]Emerge();
 		emerge.setStopper(schedule.scheduleRepeating(emerge));
 	}

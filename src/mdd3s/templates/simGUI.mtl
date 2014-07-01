@@ -144,8 +144,8 @@ public class [c.name /]GUI extends GUIState {
 		display = null;
 	}
 
-	public static void main(String['[]'/] args){
-		
+	public static void main(String['[]'/] args)
+    {
 		[c.name/]GUI vid = new [c.name/]GUI();
 		Console c = new Console(vid);
 		c.setVisible(true);

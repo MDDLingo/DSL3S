@@ -260,7 +260,8 @@ MasonGeometry class.
 	    
 		try //Remaining lines
 		{ 
-	      while ((nextLine = reader.readNext()) != null) {
+	      while ((nextLine = reader.readNext()) != null) 
+          {
 	        lineNumber++;        
 	        array.add(new Double(nextLine['['/]0[']'/]));
 	      }

@@ -159,8 +159,8 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable
 	protected Coordinate location;
 	public Coordinate getLocation() {return location;}
 
-	public static Double getMinDisplayValue() {
-
+	public static Double getMinDisplayValue() 
+    {
 		return new Double(
  [for (ass:Association | c.getAssociations())]
   [for (p:Element | ass.relatedElement) ]
@@ -178,8 +178,8 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable
 			0); // this zero is an artifact of code generation
 }
 
-	public static Double getMaxDisplayValue() {
-
+	public static Double getMaxDisplayValue() 
+    {
 		return new Double(
  [for (ass:Association | c.getAssociations())]
   [for (p:Element | ass.relatedElement) ]
@@ -197,8 +197,8 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable
 			0); // this zero is an artifact of code generation
 }
 
-	public Double getDisplayValue() {
-
+	public Double getDisplayValue() 
+    {
 		return new Double(
  [for (ass:Association | c.getAssociations())]
   [for (p:Element | ass.relatedElement) ]
@@ -218,8 +218,8 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable
 
 
 	//@Override
-	public void step(SimState state) {
-
+	public void step(SimState state) 
+    {
  [comment Get Simulation name /]
   [for (assS:Association | c.getAssociations())]
    [for (e:Element | assS.relatedElement) ]

@@ -54,7 +54,8 @@ public class [c.name/]Emerge implements Steppable, Stoppable {
     public void setStopper(Stoppable stopper) {this.stopper = stopper;}
 
 	//@Override
-	public void stop() {
+	public void stop() 
+    {
 		// TODO Auto-generated method stub
 		stopper.stop();
 	}
