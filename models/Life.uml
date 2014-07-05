@@ -119,5 +119,5 @@
   <DSL3S:Harvest xmi:id="_VNa9IBQIEeOL_dsJOHIJwA" valueHarvested="1" base_Class="_jYYv0CQ-EeK2oPEGStcpwg" scope="1.5"/>
   <DSL3S:Perish xmi:id="_WUZzUBQIEeOL_dsJOHIJwA" upperThreshold="4" lowerThreshold="1" base_Class="_CkmUMCQ_EeK2oPEGStcpwg"/>
   <DSL3S:Attribute xmi:id="_sMjyYBQIEeOL_dsJOHIJwA" base_Class="_blgCUCQ-EeK2oPEGStcpwg" maxValue="8" stepVariation="-10" initValue="3"/>
-  <DSL3S:Supply xmi:id="_IgdkYO7oEeOdtbYJsa7Y0g" maxImpact="0" base_Class="_CGMPoO7oEeOdtbYJsa7Y0g"/>
+  <DSL3S:Supply xmi:id="_IgdkYO7oEeOdtbYJsa7Y0g" maxImpact="1" base_Class="_CGMPoO7oEeOdtbYJsa7Y0g"/>
 </xmi:XMI>
