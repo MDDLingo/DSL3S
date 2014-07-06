@@ -167,16 +167,15 @@
     <packagedElement xmi:type="uml:Package" xmi:id="_K6hOIOC8EeKY16wTGqVU7g" name="Particle View"/>
     <packagedElement xmi:type="uml:Package" xmi:id="_yPiEkOP8EeK6ROy64Uoi8w" name="Seed View">
       <packagedElement xmi:type="uml:Class" xmi:id="_9IDiwOP7EeK6ROy64Uoi8w" name="Seed"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_AuQ_AOP9EeK6ROy64Uoi8w" name="Frozen">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_C5L-cOP9EeK6ROy64Uoi8w" name="seed" type="_9IDiwOP7EeK6ROy64Uoi8w" association="_C5Q28OP9EeK6ROy64Uoi8w">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_C5L-cuP9EeK6ROy64Uoi8w" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_C5L-ceP9EeK6ROy64Uoi8w" value="1"/>
-        </ownedAttribute>
-      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_AuQ_AOP9EeK6ROy64Uoi8w" name="Frozen"/>
       <packagedElement xmi:type="uml:Association" xmi:id="_C5Q28OP9EeK6ROy64Uoi8w" name="frozen_seed_0" memberEnd="_C5Q28eP9EeK6ROy64Uoi8w _C5L-cOP9EeK6ROy64Uoi8w">
-        <ownedEnd xmi:type="uml:Property" xmi:id="_C5Q28eP9EeK6ROy64Uoi8w" name="frozen" type="_AuQ_AOP9EeK6ROy64Uoi8w" association="_C5Q28OP9EeK6ROy64Uoi8w">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_C5Q28eP9EeK6ROy64Uoi8w" name="frozen" type="_AuQ_AOP9EeK6ROy64Uoi8w" aggregation="composite" association="_C5Q28OP9EeK6ROy64Uoi8w">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_C5Q28-P9EeK6ROy64Uoi8w" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_C5Q28uP9EeK6ROy64Uoi8w" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_C5L-cOP9EeK6ROy64Uoi8w" name="seed" type="_9IDiwOP7EeK6ROy64Uoi8w" association="_C5Q28OP9EeK6ROy64Uoi8w">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_C5L-cuP9EeK6ROy64Uoi8w" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_C5L-ceP9EeK6ROy64Uoi8w" value="1"/>
         </ownedEnd>
       </packagedElement>
     </packagedElement>
@@ -201,4 +200,5 @@
   <DSL3S_1:Simulation xmi:id="_HULz8ATgEeSLcrL9B3-GDw" base_Class="_-aFq4OCkEeKY16wTGqVU7g" simulName="Freeze" spaceHeight="100" spaceWidth="100"/>
   <DSL3S_1:Animat xmi:id="_XSayQATgEeSLcrL9B3-GDw" initNum="1" base_Class="_9IDiwOP7EeK6ROy64Uoi8w" colourMax="0,0,255"/>
   <DSL3S_1:Animat xmi:id="_h6VzMATgEeSLcrL9B3-GDw" initNum="1000" stop="1" wanderer="true" base_Class="_UKXgUOClEeKY16wTGqVU7g"/>
+  <DSL3S_1:Attribute xmi:id="_sfXbsAThEeSLcrL9B3-GDw" base_Class="_AuQ_AOP9EeK6ROy64Uoi8w" minValue="1" maxValue="1" display="true" initValue="1"/>
 </xmi:XMI>
