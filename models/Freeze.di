@@ -10,6 +10,9 @@
     <availablePage>
       <emfPageIdentifier href="Freeze.notation#_O61q8OCmEeKY16wTGqVU7g"/>
     </availablePage>
+    <availablePage>
+      <emfPageIdentifier href="Freeze.notation#_rwY9kAUoEeSLcrL9B3-GDw"/>
+    </availablePage>
   </pageList>
   <sashModel currentSelection="//@sashModel/@windows.0/@children.0">
     <windows>
@@ -19,6 +22,9 @@
         </children>
         <children>
           <emfPageIdentifier href="Freeze.notation#_s4p_AOClEeKY16wTGqVU7g"/>
+        </children>
+        <children>
+          <emfPageIdentifier href="Freeze.notation#_rwY9kAUoEeSLcrL9B3-GDw"/>
         </children>
         <children>
           <emfPageIdentifier href="Freeze.notation#_O61q8OCmEeKY16wTGqVU7g"/>
