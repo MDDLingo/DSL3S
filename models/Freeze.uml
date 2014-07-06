@@ -199,6 +199,8 @@
   <DSL3S_1:Animat xmi:id="_XSayQATgEeSLcrL9B3-GDw" initNum="1" base_Class="_9IDiwOP7EeK6ROy64Uoi8w" colourMax="0,0,255"/>
   <DSL3S_1:Animat xmi:id="_h6VzMATgEeSLcrL9B3-GDw" initNum="1000" stop="1" wanderer="true" base_Class="_UKXgUOClEeKY16wTGqVU7g"/>
   <DSL3S_1:Attribute xmi:id="_sfXbsAThEeSLcrL9B3-GDw" base_Class="_AuQ_AOP9EeK6ROy64Uoi8w" minValue="1" maxValue="1" display="true" initValue="1"/>
-  <DSL3S_1:Attribute xmi:id="_Y7xY4ATkEeSLcrL9B3-GDw" base_Class="_i-FxUOC7EeKY16wTGqVU7g" maxValue="1"/>
+  <DSL3S_1:Attribute xmi:id="_Y7xY4ATkEeSLcrL9B3-GDw" base_Class="_i-FxUOC7EeKY16wTGqVU7g" maxValue="100" stepVariation="-100"/>
   <DSL3S_1:Attribute xmi:id="_aAb64ATkEeSLcrL9B3-GDw" base_Class="_ZxRB8OCmEeKY16wTGqVU7g" maxValue="1"/>
+  <DSL3S_1:Move xmi:id="_7YQwUATmEeSLcrL9B3-GDw" weight="1" base_Class="_9n9BUOC6EeKY16wTGqVU7g" scope="1.4" stop="1"/>
+  <DSL3S_1:Move xmi:id="_-kbxYATmEeSLcrL9B3-GDw" weight="1" base_Class="_hA7OEOP9EeK6ROy64Uoi8w" scope="1.4" stop="1"/>
 </xmi:XMI>
