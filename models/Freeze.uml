@@ -79,74 +79,6 @@
         </ownedEnd>
       </packagedElement>
     </packagedElement>
-    <packagedElement xmi:type="uml:Package" xmi:id="_TppW4OC7EeKY16wTGqVU7g" name="Particle.Harvest View">
-      <packagedElement xmi:type="uml:Association" xmi:id="_tLy7cOC7EeKY16wTGqVU7g" name="neighbours_particle_0" memberEnd="_tLy7ceC7EeKY16wTGqVU7g _tLyUYOC7EeKY16wTGqVU7g">
-        <ownedEnd xmi:type="uml:Property" xmi:id="_tLy7ceC7EeKY16wTGqVU7g" name="neighbours" type="_i-FxUOC7EeKY16wTGqVU7g" aggregation="composite" association="_tLy7cOC7EeKY16wTGqVU7g">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tLy7c-C7EeKY16wTGqVU7g" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tLy7cuC7EeKY16wTGqVU7g" value="1"/>
-        </ownedEnd>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_tLyUYOC7EeKY16wTGqVU7g" name="particle" type="_UKXgUOClEeKY16wTGqVU7g" association="_tLy7cOC7EeKY16wTGqVU7g">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tLyUYuC7EeKY16wTGqVU7g" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tLyUYeC7EeKY16wTGqVU7g" value="1"/>
-        </ownedEnd>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_2-p5YOjOEeK-J6PJ-81stw" name="Count">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_6m2IEOjOEeK-J6PJ-81stw" name="neighbours" type="_i-FxUOC7EeKY16wTGqVU7g" association="_6m3WMOjOEeK-J6PJ-81stw">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6m2IEujOEeK-J6PJ-81stw" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6m2IEejOEeK-J6PJ-81stw" value="1"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_6_AJYOjOEeK-J6PJ-81stw" name="mobile" type="_ZxRB8OCmEeKY16wTGqVU7g" association="_6_DMsOjOEeK-J6PJ-81stw">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6_AJYujOEeK-J6PJ-81stw" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6_AJYejOEeK-J6PJ-81stw" value="1"/>
-        </ownedAttribute>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_6m3WMOjOEeK-J6PJ-81stw" name="count_neighbours_0" memberEnd="_6m3WMejOEeK-J6PJ-81stw _6m2IEOjOEeK-J6PJ-81stw">
-        <ownedEnd xmi:type="uml:Property" xmi:id="_6m3WMejOEeK-J6PJ-81stw" name="count" type="_2-p5YOjOEeK-J6PJ-81stw" association="_6m3WMOjOEeK-J6PJ-81stw">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6m3WM-jOEeK-J6PJ-81stw" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6m3WMujOEeK-J6PJ-81stw" value="1"/>
-        </ownedEnd>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_6_DMsOjOEeK-J6PJ-81stw" name="count_mobile_0" memberEnd="_6_DMsejOEeK-J6PJ-81stw _6_AJYOjOEeK-J6PJ-81stw">
-        <ownedEnd xmi:type="uml:Property" xmi:id="_6_DMsejOEeK-J6PJ-81stw" name="count" type="_2-p5YOjOEeK-J6PJ-81stw" association="_6_DMsOjOEeK-J6PJ-81stw">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6_DMs-jOEeK-J6PJ-81stw" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6_DMsujOEeK-J6PJ-81stw" value="1"/>
-        </ownedEnd>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_HeXNEOjPEeK-J6PJ-81stw" name="freezed_mobile_0" memberEnd="_HeXNEejPEeK-J6PJ-81stw _HeV-8OjPEeK-J6PJ-81stw">
-        <ownedEnd xmi:type="uml:Property" xmi:id="_HeXNEejPEeK-J6PJ-81stw" name="freezed" type="_CvZjkOjPEeK-J6PJ-81stw" association="_HeXNEOjPEeK-J6PJ-81stw">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HeXNE-jPEeK-J6PJ-81stw" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HeXNEujPEeK-J6PJ-81stw" value="1"/>
-        </ownedEnd>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_IOdNQOjPEeK-J6PJ-81stw" name="freezed_neighbours_0" memberEnd="_IOdNQejPEeK-J6PJ-81stw _IOb_IOjPEeK-J6PJ-81stw">
-        <ownedEnd xmi:type="uml:Property" xmi:id="_IOdNQejPEeK-J6PJ-81stw" name="freezed" type="_CvZjkOjPEeK-J6PJ-81stw" association="_IOdNQOjPEeK-J6PJ-81stw">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IOdNQ-jPEeK-J6PJ-81stw" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IOdNQujPEeK-J6PJ-81stw" value="1"/>
-        </ownedEnd>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_OWXmsOjPEeK-J6PJ-81stw" name="Seeded">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_QpW9AOjPEeK-J6PJ-81stw" name="mobile" type="_ZxRB8OCmEeKY16wTGqVU7g" association="_QpYLIOjPEeK-J6PJ-81stw">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QpW9AujPEeK-J6PJ-81stw" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QpW9AejPEeK-J6PJ-81stw" value="1"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_R-I-oOjPEeK-J6PJ-81stw" name="frozen" type="_AuQ_AOP9EeK6ROy64Uoi8w" association="_R-KMwOjPEeK-J6PJ-81stw">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_R-I-oujPEeK-J6PJ-81stw" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_R-I-oejPEeK-J6PJ-81stw" value="1"/>
-        </ownedAttribute>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_QpYLIOjPEeK-J6PJ-81stw" name="seeded_mobile_0" memberEnd="_QpYLIejPEeK-J6PJ-81stw _QpW9AOjPEeK-J6PJ-81stw">
-        <ownedEnd xmi:type="uml:Property" xmi:id="_QpYLIejPEeK-J6PJ-81stw" name="seeded" type="_OWXmsOjPEeK-J6PJ-81stw" association="_QpYLIOjPEeK-J6PJ-81stw">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QpYLI-jPEeK-J6PJ-81stw" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QpYLIujPEeK-J6PJ-81stw" value="1"/>
-        </ownedEnd>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_R-KMwOjPEeK-J6PJ-81stw" name="seeded_frozen_0" memberEnd="_R-KMwejPEeK-J6PJ-81stw _R-I-oOjPEeK-J6PJ-81stw">
-        <ownedEnd xmi:type="uml:Property" xmi:id="_R-KMwejPEeK-J6PJ-81stw" name="seeded" type="_OWXmsOjPEeK-J6PJ-81stw" association="_R-KMwOjPEeK-J6PJ-81stw">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_R-KMw-jPEeK-J6PJ-81stw" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_R-KMwujPEeK-J6PJ-81stw" value="1"/>
-        </ownedEnd>
-      </packagedElement>
-    </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_K6hOIOC8EeKY16wTGqVU7g" name="Particle View"/>
     <packagedElement xmi:type="uml:Package" xmi:id="_yPiEkOP8EeK6ROy64Uoi8w" name="Seed View">
       <packagedElement xmi:type="uml:Class" xmi:id="_9IDiwOP7EeK6ROy64Uoi8w" name="Seed"/>
@@ -164,16 +96,6 @@
     <packagedElement xmi:type="uml:Package" xmi:id="_tKxQ4AUoEeSLcrL9B3-GDw" name="Interactions View">
       <packagedElement xmi:type="uml:Class" xmi:id="_i-FxUOC7EeKY16wTGqVU7g" name="Neighbours"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_9n9BUOC6EeKY16wTGqVU7g" name="FreezePart"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_CvZjkOjPEeK-J6PJ-81stw" name="Frozen">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_HeV-8OjPEeK-J6PJ-81stw" name="mobile" type="_ZxRB8OCmEeKY16wTGqVU7g" association="_HeXNEOjPEeK-J6PJ-81stw">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HeV-8ujPEeK-J6PJ-81stw" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HeV-8ejPEeK-J6PJ-81stw" value="1"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_IOb_IOjPEeK-J6PJ-81stw" name="neighbours" type="_i-FxUOC7EeKY16wTGqVU7g" association="_IOdNQOjPEeK-J6PJ-81stw">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IOb_IujPEeK-J6PJ-81stw" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IOb_IejPEeK-J6PJ-81stw" value="1"/>
-        </ownedAttribute>
-      </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_AuQ_AOP9EeK6ROy64Uoi8w" name="Frozen"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_ZxRB8OCmEeKY16wTGqVU7g" name="Mobile"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_6B0mYAUpEeSLcrL9B3-GDw" name="SuppNeighbs"/>
