@@ -575,6 +575,10 @@
           <element xmi:type="uml:Property" href="DSL3S.profile.uml#_9NnlsOvyEeK7nZQt8F3isw"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_9OM0gevyEeK7nZQt8F3isw"/>
         </children>
+        <children xmi:type="notation:Shape" xmi:id="_MWRZ0AYJEeSItoOzkyeFeg" type="3002" fontHeight="10">
+          <element xmi:type="uml:Property" href="DSL3S.profile.uml#_MWO9kAYJEeSItoOzkyeFeg"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_MWRZ0QYJEeSItoOzkyeFeg"/>
+        </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_Hislwu5SEeO00oyT07T5Aw"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_Hislw-5SEeO00oyT07T5Aw"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_HislxO5SEeO00oyT07T5Aw"/>
