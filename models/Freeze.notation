@@ -782,6 +782,30 @@
       <element xmi:type="uml:Association" href="Freeze.uml#_oeU-UOP-EeK6ROy64Uoi8w"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_oeWMcuP-EeK6ROy64Uoi8w" points="[50, 4, -213, 4]$[265, 51, 2, 51]"/>
     </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_B-D4kAX4EeSFAuGnTa8zgw" type="4001" source="_T5svoOC8EeKY16wTGqVU7g" target="_Qe41oOC8EeKY16wTGqVU7g" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_B-EfoAX4EeSFAuGnTa8zgw" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_B-EfoQX4EeSFAuGnTa8zgw" y="-20"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_B-EfogX4EeSFAuGnTa8zgw" visible="false" type="6002">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_B-EfowX4EeSFAuGnTa8zgw" y="20"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_B-EfpAX4EeSFAuGnTa8zgw" visible="false" type="6003">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_B-EfpQX4EeSFAuGnTa8zgw" y="-20"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_B-EfpgX4EeSFAuGnTa8zgw" visible="false" type="6005">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_B-EfpwX4EeSFAuGnTa8zgw" y="20"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_B-FGsAX4EeSFAuGnTa8zgw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_B-FGsQX4EeSFAuGnTa8zgw" y="20"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_B-FGsgX4EeSFAuGnTa8zgw" type="6034">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_B-FGswX4EeSFAuGnTa8zgw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_B-D4kQX4EeSFAuGnTa8zgw"/>
+      <element xmi:type="uml:Association" href="Freeze.uml#_B8fyUAX4EeSFAuGnTa8zgw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_B-D4kgX4EeSFAuGnTa8zgw" points="[17, -1, -123, 9]$[90, -1, -50, 9]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_B-UXQAX4EeSFAuGnTa8zgw" id="(0.8661417322834646,0.5434782608695652)"/>
+    </edges>
   </notation:Diagram>
   <notation:Diagram xmi:id="_rwY9kAUoEeSLcrL9B3-GDw" type="PapyrusUMLClassDiagram" name="Interactions View" measurementUnit="Pixel">
     <children xmi:type="notation:Shape" xmi:id="_tL1A0AUoEeSLcrL9B3-GDw" type="2007">

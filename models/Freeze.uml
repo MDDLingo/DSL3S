@@ -194,6 +194,16 @@
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MrXe8gUrEeSLcrL9B3-GDw" value="1"/>
         </ownedEnd>
       </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_B8fyUAX4EeSFAuGnTa8zgw" name="neighbours_particle_1" memberEnd="_B8fyUQX4EeSFAuGnTa8zgw _B8d9IAX4EeSFAuGnTa8zgw">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_B8fyUQX4EeSFAuGnTa8zgw" name="neighbours" type="_i-FxUOC7EeKY16wTGqVU7g" aggregation="composite" association="_B8fyUAX4EeSFAuGnTa8zgw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_B8fyUgX4EeSFAuGnTa8zgw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_B8fyUwX4EeSFAuGnTa8zgw" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_B8d9IAX4EeSFAuGnTa8zgw" name="particle" type="_UKXgUOClEeKY16wTGqVU7g" association="_B8fyUAX4EeSFAuGnTa8zgw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_B8d9IQX4EeSFAuGnTa8zgw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_B8d9IgX4EeSFAuGnTa8zgw" value="1"/>
+        </ownedEnd>
+      </packagedElement>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_SuOSgBWXEeOwad1GzWDyLw">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Su-gcBWXEeOwad1GzWDyLw" source="http://www.eclipse.org/uml2/2.0.0/UML">
@@ -210,15 +220,18 @@
   <DSL3S:State xmi:id="_eomu8BWZEeOwad1GzWDyLw" base_Class="_ZxRB8OCmEeKY16wTGqVU7g" maxValue="1"/>
   <DSL3S:Move xmi:id="_hYDXwBWZEeOwad1GzWDyLw" weight="1" base_Class="_9n9BUOC6EeKY16wTGqVU7g" scope="1.4" stop="1"/>
   <DSL3S:Move xmi:id="_konwoBWZEeOwad1GzWDyLw" weight="1" base_Class="_hA7OEOP9EeK6ROy64Uoi8w" scope="1.4" stop="1"/>
+<!--
   <DSL3S:Harvest xmi:id="_nyUFcBWZEeOwad1GzWDyLw" harvested="Mobile" percentHarvested="1" base_Class="_2-p5YOjOEeK-J6PJ-81stw" scope="1.4" maxImpact="0"/>
   <DSL3S:Harvest xmi:id="_qRVFkBWZEeOwad1GzWDyLw" harvested="Neighbours" valueHarvested="1" base_Class="_CvZjkOjPEeK-J6PJ-81stw" scope="1.4" maxImpact="0"/>
   <DSL3S:Harvest xmi:id="_sTaSEBWZEeOwad1GzWDyLw" harvested="Frozen" valueHarvested="1" base_Class="_OWXmsOjPEeK-J6PJ-81stw" scope="1.4" maxImpact="0"/>
+-->
+
   <DSL3S_1:Simulation xmi:id="_HULz8ATgEeSLcrL9B3-GDw" base_Class="_-aFq4OCkEeKY16wTGqVU7g" simulName="Freeze" spaceHeight="100" spaceWidth="100"/>
-  <DSL3S_1:Animat xmi:id="_XSayQATgEeSLcrL9B3-GDw" initNum="1" base_Class="_9IDiwOP7EeK6ROy64Uoi8w" colourMax="0,0,255"/>
+  <DSL3S_1:Animat xmi:id="_XSayQATgEeSLcrL9B3-GDw" initNum="1" stop="null" base_Class="_9IDiwOP7EeK6ROy64Uoi8w" colourMax="0,0,255"/>
   <DSL3S_1:Animat xmi:id="_h6VzMATgEeSLcrL9B3-GDw" initNum="1000" stop="1" wanderer="true" base_Class="_UKXgUOClEeKY16wTGqVU7g"/>
-  <DSL3S_1:Attribute xmi:id="_sfXbsAThEeSLcrL9B3-GDw" base_Class="_AuQ_AOP9EeK6ROy64Uoi8w" minValue="1" maxValue="1" display="true" initValue="1"/>
-  <DSL3S_1:Attribute xmi:id="_Y7xY4ATkEeSLcrL9B3-GDw" base_Class="_i-FxUOC7EeKY16wTGqVU7g" maxValue="100" stepVariation="-100"/>
-  <DSL3S_1:Attribute xmi:id="_aAb64ATkEeSLcrL9B3-GDw" base_Class="_ZxRB8OCmEeKY16wTGqVU7g" maxValue="1"/>
+  <DSL3S_1:Attribute xmi:id="_sfXbsAThEeSLcrL9B3-GDw" base_Class="_AuQ_AOP9EeK6ROy64Uoi8w" minValue="1" maxValue="1" display="true" initValue="1" inputAttribute="null"/>
+  <DSL3S_1:Attribute xmi:id="_Y7xY4ATkEeSLcrL9B3-GDw" base_Class="_i-FxUOC7EeKY16wTGqVU7g" maxValue="100" stepVariation="-100" inputAttribute="null"/>
+  <DSL3S_1:Attribute xmi:id="_aAb64ATkEeSLcrL9B3-GDw" base_Class="_ZxRB8OCmEeKY16wTGqVU7g" maxValue="1" inputAttribute="null"/>
   <DSL3S_1:Move xmi:id="_7YQwUATmEeSLcrL9B3-GDw" weight="1" base_Class="_9n9BUOC6EeKY16wTGqVU7g" scope="1.4" stop="1"/>
   <DSL3S_1:Move xmi:id="_-kbxYATmEeSLcrL9B3-GDw" weight="1" base_Class="_hA7OEOP9EeK6ROy64Uoi8w" scope="1.4" stop="1"/>
   <DSL3S_1:Supply xmi:id="_aJhGIAUrEeSLcrL9B3-GDw" maxImpact="1" base_Class="_8ouXMAUpEeSLcrL9B3-GDw"/>
