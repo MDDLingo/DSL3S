@@ -33,14 +33,14 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable {
 	public void setValue(Double newValue) {var.setValue(newValue);}
 	public Double getValue() {return var.getValue();}
 	
-	public Double supplyPercent(Double percent, Double max) 
+	public Double supplyPercent(Double percent, Double impact, Double max) 
 	{
-		return var.supplyPercent(percent, max);
+		return var.supplyPercent(percent, impact, max);
 	}
 	
-	public Double supplyValue(Double val, Double max) 
+	public Double supplyValue(Double val, Double impact, Double max) 
 	{
-		return var.supplyValue(val, max);
+		return var.supplyValue(val, impact, max);
 	}
 
 	private Stoppable stopper = null;
