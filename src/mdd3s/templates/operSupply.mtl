@@ -31,15 +31,20 @@ classes of that type.
 		 [else]
 	protected static Double maxImpact[pClass.name/] = null;
 		 [/if]
+		 [if pClass.getTaggedValue(pClass, 'Supply', 'maxSupply').isNotNull()]
+	protected static Double maxSupply[pClass.name/] = new Double([pClass.getTaggedValue(pClass, 'Supply', 'maxSupply')/]);
+		 [else]
+	protected static Double maxSupply[pClass.name/] = null;
+		 [/if]
 
 	protected Double supplyValue[sClass.name/](Double value) 
 	{
-		return attribute[sClass.name/].supplyValue(value, maxImpact[pClass.name/]);
+		return attribute[sClass.name/].supplyValue(value, maxImpact[pClass.name/], maxSupply[pClass.name/]);
 	}
 
 	protected Double supplyPercent[sClass.name/](Double value) 
 	{
-		return attribute[sClass.name/].supplyValue(value, maxImpact[pClass.name/]);
+		return attribute[sClass.name/].supplyValue(value, maxImpact[pClass.name/], maxSupply[pClass.name/]);
 	}
        [/if]
       [/if]

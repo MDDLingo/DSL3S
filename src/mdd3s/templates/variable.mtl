@@ -53,25 +53,26 @@ public /*abstract*/ class Variable
 		value = randGen.nextDouble() * (valueMax - valueMin) + valueMin;
 	}
 
-	protected Double supply(Double supplied, Double max)
+	protected Double supply(Double supplied, Double impact, Double max)
 	{
 		if((max != null) && (supplied > max)) supplied = max;
-		subtract(supplied);
+		if((impact != null) && (supplied > impact)) subtract(impact);
+		else subtract(supplied);
 		return supplied;
 	}
 	
-	public Double supplyPercent(Double percent, Double max) 
+	public Double supplyPercent(Double percent, Double impact, Double max) 
 	{
 		Double supplied = value * percent / 100.0;
-		return supply(supplied, max);
+		return supply(supplied, impact, max);
 	}
 
-	public Double supplyValue(Double val, Double max) 
+	public Double supplyValue(Double val, Double impact, Double max) 
 	{
 		Double supplied;
 		if(val < value) supplied = val;
 		else supplied = value;
-		return supply(supplied, max);
+		return supply(supplied, impact, max);
 	}
 }
 
