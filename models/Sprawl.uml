@@ -35,6 +35,28 @@
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="__2C2YKxWEeOgHYIEg56prw" name="Protected"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_bCbQsKxuEeO4B8LU8denRg" name="Roads"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_q4ksIAeWEeSPKvleXD_A_w" name="Protected"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_qN2UIAeWEeSPKvleXD_A_w" name="Roads"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_QVdu8AeYEeSPKvleXD_A_w" name="roads_sprawl_1" memberEnd="_QVdu8QeYEeSPKvleXD_A_w _QVdH4AeYEeSPKvleXD_A_w">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_QVdu8QeYEeSPKvleXD_A_w" name="roads" type="_qN2UIAeWEeSPKvleXD_A_w" aggregation="composite" association="_QVdu8AeYEeSPKvleXD_A_w">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QVdu8geYEeSPKvleXD_A_w" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QVdu8weYEeSPKvleXD_A_w" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_QVdH4AeYEeSPKvleXD_A_w" name="sprawl" type="_oZj14BvfEeOjmZiRzPqkag" association="_QVdu8AeYEeSPKvleXD_A_w">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QVdH4QeYEeSPKvleXD_A_w" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QVdH4geYEeSPKvleXD_A_w" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_UPvMIAeYEeSPKvleXD_A_w" name="protected_sprawl_1" memberEnd="_UPvMIQeYEeSPKvleXD_A_w _UPsv4AeYEeSPKvleXD_A_w">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_UPvMIQeYEeSPKvleXD_A_w" name="protected" type="_q4ksIAeWEeSPKvleXD_A_w" aggregation="composite" association="_UPvMIAeYEeSPKvleXD_A_w">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UPvMIgeYEeSPKvleXD_A_w" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UPvMIweYEeSPKvleXD_A_w" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_UPsv4AeYEeSPKvleXD_A_w" name="sprawl" type="_oZj14BvfEeOjmZiRzPqkag" association="_UPvMIAeYEeSPKvleXD_A_w">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UPsv4QeYEeSPKvleXD_A_w" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UPsv4geYEeSPKvleXD_A_w" value="1"/>
+        </ownedEnd>
+      </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_l1DRwBvfEeOjmZiRzPqkag" name="Sprawl View">
       <packagedElement xmi:type="uml:Class" xmi:id="_1ILoIBvgEeOjmZiRzPqkag" name="SprawlSpeed"/>
@@ -127,8 +149,6 @@
       <packagedElement xmi:type="uml:Class" xmi:id="_wzcR8BvfEeOjmZiRzPqkag" name="Urbe"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_oZj14BvfEeOjmZiRzPqkag" name="Sprawl"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_qN2UIAeWEeSPKvleXD_A_w" name="Roads"/>
-    <packagedElement xmi:type="uml:Class" xmi:id="_q4ksIAeWEeSPKvleXD_A_w" name="Protected"/>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_rIZasBvfEeOjmZiRzPqkag">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rJiqMBvfEeOjmZiRzPqkag" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="../profile/DSL3S.profile.uml#_jJVh8AYJEeSItoOzkyeFeg"/>
