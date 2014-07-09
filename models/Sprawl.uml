@@ -33,8 +33,6 @@
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ryjVgRvgEeOjmZiRzPqkag" value="1"/>
         </ownedEnd>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="__2C2YKxWEeOgHYIEg56prw" name="Protected"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_bCbQsKxuEeO4B8LU8denRg" name="Roads"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_q4ksIAeWEeSPKvleXD_A_w" name="Protected"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_qN2UIAeWEeSPKvleXD_A_w" name="Roads"/>
       <packagedElement xmi:type="uml:Association" xmi:id="_QVdu8AeYEeSPKvleXD_A_w" name="roads_sprawl_1" memberEnd="_QVdu8QeYEeSPKvleXD_A_w _QVdH4AeYEeSPKvleXD_A_w">
