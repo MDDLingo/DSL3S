@@ -29,7 +29,7 @@
 	qualifiedNameDepth:full;
 }
 
-[appliedStereotypes~="Environment"]
+[appliedStereotypes~="Spatial"]
 {
 	gradient: dsl3sBlue vertical;
 	background-color: dsl3sGreen;
@@ -39,7 +39,7 @@
 	qualifiedNameDepth:full;
 }
 
-[appliedStereotypes~="State"]
+[appliedStereotypes~="Attribute"]
 {
 	gradient: dsl3sBlue vertical;
 	background-color: dsl3sYellow;
@@ -79,6 +79,16 @@
 	qualifiedNameDepth:full;
 }
 
+[appliedStereotypes~="Supply"]
+{
+	gradient: sl3sRed vertical;
+	background-color: dsl3sCyand;
+	bold:true;
+	shadow:true;
+	elementIcon:true;
+	qualifiedNameDepth:full;
+}
+
 [appliedStereotypes~="Harvest"]
 {
 	gradient: dsl3sCyan vertical;
@@ -88,6 +98,7 @@
 	elementIcon:true;
 	qualifiedNameDepth:full;
 }
+
 
 [appliedStereotypes~="Replicate"]
 {
