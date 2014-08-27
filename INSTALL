@@ -8,7 +8,7 @@ Fresh install from GitHub
 . Set the src folder as a source folder [right click > Source > Format; right click on project > Refresh]. If the src folder isn't market immediatly as source close and re-open the project. 
 
 . Add plugin references
-  [right click > Build PAth > Configure Build Path > Add Library > Plug-in Dependencies > Select Acceleo > Next > Select all checkboxes > Finish]
+  [right click > Build Path > Configure Build Path > Add Library > Plug-in Dependencies > Select Acceleo > Next > Select all checkboxes > Finish]
   
 . Open the file META-INF/MANIFEST.MF, make sure Export-Package and Import-Package look like this:
 Export-Package: mdd3s.templates,
