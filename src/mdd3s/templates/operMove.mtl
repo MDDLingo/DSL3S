@@ -8,8 +8,7 @@ Generates the Move function to be included in the Animat class.
 /]
 
 [template public operMove(c : Class) ? (c.hasStereotype('Animat'))]
-[comment Check first if this class has linked Moved stereotypes /]
-[if (c.hasLinkedStereotype('Move'))]	
+	
  [comment Get Simulation name /]
   [for (assS:Association | c.getAssociations())]
    [for (e:Element | assS.relatedElement) ]
@@ -118,5 +117,5 @@ Generates the Move function to be included in the Animat class.
 		sim.space[c.name/].setGeometryLocation(this, new PointMoveTo(nextLoc));
 		location = nextLoc;
 	}
-[/if] [comment Linked check /]
+
 [/template]

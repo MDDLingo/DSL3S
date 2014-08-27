@@ -266,9 +266,7 @@ public class [c.name/] extends MasonGeometry implements Steppable, Stoppable
 		
 		replicate(sim);
 
- [if (c.hasLinkedStereotype('Move'))]
 		move(sim);
- [/if]
 	}
 
  [c.operSupply() /]
