@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DSL3S="http:///schemas/DSL3S/_DCacAPDEEeOA5dbinY6UPQ/26" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http:///schemas/DSL3S/_DCacAPDEEeOA5dbinY6UPQ/26 ../profile/DSL3S.profile.uml#_Djd6oPDEEeOA5dbinY6UPQ">
+<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DSL3S="http:///schemas/DSL3S/_jBFk4AYJEeSItoOzkyeFeg/27" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http:///schemas/DSL3S/_jBFk4AYJEeSItoOzkyeFeg/27 ../profile/DSL3S.profile.uml#_jJVh8AYJEeSItoOzkyeFeg">
   <uml:Model xmi:id="_uoB9EBVhEeKfCYUGa0wThA" name="model">
     <packagedElement xmi:type="uml:Association" xmi:id="_BW8c0BVuEeKKubxyzHq1vA" name="" memberEnd="_BW8c0RVuEeKKubxyzHq1vA _BW6AkBVuEeKKubxyzHq1vA">
       <ownedEnd xmi:type="uml:Property" xmi:id="_BW8c0RVuEeKKubxyzHq1vA" name="" type="_9RDlgBVtEeKKubxyzHq1vA" association="_BW8c0BVuEeKKubxyzHq1vA">
@@ -269,7 +269,7 @@
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_SfLG0BQLEeOL_dsJOHIJwA">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Sf7UwBQLEeOL_dsJOHIJwA" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="../profile/DSL3S.profile.uml#_Djd6oPDEEeOA5dbinY6UPQ"/>
+        <references xmi:type="ecore:EPackage" href="../profile/DSL3S.profile.uml#_jJVh8AYJEeSItoOzkyeFeg"/>
       </eAnnotations>
       <appliedProfile xmi:type="uml:Profile" href="../profile/DSL3S.profile.uml#_bf7O0CBZEeKpfttodweVYA"/>
     </profileApplication>
@@ -291,7 +291,7 @@
     <contents xmi:type="ecore:EObject" xmi:id="_nGLIca0IEeOwIOVcIgmabQ" scope="1"/>
   </ecore:EAnnotation>
   <DSL3S:Attribute xmi:id="_JpO60O5aEeO00oyT07T5Aw" base_Class="_xwF7cO5ZEeO00oyT07T5Aw" maxValue="100" stepVariation="-1" display="true" initValue="20" inputAttribute="energy"/>
-  <DSL3S:Supply xmi:id="_bHrcwO5cEeO00oyT07T5Aw" maxImpact="null" base_Class="_Xf6r4O5cEeO00oyT07T5Aw"/>
+  <DSL3S:Supply xmi:id="_bHrcwO5cEeO00oyT07T5Aw" base_Class="_Xf6r4O5cEeO00oyT07T5Aw"/>
   <DSL3S:Simulation xmi:id="_z5dpcO5eEeO00oyT07T5Aw" base_Class="_vaEtAO5eEeO00oyT07T5Aw" simulName="PredatorPrey" spaceHeight="100" spaceWidth="100"/>
   <DSL3S:Harvest xmi:id="_DjtfUO5gEeO00oyT07T5Aw" percentHarvested="100" base_Class="_4u-xcO5fEeO00oyT07T5Aw"/>
   <DSL3S:Move xmi:id="_bAG4UO5gEeO00oyT07T5Aw" weight="1" base_Class="_Y6eBgO5gEeO00oyT07T5Aw" stop="null"/>
