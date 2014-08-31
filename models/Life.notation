@@ -579,11 +579,11 @@
         </children>
         <children xmi:type="notation:Shape" xmi:id="_CGTkYO7oEeOdtbYJsa7Y0g" type="3010" fontName="Ubuntu" fontHeight="11">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_IgjrAO7oEeOdtbYJsa7Y0g" source="Stereotype_Annotation">
-            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LsVqgO7oEeOdtbYJsa7Y0g" key="StereotypeWithQualifiedNameList" value=""/>
-            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LsWRkO7oEeOdtbYJsa7Y0g" key="StereotypeList" value="DSL3S::Supply"/>
-            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LsWRke7oEeOdtbYJsa7Y0g" key="PropStereoDisplay" value="DSL3S::Supply.maxImpact"/>
-            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LsW4oO7oEeOdtbYJsa7Y0g" key="Stereotype_Presentation_Kind" value="HorizontalStereo"/>
-            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LsW4oe7oEeOdtbYJsa7Y0g" key="StereotypePropertyLocation" value="Compartment"/>
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_MPnSsDD_EeSyhpp2a1kE-A" key="StereotypeWithQualifiedNameList" value=""/>
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_MPpu8DD_EeSyhpp2a1kE-A" key="StereotypeList" value="DSL3S::Supply"/>
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_MPpu8TD_EeSyhpp2a1kE-A" key="PropStereoDisplay" value="DSL3S::Supply.maxSupply"/>
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_MPqWADD_EeSyhpp2a1kE-A" key="Stereotype_Presentation_Kind" value="HorizontalStereo"/>
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_MPqWATD_EeSyhpp2a1kE-A" key="StereotypePropertyLocation" value="Compartment"/>
           </eAnnotations>
           <children xmi:type="notation:DecorationNode" xmi:id="_CGULcO7oEeOdtbYJsa7Y0g" type="5014"/>
           <children xmi:type="notation:BasicCompartment" xmi:id="_CGULce7oEeOdtbYJsa7Y0g" visible="false" type="7011">
