@@ -5,7 +5,7 @@
 
 [template public testOperEmerge(aClass : Class)]
 	
-	[comment @main /]
+	[comment !!!!!!!!! to run this tise replace "main" for "atmain" using the @ character /]
 	[aClass.operEmerge()/]
 	
 [/template]

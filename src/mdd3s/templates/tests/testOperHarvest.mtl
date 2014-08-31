@@ -5,7 +5,7 @@
 
 
 [template public testOperHarvest(c : Class) ? (c.hasStereotype('Animat'))]
-[comment @main /]
+[comment !!!!!!!!! to run this tise replace "main" for "atmain" using the @ character /]
 
 [file (c.name.concat('.test'), false, 'UTF-8')]
 	[c.operHarvest()/]

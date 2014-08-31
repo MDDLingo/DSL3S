@@ -14,7 +14,6 @@ Skeleton of the Animat class.
 [import mdd3s::templates::operMove/]
 
 [template public animat(c : Class) ? (c.hasStereotype('Animat'))]
-[comment @main /]
 [file (c.name.concat('.java'), false, 'UTF-8')]
 
 import java.util.HashMap;

@@ -5,7 +5,7 @@
 
 [template public testSimClass(c : Class) ? (c.hasStereotype('Simulation'))]
 	
-	[comment @main /]
+	[comment !!!!!!!!! to run this tise replace "main" for "atmain" using the @ character /]
 	[c.variable()/]
 
 [/template]
