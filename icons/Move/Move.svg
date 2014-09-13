@@ -13,8 +13,8 @@
    height="82.088318"
    id="svg2882"
    version="1.1"
-   inkscape:version="0.47 r22583"
-   sodipodi:docname="Animat01.svg">
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="Move02.svg">
   <defs
      id="defs2884">
     <inkscape:perspective
@@ -61,7 +61,7 @@
      showgrid="false"
      inkscape:window-width="1438"
      inkscape:window-height="971"
-     inkscape:window-x="1"
+     inkscape:window-x="67"
      inkscape:window-y="52"
      inkscape:window-maximized="0" />
   <metadata
@@ -101,7 +101,7 @@
        sodipodi:cy="46.083107"
        sodipodi:rx="22.602163"
        sodipodi:ry="22.602163"
-       d="m 72.225908,46.083107 a 22.602163,22.602163 0 1 1 -45.204326,0 22.602163,22.602163 0 1 1 45.204326,0 z"
+       d="m 72.225908,46.083107 c 0,12.48283 -10.119333,22.602163 -22.602163,22.602163 -12.48283,0 -22.602163,-10.119333 -22.602163,-22.602163 0,-12.48283 10.119333,-22.602163 22.602163,-22.602163 12.48283,0 22.602163,10.119333 22.602163,22.602163 z"
        transform="translate(1370.1887,754.12581)" />
     <path
        style="fill:none;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -126,5 +126,10 @@
        d="m 1454.2918,774.66015 8.625,8.25 -3.375,3.5 -8.75,-8.25 3.5,-3.5 z"
        id="path3975"
        sodipodi:nodetypes="ccccc" />
+    <path
+       inkscape:connector-curvature="0"
+       d="m 1439.2317,800.23652 a 19.465752,19.339486 0 0 1 -38.9315,0 19.465752,19.339486 0 1 1 38.9315,0 z"
+       id="path2990"
+       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.71697962000000004" />
   </g>
 </svg>

@@ -14,8 +14,8 @@
    height="82.088318"
    id="svg2882"
    version="1.1"
-   inkscape:version="0.47 r22583"
-   sodipodi:docname="Perish.svg">
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="Perish02.svg">
   <defs
      id="defs2884">
     <linearGradient
@@ -165,7 +165,7 @@
      showgrid="false"
      inkscape:window-width="1685"
      inkscape:window-height="971"
-     inkscape:window-x="1"
+     inkscape:window-x="67"
      inkscape:window-y="52"
      inkscape:window-maximized="0" />
   <metadata
@@ -205,15 +205,31 @@
        sodipodi:cy="46.083107"
        sodipodi:rx="22.602163"
        sodipodi:ry="22.602163"
-       d="m 72.225908,46.083107 a 22.602163,22.602163 0 1 1 -45.204326,0 22.602163,22.602163 0 1 1 45.204326,0 z"
+       d="m 72.225908,46.083107 c 0,12.48283 -10.119333,22.602163 -22.602163,22.602163 -12.48283,0 -22.602163,-10.119333 -22.602163,-22.602163 0,-12.48283 10.119333,-22.602163 22.602163,-22.602163 12.48283,0 22.602163,10.119333 22.602163,22.602163 z"
        transform="translate(1384.6734,754.25208)" />
     <path
        style="fill:none;stroke:url(#linearGradient5905);stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 1457.9674,771.8485 -47.4107,56.96429"
-       id="path5301" />
+       d="m 1457.9674,771.8485 -8.0148,9.23458"
+       id="path5301"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:url(#linearGradient5883);stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 1410.5567,771.8485 47.4107,56.96429"
-       id="path5299" />
+       d="m 1450.079,819.70447 7.8884,9.10832"
+       id="path5299"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="path3009"
+       d="m 1410.5567,771.8485 8.0147,9.36085"
+       style="fill:none;stroke:url(#linearGradient5883);stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="path3011"
+       d="m 1418.3189,819.57821 -7.7622,9.23458"
+       style="fill:none;stroke:url(#linearGradient5905);stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
   </g>
 </svg>
