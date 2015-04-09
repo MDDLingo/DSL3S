@@ -1,3 +1,15 @@
 [submodule "https://github.com/ldesousa/dsl3s.manual.git"]
 	path = https://github.com/ldesousa/dsl3s.manual.git
 	url = https://github.com/ldesousa/dsl3s.manual.git
+[submodule "dsl3s.profile"]
+	path = dsl3s.profile
+	url = git@github.com:MDDLingo/dsl3s.profile.git
+[submodule "dsl3s.mdd3s"]
+	path = dsl3s.mdd3s
+	url = git@github.com:MDDLingo/dsl3s.mdd3s.git
+[submodule "dsl3s.examples"]
+	path = dsl3s.examples
+	url = git@github.com:MDDLingo/dsl3s.examples.git
+[submodule "dsl3s.manual"]
+	path = dsl3s.manual
+	url = git@github.com:MDDLingo/dsl3s.manual.git
