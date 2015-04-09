@@ -30,7 +30,7 @@ Wiki
 
 For more information and the latest updates please visit the Wiki [2].
 
-[2] https://github.com/ldesousa/DSL3S/wiki
+[2] https://github.com/MDDLingo/DSL3S/wiki
 
 Software dependencies
 --------------------------------------------------------------------------------------
