@@ -1,6 +1,6 @@
 [submodule "updates/4.3.kepler"]
 	path = updates/4.3.kepler
-	url = https://github.com/ldesousa/dsl3s.update.4.3.kepler.git
+	url = https://github.com/MDDLingo/dsl3s.update.4.3.kepler.git
 [submodule "updates/4.4.luna"]
 	path = updates/4.4.luna
-	url = https://github.com/ldesousa/dsl3s.update.4.4.luna.git
+	url = https://github.com/MDDLingo/dsl3s.update.4.4.luna.git
