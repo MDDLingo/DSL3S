@@ -25,17 +25,19 @@ Urban and Spatial Systems, Oporto, November 2012.
 
 [1] https://fenix.ist.utl.pt/cursos/deic?locale=en_EN
 
-Wiki
+Usage
 --------------------------------------------------------------------------------------
 
-For more information and the latest updates please visit the Wiki [2].
+DSL3S and its accompanying code generator (MDD3S) are available as plug-ins for
+Eclipse. Install instructions and a manual are available at the project Wiki [2].
 
 [2] https://github.com/MDDLingo/DSL3S/wiki
 
 Software dependencies
 --------------------------------------------------------------------------------------
 
-To run this project the following pieces of software are required:
+To run this project from the source code the following pieces of software are 
+required:
 
 . Eclipse (4.3.1) - the development workbench [3];
 
