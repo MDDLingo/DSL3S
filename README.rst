@@ -68,6 +68,4 @@ Licence
 --------------------------------------------------------------------------------------
 
 DSL3S is released under the EUPL 1.1 licence [8]. For further details please 
-consult the LICENCE file.  
-
-[8] http://joinup.ec.europa.eu/software/page/eupl
+consult the LICENCE file.  http://joinup.ec.europa.eu/software/page/eupl
