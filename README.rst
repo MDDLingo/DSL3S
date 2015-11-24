@@ -19,9 +19,8 @@ be the achieved by the development and application of a UML profile coupled to
 a code generation infrastructure. For more details on the project the following 
 article is recommended:
 
-de Sousa, L. and da Silva, A. R., “Preliminary Design and Implementation of 
-DSL3S”, CAMUSS - International Symposium on Cellular Automata Modelling for 
-Urban and Spatial Systems, Oporto, November 2012.
+de Sousa, L. M. and Silva, A. R., A Domain Specific Language for Spatial
+Simulation Scenarios. GeoInformatica, 19(5), 2015.
 
 [1] https://fenix.ist.utl.pt/cursos/deic?locale=en_EN
 
