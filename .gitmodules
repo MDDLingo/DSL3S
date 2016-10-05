@@ -11,5 +11,5 @@
 	path = dsl3s.examples
 	url = git@github.com:MDDLingo/dsl3s.examples.git
 [submodule "dsl3s.manual"]
-	path = dsl3s.manual
+	path = docs
 	url = git@github.com:MDDLingo/dsl3s.manual.git
