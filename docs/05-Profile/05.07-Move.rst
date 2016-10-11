@@ -1,0 +1,27 @@
+![Move](http://ldesousa.github.io/DSL3S/icons/Move.svg) 
+
+Provides properties to weight the relevance
+of each related class influencing the movement of an animat. For instance, in a
+predator-prey simulation the movement of a "sheep" animat may be positively
+weighted in relation to a "grass" _Spatial_ layer and negatively
+weighted in relation to a "wolf" animat.
+
+### Properties
+* _weight_ - Numerical value determining the weight of the associated
+    element (_Attribute_ or _Spatial_) in the movement process of the associated
+    _Animat_.
+
+* _scope_ - Sets the radius of the neighbourhood to scout.
+    
+
+
+### Artefacts
+
+
+For each _Animat_ a method named _move()_ is generated containing the
+logic of all _Move_ elements linked to it. This
+method is included in the corresponding _Animat_ Java class and invoked in the
+_step()_ method. At each time step the _move()_ method searches
+for relevant instances within the neighbourhood(s) defined, collecting a set of
+candidate locations. The _Animat_ moves into the location within the set
+of candidates with highest weight.

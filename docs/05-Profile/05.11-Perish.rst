@@ -1,0 +1,27 @@
+![Perish](http://ldesousa.github.io/DSL3S/icons/Perish.svg) 
+
+Defines an interval of values relative to
+an _Attribute_ element, determining the conditions for the existence of
+the _Animat_ itself.
+
+### Properties
+
+* _lowerThreshold_ - Lower threshold of the associated
+  _Attribute_ below which instances of the associated _Animat_
+  are discarded.
+
+* _upperThreshold_ - Upper threshold of the associated
+   	_Attri\-bute_ below which instances of the associated _Animat_
+   	are discarded.
+
+
+
+
+
+
+### Artefacts
+
+For each _Animat_ Java class a method named _perish()_ is
+generated containing the logic of all _Perish_ classes linked in
+the model. It is invoked in the _step()_ method a tests all the
+_Variable_ type properties of concerned _Attribute_ elements.

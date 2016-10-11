@@ -1,0 +1,40 @@
+![Animat](http://ldesousa.github.io/DSL3S/icons/Animat.svg) 
+
+This is the stereotype for the actors of change, it is intended to aggregate attributes and exist at a
+perfectly identifiable location in space. The initial number of animat instances of each type, and their
+spatial positioning, can be provided by a specific geo-referenced data set. Initial settings can also be randomly generated.
+
+### Properties
+* _inputFile_ - Path to a spatial layer containing
+    features setting the initial number and location of animats. Attributes of 
+    this layer can be used to initialise _Attributes_ owned by this
+    _Animat_ element. Each feature in this spatial layer produces an
+    singular _Animat_ instance.
+
+* _initNum_ - The number of animats at simulation start.
+    In case an input layer is not provided, this property is used to randomly cast animats
+    in the simulation space.
+
+* _wanderer_ - Determines whether the animat should move
+    randomly in case no _Move_ stereotype is linked to it. Prevents an
+    _Animat_ instance from standing idle in an optimal location.
+
+* _colourMin_ - An RGB colour definition used to
+    portrait the animat in the user interface. Defines a cloropleth together
+    with _colourMax_, that is used in function of the values of one or
+    more of the _Attribute_ elements owned.
+
+* _colourMax_ - RGB colour defining the top end of the
+    cloropleth used to portrait the _Animat_.
+
+
+
+### Artefacts
+
+For each Animat class in the model a Java class with the same name is generated.
+It contains properties and methods to store and manage each of its
+_Attribute_ elements, plus the MASON _step()_ routine, containing
+the code to be executed at each simulation time step. A second Java class is also
+generated, again with the _Animat_ name, but with the suffix _Portrayal_;
+as its name implies, it defines a cloropleth and methods to display the Animat
+in the GUI.

@@ -1,0 +1,46 @@
+![Attribute](http://ldesousa.github.io/DSL3S/icons/Attribute.svg) 
+
+This stereotype represents a
+single characteristic of an Animat, representable by an atomic data
+type, such as an integer or a boolean. The values of Attribute elements can be
+initialised through the same spatial data set initialising its owning Animat, using its attribute table.
+
+### Properties
+
+* _attribute_ - This property is used to
+    initialise the _Attribute_ instance with the value of the
+    corresponding value in the attribute table of the spatial layer assigned to
+    the owning _Animat_ element. 
+
+ * _minValue_ - Minimum admissible value of the _Attribute_.
+
+* _maxValue_ - Maximum admissible value of the _Attribute_.
+
+* _stepVariation_ - Numerical value determining how the
+    _Attri\-bute_ evolves with time. At each time step this value is
+    summed to the _Attribute_.
+
+* _display_ - Boolean determining if the _Attribute_ is used
+    to portrait the owning _Animat_.
+
+* _initValue_ - Numerical value that initiates the
+    _Attribute_ (alternative to _initRandom_ and
+    _attribute_).
+
+* _initRandom_ - Boolean indicating if the Attribute is to
+    be initiated with a random value (alternative to _initValue_ and
+    _attribute_).
+    
+
+
+
+
+### Artefacts
+
+A single Java class named _Variable.class_ is generated, that serves as a
+generic encapsulation for atomic values used in the simulation. This class
+includes a set of properties (value, maximum, minimum and variation) and a set
+of corresponding setter and getter methods. In the _Animat_ Java class, a
+property of type _Variable_ is generated for each owned
+_Attribute_ element; the _initValue_ and _initRandom_
+properties are included as static Java properties in the _Sim.class_.

@@ -1,0 +1,32 @@
+![Replicate](http://ldesousa.github.io/DSL3S/icons/Replicate.svg) 
+
+provides properties to set replication
+thresholds against the animat internal state. Impact on the reproducing animat
+and inheritance of attribute values to the new animat can also be modelled with
+specific properties. As with the _Emerge_ operation, the initial state of
+a new animat resulting from a replication is set according to the properties
+set in the _Animat_ class itself.
+
+### Properties
+
+* _lowerThreshold_ - Lower value of the interval within which the
+   	associated _Attribute_ may trigger the replication process.
+
+* _upperThreshold_ - Upper value of the interval within which the
+   	associated _Attribute_ may trigger the replication process.
+
+* _toll_ - Numerical value defining the impact of replication on the
+   	associated _Attribute_ of the parent _Animat_.
+
+* _inheritance_ - Numerical value defining the amount transmitted
+   	to the associated _Attribute_ from the parent to the child _Animat_.
+
+
+
+### Artefacts
+
+
+For each Animat a method named _replicate()_ is generated containing the
+logic of all _Replicate_ classes linked to the _Animat_ in the
+model. This method is included in the corresponding _Animat_ Java class and
+invoked in the _step()_ method.

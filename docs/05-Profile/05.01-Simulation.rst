@@ -1,0 +1,24 @@
+![Simulation](http://ldesousa.github.io/DSL3S/icons/Simulation.svg) 
+
+This stereotype hosts definitions such as the spatial extent of simulation. It bonds
+together all other elements, as an entry point to the simulation.
+
+### Properties
+
+* _simulName_ - A string with a title for the Simulation, to be presented in the user interface.
+
+* _spaceHeight_ - A numeric value indicating the height of the simulation space. Used to frame the class that hosts all animat instances during simulation.
+
+* _spaceWidth_ - A numeric value indicating the width of the simulation space; used as _spaceHeight_. 
+
+### Artefacts
+
+From this element two Java classes are generated: _Sim.java_, and
+_SimGUI.java_ (where _Sim_ is replaced with the content of the
+_simulName_ property). The first contains all initialisation routines,
+that create new animats and set up the simulation at its start; it also contains
+methods to discard animats during simulation time. The spatial data structures
+holding animats, _Spatial_ variables plus _Global_ variables are
+all properties of the _Sim.java_ class too. _SimGUI.java_ contains
+all properties required to present the simulation with a MASON GUI; it also
+initialises these properties.

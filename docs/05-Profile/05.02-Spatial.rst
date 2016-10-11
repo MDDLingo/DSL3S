@@ -1,0 +1,52 @@
+![Spatial](http://ldesousa.github.io/DSL3S/icons/Spatial.svg) 
+
+This is essentially a stub for the
+input of geo-referenced data. Each instance corresponds to a spatial layer
+(either in raster or vector format) with the characteristic of having an
+unequivocal value for each location in space. This stereotype also
+provides means for the fully random generation of spatial variables,
+that may be useful for prototyping with synthetic scenarios.
+
+### Properties
+
+* _inputFile_ - Path to a spatial layer initialising
+    the _Spatial_ element. In case it is a vector layer, each feature
+    generates a _Spatial_ instance; for raster layers each cell is 
+    transformed into a _Spatial_ instance.
+
+* _minValue_ - Minimum admissible value for the
+    variable.
+
+* _maxValue_ - Maximum admissible value for the
+    variable.
+
+* _stepVariation_ - Numerical value determining how the
+    variable evolves with time. At each time step this value is summed to the
+    _Spatial_ instance.
+
+* _display_ - Boolean determining if the _Spatial_ variable is
+    to be portrayed in the user interface. Since a _Spatial_ variable
+    can cover the entire simulation space, not all may be
+    displayed.
+
+* _initValue_ - Numerical value that initiates the
+    variable in all locations of the simulation space (alternative to
+    _initRandom_ and _inputFile_).
+
+* _initRandom_ - Boolean indicating if the variable
+    is to be initiated with random values (alternative to _initValue_ and
+    _inputFile_).
+
+* _colourMin_ - RGB colour defining the lower end of the
+    cloropleth used to portrait the variable.
+
+* _colourMax_ - RGB colour defining the top end of the
+    cloropleth used to portrait the variable.
+
+### Artefacts
+
+Elements of this type in the model produce a Java class with the same
+name. This class extends the _MasonGeometry_ class from the GeoMASON
+library and includes a property of type _MasonGeometry_. A 
+_Portrayal_ class is also generated, with the same display functions as
+in the _Animat_ case.

@@ -1,0 +1,20 @@
+![Supply](http://ldesousa.github.io/DSL3S/icons/Supply.svg) 
+
+Together with _Harvest_ this stereotype provides
+ways for animats to exchange assets. It makes the information or resource held
+in a particular _Attribute_ available to other animat. A limit may be
+set on the amount of this asset that another animat may acquire in each interaction.
+
+
+### Properties
+
+* _maxImpact_ - Sets a limit to the amount supplied from the
+   	associated _Attribute_.
+
+
+
+### Artefacts
+
+A method named _supplyAttribute()_ is generated
+containing the logic of access to the _Variable_ property of concerned
+_Attribute_. It is included in the respective _Animat_ Java class.

@@ -1,0 +1,34 @@
+![Harvest](http://ldesousa.github.io/DSL3S/icons/Harvest.svg) 
+
+provides properties to para-metrise
+changes to the harvesting _Animat_ in an interaction. This is modelled
+with an harvest rate or harvest amount. A consumption rate of 100% may be used
+to model preying relationships, whereas 0% can be used for the animat to simply
+collect information on its neighbourhood.
+
+### Properties
+
+* _percentHarvested_ - Percentage of the harvested _Attribute_ or _Spatial_
+   	variable to be taken (alternative to _valueHarvested_).
+
+* _valueHarvested_ - Exact quantity of the harvested 
+   	_Attribute_ or _Spatial_ variable
+   	to be taken (alternative to _percentHarvested_).
+
+* _maxIntake_ - Sets a limit to the amount harvested from the
+   	associated _Attribute_ or _Spatial_.
+
+* _scope_ - Sets the radius of the neighbourhood to take
+   	into account in the harvest process.
+
+
+
+
+
+### Artefacts
+
+For each Animat a method named _harvest()_ is generated containing the
+logic of all Harvest classes linked to the Animat in the model. It searches the
+within the neighbourhood(s) defined for relevant instances, invoking their
+harvest method counterparts as needed. This method is included in the
+corresponding Animat Java class and invoked in the _step()_ method.

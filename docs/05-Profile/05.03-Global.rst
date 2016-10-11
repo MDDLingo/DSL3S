@@ -1,0 +1,37 @@
+![Global](http://ldesousa.github.io/DSL3S/icons/Global.svg) 
+
+Stereotype for simple scalar values
+that can vary with time. It can, for instance, be set randomly at simulation
+start and/or made to evolve each time step. It can also be fed into the
+model as a predefined time-series of values, that may be an input from a text
+file.
+
+### Properties
+
+* _probability_ - Sets the probability of emergence of a new _Animat_ in
+    presence of the associated _Attribute_ or _Spatial_ variable.
+
+* _scope_ - Determines the radius of the neighbourhood to take
+    into account in the emergence process.
+
+* _required_ - Boolean that sets the presence of the associated
+   	_Attribute_ or _Spatial_ variable as indispensable (or not)
+   	for the emergence of a new _Animat_ instance.
+
+* _lowerThreshold_ - Lower value of the interval within which the
+   	associated _Attribute_ or _Spatial_ variable may trigger the emergence.
+
+* _upperThreshold_ - Upper value of the interval within which the
+   	associated _Attribute_ or _Spatial_ variable may trigger the emergence.
+  
+
+### Artefacts
+
+For each _Animat_ in the model, a single Java class is produced, named
+after the _Animat_ plus the suffix _Emerge_. The logic of every
+_Emerge_ operation associated to the _Animat_ is collected here.
+This Java class also has a _step()_ method that is executed at each time
+step. It browses through the simulation space, at each location evaluating the
+probability of emergence. The probabilities from each _Emerge_ element
+are summed up, if the resulting value is above a random number generated between 
+0 and 100, then emergence takes place.
