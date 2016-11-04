@@ -292,6 +292,9 @@ texinfo_documents = [
 
 
 # -- AutoStructify -------------------------------------------
+# References:
+# http://stackoverflow.com/a/33797841/2066215
+# https://recommonmark.readthedocs.io/en/latest/auto_structify.html
 
 github_doc_root = 'https://github.com/MDDLingo/DSL3S/tree/master/doc/'
 
